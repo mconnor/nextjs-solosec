@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const MainDiv = styled.div`
-    background: green;
+   background-image: url(/img/header-sansNav.png);
 `;
 
 const Header = () => {

@@ -1,10 +1,16 @@
+import { ReactNode } from 'react';
 import styled from 'styled-components'
 
 const MainDiv = styled.div`
     background: pink;
 `;
 
-const Main = ({ children }) => {
+type Props = {
+    children: ReactNode;
+    title?: string;
+}
+
+const Main: React.FC<Props> = ({ children }) => {
     return (
         <MainDiv>
             {children}
