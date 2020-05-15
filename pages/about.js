@@ -6,8 +6,7 @@ import Footer from './components/Footer';
 
 const MainDiv = styled.div`display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 800px 200px;
-
+    grid-template-rows: 20px 800px 20px;
 `;
 
 export default function AboutPage() {
