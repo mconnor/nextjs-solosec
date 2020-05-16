@@ -1,18 +1,21 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components'
 
-const MainDiv = styled.div`
-    background: pink;
+const MainDiv = styled.div<Props>`
+    grid-area: ${props => props.gridArea};
+    text-align: center;
+    background-image: url(/img/bg/12_foreground.png), url(/img/bg/blueBg.png);
+    background-repeat: no-repeat, no-repeat;
 `;
 
-type Props = {
-    children: ReactNode;
-    title?: string;
+interface Props {
+    gridArea: string;
+    children?: ReactNode
 }
 
-const Main: React.FC<Props> = ({ children }) => {
+const Main: React.FC<Props> = ({ children, gridArea }) => {
     return (
-        <MainDiv>
+        <MainDiv gridArea={gridArea}>
             {children}
         </MainDiv>
     )

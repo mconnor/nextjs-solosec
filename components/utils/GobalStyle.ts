@@ -1,0 +1,165 @@
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+    :root {
+        /* --button-font: 1.125rem;
+        --mobile-button-font: 1rem;
+        --headline-font-size: 4.375rem;
+        --headline-mobile-font-size:2.344rem;
+        --dark-blue:#0D2138;
+        --default-headline-color: var(--dark-blue);
+        --copy-blue: #13273E;
+        --default-font-color: var(--copy-blue); */
+
+        --ipad-max-width: 1366px;
+        --ipad-max-height: 1024px;
+        --ipad-min-width: 1112px;
+        --ipad-min-height: 834px;
+
+        --header-height: 100px; //80
+        --main-height: 750px; //607
+        --footer-height: 170px; // 147
+
+        --bg: white;
+        --primary: #fff;
+        --primary-btn-hover-color: gray;
+        --yellow: rgb(128, 124, 116);
+        --copy-blue: #003E6A;
+        --isi-headline-bg: rbg(273,326,230);
+
+    }
+   
+  @font-face {
+    font-family: 'Lato';
+    src: url(/fonts/Lato-Regular.ttf) format('truetype');
+    src: url(/fonts/Lato-Light.ttf) format('truetype');
+    src: url(/fonts/Lato-Bold.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+  }
+
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-family: Lato,  sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+    box-sizing: inherit;
+}
+.page-container {
+    background-color: white;
+    width: var(--ipad-max-width);
+    display: grid;
+    grid-template-columns: 6% 1fr 6%;
+    grid-template-rows: var(--header-height) var(--main-height) var(--footer-height);
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        ". footer .";
+    justify-items: stretch;
+}
+.head-row {
+    grid-area: header;
+    background-color: $head-bg;
+    padding-left: $main-margin;
+    padding-right: $main-margin;
+    background-image: url('../img/header-sansNav.png');
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-template-rows: $header-height;
+
+    &.nav {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 64px repeat(3, 142px) 1fr;
+        color: $primary;
+
+        &.btn {
+            display: grid;
+            align-items: center;
+            height: 66px;
+            place-items: center center;
+            border-right: 2px solid white;
+            text-align: center;
+        }
+
+        &.btn:nth-last-child(1) {
+            border: 0;
+        }
+
+        &.hamburgerClass {
+            border: 0;
+        }
+
+
+    }
+}
+.main-row {
+    grid-area: main;
+    text-align: center;
+
+    h1 {
+        display: inline-block;
+        font-size: 36px;
+    }
+
+    span {
+        color: $yellow;
+        font-size: 36px;
+        margin-left: 10px;
+    }
+
+    .nav {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+.footer-row {
+    grid-area: footer;
+    color: black;
+    font-size: .6rem;
+    background: rgb(213,233,247);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 8px 10px;
+    overflow: hidden;
+
+    h1 {
+        background: var(--isi-headline-bg);
+        color: gray;
+
+    }
+
+    &.inner-container {
+        background: white;
+        border-radius: 4px;
+        padding: 8px;
+    }
+
+    &.down-arrow {
+        transform: rotate(90deg);
+    }
+}
+[role='button'] {
+    cursor: pointer;
+
+    &:hover {
+        color: gray;
+    }
+}
+
+`;
+
+export default GlobalStyle;
