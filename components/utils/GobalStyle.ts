@@ -20,14 +20,25 @@ const GlobalStyle = createGlobalStyle`
         --main-height: 750px; //607
         --footer-height: 170px; // 147
 
-        --bg: white;
+        --bg: #fff;
         --primary: #fff;
         --primary-btn-hover-color: gray;
         --yellow: rgb(128, 124, 116);
         --copy-blue: #003E6A;
         --isi-headline-bg: rbg(273,326,230);
+        --gray: gray;
+        --copy-color-secondary: var(--gray);
+        --border-radius-4: 4px;
 
     }
+
+    /* @media only screen 
+        and (min-device-width: 768px) 
+        and (max-device-width: 1024px) 
+        and (orientation: landscape) 
+        and (-webkit-min-device-pixel-ratio: 1) {
+    } */
+
    
   @font-face {
     font-family: 'Lato';
@@ -51,6 +62,16 @@ const GlobalStyle = createGlobalStyle`
     *, *:before, *:after {
     box-sizing: inherit;
 }
+
+ .btn {
+    cursor: pointer;
+    &:hover {
+        color: gray;
+    }
+ }
+
+
+
 .page-container {
     background-color: white;
     width: var(--ipad-max-width);

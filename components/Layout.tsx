@@ -1,16 +1,18 @@
 import { ReactNode } from 'react';
+import { PageWrapper } from "../state";
 import Head from 'next/head';
 import GlobalStyle from './utils/GobalStyle';
-import style from 'styled-components'
+import styled from 'styled-components'
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import Reference from './References';
 
 type Props = {
     children: ReactNode;
     title?: string;
 }
-const PageContainer = style.div`
+const PageContainer = styled.div`
     background-color: white;
     width: var(--ipad-max-width);
     display: grid;
@@ -24,19 +26,22 @@ const PageContainer = style.div`
 `;
 
 
-const Layout: React.FC<Props> = ({ children, title = 'This is the default title' })=> (
+const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA' })=> (
 		<>
-			<Head>
+            <Head>
 				<title>{title}</title>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
             <GlobalStyle/>
-			<PageContainer>
-				<Header gridArea='header'/>
-				<Main gridArea='main' children={children} />
-				<Footer gridArea='footer'/>
-			</PageContainer>
+            <PageWrapper>
+			    <PageContainer>
+                    <Reference/>
+                    <Header gridArea='header'/>
+                    <Main gridArea='main' children={children} />
+                    <Footer gridArea='footer'/>
+                </PageContainer>
+            </PageWrapper>
 		</>
 	);
 
