@@ -6,7 +6,8 @@ import styled from 'styled-components'
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import Reference from './References';
+import ReferencesWrapper from './References';
+import SafetyModalWrapper from './SafetyModal';
 
 type Props = {
     children: ReactNode;
@@ -23,6 +24,7 @@ const PageContainer = styled.div`
         "main main main"
         ". footer .";
     justify-items: stretch;
+    border: 1px solid black;
 `;
 
 
@@ -34,9 +36,11 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA' })=> (
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
             <GlobalStyle/>
+            
             <PageWrapper>
+                <SafetyModalWrapper />
+                <ReferencesWrapper/>
 			    <PageContainer>
-                    <Reference/>
                     <Header gridArea='header'/>
                     <Main gridArea='main' children={children} />
                     <Footer gridArea='footer'/>

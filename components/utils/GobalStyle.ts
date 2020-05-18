@@ -19,17 +19,21 @@ const GlobalStyle = createGlobalStyle`
         --header-height: 100px; //80
         --main-height: 750px; //607
         --footer-height: 170px; // 147
-
+        --royal-blue: #073b87;
+        --royal-blue-light: #468dcc;
         --bg: #fff;
         --primary: #fff;
         --primary-btn-hover-color: gray;
         --yellow: rgb(128, 124, 116);
         --copy-blue: #003E6A;
         --isi-headline-bg: rbg(273,326,230);
-        --gray: gray;
+        --gray: #6d6e71;
         --copy-color-secondary: var(--gray);
         --border-radius-4: 4px;
 
+
+    
+      
     }
 
     /* @media only screen 

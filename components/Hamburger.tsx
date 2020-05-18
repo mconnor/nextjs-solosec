@@ -4,9 +4,9 @@ const Svg = styled.svg`
 cursor: pointer;
     width: 38px;
     height: 52px;
-    fill: white;
-    :hover {
-         fill: gray;
+    fill: var(--primary);
+    &:hover {
+         fill: var( --primary-btn-hover-color);
     }
 `;
 

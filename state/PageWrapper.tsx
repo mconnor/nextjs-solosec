@@ -1,24 +1,30 @@
 import  {  createContext, useContext } from "react";
 import { useToggle, ToggleState } from "../hooks";
 
-interface MenuState {
-    isMenuOpen: boolean;
-    toggleMenu?: () => void;
+interface ReferenceState {
+    isReferenceOpen: boolean;
+    toggleReference?: () => void;
+    isSafetyInfoOpen: boolean;
+    toggleSafetyInfo?: () => void;
 }
 
-export const AppContext = createContext<MenuState>({
-    isMenuOpen: false,
+export const AppContext = createContext<ReferenceState>({
+    isReferenceOpen: false,
+    isSafetyInfoOpen: false
 });
 
 
 export const PageWrapper:React.FC = ({ children }) => {
-    const { isToggled, toggle }: ToggleState = useToggle(false);
+    const refState: ToggleState  = useToggle(false);
+    const safetyInfoState: ToggleState  = useToggle(false);
 
     return (
         <AppContext.Provider
             value={{
-                isMenuOpen: isToggled,
-                toggleMenu: toggle
+                isReferenceOpen: refState.isToggled,
+                toggleReference: refState.toggle,
+                isSafetyInfoOpen: safetyInfoState.isToggled,
+                toggleSafetyInfo: safetyInfoState.toggle,
             }}
         >
             {children}
