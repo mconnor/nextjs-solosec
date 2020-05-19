@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 
 
 export default () => (
-    <Layout>
+    <Layout backgroundArt='12_foreground.png'>
         ABOUT
     </Layout>
 )

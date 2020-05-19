@@ -1,6 +1,6 @@
 
 import styled from 'styled-components'
-import { SafetyModal } from './SafetyModal';
+import { SafetyModal } from './modals/SafetyInfo/';
 
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};

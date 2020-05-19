@@ -6,12 +6,13 @@ import styled from 'styled-components'
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import ReferencesWrapper from './References';
-import SafetyModalWrapper from './SafetyModal';
+import ReferencesWrapper from './modals/References';
+import SafetyModalWrapper from './modals/SafetyInfo/';
 
 type Props = {
     children: ReactNode;
     title?: string;
+    backgroundArt?:string;
 }
 const PageContainer = styled.div`
     background-color: white;
@@ -28,7 +29,7 @@ const PageContainer = styled.div`
 `;
 
 
-const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA' })=> (
+const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', backgroundArt })=> (
 		<>
             <Head>
 				<title>{title}</title>
@@ -42,7 +43,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA' })=> (
                 <ReferencesWrapper/>
 			    <PageContainer>
                     <Header gridArea='header'/>
-                    <Main gridArea='main' children={children} />
+                    <Main gridArea='main' children={children} backgroundArt={backgroundArt}/>
                     <Footer gridArea='footer'/>
                 </PageContainer>
             </PageWrapper>
