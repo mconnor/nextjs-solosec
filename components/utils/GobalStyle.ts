@@ -18,9 +18,14 @@ const GlobalStyle = createGlobalStyle`
 
         --header-height: 100px; //80
         --main-height: 750px; //607
+
+       
+
         --footer-height: 170px; // 147
+        --main-footer-height: calc(var(--main-height) + var(--footer-height) +40px);
         --royal-blue: #073b87;
-        --royal-blue-light: #468dcc;
+        --royal-blue-light: 0x468dcc;
+        --slogan-blue: #002851
         --bg: #fff;
         --primary: #fff;
         --primary-btn-hover-color: gray;
@@ -31,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
         --copy-color-secondary: var(--gray);
         --border-radius-4: 4px;
 
-
+        --safety-info-margin: 80px;
     
       
     }

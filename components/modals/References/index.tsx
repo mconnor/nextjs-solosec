@@ -1,28 +1,30 @@
 import styled from 'styled-components'
-import { useAppState } from "../../state";
-
+import { useAppState } from "../../../state";
 
 const Main = styled.div`
     max-width: var( --ipad-max-width);
-    height: 1024px;
-    position: absolute;
+    height: var(--ipad-max-height);
+    position: fixed;
+    top:0;
+    left:0;
     z-index: 2;
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
 `;
 
 const Container = styled.div`
-height: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 75px auto;
-     
-        border-bottom-right-radius: var(--border-radius-4);
-        border-bottom-left-radius:  var(--border-radius-4);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr;
+   
+    border-bottom-right-radius: var(--border-radius-4);
+    border-bottom-left-radius:  var(--border-radius-4);
     
 `;
 const Top = styled.div`
     background-color: green;
+    border:0;
     border-top-right-radius: var(--border-radius-4);
     border-top-left-radius:  var(--border-radius-4);
     padding: 0 30px 0 30px;
@@ -45,8 +47,8 @@ const Top = styled.div`
     }
 `;
 const Copy = styled.div`
-  
-    background-color:  var(--bg);
+    grid-area: 'copy';
+    background-color:white;
     padding: 20px 48px 0 20px;
     border-bottom-right-radius: var(--border-radius-4);
     border-bottom-left-radius: var(--border-radius-4);

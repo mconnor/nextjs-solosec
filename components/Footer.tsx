@@ -15,7 +15,7 @@ interface Props {
 const Footer: React.FC<Props> = ({ gridArea }) => {
     return (
         <MainDiv gridArea={gridArea}>
-           <SafetyModal dis={true}/>
+           <SafetyModal />
         </MainDiv>
     )
 }

@@ -47,19 +47,23 @@ const Ulist = styled.ul`
     }
 `;
 
-const Container = styled.div`
+const Container = styled.div<Props>`
     font-family: Lato;
-    padding: 0 104px 0 104px;
+
+    padding-left:${props => `${props.marginLR}px`};
+    padding-right:${props => `${props.marginLR}px`};
 `;
 const NoWrapSpan = styled.span`
     white-space: nowrap;
 `;
 
+type Props = {
+    marginLR?:number;
+}
 
-
-const SafetyCopy: React.FC = () => {
+const SafetyCopy: React.FC<Props> = ({ marginLR = 80}) => {
     return (
-        <Container>
+        <Container marginLR={marginLR}>
             <SubHead>Indication</SubHead>
             <Ptag>SOLOSEC<sup>&reg;</sup> SOLOSEC® (secnidazole) 2 g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
 

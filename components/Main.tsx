@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components'
 
-const MainDiv = styled.div<Props>`
+const MainDiv = styled(motion.div)<Props>`
     grid-area: ${props => props.gridArea};
     text-align: center;
     background-image: ${props =>  props.backgroundArt ? `url(/img/bg/${props.backgroundArt}), url(/img/bg/blueBg.png)` : 'url(/img/bg/blueBg.png)'};
@@ -16,10 +17,15 @@ interface Props {
 
 const Main: React.FC<Props> = ({ children, gridArea, backgroundArt}) => {
     return (
-        <MainDiv gridArea={gridArea} backgroundArt={backgroundArt}>
-                {children}
-         
-        </MainDiv>
+        <AnimatePresence exitBeforeEnter>
+                <MainDiv gridArea={gridArea} backgroundArt={backgroundArt}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}>
+                        {children}
+                
+                </MainDiv>
+        </AnimatePresence>
     )
 }
 

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { useAppState } from "../../../state/";
-import SafetyCopy from './SafetyCopy'
+import SafetyCopy from './SafetyCopy';
+import LumpinLogo from '../../svg/LupinLogo'
+
 // import LupinLogo from './svg/LupinLogo'
 
 
@@ -11,23 +13,25 @@ const InnerDiv = styled.div`
 `;
 
 
-const Main = styled.div`
+const WrapperContainer = styled.div`
     width:var(--ipad-max-width);
-    height:var(--ipad-max-height);
+    height:var(--main-footer-height);
     position: absolute;
     z-index: 2;
     top: var(--header-height);
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 24px;
+    overflow:hidden;
     background:white;
 `;
 
 const Container = styled.div`
-    margin-top: 22px;
+
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 52px 1fr 200px;
-    
+    grid-template-rows: 52px 1fr auto;
+    align-items:center;
 `;
 
 
@@ -41,6 +45,7 @@ const Top = styled.div`
     grid-template-columns: 30px 1fr 30px;
     align-items: center;
     justify-content: space-between; */
+  
     padding-left:38px;
     h1{
         font-family: Lato;
@@ -52,44 +57,86 @@ const Top = styled.div`
     }
 `;
 
+const MARG = 80;
+interface Imargins {
+    marginRL: string;
+}
 
-const ModalFooter = styled.div`
-    background-image:url(/img/05_safetyInfoFooter.png);
-    background-repeat: no-repeat;
+
+const ModalFooter = styled.div<Imargins>`
+    /* background-image:url(/img/05_safetyInfoFooter.png);
+    background-repeat: no-repeat; */
+    display: grid;
+    grid-template-columns: 70px 114px 310px 1fr 274px 200px 80px;
+
+
+    grid-template-areas: ". lupinLogo copyright .  slogan solosecLogo .";
+    align-items:center;
+    gap: 20px;
 `;
+
+
+
 
 const SafetyModalWrapper: React.FC = () => {
     const { isSafetyInfoOpen } = useAppState();
     if (!isSafetyInfoOpen) return null;
-    return <Main><SafetyModal dis={false} /></Main>;
+    return (
+        <WrapperContainer>
+            <SafetyModal />
+        </WrapperContainer>);
 }
 
-type Prop = {
-    dis: boolean;
+interface IgridArea  {
+    gridArea: string;
 }
-export const SafetyModal: React.FC<Prop> = ({ dis = false }) => {
+
+
+
+const GridAreaDiv= styled.div<IgridArea>`
+    grid-area: ${(props) => props.gridArea};
+`;
+const Slogan= styled.h3`
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color:var(--slogan-blue);
+`;
+
+export const SafetyModal: React.FC = () => {
     const { toggleSafetyInfo } = useAppState();
     return (
-        <>
-            <Container>
-                {dis ?
-                    <Top>
-                        <h1>Important Safety Information</h1>
-                    </Top>
-                    :
-                    <Top onClick={toggleSafetyInfo}>
-                        <h1>Important Safety Information</h1>
-                    </Top>}
 
-                <InnerDiv>
+        <Container>
+            <Top onClick={toggleSafetyInfo}>
+                <h1>Important Safety Information</h1>
+            </Top>
 
-                    <SafetyCopy />
+            <InnerDiv>
+                <SafetyCopy marginLR={MARG} />
+            </InnerDiv>
 
-                </InnerDiv>
-                <ModalFooter />
-            </Container>
+            <ModalFooter>
+                <GridAreaDiv gridArea="lupinLogo">
+                 <LumpinLogo />
+                </GridAreaDiv>
 
-        </>
+                <GridAreaDiv gridArea="copyright">
+                <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
+                </GridAreaDiv>
+
+                <GridAreaDiv gridArea="slogan">
+                   <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>
+                </GridAreaDiv>
+
+                <GridAreaDiv gridArea="solosecLogo">
+                    <img src="/img/solosec-logo-isi.svg" width="195"></img>
+                </GridAreaDiv>
+                
+               
+            </ModalFooter>
+        </Container>
+
     )
 }
 

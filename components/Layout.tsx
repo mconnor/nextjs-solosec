@@ -1,4 +1,6 @@
 import { ReactNode } from 'react';
+import { useRouter } from 'next/router'
+
 import { PageWrapper } from "../state";
 import Head from 'next/head';
 import GlobalStyle from './utils/GobalStyle';
@@ -29,7 +31,10 @@ const PageContainer = styled.div`
 `;
 
 
-const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', backgroundArt })=> (
+const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', backgroundArt })=>{ 
+    const router = useRouter();
+    console.log(router.pathname )
+    return (
 		<>
             <Head>
 				<title>{title}</title>
@@ -43,11 +48,17 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', backgroundAr
                 <ReferencesWrapper/>
 			    <PageContainer>
                     <Header gridArea='header'/>
-                    <Main gridArea='main' children={children} backgroundArt={backgroundArt}/>
+                   
+                        <Main 
+                            gridArea='main' 
+                            children={children} 
+                            backgroundArt={backgroundArt} 
+                            key={router.route}/>
+                   
                     <Footer gridArea='footer'/>
                 </PageContainer>
             </PageWrapper>
 		</>
-	);
+	)};
 
 export default Layout;
