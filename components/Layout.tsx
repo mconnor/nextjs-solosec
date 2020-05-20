@@ -9,7 +9,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
-import SafetyModalWrapper from './modals/SafetyInfo/';
+
 
 type Props = {
     children: ReactNode;
@@ -17,6 +17,8 @@ type Props = {
     backgroundArt?:string;
 }
 const PageContainer = styled.div`
+    position: static;
+    overflow: hidden;
     background-color: white;
     width: var(--ipad-max-width);
     display: grid;
@@ -44,16 +46,15 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', backgroundAr
             <GlobalStyle/>
             
             <PageWrapper>
-                <SafetyModalWrapper />
                 <ReferencesWrapper/>
 			    <PageContainer>
                     <Header gridArea='header'/>
                    
-                        <Main 
-                            gridArea='main' 
-                            children={children} 
-                            backgroundArt={backgroundArt} 
-                            key={router.route}/>
+                    <Main 
+                        gridArea='main' 
+                        children={children} 
+                        backgroundArt={backgroundArt} 
+                        key={router.route}/>
                    
                     <Footer gridArea='footer'/>
                 </PageContainer>

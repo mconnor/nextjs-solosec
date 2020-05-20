@@ -1,13 +1,25 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { useAppState } from "../../../state";
 
-const Main = styled.div`
+const variants = {
+    open: { y: 0},
+    closed: {
+        y: "100%",
+        transition: {
+            delay: .2
+        }
+    },
+
+}
+
+const Main = styled(motion.div)`
+    z-index: 2;
     max-width: var( --ipad-max-width);
     height: var(--ipad-max-height);
     position: fixed;
     top:0;
     left:0;
-    z-index: 2;
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
 `;
@@ -62,14 +74,18 @@ const CloseBtn = styled.div`
 `;
 
 const ReferencesWrapper = () => {
-    const { isReferenceOpen } = useAppState();
-    if (!isReferenceOpen) return null;
+    // const { isReferenceOpen } = useAppState();
+    // if (!isReferenceOpen) return null;
     return <References />;
 }
 const References = () => {
-    const { toggleReference } = useAppState();
+    const { isReferenceOpen,toggleReference } = useAppState();
     return (
-        <Main>
+        <Main
+            variants={variants}
+            initial='closed'
+            animate={isReferenceOpen ? 'open' : 'closed'}
+            transition={{ damping: 300 }}>
             <Container>
                 <Top>
                     <h1>REFERENCES</h1>

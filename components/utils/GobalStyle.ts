@@ -19,10 +19,12 @@ const GlobalStyle = createGlobalStyle`
         --header-height: 100px; //80
         --main-height: 750px; //607
 
-       
 
         --footer-height: 170px; // 147
         --main-footer-height: calc(var(--main-height) + var(--footer-height) +40px);
+
+        --main-footer-y: calc(var(--header-height) + var(--main-height));
+        
         --royal-blue: #073b87;
         --royal-blue-light: 0x468dcc;
         --slogan-blue: #002851
@@ -48,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
         and (-webkit-min-device-pixel-ratio: 1) {
     } */
 
-   
+
   @font-face {
     font-family: 'Lato';
     src: url(/fonts/Lato-Regular.ttf) format('truetype');
@@ -69,8 +71,12 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     *, *:before, *:after {
-    box-sizing: inherit;
-}
+        box-sizing: inherit;
+    }
+    body {
+       margin:0;
+       padding:0;
+    }
 
  .btn {
     cursor: pointer;

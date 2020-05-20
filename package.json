@@ -1,15 +1,15 @@
 {
-  "name": "nextjs-hello-world",
+  "name": "nextjs-solosec",
   "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mconnor/nextjs-solosec.git"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4000",
     "build": "next build && next export",
     "serve": "browser-sync start --server --files 'css/*.css' --ss 'out/'",
-    "start": "next start"
+    "start": "next start -p 4000"
   },
   "dependencies": {
     "framer-motion": "^1.11.0",

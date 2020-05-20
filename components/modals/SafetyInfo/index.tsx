@@ -1,9 +1,33 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { useAppState } from "../../../state/";
 import SafetyCopy from './SafetyCopy';
 import LumpinLogo from '../../svg/LupinLogo'
 
-// import LupinLogo from './svg/LupinLogo'
+
+// const returnVarient(hpx: string) => {
+//     return {
+//         open: { y: 0},
+//         closed: {
+//             y: "80%",
+//             transition: {
+//                 delay: .2
+//             }
+//         },
+
+//     }
+// }
+
+const variants = {
+    open: { y: 0 },
+    closed: {
+        y: "80%",
+        transition: {
+            delay: .2
+        }
+    }
+}
+
 
 
 
@@ -13,12 +37,14 @@ const InnerDiv = styled.div`
 `;
 
 
-const WrapperContainer = styled.div`
+const WrapperContainer = styled(motion.div)`
     width:var(--ipad-max-width);
     height:var(--main-footer-height);
-    position: absolute;
-    z-index: 2;
-    top: var(--header-height);
+
+    position: fixed;
+    top:var(--header-height);
+    left:0;
+
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 24px;
@@ -58,12 +84,10 @@ const Top = styled.div`
 `;
 
 const MARG = 80;
-interface Imargins {
-    marginRL: string;
-}
 
 
-const ModalFooter = styled.div<Imargins>`
+
+const ModalFooter = styled.div`
     /* background-image:url(/img/05_safetyInfoFooter.png);
     background-repeat: no-repeat; */
     display: grid;
@@ -77,26 +101,32 @@ const ModalFooter = styled.div<Imargins>`
 
 
 
-
 const SafetyModalWrapper: React.FC = () => {
     const { isSafetyInfoOpen } = useAppState();
-    if (!isSafetyInfoOpen) return null;
+    if (!isSafetyInfoOpen) {
+        console.log('done');
+    }
+    
     return (
-        <WrapperContainer>
+        <WrapperContainer
+            variants={variants}
+            initial='closed'
+            animate={isSafetyInfoOpen ? 'open' : 'closed'}
+            transition={{ damping: 300 }}>
             <SafetyModal />
         </WrapperContainer>);
 }
 
-interface IgridArea  {
+interface IgridArea {
     gridArea: string;
 }
 
 
 
-const GridAreaDiv= styled.div<IgridArea>`
+const GridAreaDiv = styled.div<IgridArea>`
     grid-area: ${(props) => props.gridArea};
 `;
-const Slogan= styled.h3`
+const Slogan = styled.h3`
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -118,22 +148,22 @@ export const SafetyModal: React.FC = () => {
 
             <ModalFooter>
                 <GridAreaDiv gridArea="lupinLogo">
-                 <LumpinLogo />
+                    <LumpinLogo />
                 </GridAreaDiv>
 
                 <GridAreaDiv gridArea="copyright">
-                <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
+                    <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
                 </GridAreaDiv>
 
                 <GridAreaDiv gridArea="slogan">
-                   <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>
+                    <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>
                 </GridAreaDiv>
 
                 <GridAreaDiv gridArea="solosecLogo">
                     <img src="/img/solosec-logo-isi.svg" width="195"></img>
                 </GridAreaDiv>
-                
-               
+
+
             </ModalFooter>
         </Container>
 

@@ -9,19 +9,30 @@ const MainDiv = styled.div`
     place-items: center;
     gap: 100px;
     font-size: large;
-    &.a {
+  
+    a {
         border: 2px solid black;
         color: yellow;
+        background: gray;
+        padding: 20px;
+        white-space: pre-wrap;
+        font-size: x-large;
+        line-height: 50px;
+        &:hover {
+            color: white;
+     }
     };
+   
 `;
 
-
+const MULTI  = 'Multi-page-app Link\n01_home.html'
+const SINGLE  = 'Single-page-app Link\n01_home.html'
 export default () => (
 		<Layout>
 			<MainDiv>
-                <a href='01_home.html'>Regular Link to 01_home.html</a>
+                <a href='01_home.html'>{MULTI}</a>
                 <Link href="/01_home">
-                    <a className="btn btn-light">Nex.js LInk to 01_home -  runs as single page app</a>
+                    <a className="btn btn-light">{SINGLE}</a>
                 </Link>
             </MainDiv>
 		</Layout>
