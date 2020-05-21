@@ -1,39 +1,40 @@
-import Link from 'next/link'
 import Layout from '../components/Layout';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import SpaLink from '../components/SpaLink';
 
 const MainDiv = styled.div`
+    margin: 20px 200px 0 200px;
+    
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 500px;
-    place-items: center;
-    gap: 100px;
-    font-size: large;
-  
-    a {
-        border: 2px solid black;
-        color: yellow;
-        background: gray;
-        padding: 20px;
-        white-space: pre-wrap;
-        font-size: x-large;
-        line-height: 50px;
-        &:hover {
-            color: white;
-     }
-    };
+    grid-template-columns: 1fr 1fr 1fr;
    
+    grid-template-rows: auto;
+    place-items: center;
+    gap: 10px;
+    font-size: large;   
+    justify-items:stretch;
+    > {
+        grid-area: 'link'
+    }
 `;
 
-const MULTI  = 'Multi-page-app Link\n01_home.html'
-const SINGLE  = 'Single-page-app Link\n01_home.html'
+
 export default () => (
 		<Layout>
 			<MainDiv>
-                <a href='01_home.html'>{MULTI}</a>
-                <Link href="/01_home">
-                    <a className="btn btn-light">{SINGLE}</a>
-                </Link>
+                <SpaLink pageName='02_splash' />
+                <SpaLink pageName='06_discover' />
+                <SpaLink pageName='12_acog' />
+                <SpaLink pageName='14_acog' />
+                <SpaLink pageName='15_acog' />
+                <SpaLink pageName='19_chart' />
+                <SpaLink pageName='21_france' />
+                <SpaLink pageName='23_alcohol' />
+                <SpaLink pageName='28_easy' />
+                <SpaLink pageName='30_survey' />
+                <SpaLink pageName='32_singleDose' />
+                <SpaLink pageName='34_delivers' />
+                <SpaLink pageName='36_singleTreatment' />
             </MainDiv>
 		</Layout>
 )

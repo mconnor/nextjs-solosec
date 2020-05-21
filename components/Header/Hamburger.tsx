@@ -34,9 +34,9 @@ const Hamburger = () => {
     return (
         <Main>
             {isNavOpen ?
-                <CloseBtn role="button" onClick={prevState =>setNav &&  setNav(false)}>&times;</CloseBtn>
+                <CloseBtn role="button" onClick={_prevState =>setNav &&  setNav(false)}>&times;</CloseBtn>
                 :
-                <div onClick={prevState => setNav &&  setNav(true)}>
+                <div onClick={_prevState => setNav &&  setNav(true)}>
                     <Svg focusable="false" viewBox="0 0 24 24">
                         <path d="M24 6H0V2h24v4zm0 4H0v4h24v-4zm0 8H0v4h24v-4z"></path>
                      </Svg>

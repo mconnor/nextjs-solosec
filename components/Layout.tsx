@@ -10,6 +10,7 @@ import Main from './Main';
 import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
 import Nav from './modals/Nav';
+import SpaLink from '../components/SpaLink';
 
 
 type Props = {
@@ -33,6 +34,12 @@ const PageContainer = styled.div`
     justify-items: stretch;
 `;
 
+const FixedDiv = styled.div`
+    position: fixed;
+    top: 5px;
+    left: 600px;
+`;
+
 
 const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt , noBgArt=false})=>{ 
     const router = useRouter();
@@ -49,6 +56,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundAr
             <PageWrapper>
                 <Nav />
                 <ReferencesWrapper/>
+                <FixedDiv><SpaLink pageName='index' /></FixedDiv>
                 
 			    <PageContainer>
                     <Header gridArea='header'/>

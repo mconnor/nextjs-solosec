@@ -2,7 +2,8 @@
 import styled from 'styled-components'
 import Hamburger from './Hamburger'
 import { useAppState} from "../../state";
-import NavBtn from './NavBtn'
+import NavBtn from './NavBtn';
+
 
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
