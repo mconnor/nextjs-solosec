@@ -15,7 +15,7 @@ import Nav from './modals/Nav';
 type Props = {
     children: ReactNode;
     title?: string;
-    backgroundArt?:string;
+    foreGroundArt?:string;
 }
 const PageContainer = styled.div`
     position: static;
@@ -30,11 +30,10 @@ const PageContainer = styled.div`
         "main main main"
         ". footer .";
     justify-items: stretch;
-    border: 1px solid black;
 `;
 
 
-const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', backgroundArt })=>{ 
+const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt })=>{ 
     const router = useRouter();
     console.log(router.pathname )
     return (
@@ -56,7 +55,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', backgroundAr
                     <Main 
                         gridArea='main' 
                         children={children} 
-                        backgroundArt={backgroundArt} 
+                        foreGroundArt={foreGroundArt} 
                         key={router.route}/>
                    
                     <Footer gridArea='footer'/>

@@ -13,7 +13,7 @@ const variants = {
 
 }
 
-const Main = styled(motion.div)`
+const MainDiv = styled(motion.div)`
     z-index: 2;
     width: var( --ipad-max-width);
     height: var(--ipad-max-height);
@@ -81,7 +81,7 @@ const ReferencesWrapper = () => {
 const References = () => {
     const { isReferenceOpen,toggleReference } = useAppState();
     return (
-        <Main
+        <MainDiv
             variants={variants}
             initial='closed'
             animate={isReferenceOpen ? 'open' : 'closed'}
@@ -99,7 +99,7 @@ const References = () => {
                     </ol>
                 </Copy>
             </Container>
-        </Main>
+        </MainDiv>
     )
 }
 
