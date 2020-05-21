@@ -18,3 +18,4 @@ yarn-error.log*
 .vercel
 .DS_Store
 /.vscode
+/netx.js.config
