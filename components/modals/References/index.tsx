@@ -15,7 +15,7 @@ const variants = {
 
 const Main = styled(motion.div)`
     z-index: 2;
-    max-width: var( --ipad-max-width);
+    width: var( --ipad-max-width);
     height: var(--ipad-max-height);
     position: fixed;
     top:0;
