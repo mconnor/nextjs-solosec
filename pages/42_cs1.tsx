@@ -1,8 +1,13 @@
 
+
+
+
 import Layout from '../components/Layout';
 
 
+
+
 export default () => (
-    <Layout foreGroundArt='splash.png'>
+    <Layout foreGroundArt='42.png' noBgArt={true}>
     </Layout>
 )

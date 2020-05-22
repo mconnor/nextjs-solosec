@@ -35,6 +35,24 @@ export default () => (
                 <SpaLink pageName='32_singleDose' />
                 <SpaLink pageName='34_delivers' />
                 <SpaLink pageName='36_singleTreatment' />
+                <SpaLink pageName='40_nonAherence' />
+                <SpaLink pageName='42_cs1' />
+                <SpaLink pageName='43_cs2' />
+                <SpaLink pageName='48_cs3' />
+                <SpaLink pageName='49_cs4' />
+                <SpaLink pageName='55_cs5' />
+                <SpaLink pageName='56_cs6' />
+                <SpaLink pageName='61_segmentNarratives' />
+                <SpaLink pageName='65_prevelance' />
+                <SpaLink pageName='66_riskFactors' />
+                <SpaLink pageName='68_BVsequelae' />
+                <SpaLink pageName='71_qa' />
+                <SpaLink pageName='72_qa' />
+                <SpaLink pageName='73_qa' />
+                <SpaLink pageName='74_qa' />
+                <SpaLink pageName='75_qa' />
+                <SpaLink pageName='76_qa' />
+                <SpaLink pageName='77_qa' />
             </MainDiv>
 		</Layout>
 )
