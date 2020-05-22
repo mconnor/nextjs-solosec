@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
         --ipad-min-width: 1112px;
         --ipad-min-height: 834px;
 
+        --ipad-width: var(--ipad-max-width);
+        --ipad-height: var(--ipad-max-height);
+
         --header-height: 100px; //80
         --main-height: 750px; //607
 
@@ -54,28 +57,35 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Lato';
     src: url(/fonts/Lato-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url(/fonts/Lato-Light.ttf) format('truetype');
+    src: url(/fonts/Lato-Bold.ttf) format('truetype');
+    src: url(/fonts/Lato-Black.ttf) format('truetype');
   }
-  @font-face {
-    font-family: 'Lato';
+  /* @font-face {
+    font-family: 'Lato', sans-serif;
     src: url(/fonts/Lato-Light.ttf) format('truetype');
     font-weight: lighter;
     font-style: normal;
   }
   @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     src: url(/fonts/Lato-Bold.ttf) format('truetype');
     font-weight: bold;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Lato', sans-serif;
+    src: url(/fonts/Lato-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  } */
 
     * {
         box-sizing: border-box;
     }
     
     html {
-        font-family: Lato,  sans-serif;
+        
         font-size: 16px;
         box-sizing: border-box;
     }
@@ -83,6 +93,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
     }
     body {
+        font-family: 'Lato',  sans-serif;
        margin:0;
        padding:0;
     }
@@ -95,7 +106,10 @@ const GlobalStyle = createGlobalStyle`
  }
 
 
-
+.fillMain {
+    background-size:var(--ipad-width);
+    background-repeat:no-repeat; 
+}
 .page-container {
     background-color: white;
     width: var(--ipad-max-width);

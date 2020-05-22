@@ -1,34 +1,33 @@
 import { ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components'
 
-const MainDiv = styled(motion.div)<Props>`
+const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
-    background-image: ${props =>  
-        props.foreGroundArt  && props.noBgArt ? `url(/img/bg/${props.foreGroundArt}), url(/img/bg/bg_simple.png)` :
-        props.foreGroundArt  ? `url(/img/bg/${props.foreGroundArt}), url(/img/bg/blueBg.png)` :
-        'url(/img/bg/blueBg.png)'};
-    background-repeat: no-repeat, no-repeat;
+    background-image: ${props => 
+        props.noBgArt ? "" :
+        props.svgArt ?  `url(/img/svg/${props.svgArt})`: 
+        props.foreGroundArt && props.noBgArt ? `url(/img/bg/${props.foreGroundArt}), url(/img/bg/bg_simple.png)` :
+        props.foreGroundArt ? `url(/img/bg/${props.foreGroundArt}), url(/img/bg/blueBg.png)` :
+            'url(/img/bg/blueBg.png)'};
+    background-repeat:  ${props =>  !props.noBgArt && 'no-repeat, no-repeat'};
+    overflow:hidden;
 `;
 
 interface Props {
     gridArea: string;
     foreGroundArt?: string;
-    noBgArt:boolean;
-    children?: ReactNode
+    svgArt?:string;
+    noBgArt?: boolean;
+    children?: ReactNode,
+    noBG?:boolean;
 }
 
-const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, noBgArt}) => {
+const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, svgArt, noBgArt }) => {
     return (
-        <AnimatePresence exitBeforeEnter>
-                <MainDiv gridArea={gridArea} 
-                    foreGroundArt={foreGroundArt} noBgArt={noBgArt}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}>
-                        {children}
-                </MainDiv>
-        </AnimatePresence>
+        <MainDiv gridArea={gridArea}
+            foreGroundArt={foreGroundArt} noBgArt={noBgArt} svgArt={svgArt}>
+            {children}
+        </MainDiv>
     )
 }
 

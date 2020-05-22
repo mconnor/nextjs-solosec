@@ -27,6 +27,7 @@ export default () => (
                 <SpaLink pageName='12_acog' />
                 <SpaLink pageName='14_acog' />
                 <SpaLink pageName='15_acog' />
+                <SpaLink pageName='17_studies' />
                 <SpaLink pageName='19_chart' />
                 <SpaLink pageName='21_france' />
                 <SpaLink pageName='23_alcohol' />
