@@ -1,10 +1,11 @@
-
 import Layout from '../components/Layout';
+import Acog from '../components/Main/Acog'
 
 
 
 
 export default () => (
-    <Layout foreGroundArt='14.png'>
+    <Layout noBgArt={true}>
+        <Acog page={14} />
     </Layout>
 )

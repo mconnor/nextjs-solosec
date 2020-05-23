@@ -1,6 +1,6 @@
 
 import Layout from '../components/Layout';
-import Discover from '../components/Discover'
+import Discover from '../components/Main/Discover'
 
 
 
