@@ -29,7 +29,8 @@ const GlobalStyle = createGlobalStyle`
         --main-footer-y: calc(var(--header-height) + var(--main-height));
         
         --royal-blue: #073b87;
-        --royal-blue-light: 0x468dcc;
+        --royal-blue-light: #468dcc;
+        --fourty-two-blue: 0x003e6a;
         --slogan-blue: #002851
         --bg: #fff;
         --primary: #fff;
@@ -110,6 +111,7 @@ const GlobalStyle = createGlobalStyle`
     background-size:var(--ipad-width);
     background-repeat:no-repeat; 
 }
+
 .page-container {
     background-color: white;
     width: var(--ipad-max-width);

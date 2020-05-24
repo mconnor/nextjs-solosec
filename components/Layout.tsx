@@ -14,7 +14,7 @@ import SpaLink from '../components/SpaLink';
 
 
 type Props = {
-    children: ReactNode;
+    children?: ReactNode;
     title?: string;
     foreGroundArt?:string;
     svgArt?: string;
