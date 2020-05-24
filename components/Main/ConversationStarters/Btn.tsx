@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from 'react';
-import { useToggle } from '../../../../hooks';
+import { useToggle } from '../../../hooks';
 import styled from 'styled-components';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from "react-icons";
@@ -7,12 +8,14 @@ import { IconContext } from "react-icons";
 
 type MainProps = {
     on: boolean;
+    gridArea: string;
 }
 const Main = styled.button<MainProps>`
-    border: solid 1px black;
+    grid-Area: ${props => props.gridArea};
+    border: solid 1px var(--button-selcted-color);
 
-    background-color:  ${props => props.on ? '#003e6a' : 'rgba(0,0,0,0)'};
-    color:   ${props => props.on ? 'white' : '#003e6a'};
+    background-color:  ${(props) => props.on ? '#003e6a' : 'rgba(0,0,0,0)'};
+    color:   ${props => props.on ? 'white' :  '#003e6a'};
     border-radius: 10px;
     padding-right: 30px;
     padding-left:32px;
@@ -23,6 +26,7 @@ const Main = styled.button<MainProps>`
 `;
 
 const Span = styled.span`
+   
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -37,8 +41,9 @@ const Span = styled.span`
 
 type Props = {
     copy: string;
+    gridArea: string;
 }
-const Btn: React.FC<Props> = ({ copy }) => {
+const Btn: React.FC<Props> = ({ copy, gridArea }) => {
     const { toggle, isToggled } = useToggle(false);
     const [kolor, setKolor] = useState('green');
     useEffect(() => {
@@ -49,7 +54,9 @@ const Btn: React.FC<Props> = ({ copy }) => {
         }
     }, [isToggled, setKolor]);
     return (
-        <Main on={isToggled}
+        <Main 
+            on={isToggled}
+            gridArea={gridArea}
             onClick={() => toggle()}>
             <Span>{copy}</Span>
 

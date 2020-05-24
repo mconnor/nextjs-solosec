@@ -30,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
         
         --royal-blue: #073b87;
         --royal-blue-light: #468dcc;
+        --button-selcted-color:#003e6a;
+
         --fourty-two-blue: 0x003e6a;
         --slogan-blue: #002851
         --bg: #fff;
@@ -61,6 +63,7 @@ const GlobalStyle = createGlobalStyle`
     src: url(/fonts/Lato-Light.ttf) format('truetype');
     src: url(/fonts/Lato-Bold.ttf) format('truetype');
     src: url(/fonts/Lato-Black.ttf) format('truetype');
+    font-display: fallback;
   }
   /* @font-face {
     font-family: 'Lato', sans-serif;
