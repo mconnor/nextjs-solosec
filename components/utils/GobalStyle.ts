@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
         
         --royal-blue: #073b87;
         --royal-blue-light: #468dcc;
-        --button-selcted-color:#003e6a;
+        --button-selected-color:#003e6a;
 
         --fourty-two-blue: 0x003e6a;
         --slogan-blue: #002851
