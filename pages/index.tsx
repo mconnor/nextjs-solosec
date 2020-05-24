@@ -30,6 +30,7 @@ export default () => (
                 <SpaLink pageName='19_chart' />
                 <SpaLink pageName='21_chart_france' />
                 <SpaLink pageName='23_alcohol' />
+                <SpaLink pageName='25_video' />
                 <SpaLink pageName='28_easy' />
                 <SpaLink pageName='30_survey' />
                 <SpaLink pageName='32_singleDose' />
