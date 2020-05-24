@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import ConversationStarters from '../components/Main/ConversationStarters/'
+import ConversationStarters from '../components/Main/ConversationStarters/Q1'
 
 
 

@@ -1,9 +1,11 @@
 import Layout from '../components/Layout';
+import ConversationStarters from '../components/Main/ConversationStarters/Q2'
 
 
 
 
 export default () => (
-    <Layout foreGroundArt='43.png' noBgArt={true}>
+    <Layout svgArt='pg42-conversation-starter-bg.svg'>
+        <ConversationStarters />
     </Layout>
 )
