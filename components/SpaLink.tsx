@@ -10,10 +10,11 @@ const Main = styled.div`
     a {
         text-decoration: none;
         color:yellow;
+        &:active  {
+            color: white;
+        }
     }
-    &:hover {
-        color: white;
-    }
+
 `;
 
 type Props = {

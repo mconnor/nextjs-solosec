@@ -5,6 +5,6 @@ import Layout from '../components/Layout';
 
 
 export default () => (
-    <Layout foreGroundArt='34.png'>
+    <Layout foreGroundArt='/img/bg/34.png'>
     </Layout>
 )

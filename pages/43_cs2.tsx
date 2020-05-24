@@ -5,7 +5,7 @@ import ConversationStarters from '../components/Main/ConversationStarters/Q2'
 
 
 export default () => (
-    <Layout svgArt='pg42-conversation-starter-bg.svg'>
+    <Layout bgArt='/img/svg/pg42-conversation-starter-bg.svg'>
         <ConversationStarters />
     </Layout>
 )

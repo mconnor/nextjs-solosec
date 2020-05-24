@@ -1,31 +1,40 @@
 import { ReactNode } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+
+
+
 
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
-    background-image: ${props => 
-        props.noBgArt ? "" :
-        props.svgArt ?  `url(/img/svg/${props.svgArt})`: 
-        props.foreGroundArt && props.noBgArt ? `url(/img/bg/${props.foreGroundArt}), url(/img/bg/bg_simple.png)` :
-        props.foreGroundArt ? `url(/img/bg/${props.foreGroundArt}), url(/img/bg/blueBg.png)` :
-            'url(/img/bg/blueBg.png)'};
-    background-repeat:  ${props =>  !props.noBgArt && 'no-repeat, no-repeat'};
+    background-repeat: 
+        ${props => props.bgArt && props.foreGroundArt ? 'no-repeat, no-repeat'
+            : props.bgArt || props.foreGroundArt ? 'no-repeat' 
+            : ''
+        };
+    background-image: 
+        ${(props) => (props.bgArt && props.foreGroundArt) ?  `url(${props.bgArt}), url(${props.foreGroundArt})`
+            : props.bgArt ? `url(${props.bgArt})`
+            : props.foreGroundArt ? `url(${props.foreGroundArt})`
+            : ''
+        };
+
     overflow:hidden;
 `;
 
-interface Props {
+
+type Props = {
     gridArea: string;
     foreGroundArt?: string;
-    svgArt?:string;
+    bgArt?:string;
     noBgArt?: boolean;
-    children?: ReactNode,
+    children?: ReactNode;
     noBG?:boolean;
 }
 
-const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, svgArt, noBgArt }) => {
+const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt }) => {
     return (
-        <MainDiv gridArea={gridArea}
-            foreGroundArt={foreGroundArt} noBgArt={noBgArt} svgArt={svgArt}>
+        <MainDiv gridArea={gridArea} bgArt={bgArt}
+            foreGroundArt={foreGroundArt } noBgArt={noBgArt}>
             {children}
         </MainDiv>
     )

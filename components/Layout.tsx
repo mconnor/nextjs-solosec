@@ -17,7 +17,7 @@ type Props = {
     children?: ReactNode;
     title?: string;
     foreGroundArt?:string;
-    svgArt?: string;
+    bgArt?: string;
     noBgArt?:boolean;
 }
 const PageContainer = styled.div`
@@ -42,7 +42,7 @@ const FixedDiv = styled.div`
 `;
 
 
-const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt , noBgArt=false, svgArt})=>{ 
+const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt})=>{ 
     const router = useRouter();
     console.log(router.pathname )
     return (
@@ -68,7 +68,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundAr
                         foreGroundArt={foreGroundArt} 
                         key={router.route}
                         noBgArt={noBgArt}
-                        svgArt={svgArt} />
+                        bgArt={bgArt} />
                    
                     <Footer gridArea='footer'/>
                 </PageContainer>

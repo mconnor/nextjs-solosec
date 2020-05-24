@@ -5,6 +5,6 @@ import Layout from '../components/Layout';
 
 
 export default () => (
-    <Layout svgArt='pg21.svg'>
+    <Layout bgArt='/img/svg/pg21.svg'>
     </Layout>
 )
