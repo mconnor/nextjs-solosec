@@ -12,7 +12,8 @@ const MainDiv = styled.div<Props>`
             : ''
         };
     background-image: 
-        ${(props) => (props.bgArt && props.foreGroundArt) ?  `url(${props.bgArt}), url(${props.foreGroundArt})`
+        ${(props) => 
+        (props.bgArt && props.foreGroundArt) ?  `url(${props.foreGroundArt}), url(${props.bgArt})`
             : props.bgArt ? `url(${props.bgArt})`
             : props.foreGroundArt ? `url(${props.foreGroundArt})`
             : ''
