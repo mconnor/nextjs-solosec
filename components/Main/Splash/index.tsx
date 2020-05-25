@@ -8,7 +8,7 @@ const MainDiv = styled.div<Props>`
     width: var(--ipad-width);
     height:var(--main-height);
     position: relative;
-    top: -130px;
+    top: -150px;
     left:4px;
 
 `;
