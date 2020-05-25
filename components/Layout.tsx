@@ -19,6 +19,8 @@ type Props = {
     foreGroundArt?:string;
     bgArt?: string;
     noBgArt?:boolean;
+    qaBool?:boolean;
+    section?:string;
 }
 const PageContainer = styled.div`
     position: static;
@@ -42,7 +44,7 @@ const FixedDiv = styled.div`
 `;
 
 
-const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt})=>{ 
+const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{ 
     const router = useRouter();
     console.log(router.pathname )
     return (
@@ -56,7 +58,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundAr
             
             <PageWrapper>
                 <Nav />
-                <ReferencesWrapper/>
+                <ReferencesWrapper section={section}/>
                 <FixedDiv><SpaLink pageName='index' /></FixedDiv>
                 
 			    <PageContainer>

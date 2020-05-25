@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { useAppState } from "../../../state";
+import *  as RefCopy from './copy/RefCopy'
+import * as Sections from "../../utils/Sections";
 
 const variants = {
     open: { y: 0},
@@ -73,13 +75,18 @@ const CloseBtn = styled.div`
     font-weight: bold;
 `;
 
-const ReferencesWrapper = () => {
+type Props = {
+    section:string;
+}
+const ReferencesWrapper:React.FC<Props> = ({ section }) => {
     // const { isReferenceOpen } = useAppState();
     // if (!isReferenceOpen) return null;
-    return <References />;
+    return <References section={section} />;
 }
-const References = () => {
+const References:React.FC<Props> = ({ section }) => {
     const { isReferenceOpen,toggleReference } = useAppState();
+    console.log('section' + section)
+
     return (
         <MainDiv
             variants={variants}
@@ -92,11 +99,21 @@ const References = () => {
                     <CloseBtn role="button" onClick={toggleReference}>&times;</CloseBtn>
                 </Top>
                 <Copy>
-                    <ol>
-                        <li>
-                            American College of Obstetricians and Gynecologists. ACOG Practice Bulletin: Clinical Management Guidelines for Obstetricians-Gynecologists, Number 215. Obstet Gynecol 2020:135(1):e1-e17.
-                            </li>
-                    </ol>
+                    {
+                       (section===Sections.SPLASH) ? 
+                            <RefCopy.Splash />
+                        : (section===Sections.ACOG) ? 
+                            <RefCopy.Acog />
+                        : (section===Sections.ACOG_14_15) ? 
+                            <RefCopy.Acog2 /> 
+                        : (section===Sections.STUDIES) ? 
+                            <RefCopy.Studies /> 
+                        :
+                            <RefCopy.Nope />
+
+                      
+                    }
+         
                 </Copy>
             </Container>
         </MainDiv>
