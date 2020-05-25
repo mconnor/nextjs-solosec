@@ -25,24 +25,31 @@ const BarDiv = styled(motion.div)<Props>`
     transform-origin: bottom;
 `;
 
+type ScoreProps = {
+    fontSize:number;
+}
 
 
-
-const Score = styled.div`
+const Score = styled.div<ScoreProps>`
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size:${prop  => `${prop.fontSize}px`};
     color: white;
+    margin-top: 6px;
 `;
+
+
+
 
 type Props = {
     max: number;
     score:number;
     placebo?: boolean;
+    scoreBelow?:[number,number];
 }
 
-const Bar: React.FC<Props> = ({ max, placebo, score}) => {
+const Bar: React.FC<Props> = ({ max, placebo, score,scoreBelow}) => {
     return (
         <BarDiv placebo={placebo} max={max} score={score}
             variants={variants}
@@ -55,7 +62,13 @@ const Bar: React.FC<Props> = ({ max, placebo, score}) => {
                 delay:.5
             }}
         >
-            <Score>{score}%</Score>
+            <Score fontSize={24}>{score}%</Score>
+            {
+                scoreBelow&& 
+
+             <Score fontSize={16}>({scoreBelow[0]}/{scoreBelow[1]})</Score>
+            
+            }
         </BarDiv>
     )
 }
