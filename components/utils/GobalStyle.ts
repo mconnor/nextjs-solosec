@@ -41,6 +41,9 @@ const GlobalStyle = createGlobalStyle`
         --copy-blue: #003E6A;
         --isi-headline-bg: rbg(273,326,230);
         --gray: #6d6e71;
+        --green: rgb(41,147,51);
+     
+        
         --copy-color-secondary: var(--gray);
         --border-radius-4: 4px;
 
@@ -117,7 +120,7 @@ const GlobalStyle = createGlobalStyle`
 
 .page-container {
     background-color: white;
-    width: var(--ipad-max-width);
+    width: var(--ipad-width);
     display: grid;
     grid-template-columns: 6% 1fr 6%;
     grid-template-rows: var(--header-height) var(--main-height) var(--footer-height);
