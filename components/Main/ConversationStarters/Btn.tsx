@@ -14,8 +14,8 @@ const Main = styled.button<MainProps>`
     grid-Area: ${props => props.gridArea};
     border: solid 1px var(--button-selected-color);
 
-    background-color:  ${(props) => props.on ? '#003e6a' : 'rgba(0,0,0,0)'};
-    color:   ${props => props.on ? 'white' :  '#003e6a'};
+    background-color:  ${(props) => props.on ? 'var( --button-selected-color)' : 'rgba(0,0,0,0)'};
+    color:   ${props => props.on ? 'white' :  'var( --button-selected-color)'};
     border-radius: 10px;
     padding-right: 30px;
     padding-left:32px;

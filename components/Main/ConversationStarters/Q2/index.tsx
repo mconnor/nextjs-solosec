@@ -30,7 +30,7 @@ const TitleDiv = styled.div`
    
     line-height: 46px;
     letter-spacing: 0.01em;
-    color:var(--button-selcted-color);
+    color:var(--button-selected-color);
     white-space: pre-wrap;
 `;
 
