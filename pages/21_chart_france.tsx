@@ -7,7 +7,7 @@ export default () => (
         <Chart 
             chartTop={274} chartL={762} chartH={292}
             max1={222}
-            max2={229} colGap={35}
+            max2={229} gap={35}
             score1={77}
             score2={79}
             scoreBelowL={[187, 243]}
