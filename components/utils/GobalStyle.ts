@@ -59,16 +59,15 @@ const GlobalStyle = createGlobalStyle`
         and (-webkit-min-device-pixel-ratio: 1) {
     } */
 
+  @font-face {
+    font-family: 'Lato', sans-serif;
+    src: url(/fonts/Lato-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 
   @font-face {
-    font-family: 'Lato';
-    src: url(/fonts/Lato-Regular.ttf) format('truetype');
-    src: url(/fonts/Lato-Light.ttf) format('truetype');
-    src: url(/fonts/Lato-Bold.ttf) format('truetype');
-    src: url(/fonts/Lato-Black.ttf) format('truetype');
-    font-display: fallback;
-  }
-  /* @font-face {
     font-family: 'Lato', sans-serif;
     src: url(/fonts/Lato-Light.ttf) format('truetype');
     font-weight: lighter;
@@ -85,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
     src: url(/fonts/Lato-Black.ttf) format('truetype');
     font-weight: 900;
     font-style: normal;
-  } */
+  }
 
     * {
         box-sizing: border-box;
