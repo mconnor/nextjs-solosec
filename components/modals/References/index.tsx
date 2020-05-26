@@ -69,6 +69,18 @@ const Copy = styled.div`
     letter-spacing: 0.03em;
     line-height: 28px;
     color: var(--copy-color-secondary);
+    li { font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        em {
+            color: red;
+            font-weight: 100;
+            font-style: italic;
+        }
+    }
 `;
 const CloseBtn = styled.div`
     font-size: 36px;

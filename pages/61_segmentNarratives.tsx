@@ -6,7 +6,7 @@ import * as Sections from '../components/utils/Sections';
 
 export default () => (
     <Layout 
-        bgArt='/img/svg/pg61.svg'
+        bgArt='/img/svg/pg61-segment.svg'
         section={Sections.NONADHERENCE_40}>
     </Layout>
 )
