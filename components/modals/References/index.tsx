@@ -5,7 +5,7 @@ import *  as RefCopy from './copy/RefCopy'
 import * as Sections from "../../utils/Sections";
 
 const variants = {
-    open: { y: 0},
+    open: { y: 0 },
     closed: {
         y: "100%",
         transition: {
@@ -76,15 +76,15 @@ const CloseBtn = styled.div`
 `;
 
 type Props = {
-    section:string;
+    section: string;
 }
-const ReferencesWrapper:React.FC<Props> = ({ section }) => {
+const ReferencesWrapper: React.FC<Props> = ({ section }) => {
     // const { isReferenceOpen } = useAppState();
     // if (!isReferenceOpen) return null;
     return <References section={section} />;
 }
-const References:React.FC<Props> = ({ section }) => {
-    const { isReferenceOpen,toggleReference } = useAppState();
+const References: React.FC<Props> = ({ section }) => {
+    const { isReferenceOpen, toggleReference } = useAppState();
     console.log('section' + section)
 
     return (
@@ -96,24 +96,47 @@ const References:React.FC<Props> = ({ section }) => {
             <Container>
                 <Top>
                     <h1>REFERENCES</h1>
-                    <CloseBtn role="button" onClick={toggleReference}>&times;</CloseBtn>
+                    <CloseBtn role="button" 
+                        onClick={toggleReference}>&times;
+                    </CloseBtn>
                 </Top>
                 <Copy>
                     {
-                       (section===Sections.SPLASH) ? 
-                            <RefCopy.Splash />
-                        : (section===Sections.ACOG) ? 
-                            <RefCopy.Acog />
-                        : (section===Sections.ACOG_14_15) ? 
-                            <RefCopy.Acog2 /> 
-                        : (section===Sections.STUDIES) ? 
-                            <RefCopy.Studies /> 
-                        :
-                            <RefCopy.Nope />
-
-                      
+                        (section === Sections.SPLASH) ?
+                            <RefCopy.Splash_p3_7 />
+                            : (section === Sections.ACOG_12) ?
+                                <RefCopy.Acog />
+                                : (section === Sections.ACOG_14_15) ?
+                                    <RefCopy.Acog2 />
+                                    : (section === Sections.STUDIES_17) ?
+                                        <RefCopy.Studies />
+                                        : (section === Sections.CHART_19) ?
+                                            <RefCopy.Pg19 />
+                                            : (section === Sections.CHART_21) ?
+                                                <RefCopy.Pg21 />
+                                                : (section === Sections.ALCOHOL_23) ?
+                                                    <RefCopy.Pg23 />
+                                                    : (section === Sections.EASY_25) ?
+                                                        <RefCopy.Pg25_26 />
+                                                        : (section === Sections.EASY_25) ?
+                                                            <RefCopy.Pg25_26 />
+                                                            : (section === Sections.COUPON_28) ?
+                                                                <RefCopy.Pg28 />
+                                                                : (section === Sections.CHART_32) ?
+                                                                    <RefCopy.Pg32 />
+                                                                    : (section === Sections.CHART_34) ?
+                                                                        <RefCopy.Pg34 />
+                                                                        : (section === Sections.FOUR_MILLION) ?
+                                                                            <RefCopy.Pg38 />
+                                                                            : (section === Sections.NONADHERENCE_40) ?
+                                                                                <RefCopy.Pg40 />
+                                                                                : (section === Sections.RISK_66) ?
+                                                                                    <RefCopy.Pg66 />
+                                                                                    : (section === Sections.BV_68) ?
+                                                                                        <RefCopy.Pg68 />
+                                                                                        : <RefCopy.Nope />
                     }
-         
+
                 </Copy>
             </Container>
         </MainDiv>

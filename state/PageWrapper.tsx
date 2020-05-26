@@ -1,9 +1,13 @@
 import  {  createContext, useContext } from "react";
-import { useToggle, ToggleState } from "../hooks";
+import { useToggle, ToggleState, useSection, SectionState } from "../hooks";
+
 
 interface ReferenceState {
     isReferenceOpen: boolean;
     toggleReference?: () => void;
+
+    currSection?:string;
+    setCurrentSection?: (newSection:string) => void;
     
     isSafetyInfoOpen: boolean;
     toggleSafetyInfo?: () => void;
@@ -18,14 +22,15 @@ interface ReferenceState {
 }
 
 export const AppContext = createContext<ReferenceState>({
+
     isReferenceOpen: false,
     isSafetyInfoOpen: false,
     isPrescribingInfoOpen: false,
     isNavOpen: false
 });
 
-
 export const PageWrapper:React.FC = ({ children }) => {
+    const sectionState: SectionState = useSection('');
     const refState: ToggleState  = useToggle(false);
     const safetyInfoState: ToggleState  = useToggle(false);
     const prescribingInfoState: ToggleState  = useToggle(false);
@@ -34,6 +39,9 @@ export const PageWrapper:React.FC = ({ children }) => {
     return (
         <AppContext.Provider
             value={{
+                currSection: sectionState.section,
+                setCurrentSection: sectionState.setSection,
+
                 isReferenceOpen: refState.isToggled,
                 toggleReference: refState.toggle,
 

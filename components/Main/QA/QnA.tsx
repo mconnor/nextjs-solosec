@@ -5,7 +5,7 @@ type Props = {
     a: string;
 }
 
-const QnA: React.FC<Props> = ({ q, a }) => {
+const QnA: React.FC<Props> = ({ q}) => {
     return (
         <div className='container'>
             <div className={styles.question}

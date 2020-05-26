@@ -2,6 +2,8 @@
 
 import Layout from '../components/Layout';
 import QA from '../components/Main/QA'
+import * as Sections from '../components/utils/Sections';
+
 
 
 const QARRAY = [
@@ -62,7 +64,10 @@ export default () =>{
     console.log('QARRAY');
     // console.log(QARRAY);
     return (
-    <Layout bgArt='/img/svg/pg71-BG.svg'>
+    <Layout 
+        bgArt='/img/svg/pg71-BG.svg'
+        section={Sections.BV_68}
+    >
        <QA qaArray={QARRAY} />
     </Layout>
 )}

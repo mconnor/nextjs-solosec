@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import ConversationStarters from '../components/Main/ConversationStarters/Q1'
-
+import * as Sections from '../components/utils/Sections';
 
 const btnArray = [
     'What percentage of patients are satisfied with Solosec?',
@@ -9,7 +9,10 @@ const btnArray = [
 ];
 
 export default () => (
-    <Layout bgArt='/img/svg/pg42-conversation-starter-bg.svg'>
+    <Layout 
+        bgArt='/img/svg/pg42-conversation-starter-bg.svg'
+        section={Sections.NONADHERENCE_40}>
+       
         <ConversationStarters
             buttonCopyArray={btnArray} />
     </Layout>

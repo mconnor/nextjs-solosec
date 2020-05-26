@@ -1,10 +1,11 @@
 import Layout from '../components/Layout';
 import Chart from '../components/Main/Chart'
-
+import * as Sections from '../components/utils/Sections'
 
 export default () => (
-    <Layout bgArt='/img/svg/pg21.svg'>
-        <Chart chartTop={274} chartL={762} chartH={292}
+    <Layout bgArt='/img/svg/pg21.svg' section={Sections.CHART_21}>
+        <Chart 
+            chartTop={274} chartL={762} chartH={292}
             max1={222}
             max2={229} colGap={35}
             score1={77}
@@ -14,5 +15,4 @@ export default () => (
         />
     </Layout>
 )
-
 
