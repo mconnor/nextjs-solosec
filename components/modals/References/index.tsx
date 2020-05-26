@@ -96,7 +96,7 @@ const References: React.FC<Props> = ({ section }) => {
             <Container>
                 <Top>
                     <h1>REFERENCES</h1>
-                    <CloseBtn role="button" 
+                    <CloseBtn role="button"
                         onClick={toggleReference}>&times;
                     </CloseBtn>
                 </Top>
@@ -118,10 +118,10 @@ const References: React.FC<Props> = ({ section }) => {
                                                     <RefCopy.Pg23 />
                                                     : (section === Sections.EASY_25) ?
                                                         <RefCopy.Pg25_26 />
-                                                        : (section === Sections.EASY_25) ?
-                                                            <RefCopy.Pg25_26 />
-                                                            : (section === Sections.COUPON_28) ?
-                                                                <RefCopy.Pg28 />
+                                                        : (section === Sections.COUPON_28) ?
+                                                            <RefCopy.Pg28 />
+                                                            : (section === Sections.SURVEY_30) ?
+                                                                <RefCopy.Pg30 />
                                                                 : (section === Sections.CHART_32) ?
                                                                     <RefCopy.Pg32 />
                                                                     : (section === Sections.CHART_34) ?

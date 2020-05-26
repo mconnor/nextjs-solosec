@@ -1,13 +1,11 @@
 export const SPLASH:string = 'splash';
 export const ACOG_12:string = 'acog';
 export const ACOG_14_15:string = 'acog2';
-export const DISCOVER:string = 'discover';
 export const STUDIES_17:string = 'studies';
 export const CHART_19:string = '19';
 export const CHART_21:string = '21';
 export const ALCOHOL_23:string = '23';
 export const EASY_25:string = '25';
-// export const VIDEO_26:string = '26';
 export const COUPON_28:string = '28';
 export const SURVEY_30:string = '30';
 export const CHART_32:string = '32';
