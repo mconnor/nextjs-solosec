@@ -88,12 +88,8 @@ const MARG = 80;
 
 
 const ModalFooter = styled.div`
-    /* background-image:url(/img/05_safetyInfoFooter.png);
-    background-repeat: no-repeat; */
     display: grid;
     grid-template-columns: 70px 114px 310px 1fr 274px 200px 80px;
-
-
     grid-template-areas: ". lupinLogo copyright .  slogan solosecLogo .";
     align-items:center;
     gap: 20px;

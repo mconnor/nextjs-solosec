@@ -19,3 +19,4 @@ yarn-error.log*
 .DS_Store
 /.vscode
 /netx.js.config
+/public/img/bg/.DS_Store
