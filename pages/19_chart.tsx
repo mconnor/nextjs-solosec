@@ -5,7 +5,10 @@ import * as Sections from '../components/utils/Sections';
 
 export default () => (
     <Layout bgArt='/img/svg/pg19.svg' section={Sections.CHART_19}>
-       <Chart />
+       <Chart
+            chartTop = {206}
+            chartH = {248}
+         />
     </Layout>
 )
 
