@@ -32,14 +32,22 @@ const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
 const Header: React.FC<Props> = ({ gridArea }) => {
-    const { toggleReference,toggleSafetyInfo,togglePrescribingInfo } = useAppState();
+    const { toggleReference,toggleSafetyInfo,togglePrescribingInfo, setNav,setSafteyInfo } = useAppState();
+
+    const togleRef = () => {
+       
+       
+        setSafteyInfo && setSafteyInfo(false);
+        setNav && setNav(false);
+        toggleReference &&  toggleReference();
+    }
 
     return (
         <MainDiv gridArea={gridArea}>
             <Hamburger />
             <NavBtn borderRight clickCallBack={togglePrescribingInfo}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={toggleSafetyInfo}>{SAFETY_MSG}</NavBtn>
-            <NavBtn clickCallBack={toggleReference}>{REFERENCE}</NavBtn>
+            <NavBtn clickCallBack={togleRef}>{REFERENCE}</NavBtn>
         </MainDiv>
     )
 }
