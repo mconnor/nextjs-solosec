@@ -9,7 +9,7 @@ export default () => (
             bgArt='/img/svg/pg70.svg'
             section={Sections.BV_68}
     >
-        <VideoAlcohol stillUrl='/img/video_still_70.png' />
+        <VideoAlcohol stillUrl='/img/video_still_70.png' videoUrl="/videos/Page-70-v18_multiperspective_1.mp4" />
     </Layout>
 )
 
