@@ -67,14 +67,9 @@ const Top = styled.div`
     background: rgb(213,233,247);
     border-top-right-radius: var(--border-radius-4);
     border-top-left-radius:  var(--border-radius-4);
-    /* display: grid;
-    grid-template-columns: 30px 1fr 30px;
-    align-items: center;
-    justify-content: space-between; */
-  
     padding-left:38px;
     h1{
-        font-family: Lato;
+       
         font-style: normal;
         font-weight: 600;
         font-size: 18px;

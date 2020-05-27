@@ -52,7 +52,7 @@ const Top = styled.div`
         font-weight: bold;
         }
     h1{
-        font-family: Lato;
+       
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -69,7 +69,7 @@ const Copy = styled.div`
     letter-spacing: 0.03em;
     line-height: 28px;
     color: var(--copy-color-secondary);
-    li { font-family: Lato;
+    li {
         font-style: normal;
         font-weight: normal;
         font-size: 20px;

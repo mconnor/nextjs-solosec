@@ -4,7 +4,7 @@ import * as Sections from '../components/utils/Sections';
 
 const btnArray = [
     'Alcohol or food restrictions',
-    'Dosage and Administration',
+    'Dosage and administration',
     'Cost of medication',
     'Other'
 ];

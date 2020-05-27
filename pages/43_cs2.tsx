@@ -7,6 +7,7 @@ const btnArray = [
     '26%-50%',
     '51%-75%',
     '76%-100%'
+
 ];
 
 const HEADLINE = 'What percentage of patients are\nsatisfied with Solosec?'

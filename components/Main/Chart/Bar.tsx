@@ -54,7 +54,7 @@ type ScoreProps = {
 
 
 const Score = styled.div<ScoreProps>`
-    font-family: Lato;
+   
     font-style: normal;
     font-weight: normal;
     font-size:${prop => `${prop.fontSize}px`};
