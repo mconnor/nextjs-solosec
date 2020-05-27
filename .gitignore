@@ -24,3 +24,4 @@ yarn-error.log*
 /.idea/nextjs-solosec.iml
 /.idea/modules.xml
 /.idea/misc.xml
+/.idea/.gitignore
