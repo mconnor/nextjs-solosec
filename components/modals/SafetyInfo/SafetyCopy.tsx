@@ -43,7 +43,8 @@ const Ulist = styled.ul`
     color: var(--copy-color-secondary);
     letter-spacing: 0.065em;
     li {
-        margin-top: 30px;
+        margin-top: 20px;
+
     }
 `;
 

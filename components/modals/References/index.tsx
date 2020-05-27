@@ -17,11 +17,10 @@ const variants = {
 
 const MainDiv = styled(motion.div)`
     z-index: 2;
-    width: var( --ipad-max-width);
-    height: var(--ipad-max-height);
-    position: fixed;
-    top:0;
-    left:0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
 `;

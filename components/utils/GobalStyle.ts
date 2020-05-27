@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
         --ipad-min-height: 834px;
 
         --ipad-width: var(--ipad-max-width);
-        --ipad-height: var(--ipad-max-height);
+        --ipad-height: calc(var(--ipad-max-height) - 50px);
 
         --header-height: 100px; //80
         --main-height: 750px; //607
@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
         --primary-btn-hover-color: gray;
         --yellow: rgb(128, 124, 116);
         --copy-blue: #003E6A;
-        --nav-blue:#034063:
+        --nav-blue:#034063;
 
 
         --isi-blue: rgb(213,233,247);     
@@ -50,9 +50,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
 
-    * {
+    /* * {
         box-sizing: border-box;
-    }
+    } */
     
     html {
         

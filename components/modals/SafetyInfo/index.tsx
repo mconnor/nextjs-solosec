@@ -34,15 +34,16 @@ const variants = {
 const InnerDiv = styled.div`
     background: white;
     padding-top:30px;
+   
 `;
 
 
 const WrapperContainer = styled(motion.div)`
-    width:var(--ipad-max-width);
-    height:var(--main-footer-height);
-
+    width:100vw;
+    max-width: var( --ipad-width);
     position: fixed;
     top:var(--header-height);
+    height: calc(100vh - var(--header-height));
     left:0;
 
     padding-left: 20px;
@@ -50,14 +51,16 @@ const WrapperContainer = styled(motion.div)`
     padding-top: 24px;
     overflow:hidden;
     background:white;
+    border:1px solid black;
 `;
 
 const Container = styled.div`
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 52px 1fr auto;
+    grid-template-rows: 52px 1fr 100px;
     align-items:center;
+  
 `;
 
 

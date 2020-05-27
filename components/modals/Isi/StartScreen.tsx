@@ -7,28 +7,26 @@ import * as Sections from "../../utils/Sections";
 
 
 const Container = styled.div`
-position:absolute;
+    position:absolute;
     z-index:3;
-    padding:32px;
-    height:var(--ipad-height);
-    width:var(--ipad-width);
+    padding:39px;
+    height:100vh;
+    width:100vw;
     background:rgba(0,0,0,.5);
     display:grid;
     grid-template-columns: 1fr;
-    justify-items: stretch;
-
+    grid-template-rows:  1fr;
 `;
 
 const MyGrid = styled.div`
     background:white;
     border: 20px solid var(--isi-blue);
     border-radius: var(--border-radius-4);
-    width:100%;
-    height: 100%;
+ 
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 148px 1fr auto;
-    
+   
+    grid-template-rows: 130px 1fr 100px;
 `;
 
 const Header = styled.div`
@@ -42,10 +40,11 @@ const Header = styled.div`
 
 const Main = styled.div`
   padding: 0 var(--isi-margin) 0 var(--isi-margin);
+  overflow:hidden;
 `;
 
 const Footer = styled.div`
-        display: grid;
+    display: grid;
     grid-template-columns: 70px 114px 310px 1fr 274px 200px 80px;
     grid-template-areas: ". lupinLogo copyright .  slogan solosecLogo .";
     align-items:center;
@@ -70,7 +69,6 @@ const Slogan = styled.h3`
 `;
 const Img = styled.img`
    height:125px;
-
 `;
 
 
@@ -92,22 +90,22 @@ const StartScreen: React.FC<Props> = ({ section }) => {
                 <Main>
                     <Copy />
                 </Main>
-                <Footer>
-                <GridAreaDiv gridArea="lupinLogo">
-                    <LumpinLogo />
-                </GridAreaDiv>
+                    <Footer>
+                    <GridAreaDiv gridArea="lupinLogo">
+                        <LumpinLogo />
+                    </GridAreaDiv>
 
-                <GridAreaDiv gridArea="copyright">
-                    <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
-                </GridAreaDiv>
+                    <GridAreaDiv gridArea="copyright">
+                        <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
+                    </GridAreaDiv>
 
-                <GridAreaDiv gridArea="slogan">
-                    <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>
-                </GridAreaDiv>
+                    <GridAreaDiv gridArea="slogan">
+                        <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>
+                    </GridAreaDiv>
 
-                <GridAreaDiv gridArea="solosecLogo">
-                    <img src="/img/solosec-logo-isi.svg" width="195"></img>
-                </GridAreaDiv>
+                    <GridAreaDiv gridArea="solosecLogo">
+                        <img src="/img/solosec-logo-isi.svg" width="195"></img>
+                    </GridAreaDiv>
 
                 </Footer>
 
