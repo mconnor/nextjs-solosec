@@ -3,7 +3,7 @@ import ConversationStarters from '../components/Main/ConversationStarters/Q2'
 import * as Sections from '../components/utils/Sections';
 
 const btnArray = [
-    '0-25%',
+    '0%-25%',
     '25%-50%',
     '50%-75%',
     '75%-100%'
