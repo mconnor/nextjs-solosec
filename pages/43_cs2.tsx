@@ -4,9 +4,15 @@ import * as Sections from '../components/utils/Sections';
 
 const btnArray = [
     '0%-25%',
+<<<<<<< HEAD
     '25%-50%',
     '50%-75%',
     '75%-100%'
+=======
+    '26%-50%',
+    '51%-75%',
+    '76%-100%'
+>>>>>>> c5c88b5ea3932817d860784e8978631dac9fc636
 ];
 
 const HEADLINE = 'What percentage of patients are\nsatisfied with Solosec?'

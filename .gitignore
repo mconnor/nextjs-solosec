@@ -20,3 +20,7 @@ yarn-error.log*
 /.vscode
 /netx.js.config
 /public/img/bg/.DS_Store
+/.idea/vcs.xml
+/.idea/nextjs-solosec.iml
+/.idea/modules.xml
+/.idea/misc.xml

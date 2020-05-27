@@ -103,23 +103,44 @@ export const Pg23 = () => {
             </li>
 
             <li>
-                Samir, Z. Overview: How is Alcohol Metabolized by the Body? National Institute on Alcohol Abuse and Alcoholism. Accessed 20 Feb 2019. https://pubs.niaaa.nih.gov/publications/arh294/245-255.htm.
+                Samir, Z. Overview: How is Alcohol Metabolized by the Body? National Institute on Alcohol Abuse and Alcoholism. Accessed 20 Feb 2019.
+                https://pubs.niaaa.nih.gov/publications/arh294/245-255.htm.
             </li>
 
             <li>
-                Noureldin M, Krause J, Jin L, Ng V, Tran M. Drug Alcohol Interactions: A Review of 3 Therapeutic Cases. U.S. Pharmacist. 2017; 17 Nov. https://www.uspharmacist.com/article/drug-alcohol-interactions-a-review-of-three-therapeutic-classes. Accessed 20 Feb 2019
+                Noureldin M, Krause J, Jin L, Ng V, Tran M. Drug Alcohol Interactions: A Review of 3 Therapeutic Cases. U.S. Pharmacist. 2017; 17 Nov.
+                https://www.uspharmacist.com/article/drug-alcohol-interactions-a-review-of-three-therapeutic-classes. Accessed 20 Feb 2019.
             </li>
              
             <li>
-                Pentikis HS, Adetoro N. In vitro metabolic profile of secnidazole, a 5-nitroimidazole antibiotic for the treatment of bacterial vaginosis. Manuscr Prep. 2017.
+                Flagyl Extended Release [prescribing information]. Chicago, IL: G.D. Searle LLC; 2017.
             </li>
 
             <li>
-                Gillis JC, Wiseman LR. Secnidazole. A review of its antimicrobial activity, pharmacokinetic properties and therapeutic use in the management of protozoal infections and bacterial vaginosis. Drugs. 1996;51(4):621-638. <a href='http://www.ncbi.nlm.nih.gov/' target='_blank'>http://www.ncbi.nlm.nih.gov/</a> pubmed/8706597
+                Tinidazole Tablets [prescribing information]. Buffalo Grove, IL: G.D. PACK Pharmaceuticals, LLC; 2013.
             </li>
 
             <li>
-                Lamp KC, Freeman CD, Klutman NE, Lacy MK. Pharmacokinetics and pharmacodynamics of the nitroimidazole antimicrobials. Clin Pharmacokinet. 1999;36(5):353-373. doi:10.2165/00003088-199936050-00004
+                Metrogel [prescribing information]. Sellersville, PA: Teva Pharmaceuticals USA; 2005.
+            </li>
+
+            <li>
+                Nuvessa [prescribing information]. Madrid, Spain: Chemo Research SL; 2017.
+            </li>
+
+            <li>
+                Pentikis HS, Adetoro N. In vitro metabolic profile of secnidazole, a 5-nitroimidazole antibiotic for the treatment of bacterial vaginosis.
+                Manuscr Prep. 2017.
+            </li>
+
+            <li>
+                Gillis JC, Wiseman LR. Secnidazole. A review of its antimicrobial activity, pharmacokinetic properties and therapeutic use in the
+                management of protozoal infections and bacterial vaginosis. Drugs. 1996;51(4):621-638. http://www.ncbi.nlm.nih.gov/pubmed/8706597.
+            </li>
+
+            <li>
+                Lamp KC, Freeman CD, Klutman NE, Lacy MK. Pharmacokinetics and pharmacodynamics of the nitroimidazole antimicrobials.
+                Clin Pharmacokinet. 1999;36(5):353-373. doi:10.2165/00003088-199936050-00004.
             </li>
         </ol>
     )
@@ -248,8 +269,7 @@ export const Pg68 = () => {
     return (
         <ol>
            <li>
-Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in MMWR Recomm Rep. 2015;64(33):924]. MMWR Recomm Rep. 2015;64(RR-03):1-137
-</li>
+               Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in MMWR Recomm Rep. 2015;64(33):924]. MMWR Recomm Rep. 2015;64(RR-03):1-137.</li>
         </ol>
     )
 }

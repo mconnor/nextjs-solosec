@@ -6,7 +6,8 @@ const variantsV= {
     start: {
         scaleY: 0,
         transition: {
-            delay: .2
+            delay: .2,
+            duration: 2
         }
     },
     end: {
@@ -18,7 +19,8 @@ const variantsH = {
     start: {
         scaleX: 0,
         transition: {
-            delay: .2
+            delay: .2,
+            duration: 2
         }
     },
     end: {
@@ -89,7 +91,8 @@ const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, ho
                 type: "spring",
                 stiffness: 260,
                 damping: 20,
-                delay: .5
+                delay: .5,
+                mass: 2
             }}
         >
             <Score fontSize={24}>{score}%</Score>
