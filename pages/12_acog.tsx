@@ -4,7 +4,9 @@ import * as Sections from '../components/utils/Sections'
 
 
 export default () => (
-    <Layout noBgArt={true} section={Sections.ACOG_12}>
-        <img src="/img/svg/pg12.svg" className='fillMain' />
+    <Layout bgArt="/img/svg/pg12.svg" section={Sections.ACOG_12}>
+        <div>
+            <object type="image/svg+xml" data="/img/svg/pg12-checks.svg" />
+        </div>
     </Layout>
 )
