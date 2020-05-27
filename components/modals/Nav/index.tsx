@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import { useAppState } from "../../../state";
@@ -122,10 +122,7 @@ const IconBg = styled.button`
 
 const Nav = () => {
     const { isNavOpen } = useAppState();
-    const [kolor, setKolor] = useState('green');
-    const navtTo = () => {
-        console.log('c')
-    }
+   
 
     return (
         <MainDiv
