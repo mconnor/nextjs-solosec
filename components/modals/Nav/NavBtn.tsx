@@ -1,10 +1,12 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components'
+import Link from 'next/link';
+import { useAppState } from '../../../state';
 
-
-interface ChildrenProps  {
+interface ChildrenProps {
     children: ReactNode;
-    clickCallBack: (() => void) | undefined;
+    // clickCallBack: (() => void) | undefined;
+    pageName?: string;
 }
 
 
@@ -18,16 +20,32 @@ const Btn = styled.div`
     font-size: 36px;
 
 /* or 178% */
-border: 1px solid black;
+
     letter-spacing: -0.015em;
-    color: red; 
+    color: white; 
+    cursor: pointer;
+
+    &:hover {
+        color: lightblue;
+    }
+    a {
+        text-decoration: none;
+        color:white;
+    }
 `;
 
 
-const NavBtn: React.FC<ChildrenProps> = ({ children, clickCallBack }) => {
+
+
+const NavBtn: React.FC<ChildrenProps> = ({ children, pageName }) => {
+    const url = "/" + pageName;
+    const { setNav } = useAppState()
     return (
-        <Btn role='button' onClick={() => clickCallBack && clickCallBack()} >
-            {children}
+        <Btn role='button'  onClick={_prevState => setNav &&  setNav(false)} >
+
+            <Link href={url}>
+                <a>{children}</a>
+            </Link>
         </Btn>
     )
 }

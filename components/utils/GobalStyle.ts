@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
         --primary-btn-hover-color: gray;
         --yellow: rgb(128, 124, 116);
         --copy-blue: #003E6A;
-        --nav-blue:0x034063:
+        --nav-blue:#034063:
 
 
         --isi-blue: rgb(213,233,247);     
