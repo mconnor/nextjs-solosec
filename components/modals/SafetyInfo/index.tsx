@@ -21,7 +21,7 @@ import LumpinLogo from '../../svg/LupinLogo'
 const variants = {
     open: { y: 0 },
     closed: {
-        y: "80%",
+        y: "82.5%",
         transition: {
             delay: .2
         }
@@ -135,7 +135,7 @@ export const SafetyModal: React.FC = () => {
 
         <Container>
             <Top onClick={toggleSafetyInfo}>
-                <h1>Important Safety Information</h1>
+                <h1 style={{float:"left"}}>Important Safety Information</h1><span style={{float: "left", marginLeft: 5, marginTop: 15}}><img src="/img/svg/arrow-down.svg" width="12"></img></span>
             </Top>
 
             <InnerDiv>

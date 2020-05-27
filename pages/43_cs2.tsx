@@ -3,10 +3,10 @@ import ConversationStarters from '../components/Main/ConversationStarters/Q2'
 import * as Sections from '../components/utils/Sections';
 
 const btnArray = [
-    '0-25%',
-    '25%-50%',
-    '50%-75%',
-    '75%-100%'
+    '0%-25%',
+    '26%-50%',
+    '51%-75%',
+    '76%-100%'
 ];
 
 const HEADLINE = 'What percentage of patients are\nsatisfied with Solosec?'
