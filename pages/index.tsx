@@ -6,7 +6,9 @@ import * as Sections from '../components/utils/Sections';
 
 const MainDiv = styled.div`
     margin: 20px 200px 0 200px;
-    
+    video::-webkit-media-controls-overlay-play-button {
+      display: none;
+      };
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
    

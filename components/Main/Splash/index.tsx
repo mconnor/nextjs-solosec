@@ -19,7 +19,7 @@ const LogoWrapper = styled.img`
     position: absolute;
     z-index: 2;
     top: 105px;
-    left: 75px;
+    left: 86px;
     width: 295px;
 `;
 
