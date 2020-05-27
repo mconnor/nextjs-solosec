@@ -12,6 +12,7 @@ const Container = styled.div`
     padding:39px;
     height:100vh;
     width:100vw;
+    max-width: var( --ipad-width);
     background:rgba(0,0,0,.5);
     display:grid;
     grid-template-columns: 1fr;
