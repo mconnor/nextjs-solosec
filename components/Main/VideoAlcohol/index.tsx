@@ -5,10 +5,7 @@ type Props = {
     stillUrl:string;
 }
 
-const Img = styled.img`
-    width: 694px;
-    height:408px;
-`;
+
 
 const Main = styled.div`
     display: grid;
