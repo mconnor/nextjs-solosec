@@ -13,11 +13,12 @@ const MainDiv = styled.div<Props>`
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
     color: $primary;
-    font-family: Lato;
-    font-style: normal;
+
     font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 127%;
+
+
 `;
 
 

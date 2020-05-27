@@ -1,6 +1,8 @@
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import SpaLink from '../components/SpaLink';
+import * as Sections from '../components/utils/Sections';
+
 
 const MainDiv = styled.div`
     margin: 20px 200px 0 200px;
@@ -20,7 +22,8 @@ const MainDiv = styled.div`
 
 
 export default () => (
-		<Layout>
+		<Layout
+            section={Sections.INDEX}>
 			<MainDiv>
                 <SpaLink pageName='02_splash' />
                 <SpaLink pageName='06_discover' />
@@ -49,12 +52,6 @@ export default () => (
                 <SpaLink pageName='68_BVsequelae' />
                 <SpaLink pageName='70_video' />
                 <SpaLink pageName='71_qa' />
-                <SpaLink pageName='72_qa' />
-                <SpaLink pageName='73_qa' />
-                <SpaLink pageName='74_qa' />
-                <SpaLink pageName='75_qa' />
-                <SpaLink pageName='76_qa' />
-                <SpaLink pageName='77_qa' />
             </MainDiv>
 		</Layout>
 )

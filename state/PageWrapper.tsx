@@ -3,6 +3,8 @@ import { useToggle, ToggleState, useSection, SectionState } from "../hooks";
 
 
 interface ReferenceState {
+
+
     isReferenceOpen: boolean;
     toggleReference?: () => void;
 
@@ -11,6 +13,9 @@ interface ReferenceState {
     
     isSafetyInfoOpen: boolean;
     toggleSafetyInfo?: () => void;
+
+    isInitSafetyInfoOpen: boolean;
+    setInitSafteyInfo?: React.Dispatch<React.SetStateAction<boolean>>;
 
     isPrescribingInfoOpen: boolean;
     togglePrescribingInfo?: () => void;
@@ -22,9 +27,9 @@ interface ReferenceState {
 }
 
 export const AppContext = createContext<ReferenceState>({
-
+    isInitSafetyInfoOpen:true,
     isReferenceOpen: false,
-    isSafetyInfoOpen: false,
+    isSafetyInfoOpen: true,
     isPrescribingInfoOpen: false,
     isNavOpen: false
 });
@@ -33,7 +38,9 @@ export const PageWrapper:React.FC = ({ children }) => {
     const sectionState: SectionState = useSection('');
     const refState: ToggleState  = useToggle(false);
     const safetyInfoState: ToggleState  = useToggle(false);
+    const initSafetyInfoState: ToggleState  = useToggle(true);
     const prescribingInfoState: ToggleState  = useToggle(false);
+   
     const navState: ToggleState  = useToggle(false);
 
     return (
@@ -50,6 +57,9 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 isPrescribingInfoOpen: prescribingInfoState.isToggled,
                 togglePrescribingInfo: prescribingInfoState.toggle,
+
+                isInitSafetyInfoOpen: initSafetyInfoState.isToggled,
+                setInitSafteyInfo: initSafetyInfoState.setToggle,
 
                 isNavOpen: navState.isToggled,
                 toggleNav: navState.toggle,

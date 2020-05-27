@@ -1,3 +1,4 @@
+export const INDEX:string = 'index';
 export const SPLASH:string = 'splash';
 export const ACOG_12:string = 'acog';
 export const ACOG_14_15:string = 'acog2';

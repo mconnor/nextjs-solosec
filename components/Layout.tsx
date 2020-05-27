@@ -11,6 +11,7 @@ import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
 import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
+import StartScreen  from '../components/modals/Isi/StartScreen'
 
 
 type Props = {
@@ -38,7 +39,7 @@ const PageContainer = styled.div`
 `;
 
 const FixedDiv = styled.div`
-    position: fixed;
+    position: absolute;
     top: 5px;
     left: 600px;
 `;
@@ -46,17 +47,22 @@ const FixedDiv = styled.div`
 
 const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{ 
     const router = useRouter();
-    console.log(router.pathname )
+    // console.log(router.pathname )
+
+ 
     return (
 		<>
             <Head>
 				<title>{title}</title>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap" rel="stylesheet"></link>
 			</Head>
             <GlobalStyle/>
             
             <PageWrapper>
+                <StartScreen section={section}/>
+                
                 <Nav />
                 <ReferencesWrapper section={section}/>
                 <FixedDiv><SpaLink pageName='index' /></FixedDiv>

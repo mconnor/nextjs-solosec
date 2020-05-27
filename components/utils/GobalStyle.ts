@@ -2,15 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        /* --button-font: 1.125rem;
-        --mobile-button-font: 1rem;
-        --headline-font-size: 4.375rem;
-        --headline-mobile-font-size:2.344rem;
-        --dark-blue:#0D2138;
-        --default-headline-color: var(--dark-blue);
-        --copy-blue: #13273E;
-        --default-font-color: var(--copy-blue); */
-
         --ipad-max-width: 1366px;
         --ipad-max-height: 1024px;
         --ipad-min-width: 1112px;
@@ -21,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
 
         --header-height: 100px; //80
         --main-height: 750px; //607
+
+        --grayout-bg: rgba(0,0 ,0 ,0.8);
 
 
         --footer-height: 170px; // 147
@@ -35,56 +28,27 @@ const GlobalStyle = createGlobalStyle`
         --fourty-two-blue: 0x003e6a;
         --slogan-blue: #002851
         --bg: #fff;
-        --primary: #fff;
+        --primary: white;
         --primary-btn-hover-color: gray;
         --yellow: rgb(128, 124, 116);
         --copy-blue: #003E6A;
+        --nav-blue:0x034063:
+
+
+        --isi-blue: rgb(213,233,247);     
         --isi-headline-bg: rbg(273,326,230);
         --gray: #6d6e71;
         --green: rgb(41,147,51);
+
+        --isi-margin: 80px;
      
         
         --copy-color-secondary: var(--gray);
         --border-radius-4: 4px;
 
         --safety-info-margin: 80px;
-    
-      
     }
 
-    /* @media only screen 
-        and (min-device-width: 768px) 
-        and (max-device-width: 1024px) 
-        and (orientation: landscape) 
-        and (-webkit-min-device-pixel-ratio: 1) {
-    } */
-
-  @font-face {
-    font-family: 'Lato', sans-serif;
-    src: url(/fonts/Lato-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-
-  @font-face {
-    font-family: 'Lato', sans-serif;
-    src: url(/fonts/Lato-Light.ttf) format('truetype');
-    font-weight: lighter;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Lato', sans-serif;
-    src: url(/fonts/Lato-Bold.ttf) format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Lato', sans-serif;
-    src: url(/fonts/Lato-Black.ttf) format('truetype');
-    font-weight: 900;
-    font-style: normal;
-  }
 
     * {
         box-sizing: border-box;
@@ -99,9 +63,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
     }
     body {
-        font-family: 'Lato',  sans-serif;
+        font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
        margin:0;
        padding:0;
+       position:fixed;
     }
 
  .btn {

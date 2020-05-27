@@ -13,7 +13,7 @@ const SubHead = styled.h2`
 
 const StrongDiv = styled(SubHead)`
     color: black;
-    /* font-size: 18px; */
+    font-size: 14px;
     line-height: 22px;
 `;
 
@@ -27,7 +27,7 @@ const Ptag = styled.p`
    
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 22px;
 /* or 122% */
     letter-spacing: 0.06em;
@@ -37,7 +37,7 @@ const Ptag = styled.p`
 const Ulist = styled.ul`
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 22px;
     // or 122% 
     color: var(--copy-color-secondary);
@@ -48,7 +48,7 @@ const Ulist = styled.ul`
 `;
 
 const Container = styled.div<Props>`
-   
+   font-size: 14px;
 
     padding-left:${props => `${props.marginLR}px`};
     padding-right:${props => `${props.marginLR}px`};
@@ -61,7 +61,7 @@ type Props = {
     marginLR?:number;
 }
 
-const SafetyCopy: React.FC<Props> = ({ marginLR = 80}) => {
+const Copy: React.FC<Props> = ({ marginLR}) => {
     return (
         <Container marginLR={marginLR}>
             <SubHead>Indication</SubHead>
@@ -96,4 +96,4 @@ const SafetyCopy: React.FC<Props> = ({ marginLR = 80}) => {
     )
 }
 
-export default SafetyCopy
+export default Copy
