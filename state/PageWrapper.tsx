@@ -25,7 +25,7 @@ interface ReferenceState {
     isPrescribingInfoOpen: boolean;
     togglePrescribingInfo?: () => void;
 
-
+    sequence: string;
 
     isNavOpen: boolean;
     toggleNav?: () => void;
@@ -39,7 +39,8 @@ export const AppContext = createContext<ReferenceState>({
     isReferenceOpen: false,
     isSafetyInfoOpen: true,
     isPrescribingInfoOpen: false,
-    isNavOpen: false
+    isNavOpen: false,
+    sequence: "",
 });
 
 export const PageWrapper:React.FC = ({ children }) => {
@@ -77,7 +78,7 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 isaQAopen: qaState.isToggled,
                 toggleQA: qaState.toggle,
-                setQA: qaState.setToggle,
+                setQA: qaState.setToggle
             }}
         >
             {children}
