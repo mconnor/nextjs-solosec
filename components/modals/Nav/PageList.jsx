@@ -41,12 +41,12 @@ export const PageList = {
 
 let sequenceState = null;
 
-export function linkTo(page:string, t: boolean, seq:string) {
+export function linkTo(page, t, seq) {
     sequenceState = seq;
     setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
 }
 
-export function swipeLink(n:number, dir:string) {
+export function swipeLink(n, dir) {
     console.log(sequenceState, !sequenceState, n, dir);
     const path = PageList.seq.main;
     if (!sequenceState) {
