@@ -5,7 +5,7 @@ type Props = {
     key: string;
 }
 
-export const useCookies = ({ key }: Props): [string, Dispatch<SetStateAction<string>>] => {
+export const useCookie = ({ key }: Props): [string, Dispatch<SetStateAction<string>>] => {
     const initial = Cookies.get(key) ?? '';
     const [cookie, setStateCookie] = useState(initial);
 
