@@ -44,7 +44,6 @@ export function linkTo(page:string, t: boolean) {
 }
 
 export function swipeLink(n:number, dir:string) {
-    console.log("Swiping");
     const path = PageList.seq.main;
     if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
     if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];

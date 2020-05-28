@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 const SubHead = styled.h2`
-    color: var(--royal-blue);
+    //color: var(--royal-blue);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 20px;
     line-height: 16px;
+    color: #072b49;
     /* identical to box height, or 80% */
 
     letter-spacing: 0.04em;
@@ -15,6 +16,10 @@ const StrongDiv = styled(SubHead)`
     color: black;
     /* font-size: 18px; */
     line-height: 22px;
+    a {
+      color: var(--royal-blue-light);
+      text-decoration: none;
+    }
 `;
 
 const Btn = styled(StrongDiv)`
@@ -66,7 +71,7 @@ const SafetyCopy: React.FC<Props> = ({ marginLR = 80}) => {
     return (
         <Container marginLR={marginLR}>
             <SubHead>Indication</SubHead>
-            <Ptag>SOLOSEC<sup>&reg;</sup> (secnidazole) 2 g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
+            <Ptag>SOLOSEC<sup>&reg;</sup> (secnidazole) 2g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
 
             <SubHead>Dosage and Administration</SubHead>
 
@@ -75,11 +80,11 @@ const SafetyCopy: React.FC<Props> = ({ marginLR = 80}) => {
             <SubHead>Important Safety Information</SubHead>
 
             <Ulist>
-                <li>SOLOSEC is contraindicated in patients with a history of hypersensitivity to secnidazole, other ingredients of the formulation, or other nitroimidazole derivatives. </li>
+                <li>SOLOSEC is contraindicated in patients with a history of hypersensitivity to secnidazole, other ingredients of the formulation, or other nitroimidazole derivatives.</li>
 
                 <li>Vulvo-vaginal candidiasis may develop with SOLOSEC and require treatment with an antifungal agent.</li>
 
-                <li>Potential risk of carcinogenicity is unknown and has not been studied. Carcinogenicity has been seen in rodents chronically treated with nitroimidazole derivatives, which are structurally related to secnidazole. Chronic use should be avoided. </li>
+                <li>Potential risk of carcinogenicity is unknown and has not been studied. Carcinogencity has been seen in rodents chronically treated with nitroimidazole derivatives, which are structurally related to secnidazole. Chronic use should be avoided.</li>
 
                 <li>Breastfeeding is not recommended. Patients should discontinue breastfeeding for 96 hours after administration of SOLOSEC.</li>
 

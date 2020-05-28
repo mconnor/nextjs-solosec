@@ -51,7 +51,7 @@ const WrapperContainer = styled(motion.div)`
     padding-top: 24px;
     overflow:hidden;
     background:white;
-    border:1px solid black;
+    //border:1px solid black;
 `;
 
 const Container = styled.div`
@@ -119,6 +119,9 @@ interface IgridArea {
 
 const GridAreaDiv = styled.div<IgridArea>`
     grid-area: ${(props) => props.gridArea};
+    p {
+    font-size: 12px;
+    }
 `;
 const Slogan = styled.h3`
     font-style: normal;
