@@ -11,7 +11,7 @@ interface ReferenceState {
 
     isReferenceOpen: boolean;
     toggleReference?: () => void;
-
+// this is new
     currSection?:string;
     setCurrentSection?: (newSection:string) => void;
 
