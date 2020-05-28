@@ -49,9 +49,11 @@ const Ulist = styled.ul`
     // or 122% 
     color: var(--copy-color-secondary);
     letter-spacing: 0.065em;
+    list-style-position: inside;
+    padding-left: 0;
     li {
         margin-top: 20px;
-
+        
     }
 `;
 
