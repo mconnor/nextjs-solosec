@@ -19,20 +19,20 @@ const Img = styled.img`
 
 
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
-    const [cookie, setCookie] = useCookie({ key: "seq" }) ;
+    const [cookie, setCookie] = useCookie({ key: "test" }) ;
     const [showSVG, setShowSVG] = useState(`/img/svg/${svglink}.svg`);
     const {currSeq, setCurrentSequence} = useAppState();
 
     const [linkUrl] = useState<string>(PageList["pages"][page])
 
-    // useEffect(() => {
-    //     setCurrentSequence && setCurrentSequence(seq);
-    //     setCookie(currSeq);
-    // },[showSVG])
+    useEffect(() => {
+        setCurrentSequence && setCurrentSequence(seq);
+        currSeq && setCookie(currSeq);
+    },[showSVG])
 
     function linkTo(page:string, linkUrl:string) {
-            setCookie(seq);
-            console.log(page, seq, currSeq, cookie);
+        
+            console.log(page, seq, currSeq);
             setTimeout(()=>{window.location.href = linkUrl;}, 100)
        
     }
