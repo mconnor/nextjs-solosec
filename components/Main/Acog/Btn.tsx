@@ -1,7 +1,7 @@
 
 import { useToggle } from '../../../hooks';
 import styled from 'styled-components';
-import {linkTo} from '../../../components/modals/Nav/PageList';
+import {linkTo} from '../../modals/Nav/PageList';
 
 type MainProps = {
     on: boolean;

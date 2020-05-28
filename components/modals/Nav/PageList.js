@@ -32,19 +32,48 @@ export const PageList = {
     },
     seq: {
         "main": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", '24', "25", "26", "27"],
-        "02_a": ["12", "6", "7", "2"],
+        "02_a": ["2", "12", "6", "7", "2"],
         "02_b": ["page12", "page6", "page7", "page2"],
         "02_c": ["page12", "page6", "page7", "page2"],
         "02_d": ["page12", "page6", "page7", "page2"]
     }
 };
 
+<<<<<<< HEAD:components/modals/Nav/PageList.js
 export function linkTo(page, t) {
+=======
+let sequenceState = null;
+
+export function linkTo(page, t, seq) {
+    sequenceState = seq;
+>>>>>>> origin/master:components/modals/Nav/PageList.jsx
     setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
 }
 
 export function swipeLink(n, dir) {
+<<<<<<< HEAD:components/modals/Nav/PageList.js
+=======
+    console.log(sequenceState, !sequenceState, n, dir);
+>>>>>>> origin/master:components/modals/Nav/PageList.jsx
     const path = PageList.seq.main;
-    if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
-    if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
+    if (!sequenceState) {
+        navigate();
+    } else {
+        if (PageList.seq[sequenceState].indexOf(path[n]) < 1) {
+            sequenceState  = null;
+            navigate();
+        } else {
+            const page = path[n];
+            const thisPath = PageList.seq[sequenceState];
+            const currentPage = thisPath.indexOf(page);
+            if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
+            if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
+        }
+    }
+
+    function navigate() {
+        if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
+        if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
+    }
 }
+

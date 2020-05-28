@@ -1,8 +1,11 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+<<<<<<< HEAD
 
 import {useSwipeable} from "react-swipeable";
 import {swipeLink} from "../modals/Nav/PageList";
+=======
+>>>>>>> origin/master
 
 
 type MainDivProps = {
@@ -32,11 +35,14 @@ const MainDiv = styled.div<MainDivProps>`
     overflow:hidden;
 `;
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/master
 type Props = {
     gridArea: string;
     foreGroundArt?: string;
@@ -44,9 +50,9 @@ type Props = {
     noBgArt?: boolean;
     children?: ReactNode;
     noBG?:boolean;
-    pageIndex:number;
 }
 
+<<<<<<< HEAD
 const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt, pageIndex }) => {
    console.log('pageIndex '+  pageIndex)
     const handlers = useSwipeable({
@@ -64,6 +70,15 @@ const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgA
                 <div>{children}{pageIndex}</div>
             </MainDiv>
         </div>
+=======
+const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt}) => {
+
+    return (
+        <MainDiv gridArea={gridArea} bgArt={bgArt}
+                 foreGroundArt={foreGroundArt } noBgArt={noBgArt}>
+            {children}
+        </MainDiv>
+>>>>>>> origin/master
     )
 }
 

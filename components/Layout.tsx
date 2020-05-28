@@ -12,7 +12,14 @@ import ReferencesWrapper from './modals/References';
 import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
 import StartScreen  from '../components/modals/Isi/StartScreen'
+import {useSwipeable} from "react-swipeable";
+import {swipeLink} from "./modals/Nav/PageList";
 
+const onSwiping = ({ dir }, pageIndex: number) => {
+    console.log(dir, pageIndex);
+    if (dir === "Left") swipeLink(pageIndex, "Left");
+    if (dir === "Right") swipeLink(pageIndex, "Right");
+}
 
 type Props = {
     children?: ReactNode;
@@ -48,6 +55,12 @@ const FixedDiv = styled.div`
 
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
+    const handlers = useSwipeable({
+        onSwiping: (eventData) => onSwiping(eventData, pageIndex),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+        trackTouch: true
+    });
     // console.log(router.pathname )
 
     // Code that turns off native swipes in OCE Sales
@@ -70,19 +83,19 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <ReferencesWrapper section={section}/>
                 <FixedDiv><SpaLink pageName='index' /></FixedDiv>
                 
-			    <PageContainer>
+			    <PageContainer {...handlers}>
                     <Header gridArea='header'/>
-                   
-                    <Main 
-                        gridArea='main' 
-                        children={children} 
-                        foreGroundArt={foreGroundArt} 
+
+                    <Main
+                        gridArea='main'
+                        children={children}
+                        foreGroundArt={foreGroundArt}
                         key={router.route}
                         noBgArt={noBgArt}
                         bgArt={bgArt}
                         pageIndex={pageIndex}
                     />
-                   
+
                     <Footer gridArea='footer'/>
                 </PageContainer>
             </PageWrapper>
