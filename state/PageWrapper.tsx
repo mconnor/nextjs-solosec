@@ -15,9 +15,6 @@ interface ReferenceState {
     currSection?:string;
     setCurrentSection?: (newSection:string) => void;
 
-
-
-
     currPageIndex?:number;
     setCurrPageIndex?: (newSection:number) => void;
     
@@ -49,7 +46,7 @@ export const AppContext = createContext<ReferenceState>({
     isSafetyInfoOpen: true,
     isPrescribingInfoOpen: false,
     isNavOpen: false,
-    currSeq: "",
+    currSeq: ""
 });
 
 export const PageWrapper:React.FC = ({ children }) => {

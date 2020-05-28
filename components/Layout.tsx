@@ -13,15 +13,11 @@ import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
 import StartScreen  from '../components/modals/Isi/StartScreen'
 import {useSwipeable} from "react-swipeable";
-import {swipeLink} from "./modals/Nav/PageList";
+import {PageList} from "./modals/Nav/PageList";
+import {useAppState} from "../state";
 
 type RLprops = {
     dir: "Right" | "Left" | "Up" | "Down";
-}
-
-const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
-    if (dir === "Left") swipeLink(pageIndex, "Left");
-    if (dir === "Right") swipeLink(pageIndex, "Right");
 }
 
 type Props = {
@@ -58,6 +54,7 @@ const FixedDiv = styled.div`
 
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
+    const {currSeq, setCurrentSequence} = useAppState();
     const handlers = useSwipeable({
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
         preventDefaultTouchmoveEvent: true,
@@ -68,7 +65,36 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
 
     // Code that turns off native swipes in OCE Sales
     //CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
- 
+    console.log("**Current", currSeq);
+    const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
+        if (dir === "Left") swipeLink(pageIndex, "Left");
+        if (dir === "Right") swipeLink(pageIndex, "Right");
+    }
+
+    function swipeLink(n:number, dir:string) {
+        console.log(currSeq, n, dir);
+        const path = PageList.seq.main;
+        if (currSeq === "") {
+            navigate();
+        } else {
+            if (PageList.seq[currSeq].indexOf(path[n]) < 1) {
+                setCurrentSequence("");
+                navigate();
+            } else {
+                const page = path[n];
+                const thisPath = PageList.seq[currSeq];
+                const currentPage = thisPath.indexOf(page);
+                if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
+                if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
+            }
+        }
+
+        function navigate() {
+            if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
+            if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
+        }
+    }
+
     return (
 		<>
             <Head>

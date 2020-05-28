@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { GoPlus } from "react-icons/go";
+import { GoPlus, GoDash } from "react-icons/go";
 import { motion } from 'framer-motion';
 import { useToggle } from '../../../hooks';
 import IconWrapper from '../../IconWrapper'
@@ -103,7 +103,7 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a }) => {
                 <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)} />
               
                         <IconWrapper kolor='green' size='1em'>
-                             <GoPlus />
+                            {!isToggled ? <GoPlus/> : <GoDash />}
                         </IconWrapper>
    
               
