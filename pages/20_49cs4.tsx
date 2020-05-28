@@ -14,7 +14,7 @@ const btnArray = [
 export default () => (
     <Layout 
         bgArt='/img/svg/pg42-conversation-starter-bg.svg'
-        section={Sections.NONADHERENCE_40}>
+        section={Sections.NONADHERENCE_40} pageIndex={19}>
         <ConversationStarters
             headline='What is your main consideration when selecting a BV treatment for your patients?'
             buttonCopyArray={btnArray} />

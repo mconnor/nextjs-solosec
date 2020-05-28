@@ -2,36 +2,37 @@ import SpaLink from "../../SpaLink";
 
 export const PageList = {
     pages: {
-        "page1": "01_02splash",
-        "page2": "02_06discover",
-        "page3": "03_12acog",
-        "page4": "04_14acog",
-        "page5": "05_17studies",
-        "page6": "06_19chart",
-        "page7": "07_21chart_france",
-        "page8": "08_23alcohol",
-        "page9": "09_25easy",
-        "page10": "10_26howtoVideo",
-        "page11": "11_28coupon",
-        "page12": "12_30survey",
-        "page13": "13_32singleDose",
-        "page14": "14_34delivers",
-        "page15": "15_36chart",
-        "page16": "16_384million",
-        "page17": "17_40nonAherence",
-        "page18": "18_42cs1",
-        "page19": "19_43cs2",
-        "page20": "20_49cs4",
-        "page21": "21_56cs6",
-        "page22": "22_61segmentNarratives",
-        "page23": "23_65prevelance",
-        "page24": "24_66riskFactors",
-        "page25": "25_68BVsequelae",
-        "page26": "26_70video",
-        "page27": "27_71qa",
+        "1": "01_02splash",
+        "2": "02_06discover",
+        "3": "03_12acog",
+        "4": "04_14acog",
+        "5": "05_17studies",
+        "6": "06_19chart",
+        "7": "07_21chart_france",
+        "8": "08_23alcohol",
+        "9": "09_25easy",
+        "10": "10_26howtoVideo",
+        "11": "11_28coupon",
+        "12": "12_30survey",
+        "13": "13_32singleDose",
+        "14": "14_34delivers",
+        "15": "15_36chart",
+        "16": "16_384million",
+        "17": "17_40nonAherence",
+        "18": "18_42cs1",
+        "19": "19_43cs2",
+        "20": "20_49cs4",
+        "21": "21_56cs6",
+        "22": "22_61segmentNarratives",
+        "23": "23_65prevelance",
+        "24": "24_66riskFactors",
+        "25": "25_68BVsequelae",
+        "26": "26_70video",
+        "27": "27_71qa",
     },
     seq: {
-        "06_a": ["page12", "page6", "page7", "page2"],
+        "main": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", '24', "25", "26", "27"],
+        "06_a": ["12", "6", "7", "2"],
         "06_b": ["page12", "page6", "page7", "page2"],
         "06_c": ["page12", "page6", "page7", "page2"],
         "06_d": ["page12", "page6", "page7", "page2"]
@@ -40,4 +41,11 @@ export const PageList = {
 
 export function linkTo(page:string, t: boolean) {
     setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
+}
+
+export function swipeLink(n:number, dir:string) {
+    console.log("Swiping");
+    const path = PageList.seq.main;
+    if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
+    if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
 }

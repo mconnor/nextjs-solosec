@@ -138,7 +138,7 @@ const Nav = () => {
               <SubLogo>(secnizazole)</SubLogo></div>
             </NavContainer>
             <NavContainer borderRight>
-                <NavBtn pageName='page1'>{SUMMARY}</NavBtn>
+                <NavBtn pageName='02_06discover'>{SUMMARY}</NavBtn>
                 <NavBtn pageName='03_12acog'>{CONSENSUS_GUIDELINES}</NavBtn>
                 <NavBtn pageName='04_17studies'>{STUDY}</NavBtn>
 

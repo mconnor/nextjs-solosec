@@ -15,7 +15,7 @@ const HEADLINE = 'What percentage of patients are\nsatisfied with Solosec?'
 export default () => (
     <Layout 
         bgArt='/img/svg/pg42-conversation-starter-bg.svg'
-        section={Sections.NONADHERENCE_40}>
+        section={Sections.NONADHERENCE_40} pageIndex={18}>
         <ConversationStarters
             headline={HEADLINE}
             buttonCopyArray={btnArray} />

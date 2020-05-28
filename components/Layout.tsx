@@ -22,6 +22,7 @@ type Props = {
     noBgArt?:boolean;
     qaBool?:boolean;
     section?:string;
+    pageIndex:number;
 }
 const PageContainer = styled.div`
     position: static;
@@ -45,10 +46,12 @@ const FixedDiv = styled.div`
 `;
 
 
-const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{ 
+const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
     // console.log(router.pathname )
 
+    // Code that turns off native swipes in OCE Sales
+    //CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
  
     return (
 		<>
@@ -76,7 +79,9 @@ const Layout: React.FC<Props> = ({ children, title = 'Solosec IVA', foreGroundAr
                         foreGroundArt={foreGroundArt} 
                         key={router.route}
                         noBgArt={noBgArt}
-                        bgArt={bgArt} />
+                        bgArt={bgArt}
+                        pageIndex={pageIndex}
+                    />
                    
                     <Footer gridArea='footer'/>
                 </PageContainer>

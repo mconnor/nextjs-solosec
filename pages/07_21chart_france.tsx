@@ -3,7 +3,7 @@ import Chart from '../components/Main/Chart'
 import * as Sections from '../components/utils/Sections'
 
 export default () => (
-    <Layout bgArt='/img/svg/pg21.svg' section={Sections.CHART_21}>
+    <Layout bgArt='/img/svg/pg21.svg' section={Sections.CHART_21} pageIndex={6}>
         <Chart 
             chartTop={274} chartL={762} chartH={292}
             max1={222}

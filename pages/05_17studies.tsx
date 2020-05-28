@@ -4,7 +4,7 @@ import Studies from '../components/Main/Studies'
 import { STUDIES_17 } from '../components/utils/Sections'
 
 export default () => (
-    <Layout noBgArt={true} section={STUDIES_17}>
+    <Layout noBgArt={true} section={STUDIES_17} pageIndex={4}>
         <Studies svg='/img/svg/pg17.svg'></Studies>
 </Layout>
 )

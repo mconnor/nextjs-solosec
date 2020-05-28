@@ -6,7 +6,9 @@ import * as Sections from '../components/utils/Sections';
 export default () => (
     <Layout 
         noBgArt={true}
-        section={Sections.NO_REF}>
+        section={Sections.NO_REF}
+        pageIndex={1}
+    >
              <Discover />
     </Layout>
 )

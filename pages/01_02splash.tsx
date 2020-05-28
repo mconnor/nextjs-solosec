@@ -6,7 +6,7 @@ export default () => (
     <Layout  
         bgArt='/img/bg/2.jpg' 
         section={Sections.SPLASH}
-        
+        pageIndex={0}
     >
         <Splash logo="/img/solosec-logo-isi.svg">
             <img src="/img/svg/pg2-vector-nologo.svg" alt="splash page" />

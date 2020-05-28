@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-
-
-
+import SwipeableNavigation from "../SwipableNavigation";
+import {useSwipeable} from "react-swipeable";
+import {swipeLink} from "../modals/Nav/PageList";
 
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
@@ -30,12 +30,21 @@ type Props = {
     noBgArt?: boolean;
     children?: ReactNode;
     noBG?:boolean;
+    pageIndex:number;
 }
 
-const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt }) => {
+const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt, pageIndex }) => {
+    const handlers = useSwipeable({
+        onSwipedLeft: () => swipeLink(pageIndex, 'LEFT'),
+        onSwipedRight: () => swipeLink(pageIndex, 'RIGHT'),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+        trackTouch: true
+    });
+
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}
-            foreGroundArt={foreGroundArt } noBgArt={noBgArt}>
+                 foreGroundArt={foreGroundArt } noBgArt={noBgArt} {...handlers}>
             {children}
         </MainDiv>
     )
