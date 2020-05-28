@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {useAppState} from "../../../state";
 import {PageList} from "../../modals/Nav/PageList";
+import { useCookie } from '../../../hooks'
 
 type Props = {
     svglink:string;
@@ -18,6 +19,7 @@ const Img = styled.img`
 
 
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
+    const [cookie, setCookie] = useCookie({ key: "test" }) ;
     const [showSVG, setShowSVG] = useState(`/img/svg/${svglink}.svg`);
     const {currSeq, setCurrentSequence} = useAppState();
 
@@ -25,6 +27,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
 
     useEffect(() => {
         setCurrentSequence && setCurrentSequence(seq);
+        setCookie(currSeq);
     },[showSVG])
 
     function linkTo(page:string, linkUrl:string) {
