@@ -23,12 +23,16 @@ const CO_PAY_CARD = 'Co-Pay Card'
 const SATISFACTION_SURVEY = 'Satisfaction Survey'
 const CURRENT_BV_TREATMENTS = 'Current BV Treatments'
 const APPENDIX = 'Appendix'
+const PHARMAK = 'Pharmacokinetics'
+const STUDY2DATA= 'Study 2 Data'
+const TREATMENT_ADHERENCE= 'Treatment Adherence'
 
 //rigth col
 const CONVERSATION_STARTERS = 'Conversation Starters'
 const SEGMENT_NARRATIVES = 'Segment Narratives'
 const TOOLBOX = 'Toolbox'
 const Q_A = 'Q&A'
+
 
 
 const variants = {
@@ -71,15 +75,13 @@ const NavContainer = styled.div<StyleProps>`
     border-right: ${props => props.borderRight && '2px solid #034063'};
     display: grid;
     grid-template-columns: 1fr;
-  height: 80%;
-margin:0;
-row-gap:24px;
+    /* height: 80%; */
+    margin:0;
+/* row-gap:24px; */
 `;
 
 
-// - Pharmacokinetics
-// - Study 2 Data
-// - Treatment Adherence
+
 const Logo = styled.div`
     font-style: normal;
     font-weight: bold;
@@ -138,18 +140,24 @@ const Nav = () => {
               <SubLogo>(secnizazole)</SubLogo></div>
             </NavContainer>
             <NavContainer borderRight>
-                <NavBtn pageName='02_06discover'>{SUMMARY}</NavBtn>
-                <NavBtn pageName='03_12acog'>{CONSENSUS_GUIDELINES}</NavBtn>
-                <NavBtn pageName='04_17studies'>{STUDY}</NavBtn>
+                <NavBtn label={SUMMARY} pageName='02_splash' />
+                <NavBtn label={CONSENSUS_GUIDELINES} pageName='12_acog' />
+                <NavBtn label={STUDY} pageName='17_studies' />
 
-                <NavBtn pageName='07_21chart_france'>{BOHBOT}</NavBtn>
-                <NavBtn pageName='08_23alcohol'>{NO_ALCOHOL_RESTRICTION}</NavBtn>
-                <NavBtn pageName='13_32singleDose'>{DOSING}</NavBtn>
-                <NavBtn pageName='11_28coupon'>{CO_PAY_CARD}</NavBtn>
+                <NavBtn label={BOHBOT} pageName='02_splash' />
+                <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName='23_alcohol' />
+                <NavBtn label={DOSING} pageName='32_singleDose' />
+                <NavBtn label={CO_PAY_CARD} pageName='28_coupon' />
 
-                <NavBtn pageName='12_30survey'>{SATISFACTION_SURVEY}</NavBtn>
-                <NavBtn pageName='25_68BVsequelae'>{CURRENT_BV_TREATMENTS}</NavBtn>
-                <NavBtn pageName='01_02splash'>{APPENDIX}</NavBtn>
+                <NavBtn label={SATISFACTION_SURVEY} pageName='30_survey' />
+                <NavBtn label={CURRENT_BV_TREATMENTS} pageName='68_BVsequelae' />
+
+                <NavBtn label={APPENDIX} pageName='02_splash'>
+                    <NavBtn label={PHARMAK} pageName='30_survey' subnav />
+                    <NavBtn label={STUDY2DATA} pageName='68_BVsequelae' subnav />
+                    <NavBtn label={TREATMENT_ADHERENCE} pageName='02_splash' subnav />
+                </NavBtn>
+
             </NavContainer>
             <NavContainer>
                 <RightColBt>
@@ -159,7 +167,7 @@ const Nav = () => {
                         </IconWrapper>
                     </IconBg>
 
-                    <NavBtn pageName='18_42cs1'>{CONVERSATION_STARTERS}</NavBtn>
+                    <NavBtn label={CONVERSATION_STARTERS} pageName='42_cs1' />
                 </RightColBt>
                 <RightColBt>
 
@@ -170,7 +178,7 @@ const Nav = () => {
                     </IconBg>
 
 
-                    <NavBtn pageName='22_61segmentNarratives'>{SEGMENT_NARRATIVES}</NavBtn>
+                    <NavBtn label={SEGMENT_NARRATIVES} pageName='23_alcohol' />
                 </RightColBt>
                 <RightColBt>
                     <IconBg>
@@ -178,7 +186,7 @@ const Nav = () => {
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn pageName='01_02splash'>{TOOLBOX}</NavBtn>
+                    <NavBtn label={TOOLBOX} pageName='02_splash' />
                 </RightColBt>
                 <RightColBt>
                     <IconBg>
@@ -186,7 +194,7 @@ const Nav = () => {
                             <BsQuestionSquareFill />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn pageName='27_71qa.tsx'>{Q_A}</NavBtn>
+                    <NavBtn label={Q_A} pageName='02_splash' />
                 </RightColBt>
 
             </NavContainer>
@@ -196,8 +204,4 @@ const Nav = () => {
 }
 
 export default Nav
-
-
-
-
 
