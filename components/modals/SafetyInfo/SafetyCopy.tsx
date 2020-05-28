@@ -49,8 +49,8 @@ const Ulist = styled.ul`
     // or 122% 
     color: var(--copy-color-secondary);
     letter-spacing: 0.065em;
-    list-style-position: inside;
-    padding-left: 0;
+    list-style-position: outside; 
+    padding-left: 1em;
     li {
         margin-top: 20px;
         

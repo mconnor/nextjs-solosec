@@ -100,7 +100,7 @@ const StartScreen: React.FC<Props> = ({ section }) => {
                     </GridAreaDiv>
 
                     <GridAreaDiv gridArea="copyright">
-                        <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
+                        <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec<sup>®</sup> is a registered trademark owned by Lupin, Inc.</p>
                     </GridAreaDiv>
 
                     <GridAreaDiv gridArea="solosecLogo">

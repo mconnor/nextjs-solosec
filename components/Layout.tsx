@@ -9,6 +9,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
+import PrescribingInfoWrapper from "./modals/PI";
 import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
 import StartScreen  from '../components/modals/Isi/StartScreen'
@@ -110,6 +111,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 
                 <Nav />
                 <ReferencesWrapper section={section}/>
+                <PrescribingInfoWrapper section={section}/>
                 <FixedDiv><SpaLink pageName='index' /></FixedDiv>
                 
 			    <PageContainer {...handlers}>
