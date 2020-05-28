@@ -11,6 +11,7 @@ import { MdChatBubble } from "react-icons/md";
 import { FaTools } from "react-icons/fa";
 import { BsQuestionSquareFill } from "react-icons/bs";
 
+import {PageList} from "./PageList";
 
 
 const SUMMARY = 'Summary';
@@ -33,6 +34,10 @@ const SEGMENT_NARRATIVES = 'Segment Narratives'
 const TOOLBOX = 'Toolbox'
 const Q_A = 'Q&A'
 
+const TB1 = 'BV Prevalence'
+const TB2 = 'BV Risk Factors'
+const TB3 = 'BV Sequelae'
+const TB4 = 'Patient/Physician Testimonial'
 
 
 const variants = {
@@ -77,7 +82,11 @@ const NavContainer = styled.div<StyleProps>`
     grid-template-columns: 1fr;
     /* height: 80%; */
     margin:0;
+    line-height: 60px;
 /* row-gap:24px; */
+    ul {
+        line-height: 40px;
+    }
 `;
 
 
@@ -111,7 +120,24 @@ const RightColBt = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 35px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    text-align: left;
+`;
+
+const RightColBtX = styled.div`
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 35px;
+    margin-bottom: 0px;
+    text-align: left;
+`;
+
+const RightColBtSub = styled.div`
+    display: grid;
+    grid-template-columns: auto 1fr;
+    //column-gap: 0px;
+    margin-bottom: 30px;
+    text-align: left;
 `;
 
 const IconBg = styled.button`
@@ -140,22 +166,24 @@ const Nav = () => {
               <SubLogo>(secnizazole)</SubLogo></div>
             </NavContainer>
             <NavContainer borderRight>
-                <NavBtn label={SUMMARY} pageName='02_splash' />
-                <NavBtn label={CONSENSUS_GUIDELINES} pageName='12_acog' />
-                <NavBtn label={STUDY} pageName='17_studies' />
+                <NavBtn label={SUMMARY} pageName={PageList.pages["2"]} />
+                <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]} />
+                <NavBtn label={STUDY} pageName={PageList.pages["5"]} />
 
-                <NavBtn label={BOHBOT} pageName='02_splash' />
-                <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName='23_alcohol' />
-                <NavBtn label={DOSING} pageName='32_singleDose' />
-                <NavBtn label={CO_PAY_CARD} pageName='28_coupon' />
+                <NavBtn label={BOHBOT} pageName={PageList.pages["21"]} />
+                <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName={PageList.pages["23"]} />
+                <NavBtn label={DOSING} pageName={PageList.pages["13"]} />
+                <NavBtn label={CO_PAY_CARD} pageName={PageList.pages["11"]} />
 
-                <NavBtn label={SATISFACTION_SURVEY} pageName='30_survey' />
-                <NavBtn label={CURRENT_BV_TREATMENTS} pageName='68_BVsequelae' />
+                <NavBtn label={SATISFACTION_SURVEY} pageName={PageList.pages["12"]} />
+                <NavBtn label={CURRENT_BV_TREATMENTS} pageName={PageList.pages["25"]} />
 
-                <NavBtn label={APPENDIX} pageName='02_splash'>
-                    <NavBtn label={PHARMAK} pageName='30_survey' subnav />
-                    <NavBtn label={STUDY2DATA} pageName='68_BVsequelae' subnav />
-                    <NavBtn label={TREATMENT_ADHERENCE} pageName='02_splash' subnav />
+                <NavBtn label={APPENDIX} pageName={PageList.pages["1"]}>
+                    <ul>
+                        <NavBtn label={PHARMAK} pageName={PageList.pages["23"]} subnav />
+                        <NavBtn label={STUDY2DATA} pageName={PageList.pages["5"]} subnav />
+                        <NavBtn label={TREATMENT_ADHERENCE} pageName={PageList.pages["40"]} subnav />
+                    </ul>
                 </NavBtn>
 
             </NavContainer>
@@ -167,7 +195,7 @@ const Nav = () => {
                         </IconWrapper>
                     </IconBg>
 
-                    <NavBtn label={CONVERSATION_STARTERS} pageName='42_cs1' />
+                    <NavBtn label={CONVERSATION_STARTERS} pageName={PageList.pages["18"]} />
                 </RightColBt>
                 <RightColBt>
 
@@ -178,23 +206,33 @@ const Nav = () => {
                     </IconBg>
 
 
-                    <NavBtn label={SEGMENT_NARRATIVES} pageName='23_alcohol' />
+                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["8"]} />
                 </RightColBt>
-                <RightColBt>
+                <RightColBtX>
                     <IconBg>
                         <IconWrapper kolor='white' size='2em'>
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={TOOLBOX} pageName='02_splash' />
-                </RightColBt>
+                    <NavBtn label={TOOLBOX} pageName={PageList.pages["01"]} >
+
+                    </NavBtn>
+                </RightColBtX>
+                <RightColBtSub>
+                    <ul>
+                        <NavBtn label={TB1} pageName={PageList.pages["23"]} subnav />
+                        <NavBtn label={TB2} pageName={PageList.pages["24"]} subnav />
+                        <NavBtn label={TB3} pageName={PageList.pages["25"]} subnav />
+                        <NavBtn label={TB4} pageName={PageList.pages["26"]} subnav />
+                    </ul>
+                </RightColBtSub>
                 <RightColBt>
                     <IconBg>
                         <IconWrapper kolor='white' size='2em'>
                             <BsQuestionSquareFill />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={Q_A} pageName='02_splash' />
+                    <NavBtn label={Q_A} pageName={PageList.pages["27"]} />
                 </RightColBt>
 
             </NavContainer>

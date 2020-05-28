@@ -14,6 +14,7 @@ export const CHART_34:string = '34';
 export const CHART_36:string = '36';
 export const FOUR_MILLION:string = '38';
 export const NONADHERENCE_40:string = '40';
+export const RISK_65:string = '65';
 export const RISK_66:string = '66';
 export const BV_68:string = '68';
 

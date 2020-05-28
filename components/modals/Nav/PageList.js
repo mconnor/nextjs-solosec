@@ -1,5 +1,3 @@
-import {useAppState} from "../../../state";
-
 export const PageList = {
     pages: {
         "1": "01_02splash",
@@ -38,35 +36,4 @@ export const PageList = {
         "02_d": ["2", "11", "2"]
     }
 };
-
-export function linkTo(page, t, seq) {
-    // const {setCurrentSequence} = useAppState();
-    // setCurrentSequence(seq);
-    // setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
-}
-
-export function swipeLink(n, dir) {
-    // // const {currSeq, setCurrentSequence} = useAppState();
-    // console.log(currSeq, n, dir);
-    // const path = PageList.seq.main;
-    // if (currSeq === "") {
-    //     navigate();
-    // } else {
-    //     if (PageList.seq[currSeq].indexOf(path[n]) < 1) {
-    //         setCurrentSequence("");
-    //         navigate();
-    //     } else {
-    //         const page = path[n];
-    //         const thisPath = PageList.seq[currSeq];
-    //         const currentPage = thisPath.indexOf(page);
-    //         if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
-    //         if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
-    //     }
-    // }
-    //
-    // function navigate() {
-    //     if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
-    //     if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
-    // }
-}
 
