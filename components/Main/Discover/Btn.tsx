@@ -1,7 +1,8 @@
 
 import { useState } from 'react';
 import styled from 'styled-components';
-import {linkTo} from "../../modals/Nav/PageList";
+import {useAppState} from "../../../state";
+import {PageList} from "../../modals/Nav/PageList";
 
 type Props = {
     svglink:string;
@@ -18,9 +19,19 @@ height: 201px;
 
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     const [showSVG, setShowSVG] = useState(`/img/svg/${svglink}.svg`);
+    const {currSeq, setCurrentSequence} = useAppState();
+
+    function linkTo(page:string, seq:string) {
+        if (setCurrentSequence) {
+            setCurrentSequence(seq);
+        }
+        console.log(page, seq, currSeq);
+        setTimeout(()=>{window.location.href = PageList["pages"][page];}, 100)
+    }
+
     return (
         <>
-             <Img src={showSVG} onClick={() => {setShowSVG(`/img/svg/${svgClicked}.svg`); linkTo(page, true, seq)}} />
+             <Img src={showSVG} onClick={() => {setShowSVG(`/img/svg/${svgClicked}.svg`); linkTo(page, seq)}} />
         </>
     )
 }

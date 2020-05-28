@@ -15,9 +15,6 @@ interface ReferenceState {
     currSection?:string;
     setCurrentSection?: (newSection:string) => void;
 
-
-
-
     currPageIndex?:number;
     setCurrPageIndex?: (newSection:number) => void;
     
