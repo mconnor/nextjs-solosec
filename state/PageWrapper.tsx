@@ -1,5 +1,5 @@
 import  {  createContext, useContext } from "react";
-import { useToggle, ToggleState, useSection, SectionState } from "../hooks";
+import { useToggle, ToggleState, useSection, SectionState, useIndex, IndexState } from "../hooks";
 
 
 interface ReferenceState {
@@ -14,6 +14,14 @@ interface ReferenceState {
 
     currSection?:string;
     setCurrentSection?: (newSection:string) => void;
+
+
+    seq?:string;
+    setSeq?: (newSection:string) => void;
+
+    currPageIndex?:number;
+    setCurrPageIndex?: (newSection:number) => void;
+    
     
     isSafetyInfoOpen: boolean;
     toggleSafetyInfo?: () => void;
@@ -33,6 +41,7 @@ interface ReferenceState {
 }
 
 export const AppContext = createContext<ReferenceState>({
+    currPageIndex:0,
 
     isaQAopen:false,
     isInitSafetyInfoOpen:true,
@@ -51,12 +60,25 @@ export const PageWrapper:React.FC = ({ children }) => {
     const qaState: ToggleState  = useToggle(false);
    
     const navState: ToggleState  = useToggle(false);
+    const pageState: IndexState  = useIndex(0);
+
+    const seqState:SectionState = useSection('');
+   
 
     return (
         <AppContext.Provider
             value={{
+                currPageIndex: pageState.index,
+                setCurrPageIndex: pageState.setIndex,
+
                 currSection: sectionState.section,
                 setCurrentSection: sectionState.setSection,
+
+                seq: seqState.section,
+                setSeq: seqState.setSection,
+
+
+
 
                 isReferenceOpen: refState.isToggled,
                 toggleReference: refState.toggle,
