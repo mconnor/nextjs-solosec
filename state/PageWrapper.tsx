@@ -46,7 +46,7 @@ export const AppContext = createContext<ReferenceState>({
     isSafetyInfoOpen: true,
     isPrescribingInfoOpen: false,
     isNavOpen: false,
-    currSeq: "",
+    currSeq: ""
 });
 
 export const PageWrapper:React.FC = ({ children }) => {

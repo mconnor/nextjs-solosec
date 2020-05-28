@@ -24,9 +24,9 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     function linkTo(page:string, seq:string) {
         if (setCurrentSequence) {
             setCurrentSequence(seq);
+            console.log(page, seq, currSeq);
+            setTimeout(()=>{window.location.href = PageList["pages"][page];}, 100)
         }
-        console.log(page, seq, currSeq);
-        setTimeout(()=>{window.location.href = PageList["pages"][page];}, 100)
     }
 
     return (
