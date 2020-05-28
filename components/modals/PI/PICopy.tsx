@@ -24,10 +24,10 @@ const Copy = styled.div`
 `;
 
 type Props = {
-    marginLR?:number;
+
 }
 
-const PICopy: React.FC<Props> = ({ marginLR}) => {
+const PICopy: React.FC<Props> = ({}) => {
     return (
         <Copy>
             <nav id="pi-nav">
