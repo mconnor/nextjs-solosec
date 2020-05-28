@@ -16,7 +16,6 @@ import {useSwipeable} from "react-swipeable";
 import {swipeLink} from "./modals/Nav/PageList";
 
 const onSwiping = ({ dir }, pageIndex: number) => {
-    console.log(dir, pageIndex);
     if (dir === "Left") swipeLink(pageIndex, "Left");
     if (dir === "Right") swipeLink(pageIndex, "Right");
 }
