@@ -25,7 +25,8 @@ interface ReferenceState {
     isPrescribingInfoOpen: boolean;
     togglePrescribingInfo?: () => void;
 
-    sequence: string;
+    currSeq?:string;
+    setCurrentSequence?: (newSection:string) => void;
 
     isNavOpen: boolean;
     toggleNav?: () => void;
@@ -40,7 +41,7 @@ export const AppContext = createContext<ReferenceState>({
     isSafetyInfoOpen: true,
     isPrescribingInfoOpen: false,
     isNavOpen: false,
-    sequence: "",
+    currSeq: "",
 });
 
 export const PageWrapper:React.FC = ({ children }) => {
@@ -58,6 +59,9 @@ export const PageWrapper:React.FC = ({ children }) => {
             value={{
                 currSection: sectionState.section,
                 setCurrentSection: sectionState.setSection,
+
+                currSeq: sectionState.section,
+                setCurrentSequence: sectionState.setSection,
 
                 isReferenceOpen: refState.isToggled,
                 toggleReference: refState.toggle,
