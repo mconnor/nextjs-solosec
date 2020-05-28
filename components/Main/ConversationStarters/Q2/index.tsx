@@ -1,3 +1,4 @@
+// import { useState } from 'react';
 import styled from 'styled-components';
 import Btn from '../Btn';
 
@@ -38,22 +39,25 @@ type Props = {
     headline: string;
     buttonCopyArray: string[];
     url?:string,
-    urls?:string[];
+    urls:string[];
     seqs?:string[];
 }
 
-const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url, urls, seqs }) => {
+const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url='www.google.com', urls, seqs }) => {
+
+    
+
     return (
         <MainDiv numOfBtns={buttonCopyArray.length}>
             <TitleDiv>{headline}</TitleDiv>
             {
-                buttonCopyArray.map((itm, index) => {
+                buttonCopyArray.map((itm, index:number) => {
                     let btName = `bt${index}`;
                     return <Btn copy={itm} 
                                 gridArea={btName} 
                                 key={btName}
                                 url={url || urls[index]}
-                                seq={seqs ? seqs[index] : null}
+                                seq={seqs ? seqs[index] : undefined}
                             />
                 })
             }
