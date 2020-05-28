@@ -1,4 +1,4 @@
-import SpaLink from "../../SpaLink";
+
 
 export const PageList = {
     pages: {
@@ -39,11 +39,11 @@ export const PageList = {
     }
 };
 
-export function linkTo(page:string, t: boolean) {
+export function linkTo(page, t) {
     setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
 }
 
-export function swipeLink(n:number, dir:string) {
+export function swipeLink(n, dir) {
     const path = PageList.seq.main;
     if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
     if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
