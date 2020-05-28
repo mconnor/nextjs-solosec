@@ -4,20 +4,34 @@ import Link from 'next/link';
 import { useAppState } from '../../../state';
 
 interface ChildrenProps {
-    children: ReactNode;
+    children?: ReactNode;
     // clickCallBack: (() => void) | undefined;
     pageName?: string;
+    label?: string;
+    subnav?: boolean;
+
+
 }
 
 
-const Btn = styled.div`
+interface SubProps {
+
+    subnav?: boolean;
+
+}
+
+
+
+
+const Btn = styled.div<SubProps>`
     display: grid;
     white-space:nowrap;
-
+    color:white;
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: ${props => props.subnav ? '24px' : '36px'};
+/* background:${props => props.subnav ? 'pink' : 'blue'}; */
 
 /* or 178% */
 
@@ -27,26 +41,58 @@ const Btn = styled.div`
 
     &:hover {
         color: lightblue;
-    }
+    };
     a {
         text-decoration: none;
         color:white;
     }
+
+
+`;
+
+const Li = styled.li`
+  color:white;
+list-style-type: none;
+    /* &:before {
+        content: "-";
+      text-indent: -2em;
+      display: inline-block;
+    }; */
+    
+
+`;
+
+const Ul = styled.ul`
+margin:0;
+padding:0;
 `;
 
 
-
-
-const NavBtn: React.FC<ChildrenProps> = ({ children, pageName }) => {
+const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav }) => {
     const url = "/" + pageName;
-    const { setNav } = useAppState()
+    const { setNav } = useAppState();
+    const hanleClick = () => setNav && setNav(false);
     return (
-        <Btn role='button' onClick={_prevState => setNav && setNav(false)} >
+        <>
+            {children ?
+                (<Ul>
+                    <Btn role='button' onClick={hanleClick}>
+                        <Link href={url}><a>{label}</a></Link>
+                    </Btn>
+                </Ul>)
+            : subnav ?
+                (<Li><Btn role='button' onClick={hanleClick} subnav={subnav}>
+                    <Link href={url}><a>{`-${label}`}</a></Link>
+                </Btn></Li>) :
 
-            <Link href={url}>
-                <a>{children}</a>
-            </Link>
-        </Btn>
+                <Btn role='button' onClick={hanleClick} subnav={subnav}>
+                 <Link href={url}><a>{label}</a></Link>
+                </Btn>
+
+
+            }
+            {children}
+        </>
     )
 }
 
