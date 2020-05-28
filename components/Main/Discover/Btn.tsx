@@ -27,7 +27,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
 
     useEffect(() => {
         setCurrentSequence && setCurrentSequence(seq);
-        setCookie(currSeq);
+        currSeq && setCookie(currSeq);
     },[showSVG])
 
     function linkTo(page:string, linkUrl:string) {
