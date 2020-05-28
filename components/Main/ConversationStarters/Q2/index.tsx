@@ -57,11 +57,7 @@ const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url=
                     return <Btn copy={itm} 
                                 gridArea={btName} 
                                 key={btName}
-<<<<<<< HEAD
-                                url={url || urls[index]}
-=======
                                 url={url || other}
->>>>>>> origin/master
                                 seq={seqs ? seqs[index] : undefined}
                             />
                 })

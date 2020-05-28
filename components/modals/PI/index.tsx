@@ -74,7 +74,7 @@ const PrescribingInfoWrapper: React.FC<Props> = ({ }) => {
 }
 const PrescribingInfo: React.FC<Props> = ({ }) => {
     const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
-    console.log(section)
+   
     return (
         <MainDiv
             variants={variants}

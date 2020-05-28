@@ -21,10 +21,6 @@ const Img = styled.img`
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     const [showSVG, setShowSVG] = useState(`/img/svg/${svglink}.svg`);
-<<<<<<< HEAD
-    const {currSeq} = useAppState();
-=======
->>>>>>> origin/master
 
     //const [linkUrl] = useState<string>(PageList["pages"][page])
 
