@@ -12,13 +12,13 @@ import ReferencesWrapper from './modals/References';
 import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
 import StartScreen  from '../components/modals/Isi/StartScreen'
-import {useSwipeable, LEFT,
-    RIGHT} from "react-swipeable";
+import {useSwipeable} from "react-swipeable";
 import {swipeLink} from "./modals/Nav/PageList";
 
 const onSwiping = ({ dir }, pageIndex: number) => {
-    if (dir === LEFT) swipeLink(pageIndex, "Left");
-    if (dir === RIGHT) swipeLink(pageIndex, "Right");
+    console.log(dir, pageIndex);
+    if (dir === "Left") swipeLink(pageIndex, "Left");
+    if (dir === "Right") swipeLink(pageIndex, "Right");
 }
 
 type Props = {
@@ -83,7 +83,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <ReferencesWrapper section={section}/>
                 <FixedDiv><SpaLink pageName='index' /></FixedDiv>
                 
-			    <PageContainer>
+			    <PageContainer {...handlers}>
                     <Header gridArea='header'/>
 
                     <Main
@@ -94,7 +94,6 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                         noBgArt={noBgArt}
                         bgArt={bgArt}
                         pageIndex={pageIndex}
-                        {...handlers}
                     />
 
                     <Footer gridArea='footer'/>
