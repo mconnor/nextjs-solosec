@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Btn from '../Btn';
 
-
 const MainDiv =styled.div`
     margin-left: 75px;
     margin-top: 150px;
