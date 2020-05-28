@@ -13,7 +13,8 @@ const SubHead = styled.h2`
 `;
 
 const StrongDiv = styled(SubHead)`
-    color: black;
+    //color: black;
+    color: #62645b;
     /* font-size: 18px; */
     line-height: 22px;
     a {
@@ -36,6 +37,7 @@ const Ptag = styled.p`
     line-height: 22px;
 /* or 122% */
     letter-spacing: 0.06em;
+    color: #62645b;
 `;
 
 

@@ -1,25 +1,33 @@
 import styled from 'styled-components';
 
 const SubHead = styled.h2`
-    color: var(--royal-blue);
+    //color: var(--royal-blue);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 20px;
     line-height: 16px;
+    color: #072b49;
     /* identical to box height, or 80% */
 
     letter-spacing: 0.04em;
 `;
 
 const StrongDiv = styled(SubHead)`
-    color: black;
-    font-size: 14px;
+    //color: black;
+    color: #62645b;
+    ///* font-size: 18px; */
+    font-size: 16px;
     line-height: 22px;
+    a {
+      color: var(--royal-blue-light);
+      text-decoration: none;
+    }
 `;
 
 const Btn = styled(StrongDiv)`
     color: var(--royal-blue-light);
     margin-top: 20px;
+    font-size: 22px;
 `;
 
 
@@ -27,28 +35,30 @@ const Ptag = styled.p`
    
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
 /* or 122% */
     letter-spacing: 0.06em;
+    color: #62645b;
 `;
 
 
 const Ulist = styled.ul`
     font-style: normal;
     font-weight: normal;
-    /* font-size: 18px; */
+    font-size: 16px;
     line-height: 22px;
     // or 122% 
     color: var(--copy-color-secondary);
     letter-spacing: 0.065em;
     li {
-        margin-top: 30px;
+        margin-top: 20px;
+
     }
 `;
 
 const Container = styled.div<Props>`
-   font-size: 14px;
+   
 
     padding-left:${props => `${props.marginLR}px`};
     padding-right:${props => `${props.marginLR}px`};
@@ -65,7 +75,7 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
     return (
         <Container marginLR={marginLR}>
             <SubHead>Indication</SubHead>
-            <Ptag>SOLOSEC<sup>&reg;</sup> (secnidazole) 2 g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
+            <Ptag>SOLOSEC<sup>&reg;</sup> (secnidazole) 2g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
 
             <SubHead>Dosage and Administration</SubHead>
 
@@ -74,11 +84,11 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
             <SubHead>Important Safety Information</SubHead>
 
             <Ulist>
-                <li>SOLOSEC is contraindicated in patients with a history of hypersensitivity to secnidazole, other ingredients of the formulation, or other nitroimidazole derivatives. </li>
+                <li>SOLOSEC is contraindicated in patients with a history of hypersensitivity to secnidazole, other ingredients of the formulation, or other nitroimidazole derivatives.</li>
 
                 <li>Vulvo-vaginal candidiasis may develop with SOLOSEC and require treatment with an antifungal agent.</li>
 
-                <li>Potential risk of carcinogenicity is unknown and has not been studied. Carcinogenicity has been seen in rodents chronically treated with nitroimidazole derivatives, which are structurally related to secnidazole. Chronic use should be avoided. </li>
+                <li>Potential risk of carcinogenicity is unknown and has not been studied. Carcinogencity has been seen in rodents chronically treated with nitroimidazole derivatives, which are structurally related to secnidazole. Chronic use should be avoided.</li>
 
                 <li>Breastfeeding is not recommended. Patients should discontinue breastfeeding for 96 hours after administration of SOLOSEC.</li>
 
@@ -86,11 +96,9 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
             </Ulist>
 
             <StrongDiv>To report SUSPECTED ADVERSE REACTIONS, contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC <NoWrapSpan>(1-844-765-6732)</NoWrapSpan>
-
              or FDA at <NoWrapSpan>(1-800-FDA-1088)</NoWrapSpan> or <a href="www.fda.gov/medwatch." target="_blank">www.fda.gov/medwatch.</a></StrongDiv>
 
             <Btn>Please see full Prescribing Information.</Btn>
-
 
         </Container>
     )

@@ -4,13 +4,13 @@ import { useAppState } from "../../../state/";
 
 const Btn = styled.button`
     background: #05aa4e;
-    border-radius: 4px;
+    border-radius: 6px;
     width: 212px;
     height: 44px;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    color: black;
+    color: white;
     display: grid;
     place-items: center;
     border:0;   

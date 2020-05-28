@@ -124,10 +124,12 @@ const GridAreaDiv = styled.div<IgridArea>`
     }
 `;
 const Slogan = styled.h3`
+    padding-top: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 14px;
-    color:var(--slogan-blue);
+    //color:var(--slogan-blue);
+    color: #16384f;
 `;
 
 export const SafetyModal: React.FC = () => {
