@@ -36,10 +36,12 @@ type Props = {
     noBgArt?: boolean;
     children?: ReactNode;
     noBG?:boolean;
+    pageIndex:number;
 }
 
-const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt}) => {
-
+const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt,
+                                 pageIndex}) => {
+    console.log(pageIndex);
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}
                  foreGroundArt={foreGroundArt } noBgArt={noBgArt}>

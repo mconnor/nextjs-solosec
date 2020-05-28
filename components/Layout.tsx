@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router'
 
-import {PageWrapper, useAppState} from "../state";
+import { PageWrapper } from "../state";
 import Head from 'next/head';
 import GlobalStyle from './utils/GobalStyle';
 import styled from 'styled-components'
@@ -13,7 +13,16 @@ import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
 import StartScreen  from '../components/modals/Isi/StartScreen'
 import {useSwipeable} from "react-swipeable";
-import {PageList} from "./modals/Nav/PageList";
+import {swipeLink} from "./modals/Nav/PageList";
+
+type RLprops = {
+    dir: "Right" | "Left" | "Up" | "Down";
+}
+
+const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
+    if (dir === "Left") swipeLink(pageIndex, "Left");
+    if (dir === "Right") swipeLink(pageIndex, "Right");
+}
 
 type Props = {
     children?: ReactNode;
@@ -55,40 +64,11 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         trackMouse: true,
         trackTouch: true
     });
-
-    const onSwiping = ({ dir }) => {
-        if (dir === "Left") swipeLink(pageIndex, "Left");
-        if (dir === "Right") swipeLink(pageIndex, "Right");
-    }
-
-    function swipeLink(n:number, dir:string) {
-        const {currSeq, setCurrentSequence} = useAppState();
-        const path = PageList.seq.main;
-        if (currSeq === "") {
-            navigate();
-        } else {
-            if (PageList.seq[currSeq].indexOf(path[n]) < 1) {
-                setCurrentSequence("");
-                navigate();
-            } else {
-                const page = path[n];
-                const thisPath = PageList.seq[currSeq];
-                const currentPage = thisPath.indexOf(page);
-                if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
-                if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
-            }
-        }
-
-        function navigate() {
-            if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
-            if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
-        }
-    }
     // console.log(router.pathname )
 
     // Code that turns off native swipes in OCE Sales
     //CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
-
+ 
     return (
 		<>
             <Head>
