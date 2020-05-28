@@ -1,19 +1,9 @@
-export  interface Ipages {
-    someString: string[]
+interface Foo {
+    pages: { [key: string]: string; };
+    seq:{ [key: string]: string[]; }
 }
 
-export interface Iseq {
-    someString: string[]
-}
-
-export interface iPageList {
-    pages: Ipages,
-    seq: Iseq
-}
-
-
-
-export const PageList = {
+export const PageList: Foo = {
     pages: {
         "1": "01_02splash",
         "2": "02_06discover",

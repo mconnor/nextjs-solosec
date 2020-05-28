@@ -49,7 +49,7 @@ type Props = {
 const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
     const { toggle, isToggled } = useToggle(false);
     const [kolor, setKolor] = useState('green');
-    const [cookie, setCookie] = useCookie({ key: "test" }) ;
+    const [ setCookie] = useCookie({ key: "test" }) ;
     useEffect(() => {
         if (isToggled) {
             setKolor('gold');
