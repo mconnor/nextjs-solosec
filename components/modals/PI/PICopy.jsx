@@ -23,7 +23,7 @@ const Copy = styled.div`
     }
 `;
 
-const PICopy = () => {
+const PICopy= () => {
     return (
         <Copy>
             <nav id="pi-nav">

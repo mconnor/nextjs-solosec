@@ -65,14 +65,14 @@ const CloseBtn = styled.div`
 `;
 
 type Props = {
-    section: string;
+
 }
-const PrescribingInfoWrapper: React.FC<Props> = ({ section }) => {
+const PrescribingInfoWrapper: React.FC<Props> = ({ }) => {
     // const { isReferenceOpen } = useAppState();
     // if (!isReferenceOpen) return null;
-    return <PrescribingInfo section={section} />;
+    return <PrescribingInfo />;
 }
-const PrescribingInfo: React.FC<Props> = ({ section }) => {
+const PrescribingInfo: React.FC<Props> = ({ }) => {
     const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
     console.log(section)
     return (

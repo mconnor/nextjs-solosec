@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import styled from 'styled-components';
-import {useAppState} from "../../../state";
+//import {useAppState} from "../../../state";
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
 
@@ -19,21 +19,24 @@ const Img = styled.img`
 
 
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
-    const [cookie, setCookie] = useCookie({ key: "test" }) ;
+    const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     const [showSVG, setShowSVG] = useState(`/img/svg/${svglink}.svg`);
+<<<<<<< HEAD
     const {currSeq} = useAppState();
+=======
+>>>>>>> origin/master
 
-    const [linkUrl] = useState<string>(PageList["pages"][page])
+    //const [linkUrl] = useState<string>(PageList["pages"][page])
 
     // useEffect(() => {
     //     setCurrentSequence && setCurrentSequence(seq);
     //     currSeq && setCookie(currSeq);
     // },[showSVG])
 
-    function linkTo(page:string, linkUrl:string) {
+    function linkTo(page:string) {
+            console.log(cookie);
             setCookie(seq)
-            console.log(page, seq, cookie);
-            setTimeout(()=>{window.location.href = linkUrl;}, 100)
+            setTimeout(()=>{window.location.href = PageList.pages[page];}, 100)
        
     }
 
@@ -41,8 +44,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
         <>
              <Img src={showSVG} onClick={() => {
                  setShowSVG(`/img/svg/${svgClicked}.svg`);
-                 console.log(page, seq, currSeq);
-                 linkTo(page, linkUrl)}} />
+                 linkTo(page)}} />
         </>
     )
 }
