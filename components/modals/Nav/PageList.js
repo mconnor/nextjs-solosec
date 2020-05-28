@@ -1,4 +1,4 @@
-
+import {useAppState} from "../../../state";
 
 export const PageList = {
     pages: {
@@ -39,34 +39,34 @@ export const PageList = {
     }
 };
 
-let sequenceState = null;
-
 export function linkTo(page, t, seq) {
-    sequenceState = seq;
-    setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
+    // const {setCurrentSequence} = useAppState();
+    // setCurrentSequence(seq);
+    // setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
 }
 
 export function swipeLink(n, dir) {
-    console.log(sequenceState, !sequenceState, n, dir);
-    const path = PageList.seq.main;
-    if (!sequenceState) {
-        navigate();
-    } else {
-        if (PageList.seq[sequenceState].indexOf(path[n]) < 1) {
-            sequenceState  = null;
-            navigate();
-        } else {
-            const page = path[n];
-            const thisPath = PageList.seq[sequenceState];
-            const currentPage = thisPath.indexOf(page);
-            if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
-            if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
-        }
-    }
-
-    function navigate() {
-        if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
-        if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
-    }
+    // // const {currSeq, setCurrentSequence} = useAppState();
+    // console.log(currSeq, n, dir);
+    // const path = PageList.seq.main;
+    // if (currSeq === "") {
+    //     navigate();
+    // } else {
+    //     if (PageList.seq[currSeq].indexOf(path[n]) < 1) {
+    //         setCurrentSequence("");
+    //         navigate();
+    //     } else {
+    //         const page = path[n];
+    //         const thisPath = PageList.seq[currSeq];
+    //         const currentPage = thisPath.indexOf(page);
+    //         if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
+    //         if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
+    //     }
+    // }
+    //
+    // function navigate() {
+    //     if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
+    //     if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
+    // }
 }
 

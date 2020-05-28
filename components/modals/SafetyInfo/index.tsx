@@ -42,7 +42,8 @@ const WrapperContainer = styled(motion.div)`
     width:100vw;
     max-width: var( --ipad-width);
     position: fixed;
-    top:var(--header-height);
+    //top:var(--header-height);
+    top:120px;
     height: calc(100vh - var(--header-height));
     left:0;
 

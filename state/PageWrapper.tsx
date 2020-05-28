@@ -16,8 +16,7 @@ interface ReferenceState {
     setCurrentSection?: (newSection:string) => void;
 
 
-    seq?:string;
-    setSeq?: (newSection:string) => void;
+
 
     currPageIndex?:number;
     setCurrPageIndex?: (newSection:number) => void;
@@ -33,7 +32,8 @@ interface ReferenceState {
     isPrescribingInfoOpen: boolean;
     togglePrescribingInfo?: () => void;
 
-
+    currSeq?:string;
+    setCurrentSequence?: (newSeq:string) => void;
 
     isNavOpen: boolean;
     toggleNav?: () => void;
@@ -48,7 +48,8 @@ export const AppContext = createContext<ReferenceState>({
     isReferenceOpen: false,
     isSafetyInfoOpen: true,
     isPrescribingInfoOpen: false,
-    isNavOpen: false
+    isNavOpen: false,
+    currSeq: "",
 });
 
 export const PageWrapper:React.FC = ({ children }) => {
@@ -74,10 +75,8 @@ export const PageWrapper:React.FC = ({ children }) => {
                 currSection: sectionState.section,
                 setCurrentSection: sectionState.setSection,
 
-                seq: seqState.section,
-                setSeq: seqState.setSection,
-
-
+                currSeq: seqState.section,
+                setCurrentSequence: seqState.setSection,
 
 
                 isReferenceOpen: refState.isToggled,
@@ -99,7 +98,7 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 isaQAopen: qaState.isToggled,
                 toggleQA: qaState.toggle,
-                setQA: qaState.setToggle,
+                setQA: qaState.setToggle
             }}
         >
             {children}
