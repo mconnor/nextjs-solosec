@@ -16,6 +16,7 @@ import StartScreen  from '../components/modals/Isi/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
 import {useAppState} from "../state";
+import { useCookie } from '../hooks';
 
 type RLprops = {
     dir: "Right" | "Left" | "Up" | "Down";
@@ -55,6 +56,7 @@ const FixedDiv = styled.div`
 
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
+    const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     const {currSeq, setCurrentSequence} = useAppState();
     const handlers = useSwipeable({
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
@@ -66,24 +68,24 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
 
     // Code that turns off native swipes in OCE Sales
     //CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
-    console.log("**Current", currSeq);
+    console.log("**Current", currSeq, cookie);
     const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
         if (dir === "Left") swipeLink(pageIndex, "Left");
         if (dir === "Right") swipeLink(pageIndex, "Right");
     }
 
     function swipeLink(n:number, dir:string) {
-        console.log(currSeq, n, dir);
+        console.log("Cookies", currSeq, n, dir);
         const path = PageList.seq.main;
-        if (currSeq === "") {
+        if (!cookie || cookie === "") {
             navigate();
         } else {
-            if (PageList.seq[currSeq].indexOf(path[n]) < 1) {
-                setCurrentSequence("");
+            if (PageList.seq[cookie].indexOf(path[n]) < 1) {
+                setCookie("");
                 navigate();
             } else {
                 const page = path[n];
-                const thisPath = PageList.seq[currSeq];
+                const thisPath = PageList.seq[cookie];
                 const currentPage = thisPath.indexOf(page);
                 if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
                 if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
