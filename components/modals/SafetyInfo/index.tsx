@@ -133,12 +133,12 @@ const Slogan = styled.h3`
 `;
 
 export const SafetyModal: React.FC = () => {
-    const { toggleSafetyInfo } = useAppState();
+    const { toggleSafetyInfo, isSafetyInfoOpen } = useAppState();
     return (
 
         <Container>
             <Top onClick={toggleSafetyInfo}>
-                <h1 style={{float:"left"}}>Important Safety Information</h1><span style={{float: "left", marginLeft: 5, marginTop: 15}}><img src="/img/svg/arrow-down.svg" width="12"></img></span>
+                <h1 style={{float:"left"}}>Important Safety Information</h1><span style={{float: "left", marginLeft: 5, marginTop: 15}}><img src={isSafetyInfoOpen ? "/img/svg/arrow-down.svg" : "/img/svg/arrow-up.svg"} width="12"></img></span>
             </Top>
 
             <InnerDiv>
