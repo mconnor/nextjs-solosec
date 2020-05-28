@@ -25,9 +25,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
 
     useEffect(() => {
         setCurrentSequence && setCurrentSequence(seq);
-        console.log(page, seq, currSeq);
-        
-    },[page, seq, currSeq,setCurrentSequence])
+    },[showSVG])
 
     function linkTo(page:string, linkUrl:string) {
         
@@ -40,6 +38,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
         <>
              <Img src={showSVG} onClick={() => {
                  setShowSVG(`/img/svg/${svgClicked}.svg`);
+                 console.log(page, seq, currSeq);
                  linkTo(page, linkUrl)}} />
         </>
     )
