@@ -15,7 +15,11 @@ import StartScreen  from '../components/modals/Isi/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {swipeLink} from "./modals/Nav/PageList";
 
-const onSwiping = ({ dir }, pageIndex: number) => {
+type RLprops = {
+    dir: "Right" | "Left" | "Up" | "Down";
+}
+
+const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
     if (dir === "Left") swipeLink(pageIndex, "Left");
     if (dir === "Right") swipeLink(pageIndex, "Right");
 }
