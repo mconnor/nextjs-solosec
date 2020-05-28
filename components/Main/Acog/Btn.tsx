@@ -1,6 +1,7 @@
 
 import { useToggle } from '../../../hooks';
 import styled from 'styled-components';
+import {linkTo} from '../../../components/modals/Nav/PageList';
 
 type MainProps = {
     on: boolean;
@@ -16,15 +17,15 @@ const Img = styled.img`
 type Props = {
 
     svgClicked: string;
+    page: string;
 }
 
-const Btn:React.FC<Props> = ({  svgClicked }) => {
+const Btn:React.FC<Props> = ({  svgClicked, page }) => {
     const {isToggled, toggle} = useToggle(false);
     return (
-        <Main on={isToggled} onClick={ () => toggle() }>
+        <Main on={isToggled} onClick={ () => {toggle(); linkTo(page, true)} }>
              <Img src={`/img/svg/${svgClicked}.svg`}   />
         </Main>
     )
 }
-
 export default Btn;

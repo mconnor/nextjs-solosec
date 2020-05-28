@@ -41,7 +41,7 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName }) => {
     const url = "/" + pageName;
     const { setNav } = useAppState()
     return (
-        <Btn role='button'  onClick={_prevState => setNav &&  setNav(false)} >
+        <Btn role='button' onClick={_prevState => setNav && setNav(false)} >
 
             <Link href={url}>
                 <a>{children}</a>

@@ -138,18 +138,18 @@ const Nav = () => {
               <SubLogo>(secnizazole)</SubLogo></div>
             </NavContainer>
             <NavContainer borderRight>
-                <NavBtn pageName='02_splash'>{SUMMARY}</NavBtn>
-                <NavBtn pageName='12_acog'>{CONSENSUS_GUIDELINES}</NavBtn>
-                <NavBtn pageName='17_studies'>{STUDY}</NavBtn>
+                <NavBtn pageName='page1'>{SUMMARY}</NavBtn>
+                <NavBtn pageName='03_12acog'>{CONSENSUS_GUIDELINES}</NavBtn>
+                <NavBtn pageName='04_17studies'>{STUDY}</NavBtn>
 
-                <NavBtn pageName='02_splash'>{BOHBOT}</NavBtn>
-                <NavBtn pageName='23_alcohol'>{NO_ALCOHOL_RESTRICTION}</NavBtn>
-                <NavBtn pageName='32_singleDose'>{DOSING}</NavBtn>
-                <NavBtn pageName='28_coupon'>{CO_PAY_CARD}</NavBtn>
+                <NavBtn pageName='07_21chart_france'>{BOHBOT}</NavBtn>
+                <NavBtn pageName='08_23alcohol'>{NO_ALCOHOL_RESTRICTION}</NavBtn>
+                <NavBtn pageName='13_32singleDose'>{DOSING}</NavBtn>
+                <NavBtn pageName='11_28coupon'>{CO_PAY_CARD}</NavBtn>
 
-                <NavBtn pageName='30_survey'>{SATISFACTION_SURVEY}</NavBtn>
-                <NavBtn pageName='68_BVsequelae'>{CURRENT_BV_TREATMENTS}</NavBtn>
-                <NavBtn pageName='02_splash'>{APPENDIX}</NavBtn>
+                <NavBtn pageName='12_30survey'>{SATISFACTION_SURVEY}</NavBtn>
+                <NavBtn pageName='25_68BVsequelae'>{CURRENT_BV_TREATMENTS}</NavBtn>
+                <NavBtn pageName='01_02splash'>{APPENDIX}</NavBtn>
             </NavContainer>
             <NavContainer>
                 <RightColBt>
@@ -159,7 +159,7 @@ const Nav = () => {
                         </IconWrapper>
                     </IconBg>
 
-                    <NavBtn pageName='42_cs1'>{CONVERSATION_STARTERS}</NavBtn>
+                    <NavBtn pageName='18_42cs1'>{CONVERSATION_STARTERS}</NavBtn>
                 </RightColBt>
                 <RightColBt>
 
@@ -170,7 +170,7 @@ const Nav = () => {
                     </IconBg>
 
 
-                    <NavBtn pageName='23_alcohol'>{SEGMENT_NARRATIVES}</NavBtn>
+                    <NavBtn pageName='22_61segmentNarratives'>{SEGMENT_NARRATIVES}</NavBtn>
                 </RightColBt>
                 <RightColBt>
                     <IconBg>
@@ -178,7 +178,7 @@ const Nav = () => {
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn pageName='02_splash'>{TOOLBOX}</NavBtn>
+                    <NavBtn pageName='01_02splash'>{TOOLBOX}</NavBtn>
                 </RightColBt>
                 <RightColBt>
                     <IconBg>
@@ -186,7 +186,7 @@ const Nav = () => {
                             <BsQuestionSquareFill />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn pageName='02_splash'>{Q_A}</NavBtn>
+                    <NavBtn pageName='27_71qa.tsx'>{Q_A}</NavBtn>
                 </RightColBt>
 
             </NavContainer>

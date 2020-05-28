@@ -16,7 +16,7 @@ export const Acog = () => {
         
             <ol>
 <li>
-     American College of Obstetricians and Gynecologists. ACOG Practice Bulletin: Clinical Management Guidelines for Obstetricians-Gynecologists, Number 215. <em>Obstet Gynecol</em> 2020:135(1):e1-e17.
+     American College of Obstetricians and Gynecologists. ACOG Practice Bulletin: Clinical Management Guidelines for Obstetricians-Gynecologists, Number 215. <i>Obstet Gynecol</i> 2020:135(1):e1-e17.
 </li>
             </ol>
         
@@ -27,7 +27,7 @@ export const Acog2 = () => {
         
         <ol>
             <li>
-             American College of Obstetricians and Gynecologists. ACOG Practice Bulletin: Clinical Management Guidelines for Obstetricians-  Gynecologists, Number 215. <em>Obstet Gynecol</em> 2020:135(1):e1-e17
+             American College of Obstetricians and Gynecologists. ACOG Practice Bulletin: Clinical Management Guidelines for Obstetricians-  Gynecologists, Number 215. <i>Obstet Gynecol</i> 2020:135(1):e1-e17
             </li>
             <li>
             Data on file. Experience Program: Post Treatment Patient Survey data (May 2019-Sep 2019). Prepared September 2019. (LPSO-  23506). Lupin Pharmaceuticals, Inc.
@@ -76,7 +76,7 @@ export const Pg19 = () => {
 SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
 </li>
            <li>
-Hillier SL, Nyirjesy P, Waldbaum AS, et al. Secnidazole treatment of bacterial vaginosis: a randomized controlled trial. <em>Obstet Gynecol</em>. 2017;130(2):379-386
+Hillier SL, Nyirjesy P, Waldbaum AS, et al. Secnidazole treatment of bacterial vaginosis: a randomized controlled trial. <i>Obstet Gynecol</i>. 2017;130(2):379-386
 </li>
            <li>
 Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness and safety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <em>Am J Obstet Gynecol</em>. 2018;219(1):110]. <em>Am J Obstet Gynecol</em>. 2017;217(6):678.e1-678.e9. doi: 10.1016/j.ajog.2017.08.017.
@@ -89,7 +89,7 @@ export const Pg21 = () => {
     return (
         <ol>
            <li>
-                Bohbot JM, Vicaut E, Fagnen D, Brauman M. Treatment of bacterial vaginosis: a multi-center, double-dummy, randomized phase III study comparing secnidazole and metronidazole. Infect Dis <em>Obstet Gynecol</em>. 2010;2010:1-
+               Bohbot JM, Vicaut E, Fagnen D, Brauman M. Treatment of bacterial vaginosis: a multi-center, double-dummy, randomized phase III study comparing secnidazole and metronidazole. <i>Infect Dis Obstet Gynecol</i>. 2010;2010:1-
             </li>
         </ol>
     )
@@ -108,7 +108,7 @@ export const Pg23 = () => {
             </li>
 
             <li>
-                Noureldin M, Krause J, Jin L, Ng V, Tran M. Drug Alcohol Interactions: A Review of 3 Therapeutic Cases. U.S. Pharmacist. 2017; 17 Nov.
+                Noureldin M, Krause J, Jin L, Ng V, Tran M. Drug Alcohol Interactions: A Review of 3 Therapeutic Cases. <i>U.S. Pharmacist</i>. 2017; 17 Nov.
                 https://www.uspharmacist.com/article/drug-alcohol-interactions-a-review-of-three-therapeutic-classes. Accessed 20 Feb 2019.
             </li>
              
@@ -129,18 +129,18 @@ export const Pg23 = () => {
             </li>
 
             <li>
-                Pentikis HS, Adetoro N. In vitro metabolic profile of secnidazole, a 5-nitroimidazole antibiotic for the treatment of bacterial vaginosis.
-                Manuscr Prep. 2017.
+                Pentikis HS, Adetoro N. <i>In vitro</i> metabolic profile of secnidazole, a 5-nitroimidazole antibiotic for the treatment of bacterial vaginosis.
+                <i>Manuscr Prep</i>. 2017.
             </li>
 
             <li>
                 Gillis JC, Wiseman LR. Secnidazole. A review of its antimicrobial activity, pharmacokinetic properties and therapeutic use in the
-                management of protozoal infections and bacterial vaginosis. Drugs. 1996;51(4):621-638. http://www.ncbi.nlm.nih.gov/pubmed/8706597.
+                management of protozoal infections and bacterial vaginosis. <i>Drugs</i>. 1996;51(4):621-638. http://www.ncbi.nlm.nih.gov/pubmed/8706597.
             </li>
 
             <li>
                 Lamp KC, Freeman CD, Klutman NE, Lacy MK. Pharmacokinetics and pharmacodynamics of the nitroimidazole antimicrobials.
-                Clin Pharmacokinet. 1999;36(5):353-373. doi:10.2165/00003088-199936050-00004.
+                <i>Clin Pharmacokinet</i>. 1999;36(5):353-373. doi:10.2165/00003088-199936050-00004.
             </li>
         </ol>
     )
@@ -214,7 +214,7 @@ export const Pg34 = () => {
 SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017
 </li>
            <li>
-Nyirjesy P, Schwebke JR. Secnidazole: next-generation antimicrobial agent for bacterial vaginosis treatment. <em>Future Microbiol</em>. 2018;13:507-524. doi:10.2217/fmb-2017-0270
+Nyirjesy P, Schwebke JR. Secnidazole: next-generation antimicrobial agent for bacterial vaginosis treatment. <i>Future Microbiol</i>. 2018;13:507-524. doi:10.2217/fmb-2017-0270
 </li>
            <li>
 Metronidazole Oral Capsules 500 mg [prescribing information]. Chicago, IL: G.D. Searle LLC; 2018. 15
@@ -228,13 +228,13 @@ export const Pg38 = () => {
     return (
         <ol>
            <li>
-Chavoustie SE, Eder SE, Koltun WD, et al. Experts explore the state of bacterial vaginosis and the unmet needs facing women and providers. Int J Gynaecol Obstet. 2017;137(2):107-109.
+               Chavoustie SE, Eder SE, Koltun WD, et al. Experts explore the state of bacterial vaginosis and the unmet needs facing women and providers. <i>Int J Gynaecol Obstet</i>. 2017;137(2):107-109.
 </li>
            <li>
- Bartley JB, Ferris DG, Allmond LM, Dickman ED, Dias JK, Lambert J. Personal digital assistants used to document compliance of bacterial vaginosis treatment. Sex Transm Dis. 2004;31(8):488-491.
+               Bartley JB, Ferris DG, Allmond LM, Dickman ED, Dias JK, Lambert J. Personal digital assistants used to document compliance of bacterial vaginosis treatment. <i>Sex Transm Dis</i>. 2004;31(8):488-491.
 </li>
            <li>
-Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness and safety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <em>Am J Obstet Gynecol</em>. 2018;219(1):110]. <em>Am J Obstet Gynecol</em>. 2017;217(6):678.e1-678.e9. doi: 10.1016/j.ajog.2017.08.017.
+Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness and safety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <i>Am J Obstet Gynecol</i>. 2018;219(1):110]. <i>Am J Obstet Gynecol</i>. 2017;217(6):678.e1-678.e9. doi: 10.1016/j.ajog.2017.08.017.
 </li>
         </ol>
     )
@@ -259,8 +259,11 @@ Koumans EH, Sternberg M, Bruce C, et al. The prevalence of bacterial vaginosis i
 Allsworth JE, Lewis VA, Peipert JF. Viral sexually transmitted infections and bacterial vaginosis: 2001-2004 National Health and Nutrition Examination Survey data. Sex Transm Dis. 2008;35(9):791-796.
 </li>
            <li>
-Brookheart RT, Lewis WG, Peipert JF, Lewis AL, Allsworth JE. Association between obesity and bacterial vaginosis as assessed by Nugent Score. <em>Am J Obstet Gynecol</em>. 2019;220(5):476.e1-476.e11.
+Brookheart RT, Lewis WG, Peipert JF, Lewis AL, Allsworth JE. Association between obesity and bacterial vaginosis as assessed by Nugent Score. <i>Am J Obstet Gynecol</i>. 2019;220(5):476.e1-476.e11.
 </li>
+            <li>
+                Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in <i>MMWR Recomm Rep</i>. 2015;64(33):924]. <i>MMWR Recomm Rep</i>. 2015;64(RR-03):1-137.
+            </li>
         </ol>
     )
 }
@@ -269,7 +272,8 @@ export const Pg68 = () => {
     return (
         <ol>
            <li>
-               Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in MMWR Recomm Rep. 2015;64(33):924]. MMWR Recomm Rep. 2015;64(RR-03):1-137.</li>
+               Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in <i>MMWR Recomm Rep</i>. 2015;64(33):924]. <i>MMWR Recomm Rep</i>. 2015;64(RR-03):1-137.
+           </li>
         </ol>
     )
 }

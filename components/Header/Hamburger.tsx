@@ -26,7 +26,6 @@ const Main = styled.div`
     display:grid;
     grid-template-columns:1fr;
     place-items: center center;
-    border: 1px solid gray;
 `;
 
 const Hamburger = () => {

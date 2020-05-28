@@ -19,6 +19,7 @@ const Main = styled.button<MainProps>`
     border-radius: 10px;
     padding-right: 30px;
     padding-left:32px;
+    height: 74px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

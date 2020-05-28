@@ -1,6 +1,7 @@
 
 import Layout from '../components/Layout';
 import * as Sections from '../components/utils/Sections';
+import SpaLink from "../components/SpaLink";
 
 export default () => (
     <Layout 

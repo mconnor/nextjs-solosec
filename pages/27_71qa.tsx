@@ -8,7 +8,7 @@ import * as Sections from '../components/utils/Sections';
 
 const QARRAY = [
     ['<section>\
-    How often does the patient take Solosec® (secnidazole)?</section>',
+    How often does the patient take Solosec<sup>®</sup> (secnidazole)?</section>',
    
         '<p>\
         Solosec does not dissolve in water or any liquids. It should not be mixed into liquids and \
