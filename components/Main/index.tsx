@@ -1,8 +1,14 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 import SwipeableNavigation from "../SwipableNavigation";
-import {useSwipeable} from "react-swipeable";
+import {useSwipeable, LEFT,
+    RIGHT,} from "react-swipeable";
 import {swipeLink} from "../modals/Nav/PageList";
+
+const onSwiping = ({ dir }, pageIndex: number) => {
+    if (dir === LEFT) swipeLink(pageIndex, "Left");
+    if (dir === RIGHT) swipeLink(pageIndex, "Right");
+}
 
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
@@ -35,8 +41,7 @@ type Props = {
 
 const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt, pageIndex }) => {
     const handlers = useSwipeable({
-        onSwipedLeft: () => swipeLink(pageIndex, 'LEFT'),
-        onSwipedRight: () => swipeLink(pageIndex, 'RIGHT'),
+        onSwiping: (eventData) => onSwiping(eventData, pageIndex),
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
         trackTouch: true

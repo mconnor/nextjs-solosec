@@ -26,6 +26,7 @@ interface ReferenceState {
     togglePrescribingInfo?: () => void;
 
 
+
     isNavOpen: boolean;
     toggleNav?: () => void;
     setNav?: React.Dispatch<React.SetStateAction<boolean>>;
