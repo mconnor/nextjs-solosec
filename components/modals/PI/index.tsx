@@ -111,7 +111,7 @@ const PrescribingInfo: React.FC<Props> = ({ section }) => {
                     </CloseBtn>
                 </Top>
                 <PICopy />
-            </Container>>
+            </Container>
         </MainDiv>
     )
 }

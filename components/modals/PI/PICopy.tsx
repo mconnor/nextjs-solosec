@@ -1,6 +1,31 @@
+import styled from 'styled-components';
+
+const Copy = styled.div`
+    grid-area: 'copy';
+    background-color:white;
+    padding: 20px 48px 0 20px;
+    border-bottom-right-radius: var(--border-radius-4);
+    border-bottom-left-radius: var(--border-radius-4);
+    letter-spacing: 0.03em;
+    line-height: 28px;
+    color: var(--copy-color-secondary);
+    li {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        em {
+            color: red;
+            font-weight: 100;
+            font-style: italic;
+        }
+    }
+`;
+
 const PICopy = () => {
     return (
-        <div id="pi" className="hide">
+        <Copy>
             <nav id="pi-nav">
                 <ul>
                     <li><a href="#indicationsAndUsage" className="active">Indications and Usage</a></li>
@@ -309,7 +334,7 @@ const PICopy = () => {
                         the molecular weight is 185.18 and the chemical structure is:</p>
 
                     <p>
-                        <img className="s50" src="media/images/global/figure-1.png"/>
+                        <img className="s50" src="/img/figure-1.png"/>
                     </p>
 
                     <h3>Figure 1: Structure of Secnidazole</h3>
@@ -930,7 +955,7 @@ const PICopy = () => {
                         <li>Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and
                             tearing across the top.
                         </li>
-                        <img className="s25" src="media/images/global/figure-2.png"/>
+                        <img className="s25" src="/img/figure-2.png"/>
                         <li>Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding.
                             The granules will not dissolve. Take within 30 minutes without chewing or crunching the
                             granules.
@@ -975,7 +1000,7 @@ const PICopy = () => {
 
             </div>
 
-        </div>
+        </Copy>
 
     )
 }
