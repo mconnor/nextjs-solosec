@@ -39,22 +39,15 @@ export const PageList = {
     }
 };
 
-<<<<<<< HEAD:components/modals/Nav/PageList.js
-export function linkTo(page, t) {
-=======
 let sequenceState = null;
 
 export function linkTo(page, t, seq) {
     sequenceState = seq;
->>>>>>> origin/master:components/modals/Nav/PageList.jsx
     setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
 }
 
 export function swipeLink(n, dir) {
-<<<<<<< HEAD:components/modals/Nav/PageList.js
-=======
     console.log(sequenceState, !sequenceState, n, dir);
->>>>>>> origin/master:components/modals/Nav/PageList.jsx
     const path = PageList.seq.main;
     if (!sequenceState) {
         navigate();
