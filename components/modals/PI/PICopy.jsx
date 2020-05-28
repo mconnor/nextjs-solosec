@@ -23,11 +23,7 @@ const Copy = styled.div`
     }
 `;
 
-type Props = {
-
-}
-
-const PICopy: React.FC<Props> = ({}) => {
+const PICopy= () => {
     return (
         <Copy>
             <nav id="pi-nav">
