@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import {useAppState} from "../../../state";
 import {PageList} from "../../modals/Nav/PageList";
@@ -9,7 +9,7 @@ type Props = {
     svglink:string;
     svgClicked: string;
     page:string;
-    seq:string;
+    seq:string
 }
 
 const Img = styled.img`
@@ -21,7 +21,7 @@ const Img = styled.img`
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     const [cookie, setCookie] = useCookie({ key: "test" }) ;
     const [showSVG, setShowSVG] = useState(`/img/svg/${svglink}.svg`);
-    const {currSeq, setCurrentSequence} = useAppState();
+    const {currSeq} = useAppState();
 
     const [linkUrl] = useState<string>(PageList["pages"][page])
 

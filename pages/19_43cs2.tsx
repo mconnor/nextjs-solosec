@@ -20,6 +20,7 @@ export default () => (
             headline={HEADLINE}
             buttonCopyArray={btnArray}
             url={PageList.pages["12"]}
+            urls={['world', 'world']}
         />
     </Layout>
 )
