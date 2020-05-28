@@ -20,6 +20,9 @@ interface SubProps {
 
 }
 
+
+
+
 const Btn = styled.div<SubProps>`
     display: grid;
     white-space:nowrap;
@@ -50,9 +53,13 @@ const Btn = styled.div<SubProps>`
 const Li = styled.li`
   color:white;
 list-style-type: none;
-    &:before {
-            content: '-';
-    };
+    /* &:before {
+        content: "-";
+      text-indent: -2em;
+      display: inline-block;
+    }; */
+    
+
 `;
 
 const Ul = styled.ul`
@@ -75,12 +82,13 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav }) 
                 </Ul>)
             : subnav ?
                 (<Li><Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <Link href={url}><a>{label}</a></Link>
+                    <Link href={url}><a>{`-${label}`}</a></Link>
                 </Btn></Li>) :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
                  <Link href={url}><a>{label}</a></Link>
                 </Btn>
+
 
             }
             {children}
