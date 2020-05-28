@@ -63,7 +63,7 @@ list-style-type: none;
 `;
 
 const Ul = styled.ul`
-magin:0;
+margin:0;
 padding:0;
 `;
 
