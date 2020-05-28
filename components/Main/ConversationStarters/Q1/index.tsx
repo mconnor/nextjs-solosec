@@ -24,9 +24,10 @@ const MainDiv =styled.div`
 
 type Props = {
     buttonCopyArray: string[];
+    linksArray: string[];
 }
 
-const ConversationStarters:React.FC<Props> = ({  buttonCopyArray }) => {
+const ConversationStarters:React.FC<Props> = ({  buttonCopyArray , linksArray}) => {
     return (
         <MainDiv>
             {
@@ -35,7 +36,7 @@ const ConversationStarters:React.FC<Props> = ({  buttonCopyArray }) => {
                     return <Btn copy={itm} 
                                 gridArea={btName} 
                                 key={btName} 
-                                url='www.googl.com'
+                                url={linksArray[index]}
                             />
                 })
             }

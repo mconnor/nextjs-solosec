@@ -15,7 +15,7 @@ const variants = {
 }
 
 const MainDiv = styled(motion.div)`
-    z-index: 2;
+    z-index: 3;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -95,8 +95,6 @@ const PrescribingInfoWrapper: React.FC<Props> = ({ section }) => {
 }
 const PrescribingInfo: React.FC<Props> = ({ section }) => {
     const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
-    console.log('section' + section)
-
     return (
         <MainDiv
             variants={variants}

@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { useToggle } from '../../../hooks';
+import {useCookie, useToggle} from '../../../hooks';
 import styled from 'styled-components';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from "react-icons";
@@ -44,10 +44,12 @@ type Props = {
     copy: string;
     gridArea: string;
     url:string;
+    seq?:string;
 }
-const Btn: React.FC<Props> = ({ copy, gridArea, url}) => {
+const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
     const { toggle, isToggled } = useToggle(false);
     const [kolor, setKolor] = useState('green');
+    const [cookie, setCookie] = useCookie({ key: "test" }) ;
     useEffect(() => {
         if (isToggled) {
             setKolor('gold');
@@ -59,7 +61,8 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url}) => {
 
     const handleClick = (_url:string)=> {
         toggle();
-        console.log('goto ' + _url)
+        if (seq) setCookie(seq)
+        setTimeout(()=>{window.location.href = url;}, 100)
     }
     return (
         <Main 

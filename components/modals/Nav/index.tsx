@@ -206,7 +206,7 @@ const Nav = () => {
                     </IconBg>
 
 
-                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["8"]} />
+                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["22"]} />
                 </RightColBt>
                 <RightColBtX>
                     <IconBg>

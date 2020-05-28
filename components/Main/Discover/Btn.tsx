@@ -25,14 +25,14 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
 
     const [linkUrl] = useState<string>(PageList["pages"][page])
 
-    useEffect(() => {
-        setCurrentSequence && setCurrentSequence(seq);
-        currSeq && setCookie(currSeq);
-    },[showSVG])
+    // useEffect(() => {
+    //     setCurrentSequence && setCurrentSequence(seq);
+    //     currSeq && setCookie(currSeq);
+    // },[showSVG])
 
     function linkTo(page:string, linkUrl:string) {
-        
-            console.log(page, seq, currSeq);
+            setCookie(seq)
+            console.log(page, seq, cookie);
             setTimeout(()=>{window.location.href = linkUrl;}, 100)
        
     }

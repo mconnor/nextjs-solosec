@@ -37,9 +37,12 @@ const TitleDiv = styled.div`
 type Props = {
     headline: string;
     buttonCopyArray: string[];
+    url?:string,
+    urls?:string[];
+    seqs?:string[];
 }
 
-const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray }) => {
+const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url, urls, seqs }) => {
     return (
         <MainDiv numOfBtns={buttonCopyArray.length}>
             <TitleDiv>{headline}</TitleDiv>
@@ -49,7 +52,8 @@ const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray }) =>
                     return <Btn copy={itm} 
                                 gridArea={btName} 
                                 key={btName}
-                                url='www.googl.com'
+                                url={url || urls[index]}
+                                seq={seqs ? seqs[index] : null}
                             />
                 })
             }
