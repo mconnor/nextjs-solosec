@@ -1,17 +1,15 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import { GoPlus } from "react-icons/go";
 import { motion } from 'framer-motion';
-// import { useAppState } from '../../../state'
 import { useToggle } from '../../../hooks';
-// import QnA from './QnA'
-
-
+import IconWrapper from '../../IconWrapper'
 
 const variants = {
-    open: { 
+    open: {
         y: 0,
-        opacity:1, 
-        display: 'block' 
+        opacity: 1,
+        display: 'block'
     },
     closed: {
         y: "-100%",
@@ -42,7 +40,7 @@ type Props = {
 }
 
 const QA: React.FC<Props> = ({ children }) => {
-  
+
     return (
         <MainDiv>
             {children}
@@ -61,11 +59,8 @@ const Qdiv = styled.div`
 
 type OnOff = { on?: boolean; }
 
-const Adiv = styled(motion.div)<OnOff>`
+const Adiv = styled(motion.div) <OnOff>`
     margin-top: 22px;
-    /* padding: 0 18px; */
-    /* display: ${props => props.on ? 'block' : 'none'}; */
-    /* overflow: hidden; */
     font-style: normal;
     font-weight: 300;
     font-size: 22px;
@@ -83,6 +78,14 @@ const QAcontainer = styled.div`
     letter-spacing: -0.02em;
 `;
 
+const Qwrapper = styled.div`
+    display:grid;
+    grid-template-columns:auto 1fr; 
+    align-items:start;
+    column-gap:10px;
+    align-items:center;
+
+`;
 interface Iprops {
     q: string;
     a: string;
@@ -96,24 +99,31 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a }) => {
 
     return (
         <QAcontainer onClick={toggle}>
-            <Qdiv role='button'
-                dangerouslySetInnerHTML={createMarkup(q)} />
-           
-                
-                <Adiv 
-                    // on={isToggled}
-                    dangerouslySetInnerHTML={createMarkup(a)}
-                    
-                    variants={variants}
-                    initial='closed'
-                    animate={isToggled ? 'open' : 'closed'}
-                    transition={{ damping: 300 }}
-                    // initial={{ opacity: 0 }}
-                    // animate={{ opacity: 1 }}
-                    // exit={{ opacity: 0, display: 'none'}}
-                >
-                </Adiv>
-      
+            <Qwrapper>
+                <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)} />
+              
+                        <IconWrapper kolor='green' size='1em'>
+                             <GoPlus />
+                        </IconWrapper>
+   
+              
+            </Qwrapper>
+
+
+            <Adiv
+                // on={isToggled}
+                dangerouslySetInnerHTML={createMarkup(a)}
+
+                variants={variants}
+                initial='closed'
+                animate={isToggled ? 'open' : 'closed'}
+                transition={{ damping: 300 }}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // exit={{ opacity: 0, display: 'none'}}
+            >
+            </Adiv>
+
         </QAcontainer>
     )
 }
