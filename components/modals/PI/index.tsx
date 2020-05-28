@@ -70,7 +70,7 @@ type Props = {
 const PrescribingInfoWrapper: React.FC<Props> = ({ }) => {
     // const { isReferenceOpen } = useAppState();
     // if (!isReferenceOpen) return null;
-    return <PrescribingInfo section={section} />;
+    return <PrescribingInfo />;
 }
 const PrescribingInfo: React.FC<Props> = ({ }) => {
     const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
