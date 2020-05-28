@@ -12,7 +12,14 @@ import ReferencesWrapper from './modals/References';
 import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
 import StartScreen  from '../components/modals/Isi/StartScreen'
+import {useSwipeable, LEFT,
+    RIGHT} from "react-swipeable";
+import {swipeLink} from "./modals/Nav/PageList";
 
+const onSwiping = ({ dir }, pageIndex: number) => {
+    if (dir === LEFT) swipeLink(pageIndex, "Left");
+    if (dir === RIGHT) swipeLink(pageIndex, "Right");
+}
 
 type Props = {
     children?: ReactNode;
@@ -48,6 +55,12 @@ const FixedDiv = styled.div`
 
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
+    const handlers = useSwipeable({
+        onSwiping: (eventData) => onSwiping(eventData, pageIndex),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+        trackTouch: true
+    });
     // console.log(router.pathname )
 
     // Code that turns off native swipes in OCE Sales
@@ -72,17 +85,18 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 
 			    <PageContainer>
                     <Header gridArea='header'/>
-                   
-                    <Main 
-                        gridArea='main' 
-                        children={children} 
-                        foreGroundArt={foreGroundArt} 
+
+                    <Main
+                        gridArea='main'
+                        children={children}
+                        foreGroundArt={foreGroundArt}
                         key={router.route}
                         noBgArt={noBgArt}
                         bgArt={bgArt}
                         pageIndex={pageIndex}
+                        {...handlers}
                     />
-                   
+
                     <Footer gridArea='footer'/>
                 </PageContainer>
             </PageWrapper>

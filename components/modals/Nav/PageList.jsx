@@ -52,7 +52,7 @@ export function swipeLink(n, dir) {
     if (!sequenceState) {
         navigate();
     } else {
-        if (PageList.seq[sequenceState].indexOf(path[n]) === 0) {
+        if (PageList.seq[sequenceState].indexOf(path[n]) < 1) {
             sequenceState  = null;
             navigate();
         } else {
