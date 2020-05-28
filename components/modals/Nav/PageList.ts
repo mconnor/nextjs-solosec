@@ -1,4 +1,9 @@
-export const PageList = {
+interface Foo {
+    pages: { [key: string]: string; };
+    seq:{ [key: string]: string[]; }
+}
+
+export const PageList: Foo = {
     pages: {
         "1": "01_02splash",
         "2": "02_06discover",
