@@ -43,8 +43,9 @@ const Span = styled.span`
 type Props = {
     copy: string;
     gridArea: string;
+    url:string;
 }
-const Btn: React.FC<Props> = ({ copy, gridArea }) => {
+const Btn: React.FC<Props> = ({ copy, gridArea, url}) => {
     const { toggle, isToggled } = useToggle(false);
     const [kolor, setKolor] = useState('green');
     useEffect(() => {
@@ -54,11 +55,18 @@ const Btn: React.FC<Props> = ({ copy, gridArea }) => {
             setKolor('green');
         }
     }, [isToggled, setKolor]);
+
+
+    const handleClick = (_url:string)=> {
+        toggle();
+        console.log('goto ' + _url)
+    }
     return (
         <Main 
             on={isToggled}
             gridArea={gridArea}
-            onClick={() => toggle()}>
+            onClick={() => handleClick(url)}
+        >
             <Span>{copy}</Span>
 
             <IconContext.Provider value={{ color: kolor, size: '4em', className: "global-class-name" }}>

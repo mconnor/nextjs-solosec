@@ -32,7 +32,11 @@ const ConversationStarters:React.FC<Props> = ({  buttonCopyArray }) => {
             {
                 buttonCopyArray.map((itm, index) => {
                     let btName = `bt${index}`;
-                    return <Btn copy={itm} gridArea={btName} key={btName} />
+                    return <Btn copy={itm} 
+                                gridArea={btName} 
+                                key={btName} 
+                                url='www.googl.com'
+                            />
                 })
             }
            
