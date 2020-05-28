@@ -4,6 +4,10 @@ import { useToggle, ToggleState, useSection, SectionState } from "../hooks";
 
 interface ReferenceState {
 
+    isaQAopen:boolean;
+    toggleQA?: () => void;
+    setQA?: React.Dispatch<React.SetStateAction<boolean>>;
+
 
     isReferenceOpen: boolean;
     toggleReference?: () => void;
@@ -28,6 +32,8 @@ interface ReferenceState {
 }
 
 export const AppContext = createContext<ReferenceState>({
+
+    isaQAopen:false,
     isInitSafetyInfoOpen:true,
     isReferenceOpen: false,
     isSafetyInfoOpen: true,
@@ -41,6 +47,7 @@ export const PageWrapper:React.FC = ({ children }) => {
     const safetyInfoState: ToggleState  = useToggle(false);
     const initSafetyInfoState: ToggleState  = useToggle(true);
     const prescribingInfoState: ToggleState  = useToggle(false);
+    const qaState: ToggleState  = useToggle(false);
    
     const navState: ToggleState  = useToggle(false);
 
@@ -55,8 +62,7 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 isSafetyInfoOpen: safetyInfoState.isToggled,
                 toggleSafetyInfo: safetyInfoState.toggle,
-
-setSafteyInfo:safetyInfoState.setToggle,
+                setSafteyInfo:safetyInfoState.setToggle,        
 
                 isPrescribingInfoOpen: prescribingInfoState.isToggled,
                 togglePrescribingInfo: prescribingInfoState.toggle,
@@ -67,6 +73,10 @@ setSafteyInfo:safetyInfoState.setToggle,
                 isNavOpen: navState.isToggled,
                 toggleNav: navState.toggle,
                 setNav: navState.setToggle,
+
+                isaQAopen: qaState.isToggled,
+                toggleQA: qaState.toggle,
+                setQA: qaState.setToggle,
             }}
         >
             {children}
