@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Btn from './Btn';
-
+import  {PageList} from "../../modals/Nav/PageList";
 
 const MainDiv = styled.div`
     //background-image: url(/img/svg/pg14-background.svg);
@@ -38,12 +38,12 @@ const Acgo:React.FC<Props> = ( { page }) => {
     return (
         <MainDiv className='fillMain'>
             <BtnContainer>
-                <Btn svgClicked={`pg${page}-button-1-overlay`} page="page12"/>
-                <Btn svgClicked={`pg${page}-button-2-overlay`} page="page11"/>
-                <Btn svgClicked={`pg${page}-button-3-overlay`} page="page13"/>
-                <Btn svgClicked={`pg${page}-button-4-overlay`} page="page13"/>
-                <Btn svgClicked={`pg${page}-button-5-overlay`} page="page25"/>
-                <Btn svgClicked={`pg${page}-button-6-overlay`} page="page5"/>
+                <Btn svgClicked={`pg${page}-button-1-overlay`} page={PageList.pages["12"]}/>
+                <Btn svgClicked={`pg${page}-button-2-overlay`} page={PageList.pages["11"]}/>
+                <Btn svgClicked={`pg${page}-button-3-overlay`} page={PageList.pages["13"]}/>
+                <Btn svgClicked={`pg${page}-button-4-overlay`} page={PageList.pages["13"]}/>
+                <Btn svgClicked={`pg${page}-button-5-overlay`} page={PageList.pages["25"]}/>
+                <Btn svgClicked={`pg${page}-button-6-overlay`} page={PageList.pages["5"]}/>
             </BtnContainer>
             <SVGDiv className='obj'>
                 <object type="image/svg+xml" data="/img/svg/pg14-background.svg" />
