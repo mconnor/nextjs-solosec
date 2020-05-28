@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import Btn from './Btn'
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
 
 const MainDiv = styled.div`
     background-image: url(/img/svg/pg6.svg);

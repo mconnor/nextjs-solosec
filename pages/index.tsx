@@ -25,6 +25,7 @@ const MainDiv = styled.div`
 
 export default () => (
 		<Layout
+            pageIndex={0}
             section={Sections.INDEX}>
 			<MainDiv>
                 <SpaLink pageName='01_02splash' />

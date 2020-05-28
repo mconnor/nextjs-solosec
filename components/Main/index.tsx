@@ -1,7 +1,17 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-const MainDiv = styled.div<Props>`
+
+type MainDivProps = {
+    gridArea: string;
+    foreGroundArt?: string;
+    bgArt?:string;
+    noBgArt?: boolean;
+    noBG?:boolean;
+}
+
+
+const MainDiv = styled.div<MainDivProps>`
     grid-area: ${props => props.gridArea};
     background-repeat: 
         ${props => props.bgArt && props.foreGroundArt ? 'no-repeat, no-repeat'
@@ -39,3 +49,4 @@ const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgA
 }
 
 export default Main
+// {...handlers}

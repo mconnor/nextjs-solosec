@@ -1,4 +1,4 @@
-import {useAppState} from "../../../state";
+import SpaLink from "../../SpaLink";
 
 export const PageList = {
     pages: {
@@ -42,9 +42,7 @@ export const PageList = {
 let sequenceState = null;
 
 export function linkTo(page, t, seq) {
-
     sequenceState = seq;
-    console.log(page, t, seq);
     setTimeout(()=>{window.location.href = PageList["pages"][page];}, t ? 100: 0)
 }
 
@@ -54,9 +52,7 @@ export function swipeLink(n, dir) {
     if (!sequenceState) {
         navigate();
     } else {
-        console.log(path[n], PageList.seq[sequenceState].indexOf(path[n]))
         if (PageList.seq[sequenceState].indexOf(path[n]) < 1) {
-            console.log("Removing sequence state")
             sequenceState  = null;
             navigate();
         } else {
