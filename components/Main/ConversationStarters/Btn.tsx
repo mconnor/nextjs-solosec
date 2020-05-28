@@ -49,7 +49,7 @@ type Props = {
 const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
     const { toggle, isToggled } = useToggle(false);
     const [kolor, setKolor] = useState('green');
-    const [cookie, setCookie] = useCookie({ key: "test" }) ;
+    const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     useEffect(() => {
         if (isToggled) {
             setKolor('gold');
@@ -61,6 +61,7 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
 
     const handleClick = (_url:string)=> {
         toggle();
+        console.log(cookie);
         if (seq) setCookie(seq)
         setTimeout(()=>{window.location.href = url;}, 100)
     }

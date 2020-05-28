@@ -58,42 +58,21 @@ const Top = styled.div`
         text-align: left;
     }
 `;
-const Copy = styled.div`
-    grid-area: 'copy';
-    background-color:white;
-    padding: 20px 48px 0 20px;
-    border-bottom-right-radius: var(--border-radius-4);
-    border-bottom-left-radius: var(--border-radius-4);
-    letter-spacing: 0.03em;
-    line-height: 28px;
-    color: var(--copy-color-secondary);
-    li {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
-        letter-spacing: 0.02em;
-        em {
-            color: red;
-            font-weight: 100;
-            font-style: italic;
-        }
-    }
-`;
+
 const CloseBtn = styled.div`
     font-size: 36px;
     font-weight: bold;
 `;
 
 type Props = {
-    section: string;
+
 }
-const PrescribingInfoWrapper: React.FC<Props> = ({ section }) => {
+const PrescribingInfoWrapper: React.FC<Props> = ({ }) => {
     // const { isReferenceOpen } = useAppState();
     // if (!isReferenceOpen) return null;
     return <PrescribingInfo section={section} />;
 }
-const PrescribingInfo: React.FC<Props> = ({ section }) => {
+const PrescribingInfo: React.FC<Props> = ({ }) => {
     const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
     return (
         <MainDiv

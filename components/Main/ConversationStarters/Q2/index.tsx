@@ -49,11 +49,12 @@ const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url,
             {
                 buttonCopyArray.map((itm, index) => {
                     let btName = `bt${index}`;
+                    let other = urls ? urls[index] : "";
                     return <Btn copy={itm} 
                                 gridArea={btName} 
                                 key={btName}
-                                url={url || urls[index]}
-                                seq={seqs ? seqs[index] : null}
+                                url={url || other}
+                                seq={seqs ? seqs[index] : undefined}
                             />
                 })
             }

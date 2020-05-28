@@ -57,7 +57,7 @@ const FixedDiv = styled.div`
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
-    const {currSeq, setCurrentSequence} = useAppState();
+    const {currSeq} = useAppState();
     const handlers = useSwipeable({
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
         preventDefaultTouchmoveEvent: false,
