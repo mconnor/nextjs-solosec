@@ -43,7 +43,7 @@ const TB4 = 'Patient/Physician Testimonial'
 const variants = {
     open: { y: 0 },
     closed: {
-        y: "100%",
+        y: "110%",
         transition: {
             delay: .2
         }
@@ -67,6 +67,7 @@ const MainDiv = styled(motion.div)`
     grid-template-columns: 1fr 2fr 2fr;
     column-gap: 60px;
     padding-top: 50px;
+    padding-bottom: 60px;
     align-items:start;
    
     
@@ -95,7 +96,7 @@ const NavContainerX = styled.div<StyleProps>`
     grid-template-columns: 1fr;
     height: 90%; 
     margin:0;
-    line-height: 60px;
+    line-height: 50px;
 /* row-gap:24px; */
     ul {
         line-height: 40px;
