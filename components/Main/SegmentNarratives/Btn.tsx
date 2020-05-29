@@ -1,9 +1,7 @@
-
-// import { useState } from 'react';
 import styled from 'styled-components';
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
-import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 
 type Props = {
@@ -11,11 +9,7 @@ type Props = {
     seq:string
 }
 
-<<<<<<< HEAD
-const Button = styled.img`
-=======
 const BtnInvisible = styled.button`
->>>>>>> e7eb63266953b2e61e5f75f8780cc70beaf4ef36
     width: 360px;
     height: 75px;
     background: transparent;
@@ -26,38 +20,23 @@ const BtnInvisible = styled.button`
 
 const Btn:React.FC<Props> = ({ page, seq}) => {
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
-    const router = useRouter()
 
-    //const [linkUrl] = useState<string>(PageList["pages"][page])
+console.log('cookie', cookie) // keep this
 
-    // useEffect(() => {
-    //     setCurrentSequence && setCurrentSequence(seq);
-    //     currSeq && setCookie(currSeq);
-    // },[showSVG])
 
-    function linkTo(page:string) {
-        console.log(cookie);
-        setCookie(seq)
-        setTimeout(()=>{router.push("/" + PageList.pages[page]);}, 100)
+    const url =  PageList.pages[page].slice(0,-5);
+   
 
-    }
 
     return (
-<<<<<<< HEAD
-        <Button onClick={() => {
-            linkTo(page)}}>
-        </Button>
+  
+
+
+        <Link href={url}>
+            <BtnInvisible onClick={() =>{ 
+                 console.log('url', url);setCookie(seq)}} />
+        </Link>
     )
 }
 
 export default Btn
-=======
-        
-        <BtnInvisible onClick={() => {
-            linkTo(page)}}>
-        </BtnInvisible>
-    )
-}
-
-export default Btn
->>>>>>> e7eb63266953b2e61e5f75f8780cc70beaf4ef36
