@@ -5,6 +5,7 @@ import SafetyModalWrapper from './modals/SafetyInfo/';
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
     overflow: hidden;
+    border:1px solid black;
 `;
 
 

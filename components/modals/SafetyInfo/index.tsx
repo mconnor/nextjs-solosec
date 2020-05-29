@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { useAppState } from "../../../state/";
-import SafetyCopy from './SafetyCopy';
+import Copy from '../StartScreen/Copy';
 import LumpinLogo from '../../svg/LupinLogo'
 
 
@@ -21,7 +21,7 @@ import LumpinLogo from '../../svg/LupinLogo'
 const variants = {
     open: { y: 0 },
     closed: {
-        y: "82.5%",
+        y: 730,
         transition: {
             delay: .2
         }
@@ -42,17 +42,17 @@ const WrapperContainer = styled(motion.div)`
     width:100vw;
     max-width: var( --ipad-width);
     position: fixed;
-    //top:var(--header-height);
-    top:120px;
+    top:var(--header-height);
     height: calc(100vh - var(--header-height));
     left:0;
 
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 24px;
+    padding-top: 20px;
+   
     overflow:hidden;
     background:white;
-    //border:1px solid black;
+   
 `;
 
 const Container = styled.div`
@@ -143,7 +143,7 @@ export const SafetyModal: React.FC = () => {
             </Top>
 
             <InnerDiv>
-                <SafetyCopy marginLR={MARG} />
+                <Copy marginLR={MARG} />
             </InnerDiv>
 
             <ModalFooter>
