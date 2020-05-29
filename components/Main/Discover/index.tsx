@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Btn from './Btn'
+import { useRouter } from 'next/router'
+import {PageList} from "../../modals/Nav/PageList";
 
 const MainDiv = styled.div`
     background-image: url(/img/svg/pg6.svg);
@@ -14,16 +16,22 @@ const BtnContainer = styled.div`
     row-gap: 7px;
 `;
 
-// const BtnInvisible = styled.button`
-//     width: 360px;
-//     height: 75px;
-//     //background: transparent;
-//     //border: none !important;
-//     font-size:0;
-// `;
+const BtnInvisible = styled.button`
+    width: 360px;
+    height: 75px;
+    background: transparent;
+    border: none !important;
+    font-size:0;
+    position: absolute;
+    top: 720px;
+    right: 60px;
+    cursor: pointer;
+`;
 
 
 const Discover = () => {
+    const router = useRouter();
+
     return (
         <MainDiv className='fillMain'>
             <BtnContainer>
@@ -32,8 +40,8 @@ const Discover = () => {
                 <Btn svglink='pg6-button-3' svgClicked='pg6-button-3-selected' page="8" seq="02_c"/>
                 <Btn svglink='pg6-button-4' svgClicked='pg6-button-4-selected' page="10" seq="02_d"/>
             </BtnContainer>
-            {/*<BtnInvisible onClick={() =>{*/}
-            {/*    console.log('url')}} />*/}
+            <BtnInvisible onClick={() =>{
+                router.push("/" + PageList.pages["3"])}} />
         </MainDiv>
     )
 }
