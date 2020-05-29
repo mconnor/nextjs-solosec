@@ -20,9 +20,9 @@ const Discover = () => {
         <MainDiv className='fillMain'>
             <BtnContainer>
                 <Btn svglink='pg6-button-1' svgClicked='pg6-button-1-selected' page="12" seq="02_a"/>
-                <Btn svglink='pg6-button-2' svgClicked='pg6-button-2-selected' page="12" seq="02_b"/>
-                <Btn svglink='pg6-button-3' svgClicked='pg6-button-3-selected' page="12" seq="02_c"/>
-                <Btn svglink='pg6-button-4' svgClicked='pg6-button-4-selected' page="12" seq="02_d"/>
+                <Btn svglink='pg6-button-2' svgClicked='pg6-button-2-selected' page="8" seq="02_b"/>
+                <Btn svglink='pg6-button-3' svgClicked='pg6-button-3-selected' page="13" seq="02_c"/>
+                <Btn svglink='pg6-button-4' svgClicked='pg6-button-4-selected' page="11" seq="02_d"/>
             </BtnContainer>
         </MainDiv>
     )
