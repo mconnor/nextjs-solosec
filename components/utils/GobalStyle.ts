@@ -63,10 +63,22 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
     }
     body {
-        font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
        margin:0;
        padding:0;
        position:fixed;
+    }
+
+    .modalWrapper {
+        width:100vw;
+        height:100vh;
+        max-width: var( --ipad-width);
+        height: 100vh;
+        position: absolute;
+        z-index: 3;
+        left:0;
+        overflow:hidden;
+        background:white;   
     }
 
  .btn {

@@ -5,19 +5,6 @@ import Copy from '../StartScreen/Copy';
 import LumpinLogo from '../../svg/LupinLogo'
 
 
-// const returnVarient(hpx: string) => {
-//     return {
-//         open: { y: 0},
-//         closed: {
-//             y: "80%",
-//             transition: {
-//                 delay: .2
-//             }
-//         },
-
-//     }
-// }
-
 const variants = {
     open: { 
         y: 0,
@@ -43,30 +30,20 @@ const InnerDiv = styled.div<Props>`
 `;
 
 
-const WrapperContainer = styled(motion.div)<Props>`
+const OuterContrainer = styled(motion.div)<Props>`
+    height: calc(100vh - var(--header-height)) !important;;
+    top:var(--header-height) !important;;
     padding-top: ${props => props.isOpen ? '26px' : '0' };
-    width:100vw;
-    max-width: var( --ipad-width);
-    position: fixed;
-    top:var(--header-height);
-    height: calc(100vh - var(--header-height));
-    left:0;
-
     padding-left: 20px;
     padding-right: 20px;
-   
-    overflow:hidden;
-    background:white;
-   
 `;
 
 const Container = styled.div`
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 52px 1fr 56px;
     align-items:center;
-  
+
 `;
 
 
@@ -102,20 +79,17 @@ const ModalFooter = styled.div`
 
 //
 const SafetyModalWrapper: React.FC = () => {
-    const { isSafetyInfoOpen } = useAppState();
-    if (!isSafetyInfoOpen) {
-        console.log('done');
-    }
-    
+    const { isSafetyInfoOpen, isPrescribingInfoOpen, isReferenceOpen } = useAppState();
+
     return (
-        <WrapperContainer
+        <OuterContrainer  className='modalWrapper'
             isOpen = {isSafetyInfoOpen}
             variants={variants}
             initial='closed'
-            animate={isSafetyInfoOpen ? 'open' : 'closed'}
+            animate={(isSafetyInfoOpen) ? 'open' : 'closed'}
             transition={{ damping: 300 }}>
             <SafetyModal />
-        </WrapperContainer>);
+        </OuterContrainer>);
 }
 
 interface IgridArea {

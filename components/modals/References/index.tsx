@@ -15,11 +15,8 @@ const variants = {
 
 }
 
-const MainDiv = styled(motion.div)`
-    z-index: 2;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
+const OuterContrainer = styled(motion.div)`
+
     
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
@@ -99,7 +96,7 @@ const References: React.FC<Props> = ({section}) => {
     console.log('section' + section)
 
     return (
-        <MainDiv
+        <OuterContrainer className='modalWrapper'
             variants={variants}
             initial='closed'
             animate={isReferenceOpen ? 'open' : 'closed'}
@@ -152,7 +149,7 @@ const References: React.FC<Props> = ({section}) => {
 
                 </Copy>
             </Container>
-        </MainDiv>
+        </OuterContrainer>
     )
 }
 

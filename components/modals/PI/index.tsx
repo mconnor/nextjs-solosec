@@ -14,8 +14,8 @@ const variants = {
 
 }
 
-const MainDiv = styled(motion.div)`
-    z-index: 3;
+const OuterContrainer = styled(motion.div)`
+    z-index: 4;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -76,7 +76,7 @@ const PrescribingInfo: React.FC<Props> = ({ }) => {
     const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
    
     return (
-        <MainDiv
+        <OuterContrainer className='modalWrapper'
             variants={variants}
             initial='closed'
             animate={isPrescribingInfoOpen ? 'open' : 'closed'}
@@ -90,7 +90,7 @@ const PrescribingInfo: React.FC<Props> = ({ }) => {
                 </Top>
                 <PICopy />
             </Container>
-        </MainDiv>
+        </OuterContrainer>
     )
 }
 
