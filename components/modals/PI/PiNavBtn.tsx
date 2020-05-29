@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import styled from 'styled-components'
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 
 const NavBtn = styled.button`
     height: 60px;

@@ -1,15 +1,13 @@
 import styled from 'styled-components';
-import PiNavBtn from './PiNavBtn'
-
 const Copy = styled.div`
-    display:grid;
+    /* display:grid;
     grid-template-columns: 444px 1fr;
     column-gap: 106px;
     align-items: flex-start;
-    overflow:scroll;
+    overflow:scroll; */
 
 
-    background-color:white;
+    background-color:whiteimport styled from 'styled-components';
     padding: 20px 48px 0 20px;
     border-bottom-right-radius: var(--border-radius-4);
     border-bottom-left-radius: var(--border-radius-4);
@@ -30,17 +28,7 @@ const Copy = styled.div`
     }
 `;
 
-const Nav = styled.nav`
-    display:grid;
-    grid-template-columns: 1fr;
-    row-gap:46px;
 
-    color: var(--isi-blue);
-    background: #eeeeee;
-    padding: 0 40px;
-       
-        
-`;
 
 // const Ul = styled.div`
 //     display:grid;
@@ -58,24 +46,7 @@ const Nav = styled.nav`
 const PICopy= () => {
     return (
         <Copy>
-            <Nav id="pi-nav">
-              
-                    <PiNavBtn url="#indicationsAndUsage">Indications and Usage</PiNavBtn>
-                    <PiNavBtn url="#dosage">Dosage and Administration</PiNavBtn>
-                    <PiNavBtn url="#dosageStrength">Dosage Forms and Strengths</PiNavBtn>
-                    <PiNavBtn url="#contraindications">Contraindications</PiNavBtn>
-                    <PiNavBtn url="#warnings">Warnings and Precautions</PiNavBtn>
-                    <PiNavBtn url="#adverseReactions">Adverse Reactions</PiNavBtn>
-                    <PiNavBtn url="#drugInteractions">Drug Interactions</PiNavBtn>
-                    <PiNavBtn url="#specificUse">Use in Specific Populations</PiNavBtn>
-                    <PiNavBtn url="#description">Description</PiNavBtn>
-                    <PiNavBtn url="#clinicalPharmacology">Clinical Pharmacology</PiNavBtn>
-                    <PiNavBtn url="#nonclinicalToxicology">Nonclinical Toxicology</PiNavBtn>
-                    <PiNavBtn url="#clinicalStudies">Clinical Studies</PiNavBtn>
-                    <PiNavBtn url="#storage">How Supplied/Storage and Handling</PiNavBtn>
-                    <PiNavBtn url="#counseling">Patient Counseling Information</PiNavBtn>
-                
-            </Nav>
+           
 
             <div className="content">
 
