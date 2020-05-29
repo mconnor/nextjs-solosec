@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {useAppState} from "../../../state";
 
 const SubHead = styled.h2`
     //color: var(--royal-blue);
@@ -28,6 +29,7 @@ const Btn = styled(StrongDiv)`
     color: var(--royal-blue-light);
     margin-top: 20px;
     font-size: 16px;
+    cursor: pointer;
 `;
 
 
@@ -74,6 +76,15 @@ type Props = {
 }
 
 const Copy: React.FC<Props> = ({ marginLR}) => {
+    const { togglePrescribingInfo,
+        setNav,setSafteyInfo } = useAppState();
+
+    const handleIPIclick = () => {
+        togglePrescribingInfo &&  togglePrescribingInfo();
+        setSafteyInfo && setSafteyInfo(false);
+        setNav && setNav(false);
+    }
+
     return (
         <Container marginLR={marginLR}>
             <SubHead>Indication</SubHead>
@@ -99,7 +110,7 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
 
             <StrongDiv>To report SUSPECTED ADVERSE REACTIONS, contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC <NoWrapSpan>(1-844-765-6732)</NoWrapSpan> or FDA at <NoWrapSpan>(1-800-FDA-1088) </NoWrapSpan> or <a href="www.fda.gov/medwatch." target="_blank">www.fda.gov/medwatch.</a></StrongDiv>
 
-            <Btn>Please see full Prescribing Information.</Btn>
+            <Btn onClick={() => handleIPIclick()}>Please see full Prescribing Information.</Btn>
 
         </Container>
     )

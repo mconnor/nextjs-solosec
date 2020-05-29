@@ -14,6 +14,14 @@ const BtnContainer = styled.div`
     row-gap: 7px;
 `;
 
+// const BtnInvisible = styled.button`
+//     width: 360px;
+//     height: 75px;
+//     //background: transparent;
+//     //border: none !important;
+//     font-size:0;
+// `;
+
 
 const Discover = () => {
     return (
@@ -24,6 +32,8 @@ const Discover = () => {
                 <Btn svglink='pg6-button-3' svgClicked='pg6-button-3-selected' page="8" seq="02_c"/>
                 <Btn svglink='pg6-button-4' svgClicked='pg6-button-4-selected' page="10" seq="02_d"/>
             </BtnContainer>
+            {/*<BtnInvisible onClick={() =>{*/}
+            {/*    console.log('url')}} />*/}
         </MainDiv>
     )
 }
