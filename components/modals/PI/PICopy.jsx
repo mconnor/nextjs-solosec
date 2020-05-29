@@ -1,8 +1,13 @@
 import styled from 'styled-components';
-
 const Copy = styled.div`
-    grid-area: 'copy';
-    background-color:white;
+    /* display:grid;
+    grid-template-columns: 444px 1fr;
+    column-gap: 106px;
+    align-items: flex-start;
+    overflow:scroll; */
+
+
+    background-color:whiteimport styled from 'styled-components';
     padding: 20px 48px 0 20px;
     border-bottom-right-radius: var(--border-radius-4);
     border-bottom-left-radius: var(--border-radius-4);
@@ -23,27 +28,25 @@ const Copy = styled.div`
     }
 `;
 
+
+
+// const Ul = styled.div`
+//     display:grid;
+//     grid-template-columns: 1fr;
+//     justify-items: stretch;
+//     li {
+//         list-style:none;
+//         border:1 px solid;
+        
+//      }   
+// `;
+
+
+
 const PICopy= () => {
     return (
         <Copy>
-            <nav id="pi-nav">
-                <ul>
-                    <li><a href="#indicationsAndUsage" className="active">Indications and Usage</a></li>
-                    <li><a href="#dosage">Dosage and Administration</a></li>
-                    <li><a href="#dosageStrength">Dosage Forms and Strengths</a></li>
-                    <li><a href="#contraindications">Contraindications</a></li>
-                    <li><a href="#warnings">Warnings and Precautions</a></li>
-                    <li><a href="#adverseReactions">Adverse Reactions</a></li>
-                    <li><a href="#drugInteractions">Drug Interactions</a></li>
-                    <li><a href="#specificUse">Use in Specific Populations</a></li>
-                    <li><a href="#description">Description</a></li>
-                    <li><a href="#clinicalPharmacology">Clinical Pharmacology</a></li>
-                    <li><a href="#nonclinicalToxicology">Nonclinical Toxicology</a></li>
-                    <li><a href="#clinicalStudies">Clinical Studies</a></li>
-                    <li><a href="#storage">How Supplied/Storage and Handling</a></li>
-                    <li><a href="#counseling">Patient Counseling Information</a></li>
-                </ul>
-            </nav>
+           
 
             <div className="content">
 
