@@ -6,7 +6,7 @@ interface StyleProps  {
 }
 interface ChildrenProps  {
     children: ReactNode;
-    clickCallBack: (() => void) | undefined;
+    clickCallBack: (() => void);
 }
 
 
