@@ -91,14 +91,14 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 const page = path[n];
                 const thisPath = PageList.seq[cookie];
                 const currentPage = thisPath.indexOf(page);
-                if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
-                if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
+                if (dir === "Right") if (currentPage !== 0) router.push(PageList["pages"][thisPath[currentPage-1]]);
+                if (dir === "Left") if (currentPage !== thisPath.length-1) router.push(PageList["pages"][thisPath[currentPage+1]]);
             }
         }
 
         function navigate() {
-            if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
-            if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
+            if (dir === "Right") if (n !== 0) router.push(PageList["pages"][path[n-1]]);
+            if (dir === "Left") if (n !== path.length-1) router.push(PageList["pages"][path[n+1]]);
         }
     }
 
