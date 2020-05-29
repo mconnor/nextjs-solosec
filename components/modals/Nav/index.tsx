@@ -82,7 +82,7 @@ const NavContainer = styled.div<StyleProps>`
     grid-template-columns: 1fr;
     //height: 90%; 
     margin:0;
-    line-height: 60px;
+    line-height: 50px;
 /* row-gap:24px; */
     ul {
         line-height: 40px;
@@ -158,7 +158,7 @@ const IconBg = styled.button`
     border:0;
     height: 54px;
     width: 54px;
-    font-size: 18px;
+    font-size: 14px;
 `;
 
 const Nav = () => {
