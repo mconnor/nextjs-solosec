@@ -28,14 +28,24 @@ const Main = styled.div`
     place-items: center center;
 `;
 
-const Hamburger = () => {
-    const { isNavOpen, setNav } = useAppState()
+
+interface Props  {
+    clickCallBack: (() => void) | undefined;
+}
+
+
+const Hamburger:React.FC<Props> = ({ clickCallBack}) => {
+    const { isNavOpen } = useAppState()
     return (
         <Main>
             {isNavOpen ?
-                <CloseBtn role="button" onClick={_prevState =>setNav &&  setNav(false)}>&times;</CloseBtn>
+                <CloseBtn role="button" 
+                    onClick={clickCallBack}
+                >
+                        &times;</CloseBtn>
                 :
-                <div onClick={_prevState => setNav &&  setNav(true)}>
+                <div 
+                    onClick={clickCallBack}>
                     <Svg focusable="false" viewBox="0 0 24 24">
                         <path d="M24 6H0V2h24v4zm0 4H0v4h24v-4zm0 8H0v4h24v-4z"></path>
                      </Svg>
