@@ -67,7 +67,9 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
     // console.log(router.pathname )
 
     // Code that turns off native swipes in OCE Sales
+    // @ts-ignore
     //CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
+
     console.log("**Current", currSeq, cookie);
     const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
         if (dir === "Left") swipeLink(pageIndex, "Left");
