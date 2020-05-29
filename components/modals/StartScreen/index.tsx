@@ -6,8 +6,8 @@ import { useAppState } from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
-
-
+//     const { setInitSafteyInfo } = useAppState()
+// _prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)
 
 const OuterContainer = styled.div`
     position:absolute;
@@ -57,7 +57,7 @@ type FCProps = {
 }
 
 const StartScreen: React.FC<FCProps> = ({ section }) => {
-    const { isInitSafetyInfoOpen } = useAppState()
+    const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
     if (!isInitSafetyInfoOpen) return null;
     if  (section !== Sections.INDEX) return null;
     return (
@@ -65,7 +65,7 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
             <MyGrid >
                 <Header>
                     <Img src='/img/solosec-logo-isi.svg' />
-                    <ConfirmBtn />
+                  <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
                     <Copy />

@@ -1,8 +1,13 @@
 
 import styled from 'styled-components'
-import { useAppState } from "../../../state/";
+import { ReactNode } from 'react';
 
-const Btn = styled.button`
+
+interface IBtn {
+    gridArea:string;
+}
+
+const Btn = styled.button<IBtn>`
     background: #05aa4e;
     border-radius: 6px;
     width: 212px;
@@ -14,21 +19,21 @@ const Btn = styled.button`
     display: grid;
     place-items: center;
     border:0;   
+    grid-area: ${(props) => props.gridArea};
  
 `;
 
-// interface ChildrenProps {
-//     children: ReactNode;
-//     clickCallBack: (() => void) | undefined;
-// }
+interface ChildrenProps {
+    children: ReactNode;
+    clickCallBack: (() => void) | undefined;
+    gridArea?:string;
+}
 
-const ConfirmBtn: React.FC = () => {
-    const { setInitSafteyInfo } = useAppState()
+const ConfirmBtn: React.FC<ChildrenProps> = ({ children, clickCallBack, gridArea='close'}) => {
+
     return (
 
-           <Btn 
-            onClick={_prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)}
-           >CONFIRM</Btn> 
+           <Btn gridArea={gridArea} onClick={clickCallBack}>{children}</Btn> 
     
     )
 }

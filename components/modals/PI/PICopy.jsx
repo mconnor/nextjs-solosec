@@ -1,13 +1,22 @@
 import styled from 'styled-components';
+
+
+
+
+// type Props = {
+//     gridArea:string;
+// }
+
+
 const Copy = styled.div`
     /* display:grid;
     grid-template-columns: 444px 1fr;
     column-gap: 106px;
     align-items: flex-start;
     overflow:scroll; */
-
-
-    background-color:whiteimport styled from 'styled-components';
+    /* grid-area: ${(props) => props.gridArea}; */
+    
+    background-color:white;
     padding: 20px 48px 0 20px;
     border-bottom-right-radius: var(--border-radius-4);
     border-bottom-left-radius: var(--border-radius-4);
@@ -43,7 +52,9 @@ const Copy = styled.div`
 
 
 
+
 const PICopy= () => {
+// const PICopy:React.FC<Props> = ({ gridArea }) => {
     return (
         <Copy>
            
