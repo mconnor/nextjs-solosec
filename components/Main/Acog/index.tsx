@@ -24,7 +24,7 @@ const BtnContainer = styled.div`
     grid-template-rows: repeat( 6, 78px);
     justify-items: start;
     left: 503px;
-    top: 104px;
+    top: 119px;
     position: relative;
     z-index: 1;
 `;

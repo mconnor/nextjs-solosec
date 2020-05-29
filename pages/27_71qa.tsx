@@ -14,7 +14,7 @@ export default () => {
         >
             <QA>
                 <QuestionAnswer
-                    q='How often does the patient take Solosec<sup>©</sup>; (secnidazole)'
+                    q='How often does the patient take Solosec<sup>©</sup> (secnidazole)'
                     a='<p>
                         A patient only needs to take Solosec one time, orally, to complete treatment.1 Long-term use of Solosec should be avoided.
                     </p>'
