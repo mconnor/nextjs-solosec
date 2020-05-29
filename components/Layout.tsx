@@ -12,7 +12,7 @@ import ReferencesWrapper from './modals/References';
 import PrescribingInfoWrapper from "./modals/PI";
 import Nav from './modals/Nav';
 import SpaLink from '../components/SpaLink';
-import StartScreen  from '../components/modals/Isi/StartScreen'
+import StartScreen  from './modals/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
 import {useAppState} from "../state";
@@ -37,9 +37,10 @@ const PageContainer = styled.div`
     overflow: hidden;
     background-color: white;
     width: var(--ipad-max-width);
+    height: 100vh;
     display: grid;
     grid-template-columns: 6% 1fr 6%;
-    grid-template-rows: var(--header-height) var(--main-height) var(--footer-height);
+    grid-template-rows: var(--header-height) var(--main-height) 1fr;
     grid-template-areas:
         "header header header"
         "main main main"
