@@ -119,7 +119,7 @@ export const SafetyModal: React.FC = () => {
 
         <Container>
             <Top onClick={toggleSafetyInfo}>
-                <h1 style={{float:"left"}}>Important Safety Information</h1><span style={{float: "left", marginLeft: 5, marginTop: 15}}><img src={isSafetyInfoOpen ? "/img/svg/arrow-down.svg" : "/img/svg/arrow-up.svg"} width="12"></img></span>
+                <h1 style={{float:"left"}}>IMPORTANT SAFETY INFORMATION</h1><span style={{float: "left", marginLeft: 5, marginTop: 15}}><img src={isSafetyInfoOpen ? "/img/svg/arrow-down.svg" : "/img/svg/arrow-up.svg"} width="12"></img></span>
             </Top>
 
             <InnerDiv isOpen={isSafetyInfoOpen}>
@@ -127,22 +127,32 @@ export const SafetyModal: React.FC = () => {
             </InnerDiv>
 
             <ModalFooter>
+                {/*<GridAreaDiv gridArea="lupinLogo">*/}
+                {/*    <LumpinLogo />*/}
+                {/*</GridAreaDiv>*/}
+
+                {/*<GridAreaDiv gridArea="copyright">*/}
+                {/*    <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>*/}
+                {/*</GridAreaDiv>*/}
+
+                {/*<GridAreaDiv gridArea="slogan">*/}
+                {/*    <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>*/}
+                {/*</GridAreaDiv>*/}
+
+                {/*<GridAreaDiv gridArea="solosecLogo">*/}
+                {/*    <img src="/img/solosec-logo-isi.svg" width="195"></img>*/}
+                {/*</GridAreaDiv>*/}
                 <GridAreaDiv gridArea="lupinLogo">
                     <LumpinLogo />
                 </GridAreaDiv>
 
                 <GridAreaDiv gridArea="copyright">
-                    <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
+                    <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec<sup>®</sup> is a registered trademark owned by Lupin, Inc. PP-SOL-0417</p>
                 </GridAreaDiv>
 
-                <GridAreaDiv gridArea="slogan">
-                    <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>
-                </GridAreaDiv>
-
-                <GridAreaDiv gridArea="solosecLogo">
-                    <img src="/img/solosec-logo-isi.svg" width="195"></img>
-                </GridAreaDiv>
-
+                {/*<GridAreaDiv gridArea="solosecLogo">*/}
+                {/*    <Slogan>PP-SOL-0196 (v4.0)</Slogan>*/}
+                {/*</GridAreaDiv>*/}
 
             </ModalFooter>
         </Container>

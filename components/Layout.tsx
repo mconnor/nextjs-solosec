@@ -85,11 +85,11 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
 
         if (e.keyCode == '37') {
             console.log("left");
-            swipeLink(pageIndex, "Left")
+            swipeLink(pageIndex, "Right")
         }
         else if (e.keyCode == '39') {
             console.log("right")
-            swipeLink(pageIndex, "Right");
+            swipeLink(pageIndex, "Left");
         }
 
     }
