@@ -182,15 +182,15 @@ const Nav = () => {
             <NavContainer borderRight>
                 <NavBtn label={SUMMARY} pageName={PageList.pages["2"]} />
                 <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]} />
-                <NavBtn label={STUDY} pageName={PageList.pages["5"]} />
+                <NavBtn label={STUDY} pageName={PageList.pages["4"]} />
 
-                <NavBtn label={BOHBOT} pageName={PageList.pages["21"]} />
-                <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName={PageList.pages["23"]} />
-                <NavBtn label={DOSING} pageName={PageList.pages["13"]} />
-                <NavBtn label={CO_PAY_CARD} pageName={PageList.pages["11"]} />
+                <NavBtn label={BOHBOT} pageName={PageList.pages["6"]} />
+                <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName={PageList.pages["7"]} />
+                <NavBtn label={DOSING} pageName={PageList.pages["8"]} />
+                <NavBtn label={CO_PAY_CARD} pageName={PageList.pages["10"]} />
 
-                <NavBtn label={SATISFACTION_SURVEY} pageName={PageList.pages["12"]} />
-                <NavBtn label={CURRENT_BV_TREATMENTS} pageName={PageList.pages["25"]} />
+                <NavBtn label={SATISFACTION_SURVEY} pageName={PageList.pages["11"]} />
+                <NavBtn label={CURRENT_BV_TREATMENTS} pageName={PageList.pages["12"]} />
 
                 <NavBtn label={APPENDIX} pageName={PageList.pages["1"]}>
                     <ul>
@@ -209,7 +209,7 @@ const Nav = () => {
                         </IconWrapper>
                     </IconBg>
 
-                    <NavBtn label={CONVERSATION_STARTERS} pageName={PageList.pages["18"]} />
+                    <NavBtn label={CONVERSATION_STARTERS} pageName={PageList.pages["17"]} />
                 </RightColBt>
                 <RightColBt>
 
@@ -220,7 +220,7 @@ const Nav = () => {
                     </IconBg>
 
 
-                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["22"]} />
+                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["21"]} />
                 </RightColBt>
                 <RightColBtX>
                     <IconBg>
@@ -228,16 +228,16 @@ const Nav = () => {
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={TOOLBOX} pageName={PageList.pages["01"]} >
+                    <NavBtn label={TOOLBOX} pageName={PageList.pages["1"]} >
 
                     </NavBtn>
                 </RightColBtX>
                 <RightColBtSub>
                     <ul>
-                        <NavBtn label={TB1} pageName={PageList.pages["23"]} subnav />
-                        <NavBtn label={TB2} pageName={PageList.pages["24"]} subnav />
-                        <NavBtn label={TB3} pageName={PageList.pages["25"]} subnav />
-                        <NavBtn label={TB4} pageName={PageList.pages["26"]} subnav />
+                        <NavBtn label={TB1} pageName={PageList.pages["22"]} subnav />
+                        <NavBtn label={TB2} pageName={PageList.pages["23"]} subnav />
+                        <NavBtn label={TB3} pageName={PageList.pages["24"]} subnav />
+                        <NavBtn label={TB4} pageName={PageList.pages["25"]} subnav />
                     </ul>
                 </RightColBtSub>
                 <RightColBt>
@@ -246,7 +246,7 @@ const Nav = () => {
                             <BsQuestionSquareFill />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={Q_A} pageName={PageList.pages["27"]} />
+                    <NavBtn label={Q_A} pageName={PageList.pages["26"]} />
                 </RightColBt>
 
             </NavContainer>

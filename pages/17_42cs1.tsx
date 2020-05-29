@@ -10,14 +10,14 @@ const btnArray = [
 ];
 
 const links = [
-    PageList.pages["19"], PageList.pages["20"], PageList.pages["21"]
+    PageList.pages["18"], PageList.pages["19"], PageList.pages["20"]
 ];
 
 export default () => (
     <Layout 
         bgArt='/img/svg/pg42-conversation-starter-bg.svg'
         section={Sections.NONADHERENCE_40}
-        pageIndex={17}
+        pageIndex={16}
     >
        
         <ConversationStarters

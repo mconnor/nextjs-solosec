@@ -13,9 +13,9 @@ const btnArray = [
 
 const pages = [
     PageList.pages["3"],
-    PageList.pages["9"],
+    PageList.pages["8"],
     PageList.pages["3"],
-    PageList.pages["11"],
+    PageList.pages["10"],
     PageList.pages["3"],
 ];
 
@@ -30,7 +30,7 @@ const seqs = [
 export default () => (
     <Layout 
         bgArt='/img/svg/pg42-conversation-starter-bg.svg'
-        section={Sections.NONADHERENCE_40} pageIndex={19}>
+        section={Sections.NONADHERENCE_40} pageIndex={18}>
         <ConversationStarters
             headline='What is your main consideration when selecting a BV treatment for your patients?'
             buttonCopyArray={btnArray}

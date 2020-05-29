@@ -145,6 +145,8 @@ const References: React.FC<Props> = ({section}) => {
                                                                                     <RefCopy.Pg66/>
                                                                                     : (section === Sections.BV_68) ?
                                                                                         <RefCopy.Pg68/>
+                                                                                        : (section === Sections.BV_71) ?
+                                                                                            <RefCopy.Pg71/>
                                                                                         : <RefCopy.Nope/>
                     }
 

@@ -3,7 +3,7 @@ import * as Sections from '../components/utils/Sections';
 
 export default () => (
     <Layout 
-        bgArt='/img/svg/pg32.svg' 
-        section={Sections.CHART_32} pageIndex={12}>
+        bgArt='/img/svg/pg38.svg' 
+        section={Sections.FOUR_MILLION} pageIndex={14}>
     </Layout>
 )

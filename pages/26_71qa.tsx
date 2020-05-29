@@ -9,8 +9,8 @@ export default () => {
     return (
         <Layout
             bgArt='/img/svg/pg71-BG.svg'
-            section={Sections.NO_REF}
-            pageIndex={26}
+            section={Sections.BV_71}
+            pageIndex={25}
         >
             <QA>
                 <QuestionAnswer

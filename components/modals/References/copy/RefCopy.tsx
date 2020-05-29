@@ -287,6 +287,16 @@ export const Pg68 = () => {
         </ol>
     )
 }
+
+export const Pg71 = () => {
+    return (
+        <ol>
+            <li>
+                SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
+            </li>
+        </ol>
+    )
+}
 export const Nope = () => {
     return (
         <h1>

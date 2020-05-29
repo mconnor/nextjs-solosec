@@ -6,7 +6,7 @@ import * as Sections from '../components/utils/Sections'
 export default () => (
     <Layout 
         noBgArt={true} 
-        section={Sections.ACOG_14_15} pageIndex={3}>
+        section={Sections.ACOG_14_15} pageIndex={2}>
         <Acog page={14} />
     </Layout>
 )
