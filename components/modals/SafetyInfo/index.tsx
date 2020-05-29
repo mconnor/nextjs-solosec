@@ -19,9 +19,12 @@ import LumpinLogo from '../../svg/LupinLogo'
 // }
 
 const variants = {
-    open: { y: 0 },
+    open: { 
+        y: 0,
+     },
     closed: {
-        y: 730,
+        y: 750,
+       
         transition: {
             delay: .2
         }
@@ -29,16 +32,19 @@ const variants = {
 }
 
 
+type Props ={
+    isOpen:boolean;
+}
 
-
-const InnerDiv = styled.div`
+const InnerDiv = styled.div<Props>`
     background: white;
-    padding-top:30px;
+    padding-top: 25px;
    
 `;
 
 
-const WrapperContainer = styled(motion.div)`
+const WrapperContainer = styled(motion.div)<Props>`
+    padding-top: ${props => props.isOpen ? '26px' : '0' };
     width:100vw;
     max-width: var( --ipad-width);
     position: fixed;
@@ -48,7 +54,6 @@ const WrapperContainer = styled(motion.div)`
 
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 20px;
    
     overflow:hidden;
     background:white;
@@ -59,7 +64,7 @@ const Container = styled.div`
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 52px 1fr 100px;
+    grid-template-rows: 52px 1fr 56px;
     align-items:center;
   
 `;
@@ -95,7 +100,7 @@ const ModalFooter = styled.div`
 `;
 
 
-
+//
 const SafetyModalWrapper: React.FC = () => {
     const { isSafetyInfoOpen } = useAppState();
     if (!isSafetyInfoOpen) {
@@ -104,6 +109,7 @@ const SafetyModalWrapper: React.FC = () => {
     
     return (
         <WrapperContainer
+            isOpen = {isSafetyInfoOpen}
             variants={variants}
             initial='closed'
             animate={isSafetyInfoOpen ? 'open' : 'closed'}
@@ -121,7 +127,7 @@ interface IgridArea {
 const GridAreaDiv = styled.div<IgridArea>`
     grid-area: ${(props) => props.gridArea};
     p {
-    font-size: 12px;
+        font-size: 12px;
     }
 `;
 const Slogan = styled.h3`
@@ -142,7 +148,7 @@ export const SafetyModal: React.FC = () => {
                 <h1 style={{float:"left"}}>Important Safety Information</h1><span style={{float: "left", marginLeft: 5, marginTop: 15}}><img src={isSafetyInfoOpen ? "/img/svg/arrow-down.svg" : "/img/svg/arrow-up.svg"} width="12"></img></span>
             </Top>
 
-            <InnerDiv>
+            <InnerDiv isOpen={isSafetyInfoOpen}>
                 <Copy marginLR={MARG} />
             </InnerDiv>
 
