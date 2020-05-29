@@ -91,7 +91,7 @@ type Props = {
 }
 const ReferencesWrapper: React.FC<Props> = ({section}) => {
     // const { isReferenceOpen } = useAppState();
-    // if (!isReferenceOpen) return null;
+    if (section === Sections.NO_REF) return null;
     return <References section={section}/>;
 }
 const References: React.FC<Props> = ({section}) => {

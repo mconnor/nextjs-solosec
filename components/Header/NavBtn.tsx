@@ -30,7 +30,7 @@ const NavBtn: React.FC<Props> = ({ children, borderRight, clickCallBack }) => {
     console.log(cookie);
 
     return (
-        <Btn role='button'  borderRight={borderRight} onClick={() => setCookie("") && clickCallBack && clickCallBack()} >
+        <Btn role='button'  borderRight={borderRight} onClick={() => {setCookie(""); clickCallBack && clickCallBack()}} >
             {children}
         </Btn>
     )

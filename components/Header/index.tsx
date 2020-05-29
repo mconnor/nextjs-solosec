@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Hamburger from './Hamburger'
 import { useAppState} from "../../state";
 import NavBtn from './NavBtn';
-
+import {useCookie} from "../../hooks";
 
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
@@ -32,14 +32,16 @@ const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
 const Header: React.FC<Props> = ({ gridArea }) => {
-    const { toggleReference,toggleSafetyInfo,togglePrescribingInfo, setNav,setSafteyInfo, noRefs } = useAppState();
-    console.log("••• Is Refs?:", noRefs)
+    const { toggleReference,toggleSafetyInfo,togglePrescribingInfo, setNav,setSafteyInfo } = useAppState();
+    // const [cookie2] = useCookie({ key: "section" }) ;
     const togleRef = () => {
-       
-       
-        setSafteyInfo && setSafteyInfo(false);
-        setNav && setNav(false);
-        toggleReference && toggleReference();
+        // console.log("••• Is Refs?:", cookie2)
+        // if (cookie2 !== "no")
+        // {
+            setSafteyInfo && setSafteyInfo(false);
+            setNav && setNav(false);
+            toggleReference && toggleReference();
+        // }
     }
 
     return (

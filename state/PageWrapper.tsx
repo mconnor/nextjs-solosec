@@ -26,9 +26,6 @@ interface ReferenceState {
     isInitSafetyInfoOpen: boolean;
     setInitSafteyInfo?: React.Dispatch<React.SetStateAction<boolean>>;
 
-    noRefs: boolean;
-    setNoRefs?: () => void;
-
     isPrescribingInfoOpen: boolean;
     togglePrescribingInfo?: () => void;
 
@@ -42,7 +39,6 @@ interface ReferenceState {
 
 export const AppContext = createContext<ReferenceState>({
     currPageIndex:0,
-    noRefs: false,
     isaQAopen:false,
     isInitSafetyInfoOpen:true,
     isReferenceOpen: false,
@@ -64,7 +60,6 @@ export const PageWrapper:React.FC = ({ children }) => {
     const pageState: IndexState  = useIndex(0);
 
     const seqState:SectionState = useSection('');
-    const setNoRefsState: ToggleState = useToggle(false);
 
     return (
         <AppContext.Provider
@@ -77,9 +72,6 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 currSeq: seqState.section,
                 setCurrentSequence: seqState.setSection,
-
-                noRefs: setNoRefsState.isToggled,
-                setNoRefs: setNoRefsState.toggle,
 
                 isReferenceOpen: refState.isToggled,
                 toggleReference: refState.toggle,
