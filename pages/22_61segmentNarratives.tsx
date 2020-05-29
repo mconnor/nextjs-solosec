@@ -1,3 +1,4 @@
+
 import Layout from '../components/Layout';
 import * as Sections from '../components/utils/Sections';
 import SegmentNarratives from "../components/Main/SegmentNarratives";

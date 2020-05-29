@@ -11,7 +11,11 @@ type Props = {
     seq:string
 }
 
+<<<<<<< HEAD
 const Button = styled.img`
+=======
+const BtnInvisible = styled.button`
+>>>>>>> e7eb63266953b2e61e5f75f8780cc70beaf4ef36
     width: 360px;
     height: 75px;
     background: transparent;
@@ -39,6 +43,7 @@ const Btn:React.FC<Props> = ({ page, seq}) => {
     }
 
     return (
+<<<<<<< HEAD
         <Button onClick={() => {
             linkTo(page)}}>
         </Button>
@@ -46,3 +51,13 @@ const Btn:React.FC<Props> = ({ page, seq}) => {
 }
 
 export default Btn
+=======
+        
+        <BtnInvisible onClick={() => {
+            linkTo(page)}}>
+        </BtnInvisible>
+    )
+}
+
+export default Btn
+>>>>>>> e7eb63266953b2e61e5f75f8780cc70beaf4ef36

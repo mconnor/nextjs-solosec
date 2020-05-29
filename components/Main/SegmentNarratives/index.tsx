@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e7eb63266953b2e61e5f75f8780cc70beaf4ef36
 import styled from 'styled-components';
 import Btn from './Btn';
 
@@ -32,4 +37,9 @@ const SegmentNarratives: React.FC<Props> = () => {
     )
 }
 
+<<<<<<< HEAD
 export default SegmentNarratives
+=======
+export default SegmentNarratives
+
+>>>>>>> e7eb63266953b2e61e5f75f8780cc70beaf4ef36
