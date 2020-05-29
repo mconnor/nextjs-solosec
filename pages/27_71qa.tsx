@@ -50,7 +50,7 @@ export default () => {
                         nausea, vomiting, diarrhea, abdominal pain, vaginal itching, and an unpleasant metallic taste in the mouth.&sup1;
                     </p>
                     <p>
-                        Please see Important Safety Information below and the accompanying full Prescribing Information.
+                        Please see <b>Important Safety Information</b> below and the accompanying <b>full Prescribing Information</b>.
                     </p>
                     <p>
                         Report suspected side effects of prescription drugs to the FDA at

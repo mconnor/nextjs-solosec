@@ -80,6 +80,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         };
     }, []);
 
+    // @ts-ignore
     function checkKey(e) {
         e = e || window.event;
 

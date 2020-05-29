@@ -97,8 +97,7 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
                 <li>Most common adverse reactions observed in clinical trials (incidence ≥2%) were vulvovaginal candidiasis, headache, nausea, dysgeusia, vomiting, diarrhea, abdominal pain, and vulvovaginal pruritus.</li>
             </Ulist>
 
-            <StrongDiv>To report SUSPECTED ADVERSE REACTIONS, contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC <NoWrapSpan>(1-844-765-6732)</NoWrapSpan>
-             or FDA at <NoWrapSpan>(1-800-FDA-1088)</NoWrapSpan> or <a href="www.fda.gov/medwatch." target="_blank">www.fda.gov/medwatch.</a></StrongDiv>
+            <StrongDiv>To report SUSPECTED ADVERSE REACTIONS, contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC <NoWrapSpan>(1-844-765-6732)</NoWrapSpan> or FDA at <NoWrapSpan>(1-800-FDA-1088) </NoWrapSpan> or <a href="www.fda.gov/medwatch." target="_blank">www.fda.gov/medwatch.</a></StrongDiv>
 
             <Btn>Please see full Prescribing Information.</Btn>
 

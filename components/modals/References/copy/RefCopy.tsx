@@ -271,9 +271,9 @@ export const Pg66 = () => {
            <li>
                Allsworth JE, Lewis VA, Peipert JF. Viral sexually transmitted infections and bacterial vaginosis: 2001-2004 National Health and Nutrition Examination Survey data. <i>Sex Transm Dis</i>. 2008;35(9):791-796.
 </li>
-           <li style={{opacity:0}}>
-Brookheart RT, Lewis WG, Peipert JF, Lewis AL, Allsworth JE. Association between obesity and bacterial vaginosis as assessed by Nugent Score. <i>Am J Obstet Gynecol</i>. 2019;220(5):476.e1-476.e11.
-</li>
+{/*           <li style={{opacity:0}}>*/}
+{/*Brookheart RT, Lewis WG, Peipert JF, Lewis AL, Allsworth JE. Association between obesity and bacterial vaginosis as assessed by Nugent Score. <i>Am J Obstet Gynecol</i>. 2019;220(5):476.e1-476.e11.*/}
+{/*</li>*/}
             <li style={{marginTop: "-60px"}}>
                 Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in <i>MMWR Recomm Rep</i>. 2015;64(33):924]. <i>MMWR Recomm Rep</i>. 2015;64(RR-03):1-137.
             </li>

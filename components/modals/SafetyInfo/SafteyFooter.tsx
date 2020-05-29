@@ -39,16 +39,16 @@ const SafteyFooter = () => {
         </GridAreaDiv>
 
         <GridAreaDiv gridArea="copyright">
-            <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0196 (v4.0)</p>
+            <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec® is a registered trademark owned by Lupin, Inc. PP-SOL-0417</p>
         </GridAreaDiv>
 
-        <GridAreaDiv gridArea="slogan">
-            <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>
-        </GridAreaDiv>
+        {/*<GridAreaDiv gridArea="slogan">*/}
+        {/*    <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>*/}
+        {/*</GridAreaDiv>*/}
 
-        <GridAreaDiv gridArea="solosecLogo">
-            <img src="/img/solosec-logo-isi.svg" width="195"></img>
-        </GridAreaDiv>
+        {/*<GridAreaDiv gridArea="solosecLogo">*/}
+        {/*    <img src="/img/solosec-logo-isi.svg" width="195"></img>*/}
+        {/*</GridAreaDiv>*/}
 
 
     </ModalFooter>
