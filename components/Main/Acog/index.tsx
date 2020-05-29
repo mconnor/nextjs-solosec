@@ -40,9 +40,9 @@ const Acgo:React.FC<Props> = ( { page }) => {
             <BtnContainer>
                 <Btn svgClicked={`pg${page}-button-1-overlay`} page={PageList.pages["12"]}/>
                 <Btn svgClicked={`pg${page}-button-2-overlay`} page={PageList.pages["11"]}/>
-                <Btn svgClicked={`pg${page}-button-3-overlay`} page={PageList.pages["13"]}/>
-                <Btn svgClicked={`pg${page}-button-4-overlay`} page={PageList.pages["13"]}/>
-                <Btn svgClicked={`pg${page}-button-5-overlay`} page={PageList.pages["25"]}/>
+                <Btn svgClicked={`pg${page}-button-3-overlay`} page={PageList.pages["9"]}/>
+                <Btn svgClicked={`pg${page}-button-4-overlay`} page={PageList.pages["9"]}/>
+                <Btn svgClicked={`pg${page}-button-5-overlay`} page={PageList.pages["13"]}/>
                 <Btn svgClicked={`pg${page}-button-6-overlay`} page={PageList.pages["5"]}/>
             </BtnContainer>
             <SVGDiv className='obj'>

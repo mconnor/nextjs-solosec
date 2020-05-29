@@ -14,13 +14,9 @@ export default () => {
         >
             <QA>
                 <QuestionAnswer
-                    q='How often does the patient take Solosec&circledR; (secnidazole)'
+                    q='How often does the patient take Solosec<sup>©</sup>; (secnidazole)'
                     a='<p>
-                        Solosec does not dissolve in water or any liquids. It should not be mixed into liquids and
-                        should only be taken with the recommended foods: applesauce, pudding, or yogurt.&sup1;
-                        The entire contents of the Solosec packet should be sprinkled onto applesauce, yogurt, or pudding and consumed once within
-                        30 minutes without chewing or crunching the granules.1 Instruct patients that they should not try to dissolve Solosec in water or any other liquids.
-                        However, they are free to drink a glass of water after taking their Solosec dose to aid in swallowing
+                        A patient only needs to take Solosec one time, orally, to complete treatment.1 Long-term use of Solosec should be avoided.
                     </p>'
                 />
                 <QuestionAnswer
@@ -39,7 +35,7 @@ export default () => {
                             However, adult patients should always consume alcohol in a responsible manner.
                         </p>
                         <p>
-                            In vitro drug alcohol
+                            <i>In vitro</i> drug alcohol
                             studies show Solosec does not inhibit the enzyme that metabolizes alcohol.&sup1;
                         </p>'
                 />
