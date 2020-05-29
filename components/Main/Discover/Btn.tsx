@@ -4,6 +4,8 @@ import styled from 'styled-components';
 //import {useAppState} from "../../../state";
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
+import { useRouter } from 'next/router'
+
 
 type Props = {
     svglink:string;
@@ -21,6 +23,7 @@ const Img = styled.img`
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     const [showSVG, setShowSVG] = useState(`/img/svg/${svglink}.svg`);
+    const router = useRouter()
 
     //const [linkUrl] = useState<string>(PageList["pages"][page])
 
@@ -32,7 +35,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     function linkTo(page:string) {
             console.log(cookie);
             setCookie(seq)
-            setTimeout(()=>{window.location.href = PageList.pages[page];}, 100)
+            setTimeout(()=>{router.push("/" + PageList.pages[page]);}, 100)
        
     }
 

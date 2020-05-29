@@ -1,6 +1,7 @@
 
 import { useToggle } from '../../../hooks';
 import styled from 'styled-components';
+import { useRouter } from 'next/router'
 
 type MainProps = {
     on: boolean;
@@ -21,8 +22,9 @@ type Props = {
 
 const Btn:React.FC<Props> = ({  svgClicked, page }) => {
     const {isToggled, toggle} = useToggle(false);
+    const router = useRouter()
     return (
-        <Main on={isToggled} onClick={ () => {toggle();  setTimeout(()=>{window.location.href = page;}, 100)} }>
+        <Main on={isToggled} onClick={ () => {toggle();  setTimeout(()=>{router.push("/" + page);}, 100)} }>
              <Img src={`/img/svg/${svgClicked}.svg`}   />
         </Main>
     )

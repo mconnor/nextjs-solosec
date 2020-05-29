@@ -96,6 +96,7 @@ const ReferencesWrapper: React.FC<Props> = ({section}) => {
 }
 const References: React.FC<Props> = ({section}) => {
     const {isReferenceOpen, toggleReference} = useAppState();
+
     console.log('section' + section)
 
     return (

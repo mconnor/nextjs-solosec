@@ -80,7 +80,7 @@ const NavContainer = styled.div<StyleProps>`
     border-right: ${props => props.borderRight && '2px solid #034063'};
     display: grid;
     grid-template-columns: 1fr;
-    /* height: 80%; */
+    //height: 90%; 
     margin:0;
     line-height: 60px;
 /* row-gap:24px; */
@@ -89,6 +89,18 @@ const NavContainer = styled.div<StyleProps>`
     }
 `;
 
+const NavContainerX = styled.div<StyleProps>`
+    border-right: ${props => props.borderRight && '2px solid #034063'};
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 90%; 
+    margin:0;
+    line-height: 60px;
+/* row-gap:24px; */
+    ul {
+        line-height: 40px;
+    }
+`;
 
 
 const Logo = styled.div`
@@ -146,6 +158,7 @@ const IconBg = styled.button`
     border:0;
     height: 54px;
     width: 54px;
+    font-size: 18px;
 `;
 
 const Nav = () => {
@@ -159,12 +172,12 @@ const Nav = () => {
             animate={isNavOpen ? 'open' : 'closed'}
             transition={{ damping: 300 }}
         >
-            <NavContainer borderRight>
+            <NavContainerX borderRight>
                <div><Logo>Solosec<sup>&reg;</sup>
               
               </Logo>
               <SubLogo>(secnizazole)</SubLogo></div>
-            </NavContainer>
+            </NavContainerX>
             <NavContainer borderRight>
                 <NavBtn label={SUMMARY} pageName={PageList.pages["2"]} />
                 <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]} />

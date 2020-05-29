@@ -32,14 +32,14 @@ const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
 const Header: React.FC<Props> = ({ gridArea }) => {
-    const { toggleReference,toggleSafetyInfo,togglePrescribingInfo, setNav,setSafteyInfo } = useAppState();
-
+    const { toggleReference,toggleSafetyInfo,togglePrescribingInfo, setNav,setSafteyInfo, noRefs } = useAppState();
+    console.log("••• Is Refs?:", noRefs)
     const togleRef = () => {
        
        
         setSafteyInfo && setSafteyInfo(false);
         setNav && setNav(false);
-        toggleReference &&  toggleReference();
+        toggleReference && toggleReference();
     }
 
     return (

@@ -58,13 +58,14 @@ const FixedDiv = styled.div`
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
-    const {currSeq} = useAppState();
+    const {currSeq, setNoRefs} = useAppState();
     const handlers = useSwipeable({
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
         preventDefaultTouchmoveEvent: false,
         trackMouse: true,
         trackTouch: true
     });
+    console.log(setNoRefs);
     // console.log(router.pathname )
 
     // Code that turns off native swipes in OCE Sales
