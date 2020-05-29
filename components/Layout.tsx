@@ -81,14 +81,14 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
     }, []);
 
     // @ts-ignore
-    function checkKey(e) {
+    function checkKey(e:KeyboardEvent) {
         e = e || window.event;
 
-        if (e.keyCode == '37') {
+        if (e.keyCode === 37) {
             console.log("left");
             swipeLink(pageIndex, "Right")
         }
-        else if (e.keyCode == '39') {
+        else if (e.keyCode === 39) {
             console.log("right")
             swipeLink(pageIndex, "Left");
         }
