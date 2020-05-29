@@ -1,10 +1,9 @@
-
 import Layout from '../components/Layout';
 import * as Sections from '../components/utils/Sections';
 
 export default () => (
     <Layout 
-        bgArt='/img/svg/pg40.svg' 
-        section={Sections.NONADHERENCE_40} pageIndex={16}>
+        bgArt='/img/svg/pg32.svg' 
+        section={Sections.CHART_32} pageIndex={11}>
     </Layout>
 )

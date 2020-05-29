@@ -17,6 +17,7 @@ export const NONADHERENCE_40:string = '40';
 export const RISK_65:string = '65';
 export const RISK_66:string = '66';
 export const BV_68:string = '68';
+export const BV_71:string = '71';
 
 export const NO_REF:string = 'no';
 
