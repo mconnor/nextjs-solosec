@@ -24,13 +24,9 @@ const Btn:React.FC<Props> = ({ page, seq}) => {
 console.log('cookie', cookie) // keep this
 
 
-    const url =  PageList.pages[page].slice(0,-5);
-   
-
+    const url =  PageList.pages[page];
 
     return (
-  
-
 
         <Link href={url}>
             <BtnInvisible onClick={() =>{ 
