@@ -26,7 +26,7 @@ type Props ={
 
 const InnerDiv = styled.div<Props>`
     background: white;
-    padding-top: 25px;
+    padding-top: -5px;
    
 `;
 

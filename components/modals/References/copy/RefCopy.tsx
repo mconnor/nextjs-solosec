@@ -41,10 +41,10 @@ export const Acog2 = () => {
             
             </li>
             <li>
-            Hillier SL, Nyirjesy P, Waldbaum AS, et al. Secnidazole treatment of bacterial vaginosis: a randomized controlled trial. Obstet Gynecol. 2017;130(2):379-386. 
+                Hillier SL, Nyirjesy P, Waldbaum AS, et al. Secnidazole treatment of bacterial vaginosis: a randomized controlled trial. <i>Obstet Gynecol</i>. 2017;130(2):379-386.
             </li>
             <li>
-                Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness andsafety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <em>Am J Obstet Gynecol</em>. 2018;219(1):110]. <em>Am J Obstet Gynecol</em>. 2017;217(6):678.e1-678.e9.
+                Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness andsafety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <i>Am J Obstet Gynecol</i>. 2018;219(1):110]. <i>Am J Obstet Gynecol</i>. 2017;217(6):678.e1-678.e9.
             </li>
         </ol>
 
@@ -59,10 +59,10 @@ export const Studies = () => {
 SOLOSEC[prescribing information].Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
 </li>
 <li>
-Hillier SL, Nyirjesy P, Waldbaum AS, et al.Secnidazole treatment of bacterial vaginosis: a randomized controlled trial.Obstet Gynecol. 2017; 130(2): 379 - 386.
+    Hillier SL, Nyirjesy P, Waldbaum AS, et al.Secnidazole treatment of bacterial vaginosis: a randomized controlled trial.<i>Obstet Gynecol</i>. 2017; 130(2): 379 - 386.
 </li>
 <li>
-Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P.A phase - 3, double - blind, placebo - controlled study of the effectiveness andsafety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis[published correction appears in <em>Am J Obstet Gynecol</em>. 2018; 219(1): 110].<em>Am J Obstet Gynecol</em>. 2017; 217(6): 678.e1 - 678.e9.doi: 10.1016 / j.ajog.2017.08.01
+Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P.A phase - 3, double - blind, placebo - controlled study of the effectiveness andsafety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis[published correction appears in <i>Am J Obstet Gynecol</i>. 2018; 219(1): 110].<i>Am J Obstet Gynecol</i>. 2017; 217(6): 678.e1 - 678.e9.doi: 10.1016 / j.ajog.2017.08.01
 </li>
             </ol>
 
@@ -79,7 +79,7 @@ SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2
 Hillier SL, Nyirjesy P, Waldbaum AS, et al. Secnidazole treatment of bacterial vaginosis: a randomized controlled trial. <i>Obstet Gynecol</i>. 2017;130(2):379-386
 </li>
            <li>
-Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness and safety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <em>Am J Obstet Gynecol</em>. 2018;219(1):110]. <em>Am J Obstet Gynecol</em>. 2017;217(6):678.e1-678.e9. doi: 10.1016/j.ajog.2017.08.017.
+Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness and safety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <i>Am J Obstet Gynecol</i>. 2018;219(1):110]. <i>Am J Obstet Gynecol</i>. 2017;217(6):678.e1-678.e9. doi: 10.1016/j.ajog.2017.08.017.
 </li>
         </ol>
     )
@@ -153,7 +153,7 @@ export const Pg25_26 = () => {
                 SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
             </li>
             <li>
-                Data on File, Physician Research. Advantage Healthcare, Inc. Prepared December 23, 201
+                Data on File, Physician Research. Advantage Healthcare, Inc. Prepared December 23, 2014.
             </li>
         </ol>
     )
@@ -186,22 +186,22 @@ export const Pg32 = () => {
     return (
         <ol>
            <li>
-SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017
+SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
 </li>
            <li>
 Flagyl Extended Release [prescribing information]. Chicago, IL: G.D. Searle LLC; 2018.
 </li>
            <li>
-Tinidazole Tablets [prescribing information]. Buffalo Grove, IL: G.D. PACK Pharmaceuticals, LLC; 2013
+Tinidazole Tablets [prescribing information]. Buffalo Grove, IL: G.D. PACK Pharmaceuticals, LLC; 2013.
 </li>
            <li>
  Metrogel [prescribing information]. Sellersville, PA: Teva Pharmaceuticals USA; 2005.
 </li>
            <li>
-Nuvessa [prescribing information]. Madrid, Spain: Chemo Research SL; 2017
+Nuvessa [prescribing information]. Madrid, Spain: Chemo Research SL; 2017.
 </li>
            <li>
- Clindesse [prescribing information]. Allegan, MI: Pharmacia &amp; Upjohn Company, LLC; 2014
+ Clindesse [prescribing information]. Allegan, MI: Pharmacia &amp; Upjohn Company, LLC; 2014.
 </li>
         </ol>
     )
@@ -211,14 +211,26 @@ export const Pg34 = () => {
     return (
         <ol>
            <li>
-SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017
+SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
 </li>
            <li>
-Nyirjesy P, Schwebke JR. Secnidazole: next-generation antimicrobial agent for bacterial vaginosis treatment. <i>Future Microbiol</i>. 2018;13:507-524. doi:10.2217/fmb-2017-0270
+Nyirjesy P, Schwebke JR. Secnidazole: next-generation antimicrobial agent for bacterial vaginosis treatment. <i>Future Microbiol</i>. 2018;13:507-524. doi:10.2217/fmb-2017-0270.
 </li>
            <li>
-Metronidazole Oral Capsules 500 mg [prescribing information]. Chicago, IL: G.D. Searle LLC; 2018. 15
+Metronidazole Oral Capsules 500 mg [prescribing information]. Chicago, IL: G.D. Searle LLC; 2018. 15.
 </li>
+        </ol>
+    )
+}
+
+export const Pg36 = () => {
+    return (
+        <ol>
+            <li>
+                Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P. A phase-3, double-blind, placebo-controlled study of the effectiveness and safety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis [published correction appears in <i>Am J Obstet Gynecol</i>. 2018;219(1):110]. <i>Am J Obstet Gynecol</i>. 2017;217(6):678.e1-678.e9. doi: 10.1016/j.ajog.2017.08.017.          </li>
+            <li>
+                SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
+            </li>
         </ol>
     )
 }
@@ -244,7 +256,7 @@ export const Pg40 = () => {
     return (
         <ol>
            <li>
-Data on file. Bacterial Vaginosis Physician Survey. Symbiomix Therapeutics, LLC, a Lupin Company, and the American Sexual Health Association (ASHA). Prepared March 2018
+Data on file. Bacterial Vaginosis Physician Survey. Symbiomix Therapeutics, LLC, a Lupin Company, and the American Sexual Health Association (ASHA). Prepared March 2018.
 </li>
         </ol>
     )
@@ -300,7 +312,7 @@ export const Pg71 = () => {
 export const Nope = () => {
     return (
         <h1>
-            TODO - insert Ref copy for this section
+
         </h1>
     )
 }

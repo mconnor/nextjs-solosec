@@ -98,10 +98,10 @@ const References: React.FC<Props> = ({section}) => {
 
     return (
         <OuterContainer className='modalWrapper'
-            variants={variants}
-            initial='closed'
-            animate={isReferenceOpen ? 'open' : 'closed'}
-            transition={{damping: 300}}>
+                        variants={variants}
+                        initial='closed'
+                        animate={isReferenceOpen ? 'open' : 'closed'}
+                        transition={{damping: 300}}>
             <Container>
                 <Top>
                     <h1>REFERENCES</h1>
@@ -135,19 +135,21 @@ const References: React.FC<Props> = ({section}) => {
                                                                 <RefCopy.Pg32/>
                                                                 : (section === Sections.CHART_34) ?
                                                                     <RefCopy.Pg34/>
-                                                                    : (section === Sections.FOUR_MILLION) ?
-                                                                        <RefCopy.Pg38/>
-                                                                        : (section === Sections.NONADHERENCE_40) ?
-                                                                            <RefCopy.Pg40/>
-                                                                            : (section === Sections.RISK_65) ?
-                                                                                <RefCopy.Pg65/>
-                                                                                : (section === Sections.RISK_66) ?
-                                                                                    <RefCopy.Pg66/>
-                                                                                    : (section === Sections.BV_68) ?
-                                                                                        <RefCopy.Pg68/>
-                                                                                        : (section === Sections.BV_71) ?
-                                                                                            <RefCopy.Pg71/>
-                                                                                        : <RefCopy.Nope/>
+                                                                    : (section === Sections.CHART_36) ?
+                                                                        <RefCopy.Pg36/>
+                                                                        : (section === Sections.FOUR_MILLION) ?
+                                                                            <RefCopy.Pg38/>
+                                                                            : (section === Sections.NONADHERENCE_40) ?
+                                                                                <RefCopy.Pg40/>
+                                                                                : (section === Sections.RISK_65) ?
+                                                                                    <RefCopy.Pg65/>
+                                                                                    : (section === Sections.RISK_66) ?
+                                                                                        <RefCopy.Pg66/>
+                                                                                        : (section === Sections.BV_68) ?
+                                                                                            <RefCopy.Pg68/>
+                                                                                            : (section === Sections.BV_71) ?
+                                                                                                <RefCopy.Pg71/>
+                                                                                                : <RefCopy.Nope/>
                     }
 
                 </Copy>

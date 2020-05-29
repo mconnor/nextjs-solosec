@@ -194,9 +194,9 @@ const Nav = () => {
 
                 <NavBtn label={APPENDIX} pageName={PageList.pages["1"]}>
                     <ul>
-                        <NavBtn label={PHARMAK} pageName={PageList.pages["23"]} subnav />
-                        <NavBtn label={STUDY2DATA} pageName={PageList.pages["5"]} subnav />
-                        <NavBtn label={TREATMENT_ADHERENCE} pageName={PageList.pages["40"]} subnav />
+                        <NavBtn label={PHARMAK} pageName={PageList.pages["13"]} subnav />
+                        <NavBtn label={STUDY2DATA} pageName={PageList.pages["14"]} subnav />
+                        <NavBtn label={TREATMENT_ADHERENCE} pageName={PageList.pages["15"]} subnav />
                     </ul>
                 </NavBtn>
 
