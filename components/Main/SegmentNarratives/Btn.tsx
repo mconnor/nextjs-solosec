@@ -14,8 +14,9 @@ type Props = {
 const Button = styled.img`
     width: 360px;
     height: 75px;
-    border: 0px;
-    background-color: #00000000;
+    background: transparent;
+    border: none !important;
+    font-size:0;
 `;
 
 
