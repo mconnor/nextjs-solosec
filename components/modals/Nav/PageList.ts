@@ -55,7 +55,7 @@ export const PageList: Foo = {
         "19": "19_43cs2.html",
         "20": "20_49cs4.html",
         "21": "21_56cs6.html",
-        "22": "22_61segmentNarratives.html",
+        "22": "22_61segmentNarratives",
         "23": "23_65prevelance.html",
         "24": "24_66riskFactors.html",
         "25": "25_68BVsequelae.html",

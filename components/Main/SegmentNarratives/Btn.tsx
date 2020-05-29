@@ -11,7 +11,7 @@ type Props = {
     seq:string
 }
 
-const Button = styled.img`
+const BtnInvisible = styled.button`
     width: 360px;
     height: 75px;
     background: transparent;
@@ -39,9 +39,10 @@ const Btn:React.FC<Props> = ({ page, seq}) => {
     }
 
     return (
-        <Button onClick={() => {
+        
+        <BtnInvisible onClick={() => {
             linkTo(page)}}>
-        </Button>
+        </BtnInvisible>
     )
 }
 
