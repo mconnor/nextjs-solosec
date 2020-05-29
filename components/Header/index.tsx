@@ -1,4 +1,5 @@
 
+
 import styled from 'styled-components'
 import Hamburger from './Hamburger'
 import { useAppState} from "../../state";
@@ -31,23 +32,41 @@ const PRESCRIBING_INFO = 'Prescribing\nInformation'
 const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
-const Header: React.FC<Props> = ({ gridArea }) => {
-    const { toggleReference,toggleSafetyInfo,togglePrescribingInfo, setNav,setSafteyInfo } = useAppState();
 
-    const togleRef = () => {
-       
-       
+
+
+
+const Header: React.FC<Props> = ({ gridArea }) => {
+    const { toggleReference,togglePrescribingInfo,toggleSafetyInfo,
+            setNav,setSafteyInfo,toggleNav } = useAppState();
+
+
+    const handlRefClick = () => {
+        toggleReference &&  toggleReference();
         setSafteyInfo && setSafteyInfo(false);
         setNav && setNav(false);
-        toggleReference &&  toggleReference();
     }
-
+    const handleIPIclick = () => {
+        togglePrescribingInfo &&  togglePrescribingInfo();
+        setSafteyInfo && setSafteyInfo(false);
+        setNav && setNav(false);
+    }
+    const handleIsiClick = () => {
+        toggleSafetyInfo &&  toggleSafetyInfo();
+        setNav && setNav(false);
+    }
+    const handleNavClick = () => {
+        toggleNav &&  toggleNav();
+        setSafteyInfo && setSafteyInfo(false);
+    }
+    
+    // {_prevState => setNav &&  setNav(true)}
     return (
         <MainDiv gridArea={gridArea}>
-            <Hamburger />
-            <NavBtn borderRight clickCallBack={togglePrescribingInfo}>{PRESCRIBING_INFO}</NavBtn>
-            <NavBtn borderRight clickCallBack={toggleSafetyInfo}>{SAFETY_MSG}</NavBtn>
-            <NavBtn clickCallBack={togleRef}>{REFERENCE}</NavBtn>
+            <Hamburger clickCallBack={handleNavClick}/>
+            <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
+            <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
+            <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
         </MainDiv>
     )
 }

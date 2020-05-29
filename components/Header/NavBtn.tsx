@@ -26,7 +26,7 @@ interface Props extends StyleProps, ChildrenProps {}
 
 const NavBtn: React.FC<Props> = ({ children, borderRight, clickCallBack }) => {
     return (
-        <Btn role='button'  borderRight={borderRight} onClick={() => clickCallBack && clickCallBack()} >
+        <Btn role='button'  borderRight={borderRight} onClick={() =>  clickCallBack()} >
             {children}
         </Btn>
     )
