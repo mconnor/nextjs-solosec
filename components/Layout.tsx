@@ -58,6 +58,7 @@ const FixedDiv = styled.div`
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
+    // const [cookie2, setCookie2] = useCookie({ key: "section" }) ;
     const {currSeq} = useAppState();
     const handlers = useSwipeable({
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
@@ -65,11 +66,12 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         trackMouse: true,
         trackTouch: true
     });
+    // setCookie2(section);
     // console.log(router.pathname )
 
     // Code that turns off native swipes in OCE Sales
     // @ts-ignore
-    //CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
+    // if (CLMPlayer) CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
 
     console.log("**Current", currSeq, cookie);
     const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
@@ -90,14 +92,14 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 const page = path[n];
                 const thisPath = PageList.seq[cookie];
                 const currentPage = thisPath.indexOf(page);
-                if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage-1]];
-                if (dir === "Left") if (currentPage !== thisPath.length-1) window.location.href = PageList["pages"][thisPath[currentPage+1]];
+                if (dir === "Right") if (currentPage !== 0) router.push("/" + PageList["pages"][thisPath[currentPage-1]]);
+                if (dir === "Left") if (currentPage !== thisPath.length-1) router.push("/" + PageList["pages"][thisPath[currentPage+1]]);
             }
         }
 
         function navigate() {
-            if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n-1]];
-            if (dir === "Left") if (n !== path.length-1) window.location.href = PageList["pages"][path[n+1]];
+            if (dir === "Right") if (n !== 0) router.push("/" + PageList["pages"][path[n-1]]);
+            if (dir === "Left") if (n !== path.length-1) router.push("/" + PageList["pages"][path[n+1]]);
         }
     }
 

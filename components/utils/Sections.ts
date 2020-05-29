@@ -18,5 +18,5 @@ export const RISK_65:string = '65';
 export const RISK_66:string = '66';
 export const BV_68:string = '68';
 
-export const NO_REF:string = '';
+export const NO_REF:string = 'no';
 

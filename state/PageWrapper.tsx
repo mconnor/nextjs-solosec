@@ -39,7 +39,6 @@ interface ReferenceState {
 
 export const AppContext = createContext<ReferenceState>({
     currPageIndex:0,
-
     isaQAopen:false,
     isInitSafetyInfoOpen:true,
     isReferenceOpen: false,
@@ -61,7 +60,6 @@ export const PageWrapper:React.FC = ({ children }) => {
     const pageState: IndexState  = useIndex(0);
 
     const seqState:SectionState = useSection('');
-   
 
     return (
         <AppContext.Provider
@@ -74,7 +72,6 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 currSeq: seqState.section,
                 setCurrentSequence: seqState.setSection,
-
 
                 isReferenceOpen: refState.isToggled,
                 toggleReference: refState.toggle,

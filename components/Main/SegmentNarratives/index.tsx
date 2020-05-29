@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 import styled from 'styled-components';
 import Btn from './Btn';
 
@@ -34,5 +37,9 @@ const SegmentNarratives: React.FC<Props> = () => {
     )
 }
 
+<<<<<<< HEAD
 export default SegmentNarratives
 
+=======
+export default SegmentNarratives
+>>>>>>> origin/master
