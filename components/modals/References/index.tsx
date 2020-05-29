@@ -15,7 +15,7 @@ const variants = {
 
 }
 
-const OuterContrainer = styled(motion.div)`
+const OuterContainer = styled(motion.div)`
 
     
     background-color: rgba(0,0 ,0 ,0.8);
@@ -97,7 +97,7 @@ const References: React.FC<Props> = ({section}) => {
     console.log('section' + section)
 
     return (
-        <OuterContrainer className='modalWrapper'
+        <OuterContainer className='modalWrapper'
             variants={variants}
             initial='closed'
             animate={isReferenceOpen ? 'open' : 'closed'}
@@ -150,7 +150,7 @@ const References: React.FC<Props> = ({section}) => {
 
                 </Copy>
             </Container>
-        </OuterContrainer>
+        </OuterContainer>
     )
 }
 
