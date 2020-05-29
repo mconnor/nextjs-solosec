@@ -79,7 +79,7 @@ const ModalFooter = styled.div`
 
 //
 const SafetyModalWrapper: React.FC = () => {
-    const { isSafetyInfoOpen, isPrescribingInfoOpen, isReferenceOpen } = useAppState();
+    const { isSafetyInfoOpen } = useAppState();
 
     return (
         <OuterContrainer  className='modalWrapper'

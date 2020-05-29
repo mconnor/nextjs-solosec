@@ -30,7 +30,7 @@ const Main = styled.div`
 
 
 interface Props  {
-    clickCallBack: (() => void) | undefined;
+    clickCallBack: (() => void);
 }
 
 
