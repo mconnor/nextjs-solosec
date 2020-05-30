@@ -89,8 +89,8 @@ const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, ho
             animate='end'
             transition={{
                 type: "spring",
-                stiffness: 260,
-                damping: 20,
+                stiffness: 340,
+                damping: 40,
                 delay: .5,
                 mass: 2
             }}
