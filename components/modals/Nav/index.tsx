@@ -149,7 +149,7 @@ const RightColBtSub = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
     //column-gap: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     margin-left: 75px;
     text-align: left;
 `;
