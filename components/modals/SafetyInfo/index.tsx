@@ -11,7 +11,7 @@ const variants = {
         y: 0,
      },
     closed: {
-        y: 750,
+        y:752,
        
         transition: {
             delay: .2
@@ -27,16 +27,16 @@ type Props ={
 const InnerDiv = styled.div<Props>`
     background: white;
     padding-top: -5px;
-   
 `;
 
 
 const OuterContainer = styled(motion.div)<Props>`
     height: calc(100vh - var(--header-height)) !important;
-    top:var(--header-height) !important;;
+    top:var(--header-height) !important;
     padding-top: ${props => props.isOpen ? '26px' : '0' };
     padding-left: 20px;
     padding-right: 20px;
+    z-index:10 !important;
    
 `;
 
