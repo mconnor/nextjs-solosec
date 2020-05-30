@@ -94,7 +94,7 @@ const NavContainerX = styled.div<StyleProps>`
     border-right: ${props => props.borderRight && '2px solid #034063'};
     display: grid;
     grid-template-columns: 1fr;
-    height: 90%; 
+    height: 100%; 
     margin:0;
     line-height: 50px;
 /* row-gap:24px; */
@@ -150,6 +150,7 @@ const RightColBtSub = styled.div`
     grid-template-columns: auto 1fr;
     //column-gap: 0px;
     margin-bottom: 30px;
+    margin-left: 75px;
     text-align: left;
 `;
 
