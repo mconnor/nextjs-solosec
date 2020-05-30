@@ -12,8 +12,9 @@ import SafteyFooter from '../SafetyInfo/SafteyFooter';
 const OuterContainer = styled.div`
 
     z-index:6 !important;
+    height:100vh;
+    max-height: var(--ipad-height);
 
-    padding:36px;
     background:rgba(0,0,0,.5) !important;
 
     display:grid;
@@ -21,6 +22,7 @@ const OuterContainer = styled.div`
 `;
 
 const MyGrid = styled.div`
+    margin: 12px 12px 66px 12px;
     background:white;
     border: 20px solid var(--isi-blue);
     border-radius: var(--border-radius-4);
