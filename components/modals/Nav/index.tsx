@@ -193,7 +193,7 @@ const Nav = () => {
                 <NavBtn label={SATISFACTION_SURVEY} pageName={PageList.pages["11"]} />
                 <NavBtn label={CURRENT_BV_TREATMENTS} pageName={PageList.pages["12"]} />
 
-                <NavBtn label={APPENDIX} pageName={PageList.pages["1"]}>
+                <NavBtn label={APPENDIX} >
                     <ul>
                         <NavBtn label={PHARMAK} pageName={PageList.pages["13"]} subnav />
                         <NavBtn label={STUDY2DATA} pageName={PageList.pages["14"]} subnav />
@@ -229,7 +229,7 @@ const Nav = () => {
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={TOOLBOX} pageName={PageList.pages["1"]} >
+                    <NavBtn label={TOOLBOX} >
 
                     </NavBtn>
                 </RightColBtX>

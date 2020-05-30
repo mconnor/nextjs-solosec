@@ -62,7 +62,7 @@ SOLOSEC[prescribing information].Baltimore, MD: Lupin Pharmaceuticals, Inc.; 201
     Hillier SL, Nyirjesy P, Waldbaum AS, et al.Secnidazole treatment of bacterial vaginosis: a randomized controlled trial.<i>Obstet Gynecol</i>. 2017; 130(2): 379 - 386.
 </li>
 <li>
-Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P.A phase - 3, double - blind, placebo - controlled study of the effectiveness andsafety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis[published correction appears in <i>Am J Obstet Gynecol</i>. 2018; 219(1): 110].<i>Am J Obstet Gynecol</i>. 2017; 217(6): 678.e1 - 678.e9.doi: 10.1016 / j.ajog.2017.08.01
+Schwebke JR, Morgan FG Jr, Koltun W, Nyirjesy P.A phase - 3, double - blind, placebo - controlled study of the effectiveness and safety of single oral doses of secnidazole 2 g for the treatment of women with bacterial vaginosis[published correction appears in <i>Am J Obstet Gynecol</i>. 2018; 219(1): 110].<i>Am J Obstet Gynecol</i>. 2017; 217(6): 678.e1 - 678.e9.doi: 10.1016 / j.ajog.2017.08.01
 </li>
             </ol>
 
@@ -89,7 +89,7 @@ export const Pg21 = () => {
     return (
         <ol>
            <li>
-               Bohbot JM, Vicaut E, Fagnen D, Brauman M. Treatment of bacterial vaginosis: a multi-center, double-dummy, randomized phase III study comparing secnidazole and metronidazole. <i>Infect Dis Obstet Gynecol</i>. 2010;2010:1-
+               Bohbot JM, Vicaut E, Fagnen D, Brauman M. Treatment of bacterial vaginosis: a multi-center, double-dummy, randomized phase III study comparing secnidazole and metronidazole. <i>Infect Dis Obstet Gynecol</i>. 2010;2010:1-6.
             </li>
         </ol>
     )

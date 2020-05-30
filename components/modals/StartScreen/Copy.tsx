@@ -90,7 +90,7 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
 
     return (
         <Container marginLR={marginLR}>
-            <SubHead>Indication</SubHead>
+            <SubHead>INDICATION</SubHead>
             <Ptag>SOLOSEC<sup>&reg;</sup> (secnidazole) 2g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
 
             <SubHead>Dosage and Administration</SubHead>
