@@ -23,7 +23,7 @@ const NavBtn = styled.div<IBtn>`
     border: 2px;
    
     border-style:${props => props.active ? 'groove' : 'none'};
-    background: ${props => !props.active ? 'white' : 'var(--royal-blue-light)'};
+    background: ${props => !props.active ? '' : 'var(--royal-blue-light)'};
 
     color:  ${props => props.active ? 'white' : 'var(--royal-blue-light)'};
     cursor: pointer;
