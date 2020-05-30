@@ -284,7 +284,7 @@ export const Pg66 = () => {
                2.	Brookheart RT, Lewis WG, Peipert JF, Lewis AL, Allsworth JE. Association between obesity and bacterial vaginosis as assessed by Nugent Score. <i>Am J Obstet Gynecol</i>. 2019;220(5):476.e1-476.e11.
            </li>
             <li>
-                3.	Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in <i>MMWR Recomm Rep</i>. 2015;64(33):924]. <i>MMWR Recomm Rep</i>>. 2015;64(RR-03):1-13
+                3.	Workowski KA, Bolan GA; CDC. Sexually Transmitted Diseases Treatment Guidelines, 2015 [published correction appears in <i>MMWR Recomm Rep</i>. 2015;64(33):924]. <i>MMWR Recomm Rep</i>. 2015;64(RR-03):1-13
             </li>
         </ol>
     )
