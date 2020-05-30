@@ -52,7 +52,7 @@ const variants = {
 
 const MainDiv = styled(motion.div)`
     z-index: 3;
-    width: var( --ipad--width);
+    width: var(--ipad-width);
    
     position: fixed;
     top:var(--header-height);

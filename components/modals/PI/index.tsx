@@ -33,9 +33,9 @@ const variantsRight = {
 
 const OuterContainer = styled(motion.div)`
      position: fixed ;
-     width: var( --ipad-max-width);
+     width: var( --ipad-width);
     margin-top:var(--header-height);
-    width: 100vw;
+    width: var(--ipad--height);
     height: 52vw !important;
     /* overflow:scroll !important;
     b

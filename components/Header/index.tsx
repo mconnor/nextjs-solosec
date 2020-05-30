@@ -11,6 +11,8 @@ import NavBtn from './NavBtn';
 const MainDiv = styled.div<Props>`
     grid-area: ${props => props.gridArea};
     background-image: url(/img/header-sansNav.png);
+    background-size: 100% 100%;
+    width:var(--ipad-width);
     padding: 0 24px 0 24px;
     display: grid;
     align-items: center;
