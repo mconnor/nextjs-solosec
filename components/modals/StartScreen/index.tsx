@@ -10,7 +10,7 @@ import SafteyFooter from '../SafetyInfo/SafteyFooter';
 // _prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)
 
 const OuterContainer = styled.div`
-    position:absolute;
+
     z-index:6 !important;
 
     padding:39px;

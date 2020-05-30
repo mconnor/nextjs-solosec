@@ -5,8 +5,8 @@ type Props = {
 }
 
 const Img = styled.img`
-    width: 1396px;
-    height:780px;
+    width: var(--ipad-width);
+    height: var(--main-height);
 `;
 
 const Main = styled.div`

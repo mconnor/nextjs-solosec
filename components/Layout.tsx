@@ -33,8 +33,8 @@ type Props = {
 const PageContainer = styled.div`
     position: static;
     overflow: hidden;
-    background-color: white;
-    width: var(--ipad-max-width);
+    background-color: pink;
+    width: var(--ipad-width);
     height: 100vh;
     display: grid;
     grid-template-columns: 6% 1fr 6%;
