@@ -10,7 +10,6 @@ import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
 import PrescribingInfoWrapper from "./modals/PI";
 import Nav from './modals/Nav';
-import SpaLink from '../components/SpaLink';
 import StartScreen  from './modals/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
@@ -45,12 +44,6 @@ const PageContainer = styled.div`
         "main main main"
         ". footer .";
     justify-items: stretch;
-`;
-
-const FixedDiv = styled.div`
-    position: absolute;
-    top: 5px;
-    left: 600px;
 `;
 
 
@@ -141,7 +134,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <Nav />
                 <ReferencesWrapper section={section}/>
                 <PrescribingInfoWrapper />
-                <FixedDiv><SpaLink pageName='index' /></FixedDiv>
+            
                 
 			    <PageContainer {...handlers}>
                     <Header gridArea='header'/>

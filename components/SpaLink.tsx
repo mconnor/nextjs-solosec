@@ -6,6 +6,7 @@ const Main = styled.div`
     color: white;
     padding: 8px;
     border: 2px solid black;
+    border-radius: 4px;
     background: gray;
     a {
         text-decoration: none;

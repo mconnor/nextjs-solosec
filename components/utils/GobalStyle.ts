@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --ipad-max-width: 1366px;
         --ipad-max-height: 1024px;
-        --ipad-min-width: 1112px;
+
         --ipad-min-height: 834px;
 
         --ipad-width: var(--ipad-max-width);
@@ -47,6 +47,8 @@ const GlobalStyle = createGlobalStyle`
         --border-radius-4: 4px;
 
         --safety-info-margin: 80px;
+
+        --pi-modal-blue:#094975;
     }
 
 
