@@ -61,8 +61,7 @@ export const AppContext = createContext<ReferenceState>({
 });
 
 export const PageWrapper: React.FC = ({ children }) => {
-    // lastest user link clicked in pi modal
-    const piState: SectionState = useSection('');
+   
 
     // what section is user in
     const sectionState: SectionState = useSection('');
@@ -73,8 +72,12 @@ export const PageWrapper: React.FC = ({ children }) => {
     // is start screen isi modal open?
     const initSafetyInfoState: ToggleState = useToggle(true);
 
+     // lastest pi user anchor link clicked in pi modal
+     const piAnchorState: SectionState = useSection('');
     // is pi modal open?
     const prescribingInfoState: ToggleState = useToggle(false);
+
+
     const qaState: ToggleState = useToggle(false);
     // is nav modal open?
     const navState: ToggleState = useToggle(false);
@@ -95,10 +98,6 @@ export const PageWrapper: React.FC = ({ children }) => {
                 currSection: sectionState.section,
                 setCurrentSection: sectionState.setSection,
 
-                currPIanchor: piState.section,
-                setCurrentPIanchor: piState.setSection,
-
-
                 currSeq: seqState.section,
                 setCurrentSequence: seqState.setSection,
 
@@ -112,6 +111,9 @@ export const PageWrapper: React.FC = ({ children }) => {
                 isPrescribingInfoOpen: prescribingInfoState.isToggled,
                 togglePrescribingInfo: prescribingInfoState.toggle,
                 setPrescribingInfo: prescribingInfoState.setToggle,
+
+                currPIanchor: piAnchorState.section,
+                setCurrentPIanchor: piAnchorState.setSection,
 
                 isInitSafetyInfoOpen: initSafetyInfoState.isToggled,
                 setInitSafteyInfo: initSafetyInfoState.setToggle,
