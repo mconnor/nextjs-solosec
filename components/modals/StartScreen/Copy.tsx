@@ -64,11 +64,6 @@ const Container = styled.div<Props>`
 
     padding-left:${props => `${props.marginLR}px`};
     padding-right:${props => `${props.marginLR}px`};
-  
-}
-
-
-
 `;
 const NoWrapSpan = styled.span`
     white-space: nowrap;

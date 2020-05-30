@@ -20,6 +20,7 @@ const Btn = styled.button<IBtn>`
     place-items: center;
     border:0;   
     grid-area: ${(props) => props.gridArea};
+    cursor: pointer;
  
 `;
 
