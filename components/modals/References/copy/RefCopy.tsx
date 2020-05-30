@@ -278,7 +278,7 @@ export const Pg66 = () => {
     return (
         <ol>
            <li>
-               1.	Koumans EH, Sternberg M, Bruce C, et al. The prevalence of bacterial vaginosis in the United States, 2001-2004; associations with symptoms, sexual behaviors, and reproductive health. <i>Sex Transm Dis</i>>. 2007;34(11):864-869.
+               1.	Koumans EH, Sternberg M, Bruce C, et al. The prevalence of bacterial vaginosis in the United States, 2001-2004; associations with symptoms, sexual behaviors, and reproductive health. <i>Sex Transm Dis</i>. 2007;34(11):864-869.
 </li>
            <li>
                2.	Brookheart RT, Lewis WG, Peipert JF, Lewis AL, Allsworth JE. Association between obesity and bacterial vaginosis as assessed by Nugent Score. <i>Am J Obstet Gynecol</i>. 2019;220(5):476.e1-476.e11.
