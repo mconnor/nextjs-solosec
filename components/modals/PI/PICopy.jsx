@@ -23,17 +23,13 @@ const Copy = styled.div`
     }
 `;
 
-
-// const Ul = styled.div`
-//     display:grid;
-//     grid-template-columns: 1fr;
-//     justify-items: stretch;
-//     li {
-//         list-style:none;
-//         border:1 px solid;
-        
-//      }   
-// `;
+const H2 = styled.h2`
+    color: var(--pi-modal-blue);
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+`;
 
 const P = styled.p`
     font-style: normal;
@@ -56,7 +52,7 @@ const PICopy= () => {
 
                 <div id="indicationsAndUsage">
 
-                    <h2>1 Indications and Usage</h2>
+                    <H2>1 Indications and Usage</H2>
 
                     <h3>1.1 Bacterial Vaginosis</h3>
 
@@ -77,7 +73,7 @@ const PICopy= () => {
 
                 <div id="dosage">
 
-                    <h2>2 Dosage and Administration</h2>
+                    <H2>2 Dosage and Administration</H2>
 
                     <h3>2.1 Recommended Dosage</h3>
 
@@ -104,7 +100,7 @@ const PICopy= () => {
 
                 <div id="dosageStrength">
 
-                    <h2>3 Dosage Forms and Strengths</h2>
+                    <H2>3 Dosage Forms and Strengths</H2>
 
                     <P>Oral Granules: 2 g, of off-white to slightly yellowish granules with 4.8 g net weight, packed in
                         a unit-of-use child-resistant foil packet.</P>
@@ -113,7 +109,7 @@ const PICopy= () => {
 
                 <div id="contraindications">
 
-                    <h2>4 Contraindications</h2>
+                    <H2>4 Contraindications</H2>
 
                     <h3 className="underline">Hypersensitivity</h3>
 
@@ -124,7 +120,7 @@ const PICopy= () => {
 
                 <div id="warnings">
 
-                    <h2>5 Warnings and Precautions</h2>
+                    <H2>5 Warnings and Precautions</H2>
 
                     <h3>5.1 Vulvo-Vaginal Candidiasis</h3>
 
@@ -152,7 +148,7 @@ const PICopy= () => {
 
                 <div id="adverseReactions">
 
-                    <h2>6 Adverse Reactions</h2>
+                    <H2>6 Adverse Reactions</H2>
 
                     <h3>6.1 Clinical Trials Experience</h3>
 
@@ -247,7 +243,7 @@ const PICopy= () => {
 
                 <div id="drugInteractions">
 
-                    <h2>7 Drug Interactions</h2>
+                    <H2>7 Drug Interactions</H2>
 
                     <h3>7.1 Oral Contraceptives</h3>
 
@@ -260,7 +256,7 @@ const PICopy= () => {
 
                 <div id="specificUse">
 
-                    <h2>8 Use In Specific Populations</h2>
+                    <H2>8 Use In Specific Populations</H2>
 
                     <h3>8.1 Pregnancy</h3>
 
@@ -329,7 +325,7 @@ const PICopy= () => {
 
                 <div id="description">
 
-                    <h2>11 Description</h2>
+                    <H2>11 Description</H2>
 
                     <P>The active ingredient in SOLOSEC Oral Granules is secnidazole (also named
                         1-(2-hydroxypropyl)-2-methyl-5-nitroimidazole and 1-(2-methyl-5-nitro-1<em>H</em>-imidazol-1-yl)
@@ -352,7 +348,7 @@ const PICopy= () => {
 
                 <div id="clinicalPharmacology">
 
-                    <h2>12 Clinical Pharmacology</h2>
+                    <H2>12 Clinical Pharmacology</H2>
 
                     <h3>12.1 Mechanism of Action</h3>
 
@@ -553,7 +549,7 @@ const PICopy= () => {
 
                 <div id="nonclinicalToxicology">
 
-                    <h2>13 Nonclinical Toxicology</h2>
+                    <H2>13 Nonclinical Toxicology</H2>
 
                     <h3>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</h3>
 
@@ -576,7 +572,7 @@ const PICopy= () => {
 
                 <div id="clinicalStudies">
 
-                    <h2>14 Clinical Studies</h2>
+                    <H2>14 Clinical Studies</H2>
 
                     <P>Two randomized placebo-controlled clinical trials (Trial 1 and Trial 2) with similar designs were
                         conducted to evaluate the efficacy of SOLOSEC 2 gram for the treatment of bacterial vaginosis. A
@@ -796,7 +792,7 @@ const PICopy= () => {
 
                 <div id="storage">
 
-                    <h2>16 How Supplied / Storage and Handling</h2>
+                    <H2>16 How Supplied / Storage and Handling</H2>
 
                     <P>SOLOSEC (secnidazole) Oral Granules, 2 g, consists of off-white to slightly yellowish granules
                         containing secnidazole. SOLOSEC is supplied in a unit-of-use package containing one packet of
@@ -812,7 +808,7 @@ const PICopy= () => {
 
                 <div id="counseling">
 
-                    <h2>17 Patient Counseling Information</h2>
+                    <H2>17 Patient Counseling Information</H2>
 
                     <P>Advise the patient to read the FDA-approved patient labeling (Patient Information and
                         Instructions for Use).</P>
@@ -868,7 +864,7 @@ const PICopy= () => {
 
                 <div id="patientInfo">
 
-                    <h2>Patient Information</h2>
+                    <H2>Patient Information</H2>
 
                     <P>SOLOSEC (SO-lo-sec) (secnidazole) oral granules</P>
 
@@ -949,8 +945,8 @@ const PICopy= () => {
                     <P>For more information visit www.solosec.com or contact Lupin Pharmaceuticals, Inc. at
                         1-844-SOLOSEC (1-844-765-6732).</P>
 
-                    <h2 id="instructionsForUseLink">Instructions For Use | SOLOSEC<span className="lowercase">(secnidazole) oral granules</span>
-                    </h2>
+                    <H2 id="instructionsForUseLink">Instructions For Use | SOLOSEC<span className="lowercase">(secnidazole) oral granules</span>
+                    </H2>
 
                     <h4>For oral use (by mouth) only.</h4>
 

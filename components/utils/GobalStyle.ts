@@ -47,6 +47,8 @@ const GlobalStyle = createGlobalStyle`
         --border-radius-4: 4px;
 
         --safety-info-margin: 80px;
+
+        --pi-modal-blue:#094975;
     }
 
 
