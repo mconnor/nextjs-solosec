@@ -47,12 +47,6 @@ const PageContainer = styled.div`
     justify-items: stretch;
 `;
 
-const FixedDiv = styled.div`
-    position: absolute;
-    top: 5px;
-    left: 600px;
-`;
-
 
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     const router = useRouter();
@@ -141,7 +135,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <Nav />
                 <ReferencesWrapper section={section}/>
                 <PrescribingInfoWrapper />
-                <FixedDiv><SpaLink pageName='index' /></FixedDiv>
+            
                 
 			    <PageContainer {...handlers}>
                     <Header gridArea='header'/>
