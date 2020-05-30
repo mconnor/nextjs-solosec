@@ -30,7 +30,8 @@ const MainDiv = styled.div`
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6,auto);
+    grid-template-rows: repeat(6, minmax(min-content, max-content));
+    overflow-y: scroll;
     /* gap: 70px; */
 `;
 
@@ -67,6 +68,7 @@ const Adiv = styled(motion.div) <OnOff>`
     font-size: 22px;
     line-height: 25px;
     letter-spacing: -0.035em;
+    padding-bottom:20px;
 `;
 
 const QAcontainer = styled.div`
@@ -77,6 +79,7 @@ const QAcontainer = styled.div`
     font-size: 26px;
     line-height: 31px;
     letter-spacing: -0.02em;
+    min-height: 100px;
 `;
 
 const Qwrapper = styled.div`
