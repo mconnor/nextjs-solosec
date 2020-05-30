@@ -5,10 +5,11 @@ const GlobalStyle = createGlobalStyle`
         --ipad-max-width: 1366px;
         --ipad-max-height: 1024px;
 
+        --ipad-min-width: 1194px;
         --ipad-min-height: 834px;
 
-        --ipad-width: var(--ipad-max-width);
-        --ipad-height: calc(var(--ipad-max-height) - 50px);
+        --ipad-width: var(--ipad-min-width);
+        --ipad-height: calc(var(--ipad-min-height) - 50px);
 
         --header-height: 100px; //80
         --main-height: 750px; //607
