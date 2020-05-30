@@ -12,7 +12,7 @@ interface IBtn {
 }
 
 const NavBtn = styled.div<IBtn>`
-    height: 60px;
+    height: 50px;
     border: 1 solid black;
     display: grid;
     align-items: center;
@@ -23,9 +23,9 @@ const NavBtn = styled.div<IBtn>`
     border: 2px;
    
     border-style:${props => props.active ? 'groove' : 'none'};
-    background: ${props => !props.active ? '' : 'var(--royal-blue-light)'};
+    background: ${props => !props.active ? '' : '#072b49'};
 
-    color:  ${props => props.active ? 'white' : 'var(--royal-blue-light)'};
+    color:  ${props => props.active ? 'white' : '#072b49'};
     cursor: pointer;
     
     
