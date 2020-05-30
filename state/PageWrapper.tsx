@@ -23,8 +23,10 @@ interface ReferenceState {
     toggleSafetyInfo?: () => void;
     setSafteyInfo?: React.Dispatch<React.SetStateAction<boolean>>;
     
+    
     isInitSafetyInfoOpen: boolean;
     setInitSafteyInfo?: React.Dispatch<React.SetStateAction<boolean>>;
+    toggleInitSafetyInfo?: () => void;
 
     isPrescribingInfoOpen: boolean;
     togglePrescribingInfo?: () => void;
@@ -52,7 +54,10 @@ export const PageWrapper:React.FC = ({ children }) => {
     const sectionState: SectionState = useSection('');
     const refState: ToggleState  = useToggle(false);
     const safetyInfoState: ToggleState  = useToggle(false);
+
     const initSafetyInfoState: ToggleState  = useToggle(true);
+    
+
     const prescribingInfoState: ToggleState  = useToggle(false);
     const qaState: ToggleState  = useToggle(false);
    
@@ -85,6 +90,7 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 isInitSafetyInfoOpen: initSafetyInfoState.isToggled,
                 setInitSafteyInfo: initSafetyInfoState.setToggle,
+                toggleInitSafetyInfo: initSafetyInfoState.toggle,
 
                 isNavOpen: navState.isToggled,
                 toggleNav: navState.toggle,

@@ -87,7 +87,17 @@ const GlobalStyle = createGlobalStyle`
         color: gray;
     }
  }
+ .item1 {
+      grid-area: sidebar-1;
+    }
 
+    .item2 {
+      grid-area: content;
+    }
+
+    .item3 {
+      grid-area: sidebar-2;
+    }
 
 .fillMain {
     background-size:var(--ipad-width);
