@@ -57,6 +57,9 @@ export default QA
 const Qdiv = styled.div`
     font-style:bold;
     font-weight: 700;
+    sup {
+    font-size: 12px;
+    }
 `;
 
 type OnOff = { on?: boolean; }

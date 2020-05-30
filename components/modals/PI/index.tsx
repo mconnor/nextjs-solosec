@@ -36,12 +36,13 @@ const OuterContainer = styled(motion.div)`
      width: var( --ipad-max-width);
     margin-top:var(--header-height);
     width: 100vw;
+    height: 52vw !important;
     /* overflow:scroll !important;
     b
     overflow-y: hidden; */
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
-  border: 2px solid black;
+  //border: 2px solid black;
 `;
 
 

@@ -21,13 +21,17 @@ const Copy = styled.div`
             font-style: italic;
         }
     }
+    h1 {
+    color: #072b49;
+    font-weight: 700;
+    }
 `;
 
 const H2 = styled.h2`
-    color: var(--pi-modal-blue);
+    color: #072b49;
     text-transform: uppercase;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 18px;
 `;
 
