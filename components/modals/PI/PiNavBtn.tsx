@@ -9,22 +9,21 @@ interface IBtn {
 }
 
 const NavBtn = styled.div<IBtn>`
-    height: 60px;
+    height: 50px;
     border: 1 solid black;
     display: grid;
     align-items: center;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-
-   background: ${props => props.active && 'blue'}
-    
-    
     a {
         text-decoration:none;
-       
         font-size: 1rem;
     }
+    background-color: ${props => props.active && 'blue'}
+    
+    
+    
    
 `;
 

@@ -17,7 +17,7 @@ const Copy = styled.div`
     /* grid-area: ${(props) => props.gridArea}; */
     
     background-color:white;
-    padding: 20px 48px 0 20px;
+    padding: 40px 48px 0 20px;
     border-bottom-right-radius: var(--border-radius-4);
     border-bottom-left-radius: var(--border-radius-4);
     letter-spacing: 0.03em;
