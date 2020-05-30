@@ -164,9 +164,9 @@ const IconBg = styled.button`
 `;
 
 const Nav = () => {
-    const { isNavOpen } = useAppState();
+    const { isNavOpen, isInitSafetyInfoOpen } = useAppState();
    
-
+    if (isInitSafetyInfoOpen) return null;
     return (
         <MainDiv
             variants={variants}

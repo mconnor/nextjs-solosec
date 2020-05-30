@@ -81,8 +81,8 @@ const PrescribingInfoWrapper = () => {
 
 }
 const PrescribingInfo = () => {
-    const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
-    
+    const { isInitSafetyInfoOpen, isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
+    if (isInitSafetyInfoOpen) return null;
     return (
         <OuterContainer className='modalWrapper'>
 

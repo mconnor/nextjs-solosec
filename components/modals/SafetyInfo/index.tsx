@@ -74,8 +74,8 @@ const MARG = 80;
 
 //
 const SafetyModalWrapper: React.FC = () => {
-    const { isSafetyInfoOpen } = useAppState();
-
+    const { isSafetyInfoOpen, isInitSafetyInfoOpen } = useAppState();
+    if(isInitSafetyInfoOpen) return null;
     return (
         <OuterContainer  className='modalWrapper'
             isOpen = {isSafetyInfoOpen}
@@ -86,6 +86,8 @@ const SafetyModalWrapper: React.FC = () => {
             <SafetyModal />
         </OuterContainer>);
 }
+
+
 
 
 

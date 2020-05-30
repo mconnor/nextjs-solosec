@@ -13,12 +13,11 @@ const OuterContainer = styled.div`
 
     z-index:6 !important;
 
-    padding:39px;
+    padding:36px;
     background:rgba(0,0,0,.5) !important;
 
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  1fr;
 `;
 
 const MyGrid = styled.div`
