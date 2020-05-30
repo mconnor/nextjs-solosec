@@ -1,9 +1,11 @@
 
 
 import styled from 'styled-components'
+import Link from 'next/link';
 import Hamburger from './Hamburger'
-import { useAppState} from "../../state";
+import { useAppState } from "../../state";
 import NavBtn from './NavBtn';
+
 
 
 const MainDiv = styled.div<Props>`
@@ -18,10 +20,15 @@ const MainDiv = styled.div<Props>`
     font-weight: 600;
     font-size: 1rem;
     line-height: 127%;
-
-
 `;
 
+const IndexLinkWrapper = styled.button`
+    width:220px;
+    height: 80px;
+  opacity: 0;
+    justify-self:end;
+    cursor: pointer;
+`;
 
 interface Props {
     gridArea: string;
@@ -37,40 +44,47 @@ const REFERENCE = 'References'
 
 
 const Header: React.FC<Props> = ({ gridArea }) => {
-    const { toggleReference,togglePrescribingInfo,toggleSafetyInfo,
-            setNav,setSafteyInfo,toggleNav,
-            setPrescribingInfo } = useAppState();
+    const { toggleReference, togglePrescribingInfo, toggleSafetyInfo,
+        setNav, setSafteyInfo, toggleNav,
+        setPrescribingInfo } = useAppState();
 
 
     const handlRefClick = () => {
-        toggleReference &&  toggleReference();
+        toggleReference && toggleReference();
         setSafteyInfo && setSafteyInfo(false);
         setNav && setNav(false);
         setPrescribingInfo && setPrescribingInfo(false);
     }
     const handleIPIclick = () => {
-        togglePrescribingInfo &&  togglePrescribingInfo();
+        togglePrescribingInfo && togglePrescribingInfo();
         setSafteyInfo && setSafteyInfo(false);
         setNav && setNav(false);
     }
     const handleIsiClick = () => {
-        toggleSafetyInfo &&  toggleSafetyInfo();
+        toggleSafetyInfo && toggleSafetyInfo();
         setNav && setNav(false);
         setPrescribingInfo && setPrescribingInfo(false);
     }
     const handleNavClick = () => {
-        toggleNav &&  toggleNav();
+        toggleNav && toggleNav();
         setSafteyInfo && setSafteyInfo(false);
         setPrescribingInfo && setPrescribingInfo(false);
     }
-    
+
     // {_prevState => setNav &&  setNav(true)}
     return (
         <MainDiv gridArea={gridArea}>
-            <Hamburger clickCallBack={handleNavClick}/>
+            <Hamburger clickCallBack={handleNavClick} />
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
+            <Link href='/index'>
+                <IndexLinkWrapper>
+                
+        
+                </IndexLinkWrapper>
+                </Link>
+           
         </MainDiv>
     )
 }

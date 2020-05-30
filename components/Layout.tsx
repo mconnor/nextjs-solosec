@@ -10,7 +10,6 @@ import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
 import PrescribingInfoWrapper from "./modals/PI";
 import Nav from './modals/Nav';
-import SpaLink from '../components/SpaLink';
 import StartScreen  from './modals/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
