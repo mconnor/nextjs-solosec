@@ -22,7 +22,7 @@ export default () => {
                 <QuestionAnswer
                     q='How should I instruct my patient to take Solosec?'
                     a='<p>
-                        The entire contents of the Solosec packet should be sprinkled onto applesauce, yogurt, or pudding and consumed once within 30 minutes without chewing or crunching the granules.1 Instruct patients that they should not try to dissolve Solosec in water or any other liquids. However, they are free to drink a glass of water after taking their Solosec dose to aid in swallowing.
+                        The entire contents of the Solosec packet should be sprinkled onto applesauce, yogurt, or pudding and consumed once within 30 minutes without chewing or crunching the granules.<sup>1</sup> Instruct patients that they should not try to dissolve Solosec in water or any other liquids. However, they are free to drink a glass of water after taking their Solosec dose to aid in swallowing.
                      </p>'
                 />
                 <QuestionAnswer
