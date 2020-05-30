@@ -39,6 +39,9 @@ const Header = styled.div`
     align-items:center;
     padding: 0 var(--isi-margin) 0 var(--isi-margin);
     background: white;
+    background-image:url(/img/solosec-logo-isi.svg);
+    background-repeat:no-repeat;
+    background-position: var(--isi-margin);
 `;
 
 const Main = styled.div`
@@ -46,10 +49,6 @@ const Main = styled.div`
   overflow:hidden;
 `;
 
-
-const Img = styled.img`
-   height:125px;
-`;
 
 
 type FCProps = {
@@ -64,7 +63,7 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
         <OuterContainer className='modalWrapper'>
             <MyGrid >
                 <Header>
-                    <Img src='/img/solosec-logo-isi.svg' />
+                
                   <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>

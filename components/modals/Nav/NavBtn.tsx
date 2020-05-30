@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components'
 import Link from 'next/link';
+// import { motion } from 'framer-motion';
 import { useAppState } from '../../../state';
 
 interface ChildrenProps {

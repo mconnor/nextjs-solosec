@@ -1,19 +1,34 @@
-import { motion } from 'framer-motion';
+
 import styled from 'styled-components'
 import { useAppState } from "../../../state";
+import { motion } from 'framer-motion';
+
+
+
+
 import PICopy from './PICopy';
 import NavPanel from './NavPanel'
-import ConfirmBtn from '../StartScreen/ConfirmBtn'
+import CloseBtn from './CloseBtn'
+
+
 
 const variants = {
-    open: { y: 0 },
+    open: { x: 0 },
     closed: {
-        y: "100%",
+        x: "-120%",
         transition: {
             delay: .2
         }
     },
-
+}
+const variantsRight = {
+    open: { x: 0 },
+    closed: {
+        x: "180%",
+        transition: {
+            delay: .6
+        }
+    },
 }
 
 const OuterContainer = styled(motion.div)`
@@ -21,36 +36,18 @@ const OuterContainer = styled(motion.div)`
      width: var( --ipad-max-width);
     margin-top:var(--header-height);
     width: 100vw;
-    height: 51vw !important;
     /* overflow:scroll !important;
     b
     overflow-y: hidden; */
   overflow-y: scroll !important;
-  padding: 0 40px 0 40px;
-  //border: 2px solid black;
+  padding: 14px 20px MARGIN 14px;
+  border: 2px solid black;
 `;
 
-const Container = styled.div`
-    width:var(--ipad-width);
-    /* display: grid;
-    grid-template-columns: 440px 1fr 174px;
 
-    grid-gap: 20px;
-   
-    align-items:stretch;
-    justify-items:stretch; */
 
-  
-   
-    /* border-bottom-right-radius: var(--border-radius-4);
-    border-bottom-left-radius:  var(--border-radius-4);
-     */
-`;
+const CopyWrapper = styled(motion.div)`
 
-const CopyWrapper = styled.div`
-   
-    background:pink;
-    height:2000px;
     margin-left: 553px;
     margin-right:176px;
 `;
@@ -63,48 +60,53 @@ const CloseWrapper = styled.div`
 
     
 `;
-const NavWrapper = styled.div`
+const NavWrapper = styled(motion.div)`
    position:fixed;
    height: 440px;
    width: 400px;
     background: blue;
+    top:114px;
+    left:14px;
 `;
 
-type Props = {
+
+
+
+const PrescribingInfoWrapper = () => {
+    const { isPrescribingInfoOpen } = useAppState();
+
+    if (!isPrescribingInfoOpen) return null;
+    return  <PrescribingInfo />
 
 }
-const PrescribingInfoWrapper: React.FC<Props> = ({ }) => {
-    // const { isReferenceOpen } = useAppState();
-    // if (!isReferenceOpen) return null;
-    return <PrescribingInfo />;
-}
-const PrescribingInfo: React.FC<Props> = ({ }) => {
+const PrescribingInfo = () => {
     const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
-
+    
     return (
-        <OuterContainer className='modalWrapper'
-            variants={variants}
-            initial='closed'
-            animate={isPrescribingInfoOpen ? 'open' : 'closed'}
-            transition={{ damping: 300 }}>
+        <OuterContainer className='modalWrapper'>
 
-            <NavWrapper className="item-1">
-                <NavPanel gridArea='nav' />
+            <NavWrapper
+                variants={variants}
+                initial='closed'
+                animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
+                transition={{ damping: 300 }}
+            >
+                <NavPanel />
             </NavWrapper>
 
-            <CloseWrapper className="item-3">
-                <ConfirmBtn clickCallBack={togglePrescribingInfo}>CLOSE&times;</ConfirmBtn>
+            <CloseWrapper>
+                <CloseBtn clickCallBack={togglePrescribingInfo} />
             </CloseWrapper>
 
-            <Container>
-                {/* <NavPanel gridArea='nav' /> */}
-
-                <CopyWrapper className="item-2" >
-                    <PICopy />
-                </CopyWrapper>
-
-
-            </Container>
+            <CopyWrapper
+                 variants={variantsRight}
+                 initial='closed'
+                 animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
+                 transition={{ damping: 300 }}
+                //  onAnimationComplete={()=> setIsExitAnimDone(true) }
+            >
+                <PICopy />
+            </CopyWrapper>
         </OuterContainer>
     )
 }

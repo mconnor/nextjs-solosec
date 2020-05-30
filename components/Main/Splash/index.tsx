@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { useAppState} from "../../../state";
+
 
 type Props = {
    children: ReactNode;
@@ -24,16 +24,13 @@ const LogoWrapper = styled.img`
 `;
 
 const Splash:React.FC<Props> = ( {children, logo}) => {
-    const { isNavOpen,isReferenceOpen, isSafetyInfoOpen,isPrescribingInfoOpen } =useAppState()
+    
     return (
        <>
         <MainDiv>
             {children}
         </MainDiv>
-       {
-           (!isNavOpen && !isReferenceOpen && !isSafetyInfoOpen && !isPrescribingInfoOpen ) && 
-           <LogoWrapper src={logo} alt="splash page" />
-       }
+        <LogoWrapper src={logo} alt="splash page" />
        
        </>
     )
