@@ -4,25 +4,26 @@ import { useRouter } from 'next/router'
 import {PageList} from "../../modals/Nav/PageList";
 
 const BtnInvisible = styled.button`
-    width: 360px;
-    height: 75px;
-    background: transparent;
+    width: calc(var(--ipad-width)/2);
+    height: calc(var(--ipad-height)/2);
     border: none !important;
-    font-size:0;
-    position: absolute;
-    top: 720px;
-    right: 60px;
+    position:fixed;
+    top:calc(var(--ipad-height)/2);
+    left: calc(var(--ipad-width)/2);
     cursor: pointer;
+   
+   background:none;
+   border:none;
 `;
 
 export default () => {
     const router = useRouter();
 
     return (
-        <div>
+
             <BtnInvisible onClick={() =>{
-                router.push("/" + PageList.pages["9"])}} />
-        </div>
+                router.push("/" + PageList.pages["9"])}}></BtnInvisible>
+      
 
     )
 }

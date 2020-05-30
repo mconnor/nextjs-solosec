@@ -5,5 +5,5 @@ import Btn from '../components/Main/Dosing/Btn';
 export default () => (
     <Layout bgArt='/img/svg/pg25.svg'  section={EASY_25} pageIndex={7}>
         <Btn />
-    </Layout>
-)
+    </Layout>);
+
