@@ -69,7 +69,6 @@ const MainDiv = styled(motion.div)`
     padding-top: 50px;
     padding-bottom: 60px;
     align-items:start;
-   
     
 `;
 
@@ -97,6 +96,7 @@ const NavContainerX = styled.div<StyleProps>`
     height: 100%; 
     margin:0;
     line-height: 50px;
+    padding-right: 20px !important;
 /* row-gap:24px; */
     ul {
         line-height: 40px;
@@ -107,7 +107,7 @@ const NavContainerX = styled.div<StyleProps>`
 const Logo = styled.div`
     font-style: normal;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 28px;
     color:#034063;
     margin-left:84px;
     sup{
@@ -133,7 +133,7 @@ const RightColBt = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     text-align: left;
 `;
 

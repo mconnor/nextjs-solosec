@@ -31,7 +31,7 @@ const Btn = styled.div<SubProps>`
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
-    font-size: ${props => props.subnav ? '24px' : '36px'};
+    font-size: ${props => props.subnav ? '20px' : '28px'};
 /* background:${props => props.subnav ? 'pink' : 'blue'}; */
 
 /* or 178% */
