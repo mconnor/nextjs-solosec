@@ -1,26 +1,31 @@
 // import { useState, useEffect } from 'react';
 // import { useToggle } from '../../hooks'
 import styled from 'styled-components';
+
 import PiNavBtn from './PiNavBtn'
 
-const Nav = styled.nav<Props>`
+
+
+
+// type Props ={
+//     isOpen:boolean;
+// }
+
+const Nav = styled.nav`
  
     /* position:fixed; */
     display:grid;
     grid-template-columns: 1fr;
-   
-
     color: var(--isi-blue);
     background: #eeeeee;
     padding: 0 40px;   
-    /* grid-area: ${(props) => props.gridArea}; */
 `;
 
-type Props = {
-    gridArea:string;
-}
+// type Props = {
+//     gridArea:string;
+// }
 
-const NavPanel:React.FC<Props> = ({ gridArea}) => {
+const NavPanel:React.FC = () => {
 
     // const [activeBtn, setActiveBtn] = useState<PiNavBtn>();
 
@@ -38,7 +43,9 @@ const NavPanel:React.FC<Props> = ({ gridArea}) => {
     // }
     return (
 
-        <Nav id="pi-nav" gridArea={gridArea}>
+        <Nav
+
+        >
 
             <PiNavBtn active  url="#indicationsAndUsage">Indications and Usage</PiNavBtn>
             <PiNavBtn  url="#dosage">Dosage and Administration</PiNavBtn>

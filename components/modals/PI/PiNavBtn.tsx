@@ -1,11 +1,11 @@
 // import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { ReactNode } from 'react';
-// import Link from 'next/link'
+import Link from 'next/link'
 
 
 interface IBtn {
-    active:boolean;
+    active: boolean;
 }
 
 const NavBtn = styled.div<IBtn>`
@@ -16,31 +16,33 @@ const NavBtn = styled.div<IBtn>`
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-
-   background: ${props => props.active && 'blue'}
-    
-    
-    a {
-        text-decoration:none;
-       
-        font-size: 1rem;
+    padding-left:16px;
+    border: 2px;
+   
+    border-style:${props => props.active ? 'groove' : 'none' };
+   background: ${props => props.active && 'blue'};
+   a {
+        text-decoration: none;
+        color: var(--royal-blue-light);
     }
+    
+    
    
 `;
 
 type Props = {
-    url:string;
-    children:ReactNode;
-    active?:boolean;
+    url: string;
+    children: ReactNode;
+    active?: boolean;
     // clickBack: ()=> void;
 }
-const PiNavBtn:React.FC<Props> = ({ url, children, active=false}) => {
+const PiNavBtn: React.FC<Props> = ({ url, children, active = false }) => {
     return (
         <NavBtn active={active}>
-            <a href={url}>{children}</a>
-            {/* <Link>
-                <a href={url}>{children}</a>
-            </Link> */}
+            
+            <Link href={url}>
+                <a>{children}</a>
+            </Link>
         </NavBtn>
     )
 }

@@ -38,13 +38,15 @@ const REFERENCE = 'References'
 
 const Header: React.FC<Props> = ({ gridArea }) => {
     const { toggleReference,togglePrescribingInfo,toggleSafetyInfo,
-            setNav,setSafteyInfo,toggleNav } = useAppState();
+            setNav,setSafteyInfo,toggleNav,
+            setPrescribingInfo } = useAppState();
 
 
     const handlRefClick = () => {
         toggleReference &&  toggleReference();
         setSafteyInfo && setSafteyInfo(false);
         setNav && setNav(false);
+        setPrescribingInfo && setPrescribingInfo(false);
     }
     const handleIPIclick = () => {
         togglePrescribingInfo &&  togglePrescribingInfo();
@@ -54,10 +56,12 @@ const Header: React.FC<Props> = ({ gridArea }) => {
     const handleIsiClick = () => {
         toggleSafetyInfo &&  toggleSafetyInfo();
         setNav && setNav(false);
+        setPrescribingInfo && setPrescribingInfo(false);
     }
     const handleNavClick = () => {
         toggleNav &&  toggleNav();
         setSafteyInfo && setSafteyInfo(false);
+        setPrescribingInfo && setPrescribingInfo(false);
     }
     
     // {_prevState => setNav &&  setNav(true)}

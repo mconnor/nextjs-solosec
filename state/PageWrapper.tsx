@@ -29,6 +29,7 @@ interface ReferenceState {
     toggleInitSafetyInfo?: () => void;
 
     isPrescribingInfoOpen: boolean;
+    setPrescribingInfo?: React.Dispatch<React.SetStateAction<boolean>>;
     togglePrescribingInfo?: () => void;
 
     currSeq?:string;
@@ -87,6 +88,7 @@ export const PageWrapper:React.FC = ({ children }) => {
 
                 isPrescribingInfoOpen: prescribingInfoState.isToggled,
                 togglePrescribingInfo: prescribingInfoState.toggle,
+                setPrescribingInfo:prescribingInfoState.setToggle,      
 
                 isInitSafetyInfoOpen: initSafetyInfoState.isToggled,
                 setInitSafteyInfo: initSafetyInfoState.setToggle,
