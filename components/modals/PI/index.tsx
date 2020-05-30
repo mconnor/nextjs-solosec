@@ -47,9 +47,7 @@ const OuterContainer = styled(motion.div)`
 
 
 const CopyWrapper = styled(motion.div)`
-   
-    background:pink;
-    height:2000px;
+
     margin-left: 553px;
     margin-right:176px;
 `;
