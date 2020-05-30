@@ -133,7 +133,7 @@ const RightColBt = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 35px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     text-align: left;
 `;
 
