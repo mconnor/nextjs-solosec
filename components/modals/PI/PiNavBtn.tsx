@@ -1,11 +1,14 @@
 // import { motion } from 'framer-motion';
 import styled from 'styled-components'
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import Link from 'next/link'
+import { useAppState } from '../../../state'
+
 
 
 interface IBtn {
     active: boolean;
+
 }
 
 const NavBtn = styled.div<IBtn>`
@@ -19,12 +22,11 @@ const NavBtn = styled.div<IBtn>`
     padding-left:16px;
     border: 2px;
    
-    border-style:${props => props.active ? 'groove' : 'none' };
-   background: ${props => props.active && 'blue'};
-   a {
-        text-decoration: none;
-        color: var(--royal-blue-light);
-    }
+    border-style:${props => props.active ? 'groove' : 'none'};
+    background: ${props => !props.active ? 'white' : 'var(--royal-blue-light)'};
+
+    color:  ${props => props.active ? 'white' : 'var(--royal-blue-light)'};
+    cursor: pointer;
     
     
    
@@ -34,16 +36,29 @@ type Props = {
     url: string;
     children: ReactNode;
     active?: boolean;
-    // clickBack: ()=> void;
+    // clickBack: (event: MouseEvent<HTMLButtonElement>)=> void;
 }
 const PiNavBtn: React.FC<Props> = ({ url, children, active = false }) => {
+    const { currPIanchor, setCurrentPIanchor } = useAppState();
+
+    useEffect(() => {
+        if (active) {
+            setCurrentPIanchor && setCurrentPIanchor(url);
+        }
+
+    }, [])
+
+    const handleClick = (_url: string) => {
+        setCurrentPIanchor && setCurrentPIanchor(_url);
+
+    }
     return (
-        <NavBtn active={active}>
-            
-            <Link href={url}>
-                <a>{children}</a>
-            </Link>
-        </NavBtn>
+        <Link href={url}>
+            <NavBtn active={currPIanchor === url} onClick={() => handleClick(url)}>
+                {children}
+            </NavBtn>
+        </Link>
+
     )
 }
 
