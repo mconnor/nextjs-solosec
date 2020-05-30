@@ -58,7 +58,7 @@ const MainDiv = styled(motion.div)`
     top:var(--header-height);
     left:0;
     padding: 20px;
-    background-color:#aaaaa9;
+    background-color:#AAAAA9;
     
     /* background-image: url(/img/bg/site-map.png);
     background-repeat: no-repeat; */
