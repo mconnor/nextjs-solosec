@@ -28,8 +28,8 @@ export default () => {
                 <QuestionAnswer
                     q='Are there any lifestyle changes I should advise my patient to make during treatment with Solosec?'
                     a='<p>
-                            Solosec has no alcohol restriction; in vitro drug alcohol studies showed it does not interact with aldehyde dehydrogenase.1 There are no food restrictions, per the FDA-approved prescribing information, and Solosec has been tested not to interfere with combination ethinyl estradiol and norethindrone oral contraceptives.
-
+                            Solosec has no alcohol restriction; <i>in vitro</i> drug alcohol studies showed it does not interact with aldehyde dehydrogenase.1 There are no food restrictions, per the FDA-approved prescribing information, and Solosec has been tested not to interfere with combination ethinyl estradiol and norethindrone oral contraceptives.
+                           
                         </p>'
                 />
                 <QuestionAnswer
