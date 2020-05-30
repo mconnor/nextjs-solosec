@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
         --ipad-max-height: 1024px;
 
         --ipad-min-height: 834px;
+        --ipad-min-width: 1194px;
 
         --ipad-width: var(--ipad-max-width);
         --ipad-height: calc(var(--ipad-max-height) - 50px);
