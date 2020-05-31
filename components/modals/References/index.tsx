@@ -65,12 +65,16 @@ const Copy = styled.div`
     letter-spacing: 0.03em;
     line-height: 28px;
     color: var(--copy-color-secondary);
+    ol {
+       
+    }
     li {
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
         line-height: 30px;
         letter-spacing: 0.02em;
+        margin-left:44px;
         em {
             color: red;
             font-weight: 100;

@@ -112,7 +112,8 @@ const Logo = styled.div`
     margin-left:84px;
     sup{
         font-weight: lighter;
-    font-size: 1rem;
+        font-size: 1rem;
+        vertical-align: super;
     }
 
     /* grid-row-start: row1-start;

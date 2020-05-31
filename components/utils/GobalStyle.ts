@@ -106,7 +106,10 @@ const GlobalStyle = createGlobalStyle`
 }
     }
    
-
+    sup{
+        font-size: 1rem;
+        vertical-align: super;
+    }
 a {
     text-decoration: none;
 }
@@ -115,6 +118,9 @@ a {
         font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
        position:fixed;
     }
+
+/* end css resets */
+
 
     .modalWrapper {
         width:var(--ipad-width);
