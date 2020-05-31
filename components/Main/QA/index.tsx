@@ -34,6 +34,9 @@ const MainDiv = styled.div`
     grid-template-rows: repeat(6, minmax(min-content, max-content));
     overflow-y: scroll;
     /* gap: 70px; */
+    sup {
+    font-size: 8px;
+    }
 `;
 
 

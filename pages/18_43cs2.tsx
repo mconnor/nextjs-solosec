@@ -10,6 +10,14 @@ const btnArray = [
     '76%-100%'
 ];
 
+const seqs = [
+    "19_a",
+    "19_a",
+    "19_a",
+    "19_a",
+    "19_a",
+];
+
 const HEADLINE = 'What percentage of patients are\nsatisfied with Solosec?'
 
 export default () => (
@@ -20,7 +28,8 @@ export default () => (
             headline={HEADLINE}
             buttonCopyArray={btnArray}
             url={PageList.pages["11"]}
-            urls={['world', 'world']}
+            urls={['11', '11', '11', '11', '11']}
+            seqs={seqs}
         />
     </Layout>
 )

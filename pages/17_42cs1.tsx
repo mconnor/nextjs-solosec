@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import ConversationStarters from '../components/Main/ConversationStarters/Q1'
 import * as Sections from '../components/utils/Sections';
 import {PageList} from "../components/modals/Nav/PageList";
+import {useCookie} from "../hooks";
 
 const btnArray = [
     'What percentage of patients are satisfied with Solosec?',
@@ -13,14 +14,17 @@ const links = [
     PageList.pages["18"], PageList.pages["19"], PageList.pages["20"]
 ];
 
-export default () => (
-    <Layout
-        bgArt='./img/svg/pg42-conversation-starter-bg.svg'
-        section={Sections.NONADHERENCE_40}
-        pageIndex={16}
-    >
-       
-        <ConversationStarters
-            buttonCopyArray={btnArray} linksArray={links}/>
-    </Layout>
-)
+export default () => {
+    const [cookie, setCookie] = useCookie({key: "seq"});
+    if (cookie !== "") setCookie("")
+    return (
+        <Layout
+            bgArt='./img/svg/pg42-conversation-starter-bg.svg'
+            section={Sections.NONADHERENCE_40}
+            pageIndex={16}
+        >
+            <ConversationStarters
+                buttonCopyArray={btnArray} linksArray={links}/>
+        </Layout>
+    )
+}

@@ -39,8 +39,9 @@ const SafteyFooter = () => {
         </GridAreaDiv>
 
         <GridAreaDiv gridArea="copyright">
-            <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec<sup>®</sup> is a registered trademark owned by Lupin, Inc. </p>
-            <p>PP-SOL-0417</p>
+            <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec<sup>®</sup> is a registered trademark
+                owned by Lupin, Inc. </p>
+            <p style={{marginTop: "-10px"}}>PP-SOL-0417</p>
         </GridAreaDiv>
 
         {/*<GridAreaDiv gridArea="slogan">*/}
