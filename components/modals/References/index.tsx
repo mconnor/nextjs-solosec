@@ -26,14 +26,10 @@ const Container = styled.div`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 1fr;
-   
-    border-bottom-right-radius: var(--border-radius-4);
-    border-bottom-left-radius:  var(--border-radius-4);
-    
+    grid-template-rows: 75px 1fr; 
 `;
 const Top = styled.div`
-    background-color: green;
+    background-color: var(--green);
     border:0;
     border-top-right-radius: var(--border-radius-4);
     border-top-left-radius:  var(--border-radius-4);
@@ -60,8 +56,6 @@ const Copy = styled.div`
     grid-area: 'copy';
     background-color:white;
     padding: 20px 48px 0 20px;
-    border-bottom-right-radius: var(--border-radius-4);
-    border-bottom-left-radius: var(--border-radius-4);
     letter-spacing: 0.03em;
     line-height: 28px;
     color: var(--copy-color-secondary);

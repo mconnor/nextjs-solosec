@@ -35,13 +35,13 @@ const OuterContainer = styled(motion.div)`
      position: fixed ;
      width: var( --ipad-width);
     margin-top:var(--header-height);
-    width: var(--ipad--height);
-    height: 52vw !important;
+
     /* overflow:scroll !important;
     b
     overflow-y: hidden; */
   overflow-y: scroll !important;
-  padding: 14px 20px MARGIN 14px;
+  padding: 14px 20px 0 14px;
+  background: white;
   //border: 2px solid black;
 `;
 
@@ -57,6 +57,7 @@ const CloseWrapper = styled.div`
     top:calc(var(--header-height) + 20px);
     left: calc(var(--ipad-width) - 220px);
     position: fixed;
+    z-index:2;
  
 
     

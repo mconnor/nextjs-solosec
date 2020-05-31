@@ -7,7 +7,12 @@ interface IBtn {
     gridArea: string;
 }
 
-const Btn = styled.button<IBtn>`
+const Btn = styled.div<IBtn>`
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+
     width: 140px !important;
     height: 60px !important; 
     grid-area: ${(props) => props.gridArea};
@@ -39,7 +44,7 @@ const CloseBtn: React.FC<ChildrenProps> = ({ clickCallBack, gridArea = 'close' }
             gridArea={gridArea}
             onClick={clickCallBack}>
             <Span>CLOSE</Span>
-            <IconWrapper kolor='white' size='24px'>
+            <IconWrapper kolor='white' size='20px'>
                 <FaTimes />
             </IconWrapper>
 
