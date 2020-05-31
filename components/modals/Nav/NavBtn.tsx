@@ -35,14 +35,10 @@ const Btn = styled.div<SubProps>`
 /* background:${props => props.subnav ? 'pink' : 'blue'}; */
 
 /* or 178% */
-
+user-select: none;
     letter-spacing: -0.015em;
     color: white; 
-    cursor: pointer;
-
-    &:hover {
-        color: lightblue;
-    };
+    
     a {
         text-decoration: none;
         color:white;
@@ -64,8 +60,8 @@ list-style-type: none;
 `;
 
 const Ul = styled.ul`
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
 `;
 
 
@@ -77,10 +73,10 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav }) 
         <>
             {children ?
                 (<Ul>
-                    {/* <Btn role='button' onClick={hanleClick}>
-                        <Link href={url}><a>{label}</a></Link>
-                    </Btn> */}
-                    {label}
+                    <Btn>
+                      {label}
+                    </Btn>
+         
                 </Ul>)
             : subnav ?
                 (<Li><Btn role='button' onClick={hanleClick} subnav={subnav}>
