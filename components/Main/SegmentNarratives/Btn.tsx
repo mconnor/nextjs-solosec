@@ -36,4 +36,3 @@ console.log('cookie', cookie) // keep this
 }
 
 export default Btn
-

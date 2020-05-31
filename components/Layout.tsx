@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { useRouter } from 'next/router'
-
 import { PageWrapper } from "../state";
 import Head from 'next/head';
 import GlobalStyle from './utils/GobalStyle';
@@ -11,7 +10,6 @@ import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
 import PrescribingInfoWrapper from "./modals/PI";
 import Nav from './modals/Nav';
-import SpaLink from '../components/SpaLink';
 import StartScreen  from './modals/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
@@ -36,7 +34,7 @@ const PageContainer = styled.div`
     position: static;
     overflow: hidden;
     background-color: white;
-    width: var(--ipad-max-width);
+    width: var(--ipad-width);
     height: 100vh;
     display: grid;
     grid-template-columns: 6% 1fr 6%;
@@ -46,12 +44,6 @@ const PageContainer = styled.div`
         "main main main"
         ". footer .";
     justify-items: stretch;
-`;
-
-const FixedDiv = styled.div`
-    position: absolute;
-    top: 5px;
-    left: 600px;
 `;
 
 
@@ -73,10 +65,33 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
     // @ts-ignore
     // if (CLMPlayer) CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
 
+    useEffect(() => {
+        document.addEventListener("keydown", checkKey, false);
+
+        return () => {
+            document.removeEventListener("keydown", checkKey, false);
+        };
+    }, []);
+
+    // @ts-ignore
+    function checkKey(e:KeyboardEvent) {
+        e = e || window.event;
+
+        if (e.keyCode === 37) {
+            console.log("left");
+            swipeLink(pageIndex, "Right")
+        }
+        else if (e.keyCode === 39) {
+            console.log("right")
+            swipeLink(pageIndex, "Left");
+        }
+
+    }
+
     console.log("**Current", currSeq, cookie);
-    const onSwiping = ({ dir }: RLprops, pageIndex: number) => {
-        if (dir === "Left") swipeLink(pageIndex, "Left");
-        if (dir === "Right") swipeLink(pageIndex, "Right");
+    const onSwiping = ({ dir }: RLprops, pi: number) => {
+        if (dir === "Left") swipeLink(pi, "Left");
+        if (dir === "Right") swipeLink(pi, "Right");
     }
 
     function swipeLink(n:number, dir:string) {
@@ -119,7 +134,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <Nav />
                 <ReferencesWrapper section={section}/>
                 <PrescribingInfoWrapper />
-                <FixedDiv><SpaLink pageName='index' /></FixedDiv>
+            
                 
 			    <PageContainer {...handlers}>
                     <Header gridArea='header'/>

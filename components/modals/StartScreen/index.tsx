@@ -1,25 +1,28 @@
+
 import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
-import LumpinLogo from '../../svg/LupinLogo'
 import { useAppState } from '../../../state'
 import * as Sections from "../../utils/Sections";
+import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
+//     const { setInitSafteyInfo } = useAppState()
+// _prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)
 
-const Container = styled.div`
-    position:absolute;
-    z-index:3;
-    padding:39px;
-    height:90vh;
-    width:100vw;
-    max-width: var( --ipad-width);
-    background:rgba(0,0,0,.5);
+const OuterContainer = styled.div`
+
+    z-index:6 !important;
+    height:100vh;
+    max-height: var(--ipad-height);
+
+    background:rgba(0,0,0,.5) !important;
+
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  1fr;
 `;
 
 const MyGrid = styled.div`
+    margin: 12px 12px 66px 12px;
     background:white;
     border: 20px solid var(--isi-blue);
     border-radius: var(--border-radius-4);
@@ -37,6 +40,9 @@ const Header = styled.div`
     align-items:center;
     padding: 0 var(--isi-margin) 0 var(--isi-margin);
     background: white;
+    background-image:url(./img/solosec-logo-isi.svg);
+    background-repeat:no-repeat;
+    background-position: var(--isi-margin);
 `;
 
 const Main = styled.div`
@@ -44,73 +50,33 @@ const Main = styled.div`
   overflow:hidden;
 `;
 
-const Footer = styled.div`
-    display: grid;
-    grid-template-columns: 70px 114px 310px 1fr 274px 200px 80px;
-    grid-template-areas: ". lupinLogo copyright .  slogan solosecLogo .";
-    align-items:center;
-    gap: 20px;
-    
-
-`;
-
-interface IgridArea {
-    gridArea: string;
-}
-
-const GridAreaDiv = styled.div<IgridArea>`
-    grid-area: ${(props) => props.gridArea};
-    p {
-    font-size: 12px;
-    }
-`;
-
-const Slogan = styled.h3`
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    color:var(--slogan-blue);
-`;
-const Img = styled.img`
-   height:125px;
-`;
 
 
-type Props = {
+type FCProps = {
     section:string;
 }
 
-const StartScreen: React.FC<Props> = ({ section }) => {
-    const { isInitSafetyInfoOpen } = useAppState()
+const StartScreen: React.FC<FCProps> = ({ section }) => {
+    const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
     if (!isInitSafetyInfoOpen) return null;
-    if  (section !== Sections.INDEX) return null;
+    if  (section !== Sections.INDEX) {
+        setInitSafteyInfo && setInitSafteyInfo(false);
+        return null;
+    }
     return (
-        <Container>
+        <OuterContainer className='modalWrapper'>
             <MyGrid >
                 <Header>
-                    <Img src='/img/solosec-logo-isi.svg' />
-                    <ConfirmBtn />
+                
+                  <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
                     <Copy />
                 </Main>
-                    <Footer>
-                    <GridAreaDiv gridArea="lupinLogo">
-                        <LumpinLogo />
-                    </GridAreaDiv>
-
-                    <GridAreaDiv gridArea="copyright">
-                        <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec<sup>®</sup> is a registered trademark owned by Lupin, Inc.</p>
-                    </GridAreaDiv>
-
-                    <GridAreaDiv gridArea="solosecLogo">
-                        <Slogan>PP-SOL-0196 (v4.0)</Slogan>
-                    </GridAreaDiv>
-
-                </Footer>
+                    <SafteyFooter />
 
             </MyGrid>
-        </Container>
+        </OuterContainer>
     )
 }
 

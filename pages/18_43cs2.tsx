@@ -10,17 +10,26 @@ const btnArray = [
     '76%-100%'
 ];
 
+const seqs = [
+    "19_a",
+    "19_a",
+    "19_a",
+    "19_a",
+    "19_a",
+];
+
 const HEADLINE = 'What percentage of patients are\nsatisfied with Solosec?'
 
 export default () => (
-    <Layout 
-        bgArt='/img/svg/pg42-conversation-starter-bg.svg'
-        section={Sections.NONADHERENCE_40} pageIndex={18}>
+    <Layout
+        bgArt='./img/svg/pg42-conversation-starter-bg.svg'
+        section={Sections.NONADHERENCE_40} pageIndex={17}>
         <ConversationStarters
             headline={HEADLINE}
             buttonCopyArray={btnArray}
-            url={PageList.pages["12"]}
-            urls={['world', 'world']}
+            url={PageList.pages["11"]}
+            urls={['11', '11', '11', '11', '11']}
+            seqs={seqs}
         />
     </Layout>
 )

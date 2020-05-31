@@ -12,9 +12,9 @@ const btnArray = [
 const HEADLINE = 'What have your patients told you\nis most challenging?'
 
 const pages = [
+    PageList.pages["7"],
     PageList.pages["8"],
-    PageList.pages["9"],
-    PageList.pages["11"],
+    PageList.pages["10"],
     PageList.pages["3"]
 ];
 
@@ -26,9 +26,9 @@ const seqs = [
 ];
 
 export default () => (
-    <Layout 
-        bgArt='/img/svg/pg42-conversation-starter-bg.svg'
-        section={Sections.NONADHERENCE_40} pageIndex={20}>
+    <Layout
+        bgArt='./img/svg/pg42-conversation-starter-bg.svg'
+        section={Sections.NONADHERENCE_40} pageIndex={19}>
         <ConversationStarters
             headline={HEADLINE}
             buttonCopyArray={btnArray}

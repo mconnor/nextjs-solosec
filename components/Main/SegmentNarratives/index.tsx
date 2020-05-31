@@ -1,3 +1,4 @@
+
 import styled from 'styled-components';
 import Btn from './Btn';
 
@@ -21,7 +22,7 @@ const SegmentNarratives: React.FC<Props> = () => {
     return (
         <Main>
             <div>
-                <object type="image/svg+xml" data="/img/svg/pg61-segment.svg" />
+                <object type="image/svg+xml" data="./img/svg/pg61-segment.svg"/>
             </div>
             <BtnHolder>
                 <Btn page={"1"} seq={"22_a"} />
@@ -34,4 +35,3 @@ const SegmentNarratives: React.FC<Props> = () => {
 
 
 export default SegmentNarratives
-

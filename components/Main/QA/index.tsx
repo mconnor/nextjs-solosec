@@ -1,8 +1,9 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import styled from 'styled-components';
 import { GoPlus, GoDash } from "react-icons/go";
 import { motion } from 'framer-motion';
 import { useToggle } from '../../../hooks';
+import { useAppState } from '../../../state'
 import IconWrapper from '../../IconWrapper'
 
 const variants = {
@@ -30,8 +31,12 @@ const MainDiv = styled.div`
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6,auto);
+    grid-template-rows: repeat(6, minmax(min-content, max-content));
+    overflow-y: scroll;
     /* gap: 70px; */
+    sup {
+    font-size: 8px;
+    }
 `;
 
 
@@ -56,6 +61,9 @@ export default QA
 const Qdiv = styled.div`
     font-style:bold;
     font-weight: 700;
+    sup {
+    font-size: 12px;
+    }
 `;
 
 type OnOff = { on?: boolean; }
@@ -67,6 +75,7 @@ const Adiv = styled(motion.div) <OnOff>`
     font-size: 22px;
     line-height: 25px;
     letter-spacing: -0.035em;
+    padding-bottom:20px;
 `;
 
 const QAcontainer = styled.div`
@@ -77,6 +86,7 @@ const QAcontainer = styled.div`
     font-size: 26px;
     line-height: 31px;
     letter-spacing: -0.02em;
+    min-height: 100px;
 `;
 
 const Qwrapper = styled.div`
@@ -90,16 +100,27 @@ const Qwrapper = styled.div`
 interface Iprops {
     q: string;
     a: string;
+    slug:string;
 }
 
 
-export const QuestionAnswer: React.FC<Iprops> = ({ q, a }) => {
-    const { isToggled, toggle } = useToggle(false);
-    // const { toggleQA, isaQAopen, setQA} =useAppState();
+export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
+    const { isToggled, toggle, setToggle } = useToggle(false);
+    const { setCurrQ, currQ } = useAppState();
 
+    useEffect(()=> {
+        if (currQ !== slug) {
+            setToggle(false);
+        }
+    }, [ currQ ]) 
+
+    const handleClick = ()=> {
+        toggle();
+        setCurrQ && setCurrQ(slug)
+    }
 
     return (
-        <QAcontainer onClick={toggle}>
+        <QAcontainer onClick={handleClick}>
             <Qwrapper>
                 <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)} />
               

@@ -43,7 +43,7 @@ type Props = {
     seqs?:string[];
 }
 
-const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url='www.google.com', urls, seqs }) => {
+const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url, urls, seqs }) => {
 
     
 

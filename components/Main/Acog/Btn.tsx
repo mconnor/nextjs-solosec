@@ -25,7 +25,7 @@ const Btn:React.FC<Props> = ({  svgClicked, page }) => {
     const router = useRouter()
     return (
         <Main on={isToggled} onClick={ () => {toggle();  setTimeout(()=>{router.push("/" + page);}, 100)} }>
-             <Img src={`/img/svg/${svgClicked}.svg`}   />
+             <Img src={`./img/svg/${svgClicked}.svg`}/>
         </Main>
     )
 }

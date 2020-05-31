@@ -24,7 +24,7 @@ const BtnContainer = styled.div`
     grid-template-rows: repeat( 6, 78px);
     justify-items: start;
     left: 503px;
-    top: 104px;
+    top: 119px;
     position: relative;
     z-index: 1;
 `;
@@ -38,15 +38,15 @@ const Acgo:React.FC<Props> = ( { page }) => {
     return (
         <MainDiv className='fillMain'>
             <BtnContainer>
-                <Btn svgClicked={`pg${page}-button-1-overlay`} page={PageList.pages["12"]}/>
-                <Btn svgClicked={`pg${page}-button-2-overlay`} page={PageList.pages["11"]}/>
-                <Btn svgClicked={`pg${page}-button-3-overlay`} page={PageList.pages["13"]}/>
-                <Btn svgClicked={`pg${page}-button-4-overlay`} page={PageList.pages["13"]}/>
-                <Btn svgClicked={`pg${page}-button-5-overlay`} page={PageList.pages["25"]}/>
-                <Btn svgClicked={`pg${page}-button-6-overlay`} page={PageList.pages["5"]}/>
+                <Btn svgClicked={`pg${page}-button-1-overlay`} page={PageList.pages["11"]}/>
+                <Btn svgClicked={`pg${page}-button-2-overlay`} page={PageList.pages["10"]}/>
+                <Btn svgClicked={`pg${page}-button-3-overlay`} page={PageList.pages["8"]}/>
+                <Btn svgClicked={`pg${page}-button-4-overlay`} page={PageList.pages["8"]}/>
+                <Btn svgClicked={`pg${page}-button-5-overlay`} page={PageList.pages["12"]}/>
+                <Btn svgClicked={`pg${page}-button-6-overlay`} page={PageList.pages["4"]}/>
             </BtnContainer>
             <SVGDiv className='obj'>
-                <object type="image/svg+xml" data="/img/svg/pg14-background.svg" />
+                <object type="image/svg+xml" data="./img/svg/pg14-background.svg"/>
             </SVGDiv>
         </MainDiv>
     )

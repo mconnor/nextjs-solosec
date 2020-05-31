@@ -1,96 +1,114 @@
-import { motion } from 'framer-motion';
+
 import styled from 'styled-components'
 import { useAppState } from "../../../state";
+import { motion } from 'framer-motion';
+
+
+
+
 import PICopy from './PICopy';
+import NavPanel from './NavPanel'
+import CloseBtn from './CloseBtn'
+
+
 
 const variants = {
-    open: { y: 0 },
+    open: { x: 0 },
     closed: {
-        y: "100%",
+        x: "-120%",
         transition: {
             delay: .2
         }
     },
-
 }
-
-const OuterContrainer = styled(motion.div)`
-    z-index: 4;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    
-    background-color: rgba(0,0 ,0 ,0.8);
-    padding: 20px;
-`;
-
-const Container = styled.div`
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 75px 1fr;
-   
-    border-bottom-right-radius: var(--border-radius-4);
-    border-bottom-left-radius:  var(--border-radius-4);
-    
-`;
-const Top = styled.div`
-    background-color: green;
-    border:0;
-    border-top-right-radius: var(--border-radius-4);
-    border-top-left-radius:  var(--border-radius-4);
-    padding: 0 30px 0 30px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--primary);
-    &:close {
-        font-size: 36px;
-        font-weight: bold;
+const variantsRight = {
+    open: { x: 0 },
+    closed: {
+        x: "180%",
+        transition: {
+            delay: .6
         }
-    h1{
-       
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        letter-spacing: 0.1em;
-        text-align: left;
-    }
+    },
+}
+
+const OuterContainer = styled(motion.div)`
+     position: fixed ;
+     width: var( --ipad-width);
+    margin-top:var(--header-height);
+    width: var(--ipad--height);
+    height: 52vw !important;
+    /* overflow:scroll !important;
+    b
+    overflow-y: hidden; */
+  overflow-y: scroll !important;
+  padding: 14px 20px MARGIN 14px;
+  //border: 2px solid black;
 `;
 
-const CloseBtn = styled.div`
-    font-size: 36px;
-    font-weight: bold;
+
+
+const CopyWrapper = styled(motion.div)`
+
+    margin-left: 553px;
+    margin-right:176px;
 `;
 
-type Props = {
+const CloseWrapper = styled.div`
+    top:calc(var(--header-height) + 20px);
+    left: calc(var(--ipad-width) - 220px);
+    position: fixed;
+ 
+
+    
+`;
+const NavWrapper = styled(motion.div)`
+   position:fixed;
+   height: 440px;
+   width: 400px;
+    background: blue;
+    top:114px;
+    left:14px;
+`;
+
+
+
+
+const PrescribingInfoWrapper = () => {
+    const { isPrescribingInfoOpen } = useAppState();
+
+    if (!isPrescribingInfoOpen) return null;
+    return  <PrescribingInfo />
 
 }
-const PrescribingInfoWrapper: React.FC<Props> = ({ }) => {
-    // const { isReferenceOpen } = useAppState();
-    // if (!isReferenceOpen) return null;
-    return <PrescribingInfo />;
-}
-const PrescribingInfo: React.FC<Props> = ({ }) => {
-    const { isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
-   
+const PrescribingInfo = () => {
+    const { isInitSafetyInfoOpen, isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
+    if (isInitSafetyInfoOpen) return null;
     return (
-        <OuterContrainer className='modalWrapper'
-            variants={variants}
-            initial='closed'
-            animate={isPrescribingInfoOpen ? 'open' : 'closed'}
-            transition={{ damping: 300 }}>
-            <Container>
-                <Top>
-                    <h1>PRESCRIBING INFO</h1>
-                    <CloseBtn role="button"
-                              onClick={togglePrescribingInfo}>&times;
-                    </CloseBtn>
-                </Top>
+        <OuterContainer className='modalWrapper'>
+
+            <NavWrapper
+                variants={variants}
+                initial='closed'
+                animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
+                transition={{ damping: 300 }}
+            >
+                <NavPanel />
+            </NavWrapper>
+
+            <CloseWrapper>
+                <CloseBtn clickCallBack={togglePrescribingInfo} />
+            </CloseWrapper>
+
+            <CopyWrapper
+                 variants={variantsRight}
+                 initial='closed'
+                 animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
+                 transition={{ damping: 300 }}
+                //  onAnimationComplete={()=> setIsExitAnimDone(true) }
+            >
                 <PICopy />
-            </Container>
-        </OuterContrainer>
+            </CopyWrapper>
+        </OuterContainer>
     )
 }
 

@@ -43,7 +43,7 @@ const TB4 = 'Patient/Physician Testimonial'
 const variants = {
     open: { y: 0 },
     closed: {
-        y: "100%",
+        y: "110%",
         transition: {
             delay: .2
         }
@@ -52,13 +52,13 @@ const variants = {
 
 const MainDiv = styled(motion.div)`
     z-index: 3;
-    width: var( --ipad-max-width);
+    width: var(--ipad-width);
    
     position: fixed;
     top:var(--header-height);
     left:0;
     padding: 20px;
-    background-color:#aaaaa9;
+    background-color:#AAAAA9;
     
     /* background-image: url(/img/bg/site-map.png);
     background-repeat: no-repeat; */
@@ -67,8 +67,8 @@ const MainDiv = styled(motion.div)`
     grid-template-columns: 1fr 2fr 2fr;
     column-gap: 60px;
     padding-top: 50px;
+    padding-bottom: 60px;
     align-items:start;
-   
     
 `;
 
@@ -82,7 +82,7 @@ const NavContainer = styled.div<StyleProps>`
     grid-template-columns: 1fr;
     //height: 90%; 
     margin:0;
-    line-height: 60px;
+    line-height: 50px;
 /* row-gap:24px; */
     ul {
         line-height: 40px;
@@ -93,9 +93,10 @@ const NavContainerX = styled.div<StyleProps>`
     border-right: ${props => props.borderRight && '2px solid #034063'};
     display: grid;
     grid-template-columns: 1fr;
-    height: 90%; 
+    height: 100%; 
     margin:0;
-    line-height: 60px;
+    line-height: 50px;
+    padding-right: 20px !important;
 /* row-gap:24px; */
     ul {
         line-height: 40px;
@@ -106,7 +107,7 @@ const NavContainerX = styled.div<StyleProps>`
 const Logo = styled.div`
     font-style: normal;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 28px;
     color:#034063;
     margin-left:84px;
     sup{
@@ -148,7 +149,8 @@ const RightColBtSub = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
     //column-gap: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    margin-left: 75px;
     text-align: left;
 `;
 
@@ -158,13 +160,13 @@ const IconBg = styled.button`
     border:0;
     height: 54px;
     width: 54px;
-    font-size: 18px;
+    font-size: 14px;
 `;
 
 const Nav = () => {
-    const { isNavOpen } = useAppState();
+    const { isNavOpen, isInitSafetyInfoOpen } = useAppState();
    
-
+    if (isInitSafetyInfoOpen) return null;
     return (
         <MainDiv
             variants={variants}
@@ -181,21 +183,21 @@ const Nav = () => {
             <NavContainer borderRight>
                 <NavBtn label={SUMMARY} pageName={PageList.pages["2"]} />
                 <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]} />
-                <NavBtn label={STUDY} pageName={PageList.pages["5"]} />
+                <NavBtn label={STUDY} pageName={PageList.pages["4"]} />
 
-                <NavBtn label={BOHBOT} pageName={PageList.pages["21"]} />
-                <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName={PageList.pages["23"]} />
-                <NavBtn label={DOSING} pageName={PageList.pages["13"]} />
-                <NavBtn label={CO_PAY_CARD} pageName={PageList.pages["11"]} />
+                <NavBtn label={BOHBOT} pageName={PageList.pages["6"]} />
+                <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName={PageList.pages["7"]} />
+                <NavBtn label={DOSING} pageName={PageList.pages["8"]} />
+                <NavBtn label={CO_PAY_CARD} pageName={PageList.pages["10"]} />
 
-                <NavBtn label={SATISFACTION_SURVEY} pageName={PageList.pages["12"]} />
-                <NavBtn label={CURRENT_BV_TREATMENTS} pageName={PageList.pages["25"]} />
+                <NavBtn label={SATISFACTION_SURVEY} pageName={PageList.pages["11"]} />
+                <NavBtn label={CURRENT_BV_TREATMENTS} pageName={PageList.pages["12"]} />
 
-                <NavBtn label={APPENDIX} pageName={PageList.pages["1"]}>
+                <NavBtn label={APPENDIX} >
                     <ul>
-                        <NavBtn label={PHARMAK} pageName={PageList.pages["23"]} subnav />
-                        <NavBtn label={STUDY2DATA} pageName={PageList.pages["5"]} subnav />
-                        <NavBtn label={TREATMENT_ADHERENCE} pageName={PageList.pages["40"]} subnav />
+                        <NavBtn label={PHARMAK} pageName={PageList.pages["13"]} subnav />
+                        <NavBtn label={STUDY2DATA} pageName={PageList.pages["14"]} subnav />
+                        <NavBtn label={TREATMENT_ADHERENCE} pageName={PageList.pages["15"]} subnav />
                     </ul>
                 </NavBtn>
 
@@ -208,7 +210,7 @@ const Nav = () => {
                         </IconWrapper>
                     </IconBg>
 
-                    <NavBtn label={CONVERSATION_STARTERS} pageName={PageList.pages["18"]} />
+                    <NavBtn label={CONVERSATION_STARTERS} pageName={PageList.pages["17"]} />
                 </RightColBt>
                 <RightColBt>
 
@@ -219,7 +221,7 @@ const Nav = () => {
                     </IconBg>
 
 
-                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["22"]} />
+                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["21"]} />
                 </RightColBt>
                 <RightColBtX>
                     <IconBg>
@@ -227,16 +229,14 @@ const Nav = () => {
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={TOOLBOX} pageName={PageList.pages["01"]} >
-
-                    </NavBtn>
+                    <NavBtn label={TOOLBOX} isDisabled />
                 </RightColBtX>
                 <RightColBtSub>
                     <ul>
-                        <NavBtn label={TB1} pageName={PageList.pages["23"]} subnav />
-                        <NavBtn label={TB2} pageName={PageList.pages["24"]} subnav />
-                        <NavBtn label={TB3} pageName={PageList.pages["25"]} subnav />
-                        <NavBtn label={TB4} pageName={PageList.pages["26"]} subnav />
+                        <NavBtn label={TB1} pageName={PageList.pages["22"]} subnav />
+                        <NavBtn label={TB2} pageName={PageList.pages["23"]} subnav />
+                        <NavBtn label={TB3} pageName={PageList.pages["24"]} subnav />
+                        <NavBtn label={TB4} pageName={PageList.pages["25"]} subnav />
                     </ul>
                 </RightColBtSub>
                 <RightColBt>
@@ -245,7 +245,7 @@ const Nav = () => {
                             <BsQuestionSquareFill />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={Q_A} pageName={PageList.pages["27"]} />
+                    <NavBtn label={Q_A} pageName={PageList.pages["26"]} />
                 </RightColBt>
 
             </NavContainer>

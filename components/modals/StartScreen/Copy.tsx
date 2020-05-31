@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {useAppState} from "../../../state";
 
 const SubHead = styled.h2`
     //color: var(--royal-blue);
@@ -28,6 +29,7 @@ const Btn = styled(StrongDiv)`
     color: var(--royal-blue-light);
     margin-top: 20px;
     font-size: 16px;
+    cursor: pointer;
 `;
 
 
@@ -69,14 +71,26 @@ const NoWrapSpan = styled.span`
     white-space: nowrap;
 `;
 
+
+
 type Props = {
     marginLR?:number;
+  
 }
 
 const Copy: React.FC<Props> = ({ marginLR}) => {
+    const { togglePrescribingInfo,
+        setNav,setSafteyInfo } = useAppState();
+
+    const handleIPIclick = () => {
+        togglePrescribingInfo &&  togglePrescribingInfo();
+        setSafteyInfo && setSafteyInfo(false);
+        setNav && setNav(false);
+    }
+
     return (
         <Container marginLR={marginLR}>
-            <SubHead>Indication</SubHead>
+            <SubHead>INDICATION</SubHead>
             <Ptag>SOLOSEC<sup>&reg;</sup> (secnidazole) 2g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
 
             <SubHead>Dosage and Administration</SubHead>
@@ -97,10 +111,9 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
                 <li>Most common adverse reactions observed in clinical trials (incidence ≥2%) were vulvovaginal candidiasis, headache, nausea, dysgeusia, vomiting, diarrhea, abdominal pain, and vulvovaginal pruritus.</li>
             </Ulist>
 
-            <StrongDiv>To report SUSPECTED ADVERSE REACTIONS, contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC <NoWrapSpan>(1-844-765-6732)</NoWrapSpan>
-             or FDA at <NoWrapSpan>(1-800-FDA-1088)</NoWrapSpan> or <a href="www.fda.gov/medwatch." target="_blank">www.fda.gov/medwatch.</a></StrongDiv>
+            <StrongDiv>To report SUSPECTED ADVERSE REACTIONS, contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC <NoWrapSpan>(1-844-765-6732)</NoWrapSpan> or FDA at <NoWrapSpan>(1-800-FDA-1088) </NoWrapSpan> or <a href="www.fda.gov/medwatch." target="_blank">www.fda.gov/medwatch.</a></StrongDiv>
 
-            <Btn>Please see full Prescribing Information.</Btn>
+            <Btn onClick={() => handleIPIclick()}>Please see full Prescribing Information.</Btn>
 
         </Container>
     )

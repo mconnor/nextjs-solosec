@@ -15,7 +15,7 @@ const variants = {
 
 }
 
-const OuterContrainer = styled(motion.div)`
+const OuterContainer = styled(motion.div)`
 
     
     background-color: rgba(0,0 ,0 ,0.8);
@@ -87,7 +87,8 @@ type Props = {
     section: string;
 }
 const ReferencesWrapper: React.FC<Props> = ({section}) => {
-    // const { isReferenceOpen } = useAppState();
+    const { isInitSafetyInfoOpen } = useAppState();
+    if (isInitSafetyInfoOpen) return null;
     if (section === Sections.NO_REF) return null;
     return <References section={section}/>;
 }
@@ -97,11 +98,11 @@ const References: React.FC<Props> = ({section}) => {
     console.log('section' + section)
 
     return (
-        <OuterContrainer className='modalWrapper'
-            variants={variants}
-            initial='closed'
-            animate={isReferenceOpen ? 'open' : 'closed'}
-            transition={{damping: 300}}>
+        <OuterContainer className='modalWrapper'
+                        variants={variants}
+                        initial='closed'
+                        animate={isReferenceOpen ? 'open' : 'closed'}
+                        transition={{damping: 300}}>
             <Container>
                 <Top>
                     <h1>REFERENCES</h1>
@@ -135,22 +136,26 @@ const References: React.FC<Props> = ({section}) => {
                                                                 <RefCopy.Pg32/>
                                                                 : (section === Sections.CHART_34) ?
                                                                     <RefCopy.Pg34/>
-                                                                    : (section === Sections.FOUR_MILLION) ?
-                                                                        <RefCopy.Pg38/>
-                                                                        : (section === Sections.NONADHERENCE_40) ?
-                                                                            <RefCopy.Pg40/>
-                                                                            : (section === Sections.RISK_65) ?
-                                                                                <RefCopy.Pg65/>
-                                                                                : (section === Sections.RISK_66) ?
-                                                                                    <RefCopy.Pg66/>
-                                                                                    : (section === Sections.BV_68) ?
-                                                                                        <RefCopy.Pg68/>
-                                                                                        : <RefCopy.Nope/>
+                                                                    : (section === Sections.CHART_36) ?
+                                                                        <RefCopy.Pg36/>
+                                                                        : (section === Sections.FOUR_MILLION) ?
+                                                                            <RefCopy.Pg38/>
+                                                                            : (section === Sections.NONADHERENCE_40) ?
+                                                                                <RefCopy.Pg40/>
+                                                                                : (section === Sections.RISK_65) ?
+                                                                                    <RefCopy.Pg65/>
+                                                                                    : (section === Sections.RISK_66) ?
+                                                                                        <RefCopy.Pg66/>
+                                                                                        : (section === Sections.BV_68) ?
+                                                                                            <RefCopy.Pg68/>
+                                                                                            : (section === Sections.BV_71) ?
+                                                                                                <RefCopy.Pg71/>
+                                                                                                : <RefCopy.Nope/>
                     }
 
                 </Copy>
             </Container>
-        </OuterContrainer>
+        </OuterContainer>
     )
 }
 
