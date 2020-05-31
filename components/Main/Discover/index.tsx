@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import {PageList} from "../../modals/Nav/PageList";
 
 const MainDiv = styled.div`
-    background-image: url(/img/svg/pg6.svg);
+    background-image: url(./img/svg/pg6.svg);
     height: 100%;
     padding-top: 177px;
     padding-left:203px;

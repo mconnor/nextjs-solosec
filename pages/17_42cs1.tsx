@@ -14,8 +14,8 @@ const links = [
 ];
 
 export default () => (
-    <Layout 
-        bgArt='/img/svg/pg42-conversation-starter-bg.svg'
+    <Layout
+        bgArt='./img/svg/pg42-conversation-starter-bg.svg'
         section={Sections.NONADHERENCE_40}
         pageIndex={16}
     >

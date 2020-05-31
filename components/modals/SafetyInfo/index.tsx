@@ -101,7 +101,9 @@ export const SafetyModal: React.FC = () => {
 
         <Container>
             <Top onClick={toggleSafetyInfo}>
-                <h1 style={{float:"left"}}>IMPORTANT SAFETY INFORMATION</h1><span style={{float: "left", marginLeft: 5, marginTop: 15}}><img src={isSafetyInfoOpen ? "/img/svg/arrow-down.svg" : "/img/svg/arrow-up.svg"} width="12"></img></span>
+                <h1 style={{float: "left"}}>IMPORTANT SAFETY INFORMATION</h1><span
+                style={{float: "left", marginLeft: 5, marginTop: 15}}><img
+                src={isSafetyInfoOpen ? "./img/svg/arrow-down.svg" : "/img/svg/arrow-up.svg"} width="12"></img></span>
             </Top>
 
             <InnerDiv isOpen={isSafetyInfoOpen}>

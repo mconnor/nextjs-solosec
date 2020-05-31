@@ -3,8 +3,8 @@ import Chart from '../components/Main/Chart'
 import * as Sections from '../components/utils/Sections';
 
 export default () => (
-    <Layout 
-        bgArt='/img/svg/pg36.svg' 
+    <Layout
+        bgArt='./img/svg/pg36.svg'
         section={Sections.CHART_36} pageIndex={13}>
              <Chart 
                 horizontal

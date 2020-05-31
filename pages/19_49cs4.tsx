@@ -28,8 +28,8 @@ const seqs = [
 ];
 
 export default () => (
-    <Layout 
-        bgArt='/img/svg/pg42-conversation-starter-bg.svg'
+    <Layout
+        bgArt='./img/svg/pg42-conversation-starter-bg.svg'
         section={Sections.NONADHERENCE_40} pageIndex={18}>
         <ConversationStarters
             headline='What is your main consideration when selecting a BV treatment for your patients?'

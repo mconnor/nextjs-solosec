@@ -40,7 +40,7 @@ const Header = styled.div`
     align-items:center;
     padding: 0 var(--isi-margin) 0 var(--isi-margin);
     background: white;
-    background-image:url(/img/solosec-logo-isi.svg);
+    background-image:url(./img/solosec-logo-isi.svg);
     background-repeat:no-repeat;
     background-position: var(--isi-margin);
 `;

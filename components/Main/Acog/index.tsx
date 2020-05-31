@@ -46,7 +46,7 @@ const Acgo:React.FC<Props> = ( { page }) => {
                 <Btn svgClicked={`pg${page}-button-6-overlay`} page={PageList.pages["4"]}/>
             </BtnContainer>
             <SVGDiv className='obj'>
-                <object type="image/svg+xml" data="/img/svg/pg14-background.svg" />
+                <object type="image/svg+xml" data="./img/svg/pg14-background.svg"/>
             </SVGDiv>
         </MainDiv>
     )

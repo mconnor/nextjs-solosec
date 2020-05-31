@@ -8,7 +8,7 @@ export default () => {
 
     return (
         <Layout
-            bgArt='/img/svg/pg71-BG.svg'
+            bgArt='./img/svg/pg71-BG.svg'
             section={Sections.BV_71}
             pageIndex={25}
         >

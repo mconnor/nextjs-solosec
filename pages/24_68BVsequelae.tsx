@@ -4,8 +4,8 @@ import * as Sections from '../components/utils/Sections';
 
 
 export default () => (
-    <Layout 
-        bgArt='/img/svg/pg68.svg'
+    <Layout
+        bgArt='./img/svg/pg68.svg'
         section={Sections.BV_68}
         pageIndex={23}
     >
