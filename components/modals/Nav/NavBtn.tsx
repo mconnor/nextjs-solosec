@@ -10,6 +10,7 @@ interface ChildrenProps {
     pageName?: string;
     label?: string;
     subnav?: boolean;
+    isDisabled?: boolean;
 
 
 }
@@ -59,32 +60,32 @@ list-style-type: none;
 
 `;
 
-const Ul = styled.ul`
-    margin:0;
-    padding:0;
-`;
+// const Ul = styled.ul`
+//     margin:0;
+//     padding:0;
+// `;
 
 
-const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav }) => {
+const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, isDisabled=false }) => {
     const url = "/" + pageName;
     const { setNav } = useAppState();
     const hanleClick = () => setNav && setNav(false);
+
+    // very hacky solution for this particualar case
     return (
         <>
-            {children ?
-                (<Ul>
-                    <Btn>
-                      {label}
-                    </Btn>
-         
-                </Ul>)
+            {children ||  isDisabled ?
+                <Btn>{label}</Btn>
             : subnav ?
-                (<Li><Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <Link href={url}><a>{`-${label}`}</a></Link>
-                </Btn></Li>) :
+                <Li>
+                    <Btn role='button' onClick={hanleClick} subnav={subnav}>
+                        <Link href={url}><a>{`-${label}`}</a></Link>
+                    </Btn>
+                </Li>
+            :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                 <Link href={url}><a>{label}</a></Link>
+                    <Link href={url}><a>{label}</a></Link>
                 </Btn>
 
 

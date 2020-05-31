@@ -229,9 +229,7 @@ const Nav = () => {
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={TOOLBOX} >
-
-                    </NavBtn>
+                    <NavBtn label={TOOLBOX} isDisabled />
                 </RightColBtX>
                 <RightColBtSub>
                     <ul>
