@@ -59,7 +59,10 @@ type FCProps = {
 const StartScreen: React.FC<FCProps> = ({ section }) => {
     const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
     if (!isInitSafetyInfoOpen) return null;
-    if  (section !== Sections.INDEX) return null;
+    if  (section !== Sections.INDEX) {
+        setInitSafteyInfo(false);
+        return null;
+    }
     return (
         <OuterContainer className='modalWrapper'>
             <MyGrid >
