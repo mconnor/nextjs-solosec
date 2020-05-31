@@ -77,9 +77,10 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav }) 
         <>
             {children ?
                 (<Ul>
-                    <Btn role='button' onClick={hanleClick}>
+                    {/* <Btn role='button' onClick={hanleClick}>
                         <Link href={url}><a>{label}</a></Link>
-                    </Btn>
+                    </Btn> */}
+                    {label}
                 </Ul>)
             : subnav ?
                 (<Li><Btn role='button' onClick={hanleClick} subnav={subnav}>
