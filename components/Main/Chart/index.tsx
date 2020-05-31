@@ -39,15 +39,21 @@ const MainDiv = styled(motion.div)<Props>`
 
 const containerVariants = {
     start: {
-        opacity: 0,
+        opacity: 1,
         transition: {
-            staggerChildren: 3,
-            delayChildren: 2,
-            staggerDirection: -1,
-            when: "afterChildren"
+            staggerChildren: .9,
+            delay: .1,
+            // staggerDirection: -1,
+            when: "beforeChildren"
         }
     },
-    end: { opacity: 1 },
+    end: { opacity: 1,
+            transition: {
+                staggerChildren: .9,
+                delay: .1,
+                // staggerDirection: -1,
+                when: "beforeChildren"
+        }},
 };
 
 
@@ -62,16 +68,19 @@ const Chart: React.FC<Props> = ({
             gap={gap}
             horizontal={horizontal}
             barThickness={barThickness}
+            className="containerVariants"
             variants={containerVariants}
             initial='start'
             animate='end'
         >
             <Bar max={max1} horizontal={horizontal}
+                k={1}
                 score={score1}
                 scoreBelow={scoreBelowL}
                 barThickness={barThickness}
             />
             <Bar placebo max={max2} horizontal={horizontal}
+                k={2}
                 score={score2}
                 scoreBelow={scoreBelowR}
                 barThickness={barThickness}

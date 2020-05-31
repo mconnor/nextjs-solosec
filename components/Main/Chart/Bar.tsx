@@ -2,26 +2,30 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 
+const spring={
+    type: "spring",
+    damping: 10,
+    stiffness: 100,
+    // delay: 2,
+    // duration: 1,
+}
+
+
 const variantsV= {
     start: {
         scaleY: 0,
-        transition: {
-            delay: .2,
-            duration: 2
-        }
+        
     },
     end: {
-        scaleY: 1
+        scaleY: 1,
+        transition: {spring}
     }
 }
 
 const variantsH = {
     start: {
         scaleX: 0,
-        transition: {
-            delay: .2,
-            duration: 2
-        }
+       transition: {spring}
     },
     end: {
         scaleX: 1
@@ -72,18 +76,20 @@ type Props = {
     scoreBelow?: [number, number];
     horizontal:boolean;
     barThickness:number;
+    k:number;
 }
 
-const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, horizontal}) => {
+const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, horizontal,k}) => {
     return (
         <BarDiv
+            key={k}
             placebo={placebo} 
             max={max} 
             score={score} 
             horizontal={horizontal}
             barThickness={barThickness}
             tranformOrigin={horizontal ? 'left' : 'bottom'}
-
+            className={horizontal ? 'variantsH' : 'variantsV'}
             variants={horizontal ? variantsH : variantsV}
             initial='start'
             animate='end'
