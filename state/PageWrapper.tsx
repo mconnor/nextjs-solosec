@@ -9,13 +9,16 @@ import { useToggle, ToggleState, useSection, SectionState, useIndex, IndexState 
 
 interface ReferenceState {
 
-    isaQAopen: boolean;
-    toggleQA?: () => void;
-    setQA?: React.Dispatch<React.SetStateAction<boolean>>;
+    // isaQAopen: boolean;
+    // toggleQA?: () => void;
+    // setQA?: React.Dispatch<React.SetStateAction<boolean>>;
 
 
     isReferenceOpen: boolean;
     toggleReference?: () => void;
+
+    currQ?: string;
+    setCurrQ?: (qa: string) => void;
 
     currSection?: string;
     setCurrentSection?: (newSection: string) => void;
@@ -51,13 +54,14 @@ interface ReferenceState {
 export const AppContext = createContext<ReferenceState>({
     currPIanchor: '',
     currPageIndex: 0,
-    isaQAopen: false,
+   
     isInitSafetyInfoOpen: true,
     isReferenceOpen: false,
     isSafetyInfoOpen: true,
     isPrescribingInfoOpen: false,
     isNavOpen: false,
-    currSeq: ""
+    currSeq: "",
+    currQ: ""
 });
 
 export const PageWrapper: React.FC = ({ children }) => {
@@ -78,13 +82,14 @@ export const PageWrapper: React.FC = ({ children }) => {
     const prescribingInfoState: ToggleState = useToggle(false);
 
 
-    const qaState: ToggleState = useToggle(false);
+    const qaState:  SectionState = useSection('');
     // is nav modal open?
     const navState: ToggleState = useToggle(false);
     // page number
     const pageState: IndexState = useIndex(0);
     // section state... each page is assigned a section
     const seqState: SectionState = useSection('');
+
 
     // all this available anyhwere in the app
     // import { useAppState } from '[path]state';
@@ -123,9 +128,12 @@ export const PageWrapper: React.FC = ({ children }) => {
                 toggleNav: navState.toggle,
                 setNav: navState.setToggle,
 
-                isaQAopen: qaState.isToggled,
-                toggleQA: qaState.toggle,
-                setQA: qaState.setToggle
+                // isaQAopen: qaState.isToggled,
+                // toggleQA: qaState.toggle,
+                // setQA: qaState.setToggle
+
+                currQ:qaState.section,
+                setCurrQ:qaState.setSection
             }}
         >
             {children}

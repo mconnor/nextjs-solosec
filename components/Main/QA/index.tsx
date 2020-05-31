@@ -1,8 +1,9 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import styled from 'styled-components';
 import { GoPlus, GoDash } from "react-icons/go";
 import { motion } from 'framer-motion';
 import { useToggle } from '../../../hooks';
+import { useAppState } from '../../../state'
 import IconWrapper from '../../IconWrapper'
 
 const variants = {
@@ -96,16 +97,27 @@ const Qwrapper = styled.div`
 interface Iprops {
     q: string;
     a: string;
+    slug:string;
 }
 
 
-export const QuestionAnswer: React.FC<Iprops> = ({ q, a }) => {
-    const { isToggled, toggle } = useToggle(false);
-    // const { toggleQA, isaQAopen, setQA} =useAppState();
+export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
+    const { isToggled, toggle, setToggle } = useToggle(false);
+    const { setCurrQ, currQ } = useAppState();
 
+    useEffect(()=> {
+        if (currQ !== slug) {
+            setToggle(false);
+        }
+    }, [ currQ ]) 
+
+    const handleClick = ()=> {
+        toggle();
+        setCurrQ && setCurrQ(slug)
+    }
 
     return (
-        <QAcontainer onClick={toggle}>
+        <QAcontainer onClick={handleClick}>
             <Qwrapper>
                 <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)} />
               
