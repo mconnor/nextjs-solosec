@@ -1,56 +1,52 @@
 
 import styled from 'styled-components'
-
+import { FaTimes } from "react-icons/fa";
+import IconWrapper from '../../IconWrapper'
 
 interface IBtn {
-    gridArea:string;
+    gridArea: string;
 }
 
 const Btn = styled.button<IBtn>`
-    background: #05aa4e;
-    border-radius: 6px;
-    width: 180px;
-    height: 60px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: white;
-    display: grid;
-    place-items: center;
-    border:0;   
+    width: 140px !important;
+    height: 60px !important; 
     grid-area: ${(props) => props.gridArea};
-    display: grid;
-    grid-template-columns: 1fr;
     align-items: center;
     justify-items:center;
-    cursor: pointer;
-   
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 8px;
+    justify-items: start;
 
  
 `;
-
-
-const Times = styled.div`
-    font-style: bold;
-    font-weight: 500;
-    font-size: 24px;
-   
-    white-space: nowrap;
+const Span = styled.span`
+    justify-self: end;
 `;
+
 interface ChildrenProps {
-  
+
     clickCallBack: (() => void) | undefined;
-    gridArea?:string;
+    gridArea?: string;
 }
 
-const CloseBtn: React.FC<ChildrenProps> = ({clickCallBack, gridArea='close'}) => {
+const CloseBtn: React.FC<ChildrenProps> = ({ clickCallBack, gridArea = 'close' }) => {
 
     return (
 
-           <Btn gridArea={gridArea} onClick={clickCallBack}>
-                <Times>CLOSE &times;</Times>
-          </Btn> 
-    
+        <Btn
+            className="button-green"
+            gridArea={gridArea}
+            onClick={clickCallBack}>
+            <Span>CLOSE</Span>
+            <IconWrapper kolor='white' size='24px'>
+                <FaTimes />
+            </IconWrapper>
+
+        </Btn>
+
+
+
     )
 }
 

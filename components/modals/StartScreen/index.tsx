@@ -19,10 +19,12 @@ const OuterContainer = styled.div`
 
     display:grid;
     grid-template-columns: 1fr;
+
+    
 `;
 
 const MyGrid = styled.div`
-    margin: 12px 12px 66px 12px;
+    margin: 0 12px 66px 12px;
     background:white;
     border: 20px solid var(--isi-blue);
     border-radius: var(--border-radius-4);
@@ -31,18 +33,25 @@ const MyGrid = styled.div`
     grid-template-columns: 1fr;
    
     grid-template-rows: 130px 1fr 100px;
+
+    
 `;
 
 const Header = styled.div`
+
     display:grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    align-items:center;
-    padding: 0 var(--isi-margin) 0 var(--isi-margin);
+    grid-template-columns: 1fr;
+
+    /* justify-content: space-between;
+    align-items:center; */
+
+    padding-right: var(--isi-margin);
     background: white;
+
     background-image:url(./img/solosec-logo-isi.svg);
+    
     background-repeat:no-repeat;
-    background-position: var(--isi-margin);
+    background-position: var(--isi-margin) 1px;
 `;
 
 const Main = styled.div`
