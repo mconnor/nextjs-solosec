@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import {useDeviceDimensions} from '../../hooks'
+import {useDeviceDimensions} from '../hooks'
 import { IwidthHeightPxString } from '../interfaces'
+
 
 
 type MainDivProps = {
@@ -27,8 +28,8 @@ const MainDiv = styled.div<MainDivProps & IwidthHeightPxString>`
             : props.foreGroundArt ? `url(${props.foreGroundArt})`
             : ''
         };
-
-    overflow:hidden;
+background-size: ${props => props.bgSize };
+    /* overflow:hidden; */
 `;
 
 type Props = {
@@ -47,6 +48,8 @@ const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgA
     const { ipadWidthPx, ipadMainSectionHeightPx  } = useDeviceDimensions();
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}
+        bgSize={ipadWidthPx + ' '  + ipadMainSectionHeightPx}
+        w={ipadWidthPx} h={ipadMainSectionHeightPx}
                  foreGroundArt={foreGroundArt } noBgArt={noBgArt}>
             {children}
         </MainDiv>

@@ -3,11 +3,13 @@ import { ReactNode } from 'react';
 export interface IwidthHeightPxString  {
     w?:string;
     h?:string;
+    bgSize?:string;
  }
 
  export interface IwidthHeightNums  {
-    wNum?:string;
-    hNum?:string;
+    wNum?:number;
+    hNum?:number;
+   
  }
 export interface ChildrenProps {
     children: ReactNode;

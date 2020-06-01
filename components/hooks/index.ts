@@ -4,3 +4,4 @@ export * from "./useSection";
 export * from "./useIndex";
 export * from "./useSequence";
 export * from "./useCookie";
+export * from "./useDeviceDimensions";
