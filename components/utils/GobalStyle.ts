@@ -2,14 +2,14 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --ipad-max-width: 1366px;
-        --ipad-max-height: 1024px;
+        --ipad12-width: 1366px;
+        --ipad12-height: 1024px;
 
-        --ipad-min-width: 1194px;
-        --ipad-min-height: 834px;
+        --ipad-mini-width: 1024px;
+        --ipad-mini-height: 768px;
 
-        --ipad-width: var(--ipad-max-width);
-        --ipad-height: calc(var(--ipad-max-height) - 50px);
+        --ipad-width: var(--ipad12-width);
+        --ipad-height: calc(var(--ipad12-height) - 50px);
 
         --header-height: 100px; 
         --footer-height: 55px;

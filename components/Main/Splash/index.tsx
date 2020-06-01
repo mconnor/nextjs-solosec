@@ -1,14 +1,23 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import { useDeviceDimensions } from '../../../hooks';
 
 
-type Props = {
+
+interface StyleProps  {
+ 
+    w:string;
+    h:string;
+ }
+
+interface ChildrenProps {
    children: ReactNode;
    logo?: string;
+ 
 }
 const MainDiv = styled.div<Props>`
-    width: var(--ipad-width);
-    height:var(--main-height);
+    width: ${props => props.w};
+    height: ${props => props.h};
     position: relative;
     top: -150px;
     left:4px;
@@ -23,11 +32,16 @@ const LogoWrapper = styled.img`
     width: 295px;
 `;
 
+
+interface Props extends StyleProps, ChildrenProps {}
+
 const Splash:React.FC<Props> = ( {children, logo}) => {
-    
+    const [targetWidth, targetHeight] = useDeviceDimensions();
+
+    console.log(targetWidth, targetHeight)
     return (
        <>
-        <MainDiv>
+        <MainDiv w={targetWidth} h={targetHeight}>
             {children}
         </MainDiv>
         <LogoWrapper src={logo} alt="splash page" />
