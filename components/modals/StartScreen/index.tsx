@@ -10,15 +10,16 @@ import SafteyFooter from '../SafetyInfo/SafteyFooter';
 // _prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)
 
 const OuterContainer = styled.div`
-
+   width: 400px;
+    max-width: var(--ipad-max-width); 
+    
     z-index:6 !important;
-    height:100vh;
-    max-height: var(--ipad-height);
-
+   
     background:rgba(0,0,0,.5) !important;
 
     display:grid;
     grid-template-columns: 1fr;
+    overflow:hidden;
 `;
 
 const MyGrid = styled.div`
@@ -40,7 +41,8 @@ const Header = styled.div`
     align-items:center;
     padding: 0 var(--isi-margin) 0 var(--isi-margin);
     background: white;
-    background-image:url(./img/solosec-logo-isi.svg);
+    /* background-image:url(./img/solosec-logo-isi.svg); */
+    /* background-size: var(--i) */
     background-repeat:no-repeat;
     background-position: var(--isi-margin);
 `;
@@ -73,7 +75,7 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
                 <Main>
                     <Copy />
                 </Main>
-                    <SafteyFooter />
+                    {/* <SafteyFooter /> */}
 
             </MyGrid>
         </OuterContainer>

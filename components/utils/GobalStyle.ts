@@ -5,14 +5,14 @@ const GlobalStyle = createGlobalStyle`
         --ipad-max-width: 1366px;
         --ipad-max-height: 1024px;
 
-        --ipad-min-width: 1194px;
-        --ipad-min-height: 834px;
+        --ipad-min-width: 1024px;
+        --ipad-min-height: 768px;
 
-        --ipad-width: var(--ipad-max-width);
-        --ipad-height: calc(var(--ipad-max-height) - 50px);
+        --ipad-width: 100vw;
+        --ipad-height: 100vh;
 
-        --header-height: 100px; 
-        --footer-height: 55px;
+        --header-height: calc(var(--ipad-height)*.1); 
+        --footer-height: 54px;
         --main-height:calc(var(--ipad-height) - var(--header-height));
        
         --isi-exit-y:var(--main-height);
@@ -78,7 +78,9 @@ const GlobalStyle = createGlobalStyle`
 
     .modalWrapper {
         width:var(--ipad-width);
+        max-width:var(--ipad-max-width);
         height:var(--ipad-height);
+        max-height:var(--ipad-max-height);
         position: absolute;
         z-index: 3;
         left:0;

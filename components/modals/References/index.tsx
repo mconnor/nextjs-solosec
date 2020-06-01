@@ -23,7 +23,8 @@ const OuterContainer = styled(motion.div)`
 `;
 
 const Container = styled.div`
-    height: 100%;
+    height: var(--ipad-height);
+    max-height: var(--ipad-max-height);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 75px 1fr;

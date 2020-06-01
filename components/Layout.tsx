@@ -34,8 +34,10 @@ const PageContainer = styled.div`
     position: static;
     overflow: hidden;
     background-color: white;
-    width: var(--ipad-width);
-    height: 100vh;
+    width: var(--ipad-max-width);
+    max-width: var(--ipad-width);
+    height: var(--ipad-height);
+    max-height: var(--ipad-max-height);
     display: grid;
     grid-template-columns: 6% 1fr 6%;
     grid-template-rows: var(--header-height) var(--main-height) 1fr;
@@ -44,6 +46,7 @@ const PageContainer = styled.div`
         "main main main"
         ". footer .";
     justify-items: stretch;
+  
 `;
 
 
