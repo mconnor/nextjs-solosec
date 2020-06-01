@@ -2,17 +2,17 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --ipad-max-width: 1366px;
-        --ipad-max-height: 1024px;
+        --ipad12-width: 1366px;
+        --ipad12-height: 1024px;
 
-        --ipad-min-width: 1024px;
-        --ipad-min-height: 768px;
+        --ipad-mini-width: 1024px;
+        --ipad-mini-height: 768px;
 
-        --ipad-width: 100vw;
-        --ipad-height: 100vh;
+        --ipad-width: var(--ipad12-width);
+        --ipad-height: calc(var(--ipad12-height) - 50px);
 
-        --header-height: calc(var(--ipad-height)*.1); 
-        --footer-height: 54px;
+        --header-height: 100px; 
+        --footer-height: 55px;
         --main-height:calc(var(--ipad-height) - var(--header-height));
        
         --isi-exit-y:var(--main-height);
@@ -28,7 +28,20 @@ const GlobalStyle = createGlobalStyle`
         
         --royal-blue: #073b87;
         --royal-blue-light: #468dcc;
-        --button-selected-color:#003e6a;
+
+
+        --primary-blue:#003E6A;
+        --button-selected-color:var(--primary-blue);
+        --copy-blue: var(--primary-blue);
+        --sub-headline-color:var(--primary-blue);
+
+
+
+
+
+        --nav-blue:#034063
+
+--triangle-blue;
 
         --fourty-two-blue: 0x003e6a;
         --slogan-blue: #002851
@@ -36,18 +49,17 @@ const GlobalStyle = createGlobalStyle`
         --primary: white;
         --primary-btn-hover-color: gray;
         --yellow: rgb(128, 124, 116);
-        --copy-blue: #003E6A;
-        --nav-blue:#034063;
+;
 
 
         --isi-blue: rgb(213,233,247);     
         --isi-headline-bg: rbg(273,326,230);
-        --gray: #6d6e71;
+        --gray: #62645b;
         --green: rgb(41,147,51);
-
+        /* 05aa4e */
         --isi-margin: 80px;
      
-        
+        --button-border-radius:6px;
         --copy-color-secondary: var(--gray);
         --border-radius-4: 4px;
 
@@ -66,21 +78,53 @@ const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         box-sizing: border-box;
     }
+
+/* web reset suggestions https://www.webfx.com/blog/web-design/css-tip-1-resetting-your-styles-with-css-reset/ */
+
+
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	}
     *, *:before, *:after {
         box-sizing: inherit;
     }
+
+    p, li { margin:5px 0 10px 0; }
+    h2 { margin:10px 0 20px 0; }
+
+    p {
+        &.bold {
+        font-weight:bold;
+}
+    }
+   
+    sup{
+        font-size: 1rem;
+        vertical-align: super;
+    }
+a {
+    text-decoration: none;
+}
+
     body {
-    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-       margin:0;
-       padding:0;
+        font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
        position:fixed;
     }
 
+/* end css resets */
+
+
     .modalWrapper {
         width:var(--ipad-width);
-        max-width:var(--ipad-max-width);
         height:var(--ipad-height);
-        max-height:var(--ipad-max-height);
         position: absolute;
         z-index: 3;
         left:0;
@@ -88,23 +132,69 @@ const GlobalStyle = createGlobalStyle`
         background:white;   
     }
 
- .btn {
-    cursor: pointer;
-    &:hover {
-        color: gray;
+.isi-link {
+    a {
+      color: var(--royal-blue-light);
+      text-decoration: none;
     }
- }
- .item1 {
-      grid-area: sidebar-1;
-    }
+    color: var(--royal-blue-light);
+}
 
-    .item2 {
-      grid-area: content;
-    }
 
-    .item3 {
-      grid-area: sidebar-2;
-    }
+.primary-color {
+   color: var(--sub-headline-color);
+      
+}
+
+
+.button-green {
+    background: var(--green);
+    border-radius: var(--button-border-radius);
+    width: 212px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    border:0; 
+    cursor: pointer;  
+    white-space: nowrap;
+    
+
+}
+
+.sub-headline {
+
+
+    
+    /* font-style: normal;
+font-weight: bold;
+font-size: 18px; */
+
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 16px;
+    /* identical to box height, or 80% */
+    letter-spacing: 0.04em;
+}
+
+.modal-screen-p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+/* or 122% */
+    letter-spacing: 0.06em;
+    color: #62645b;
+}
+
+.primary-copy-color {
+    color:var(--copy-color-secondary)
+}
+
+
 
 .fillMain {
     background-size:var(--ipad-width);
@@ -202,7 +292,7 @@ const GlobalStyle = createGlobalStyle`
 
     }
 
-    &.inner-container {
+    /* &.inner-container {
         background: white;
         border-radius: 4px;
         padding: 8px;
@@ -210,14 +300,7 @@ const GlobalStyle = createGlobalStyle`
 
     &.down-arrow {
         transform: rotate(90deg);
-    }
-}
-[role='button'] {
-    cursor: pointer;
-
-    &:hover {
-        color: gray;
-    }
+    } */
 }
 
 `;
