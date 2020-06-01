@@ -43,7 +43,7 @@ const TB4 = 'Patient/Physician Testimonial'
 const variants = {
     open: { y: 0 },
     closed: {
-        y: "110%",
+        y: "100%",
         transition: {
             delay: .2
         }
@@ -64,9 +64,9 @@ const MainDiv = styled(motion.div)`
     display: grid;
     /* grid-template-columns: 20% 38% 42%; */
     grid-template-columns: 1fr 2fr 2fr;
-    column-gap: 60px;
-    padding-top: 50px;
-    padding-bottom: 60px;
+    column-gap: 4.8vw;
+    padding-top: 3vw;
+    padding-bottom: 4.8vw;
     align-items:start;
     
 `;
@@ -81,10 +81,10 @@ const NavContainer = styled.div<StyleProps>`
     grid-template-columns: 1fr;
     //height: 90%; 
     margin:0;
-    line-height: 50px;
+    line-height: 4vw;
 /* row-gap:24px; */
     ul {
-        line-height: 40px;
+        line-height: 3.2vw;
     }
 `;
 
@@ -94,11 +94,11 @@ const NavContainerX = styled.div<StyleProps>`
     grid-template-columns: 1fr;
     height: 100%; 
     margin:0;
-    line-height: 50px;
+    line-height: 4vw;
     padding-right: 20px !important;
 /* row-gap:24px; */
     ul {
-        line-height: 40px;
+        line-height: 1.6vw;
     }
 `;
 
@@ -108,7 +108,7 @@ const Logo = styled.div`
     font-weight: bold;
     font-size: 2.24vw;
     color:#034063;
-    margin-left:84px;
+    margin-left:6.72vw;
     sup{
         font-weight: lighter;
         font-size: 1rem;
@@ -122,9 +122,9 @@ const Logo = styled.div`
 const SubLogo = styled.div`
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.92vw;
     color:#034063;
-    margin-left:84px;
+    margin-left:6.72vw;
 `;
 
 
@@ -132,15 +132,15 @@ const SubLogo = styled.div`
 const RightColBt = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 35px;
-    margin-bottom: 30px;
+    column-gap: 2.8vw;
+    margin-bottom: 2.4vw;
     text-align: left;
 `;
 
 const RightColBtX = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 35px;
+    column-gap: 2.4vw;
     margin-bottom: 0px;
     text-align: left;
 `;
@@ -150,7 +150,7 @@ const RightColBtSub = styled.div`
     grid-template-columns: auto 1fr;
     //column-gap: 0px;
     margin-bottom: 0px;
-    margin-left: 75px;
+    margin-left: 6vw;
     text-align: left;
 `;
 
@@ -158,8 +158,8 @@ const IconBg = styled.button`
     background:#034063;
     border-radius: 5px;
     border:0;
-    height: 54px;
-    width: 54px;
+    height:4.32vw;
+    width: 4.32vw;
     font-size: 14px;
 `;
 

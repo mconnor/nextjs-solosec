@@ -51,7 +51,7 @@ user-select: none;
 const Li = styled.li`
     color:white;
     list-style-type: none;
-    padding-left:60px;
+    padding-left:4.8vw;
     /* &:before {
         content: "-";
       text-indent: -2em;
