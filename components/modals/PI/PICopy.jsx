@@ -21,10 +21,20 @@ const Copy = styled.div`
             font-style: italic;
         }
     }
-    h1 {
+    /* h1 {
     color: #072b49;
     font-weight: 700;
-    }
+    } */
+`;
+
+
+const H1 = styled.h1`
+   font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 25px;
+    color: var(--sub-headline-color);
 `;
 
 const H2 = styled.h2`
@@ -35,7 +45,21 @@ const H2 = styled.h2`
     font-size: 18px;
 `;
 
-const P = styled.p`
+
+
+
+
+
+
+const H3 = styled.h3`
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+
+`;
+
+const P= styled.p`
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -52,19 +76,19 @@ const PICopy= () => {
 
             <div className="content">
 
-                <h1>Full Prescribing Information</h1>
+                <H1>Full Prescribing Information</H1>
 
                 <div id="indicationsAndUsage">
 
                     <H2>1 Indications and Usage</H2>
 
-                    <h3>1.1 Bacterial Vaginosis</h3>
+                    <H3>1.1 Bacterial Vaginosis</H3>
 
                     <P>SOLOSEC is indicated for the treatment of bacterial vaginosis in adult women <em>[see Use in
                         Specific Populations (<a href="#specificUse">8.1</a>) and Clinical Studies (<a
                             href="#clinicalStudies">14</a>)]</em>.</P>
 
-                    <h3>1.2 Usage</h3>
+                    <H3>1.2 Usage</H3>
 
                     <P>To reduce the development of drug-resistant bacteria and maintain the effectiveness of SOLOSEC
                         and other antibacterial drugs, SOLOSEC should be used only to treat or prevent infections that
@@ -79,13 +103,13 @@ const PICopy= () => {
 
                     <H2>2 Dosage and Administration</H2>
 
-                    <h3>2.1 Recommended Dosage</h3>
+                    <H3>2.1 Recommended Dosage</H3>
 
                     <P>The recommended dosage of SOLOSEC is a single 2-gram packet of granules taken once orally,
                         without regard to the timing of meals <em>[see Clinical Pharmacology (<a
                             href="#clinicalPharmacology">12.3</a>)]</em>.</P>
 
-                    <h3>2.2 Instructions for the Preparation and Administration of SOLOSEC</h3>
+                    <H3>2.2 Instructions for the Preparation and Administration of SOLOSEC</H3>
 
                     <ul>
                         <li>Open the SOLOSEC packet by folding over the corner (marked by an arrow) and tearing across
@@ -115,7 +139,7 @@ const PICopy= () => {
 
                     <H2>4 Contraindications</H2>
 
-                    <h3 className="underline">Hypersensitivity</h3>
+                    <H3 className="underline">Hypersensitivity</H3>
 
                     <P>SOLOSEC is contraindicated in patients who have shown hypersensitivity to secnidazole, other
                         ingredients of the formulation, or other nitroimidazole derivatives.</P>
@@ -126,7 +150,7 @@ const PICopy= () => {
 
                     <H2>5 Warnings and Precautions</H2>
 
-                    <h3>5.1 Vulvo-Vaginal Candidiasis</h3>
+                    <H3>5.1 Vulvo-Vaginal Candidiasis</H3>
 
                     <P>The use of SOLOSEC may result in vulvo-vaginal candidiasis. In controlled clinical trials of
                         non-pregnant women with bacterial vaginosis, vulvo-vaginal candidiasis developed in 19/197
@@ -134,7 +158,7 @@ const PICopy= () => {
                             Adverse Reactions (<a href="#adverseReactions">6.1</a>)]</em>. Symptomatic vulvo-vaginal
                         candidiasis may require treatment with an antifungal agent.</P>
 
-                    <h3>5.2 Potential Risk for Carcinogenicity</h3>
+                    <H3>5.2 Potential Risk for Carcinogenicity</H3>
 
                     <P>Carcinogenicity has been seen in mice and rats treated chronically with nitroimidazole
                         derivatives which are structurally related to secnidazole. It is unclear if the positive tumor
@@ -142,7 +166,7 @@ const PICopy= () => {
                         a single dose of SOLOSEC to treat bacterial vaginosis. Avoid chronic use of SOLOSEC <em>[see
                             Nonclinical Toxicology (<a href="#nonclinicalToxicology">13.1</a>)]</em></P>
 
-                    <h3>5.3 Drug Resistance</h3>
+                    <H3>5.3 Drug Resistance</H3>
 
                     <P>Prescribing SOLOSEC in the absence of proven or strongly suspected bacterial infection or a
                         prophylactic indication is unlikely to provide benefit to the patient and increases the risk of
@@ -154,7 +178,7 @@ const PICopy= () => {
 
                     <H2>6 Adverse Reactions</H2>
 
-                    <h3>6.1 Clinical Trials Experience</h3>
+                    <H3>6.1 Clinical Trials Experience</H3>
 
                     <P>Because clinical trials are conducted under widely varying conditions, adverse reaction rates
                         observed in the clinical trials of a drug cannot be directly compared to rates in the clinical
@@ -173,15 +197,15 @@ const PICopy= () => {
                     <P>There were no deaths in the trials. Two patients in Trial 3 discontinued due to vulvovaginal
                         candidiasis in the SOLOSEC-treated arm.</P>
 
-                    <h3 className="underline">Most Common Adverse Reactions</h3>
+                    <H3 className="underline">Most Common Adverse Reactions</H3>
 
                     <P>Among 197 patients treated with a single 2 g dose of SOLOSEC in the two placebo-controlled
                         trials, Trial 1 and 2, adverse reactions were reported by approximately 29% of patients. Table 1
                         displays the most common adverse reactions (≥ 2 % in SOLOSEC-treated patients) in these two
                         trials.</P>
 
-                    <h3>Table 1: Adverse Reactions Occurring (≥ 2 % SOLOSEC-Treated Patients) in the Pooled
-                        Placebo-Controlled Trials 1 and 2 in Adult Women with Bacterial Vaginosis</h3>
+                    <H3>Table 1: Adverse Reactions Occurring (≥ 2 % SOLOSEC-Treated Patients) in the Pooled
+                        Placebo-Controlled Trials 1 and 2 in Adult Women with Bacterial Vaginosis</H3>
 
                     <table width="100%">
                         <colgroup>
@@ -234,7 +258,7 @@ const PICopy= () => {
                         of patients. Vulvovaginal candidiasis (8.4%), nausea (5.3%), vomiting (2.5%) and dysgeusia
                         (3.4%) were the most common adverse reactions reported in this trial.</P>
 
-                    <h3>6.2 Postmarketing Experience</h3>
+                    <H3>6.2 Postmarketing Experience</H3>
 
                     <P>The following adverse reactions have been reported during use of other formulations of
                         secnidazole 2 g outside of the United States. Because these reactions are reported voluntarily
@@ -249,7 +273,7 @@ const PICopy= () => {
 
                     <H2>7 Drug Interactions</H2>
 
-                    <h3>7.1 Oral Contraceptives</h3>
+                    <H3>7.1 Oral Contraceptives</H3>
 
                     <P>There was no clinically significant drug interaction between secnidazole and the combination oral
                         contraceptive, ethinyl estradiol plus norethindrone <em>[see Clinical Pharmacology (<a
@@ -262,7 +286,7 @@ const PICopy= () => {
 
                     <H2>8 Use In Specific Populations</H2>
 
-                    <h3>8.1 Pregnancy</h3>
+                    <H3>8.1 Pregnancy</H3>
 
                     <h4 className="underline">Risk Summary</h4>
 
@@ -278,7 +302,7 @@ const PICopy= () => {
                         and miscarriages in clinically recognized pregnancies is 2 to 4% and 15 to 20%,
                         respectively.</P>
 
-                    <h3 className="underline" id="specificUseData">Data</h3>
+                    <H3 className="underline" id="specificUseData">Data</H3>
 
                     <h4 className="italicise">Animal Data</h4>
 
@@ -300,7 +324,7 @@ const PICopy= () => {
                         (reduced gestational body weight gain) was evident at doses of 100 mg/kg and above (about 0.3
                         times the clinical dose based on AUC comparisons).</P>
 
-                    <h3 id="lactation">8.2 Lactation</h3>
+                    <H3 id="lactation">8.2 Lactation</H3>
 
                     <h4 className="underline">Risk Summary</h4>
 
@@ -310,17 +334,17 @@ const PICopy= () => {
                         advise patients that breastfeeding is not recommended during treatment with SOLOSEC and for 96
                         hours (based on half-life) after administration of SOLOSEC.</P>
 
-                    <h3 className="underline">Clinical Considerations</h3>
+                    <H3 className="underline">Clinical Considerations</H3>
 
                     <P>A nursing mother may choose to pump and discard her milk during treatment with SOLOSEC and for 96
                         hours after administration of SOLOSEC and feed her infant stored human milk or formula.</P>
 
-                    <h3>8.4 Pediatric Use</h3>
+                    <H3>8.4 Pediatric Use</H3>
 
                     <P>The safety and effectiveness of SOLOSEC in pediatric patients below the age of 18 years have not
                         been established.</P>
 
-                    <h3>8.5 Geriatric Use</h3>
+                    <H3>8.5 Geriatric Use</H3>
 
                     <P>Clinical studies with secnidazole did not include sufficient numbers of subjects aged 65 and over
                         to determine whether they respond differently from younger subjects.</P>
@@ -342,7 +366,7 @@ const PICopy= () => {
                         <img className="s50" src="/img/figure-1.png"/>
                     </P>
 
-                    <h3>Figure 1: Structure of Secnidazole</h3>
+                    <H3>Figure 1: Structure of Secnidazole</H3>
 
                     <P>Each packet of SOLOSEC contains 4.8 g of off-white to slightly yellowish granules, which contain
                         2 g of secnidazole and the following inactive ingredients: Eudragit NE30D (ethyl acrylate methyl
@@ -354,17 +378,17 @@ const PICopy= () => {
 
                     <H2>12 Clinical Pharmacology</H2>
 
-                    <h3>12.1 Mechanism of Action</h3>
+                    <H3>12.1 Mechanism of Action</H3>
 
                     <P>SOLOSEC is a nitroimidazole antimicrobial drug <em>[See Microbiology (<a
                         href="#microbiology">12.4</a>)]</em>.</P>
 
-                    <h3>12.2 Pharmacodynamics</h3>
+                    <H3>12.2 Pharmacodynamics</H3>
 
                     <P>Secnidazole exposure-response relationships and the time course of pharmacodynamic response are
                         unknown.</P>
 
-                    <h3 className="underline">Cardiac Electrophysiology</h3>
+                    <H3 className="underline">Cardiac Electrophysiology</H3>
 
                     <P>The effect of secnidazole on the QTc interval was evaluated in a Phase 1 randomized, double
                         blind, placebo- and positive-controlled four-period crossover thorough QTc study in 52 healthy
@@ -373,7 +397,7 @@ const PICopy= () => {
                         concentrations, there was no clinically relevant increase in the QTc interval following either
                         dose.</P>
 
-                    <h3>12.3 Pharmacokinetics</h3>
+                    <H3>12.3 Pharmacokinetics</H3>
 
                     <P>A single oral dose of 2 g of SOLOSEC in healthy adult female subjects, following an overnight
                         fast and admixed with (4 oz) of applesauce, resulted in a mean (SD) secnidazole peak plasma
@@ -383,7 +407,7 @@ const PICopy= () => {
                         concentrations decreased to 22.1 mcg/mL at 24 hours, 9.2 mcg/mL at 48 hours, 3.8 mcg/mL at 72
                         hours, and 1.4 mcg/mL at 96 hours.</P>
 
-                    <h3 className="underline">Absorption</h3>
+                    <H3 className="underline">Absorption</H3>
 
                     <h4 className="italicise">Effect of Food</h4>
 
@@ -395,8 +419,8 @@ const PICopy= () => {
                         admixing with applesauce (<a href="#table2">Table 2</a>). <em>[see Dosage and Administration (<a
                             href="#dosage">2.2</a>)]</em></P>
 
-                    <h3 id="table2">Table 2: Pharmacokinetic Parameters Following Single Dose Administration of SOLOSEC
-                        2 g Given Orally</h3>
+                    <H3 id="table2">Table 2: Pharmacokinetic Parameters Following Single Dose Administration of SOLOSEC
+                        2 g Given Orally</H3>
 
                     <table width="100%">
                         <colgroup>
@@ -468,29 +492,29 @@ const PICopy= () => {
                         </tfoot>
                     </table>
 
-                    <h3 className="underline">Distribution</h3>
+                    <H3 className="underline">Distribution</H3>
 
                     <P>The apparent volume of distribution of secnidazole is approximately42 L. The plasma protein
                         binding of secnidazole is &lt; 5%.</P>
 
-                    <h3 className="underline">Elimination</h3>
+                    <H3 className="underline">Elimination</H3>
 
                     <P>The total body clearance of secnidazole is approximately 25 mL/min. The renal clearance of
                         secnidazole is approximately 3.9 mL/min.</P>
 
                     <P>The plasma elimination half-life for secnidazole is approximately 17 hours.</P>
 
-                    <h3 className="italicise">Metabolism</h3>
+                    <H3 className="italicise">Metabolism</H3>
 
                     <P>Secnidazole is metabolized <em>in vitro</em> via oxidation by human hepatic CYP450 enzyme system
                         with ≤ 1% conversion to metabolites.</P>
 
-                    <h3 className="italicise">Excretion</h3>
+                    <H3 className="italicise">Excretion</H3>
 
                     <P>Approximately 15% of a 2 g oral dose of SOLOSEC is excreted as unchanged secnidazole in the
                         urine.</P>
 
-                    <h3 className="underline">Drug Interactions</h3>
+                    <H3 className="underline">Drug Interactions</H3>
 
                     <h4 className="italicise">Oral Contraceptives</h4>
 
@@ -506,12 +530,12 @@ const PICopy= () => {
                         significant effect on mean C<sub>max</sub> and AUC of NE. <em>[see Drug Interactions (<a
                             href="#drugInteractions">7.1</a>)]</em></P>
 
-                    <h3 className="italicise">Ethanol Metabolism</h3>
+                    <H3 className="italicise">Ethanol Metabolism</H3>
 
                     <P><em>In vitro</em> studies showed that secnidazole had no effect on aldehyde dehydrogenase
                         activity.</P>
 
-                    <h3 id="microbiology">12.4 Microbiology</h3>
+                    <H3 id="microbiology">12.4 Microbiology</H3>
 
                     <h4 className="underline">Mechanism of Action</h4>
 
@@ -520,14 +544,14 @@ const PICopy= () => {
                         believed that these radical anions interfere with bacterial DNA synthesis of susceptible
                         isolates.</P>
 
-                    <h3 className="underline">Resistance</h3>
+                    <H3 className="underline">Resistance</H3>
 
                     <P>The development of resistance to secnidazole by bacteria associated with bacterial vaginosis was
                         not examined. Bacterial isolates exhibiting reduced in vitro susceptibility to metronidazole
                         also show reduced susceptibility to secnidazole. The clinical significance of such an effect is
                         unknown.</P>
 
-                    <h3 className="underline">Antibacterial Activity</h3>
+                    <H3 className="underline">Antibacterial Activity</H3>
 
                     <P>Culture and sensitivity testing of bacteria are not routinely performed to establish the
                         diagnosis of bacterial vaginosis <em>[see Indications and Usage (<a
@@ -555,7 +579,7 @@ const PICopy= () => {
 
                     <H2>13 Nonclinical Toxicology</H2>
 
-                    <h3>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</h3>
+                    <H3>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</H3>
 
                     <P>Nitroimidazoles, which have similar chemical structures to secnidazole, have been associated with
                         tumors affecting the liver, lungs, mammary, and lymphatic tissues in animals after lifetime
@@ -606,9 +630,9 @@ const PICopy= () => {
                             href="#table3">Tables 3</a> and <a href="#table4">4</a> describe the efficacy of SOLOSEC
                         in the treatment of bacterial vaginosis.</P>
 
-                    <h3 id="table3">Table 3. Efficacy of SOLOSEC for Treatment of Bacterial Vaginosis in Two Randomized,
+                    <H3 id="table3">Table 3. Efficacy of SOLOSEC for Treatment of Bacterial Vaginosis in Two Randomized,
                         Double-Blind, Placebo-Controlled Trials in Modified-Intent-to-Treat Population at 21-30
-                        Days</h3>
+                        Days</H3>
 
                     <table width="100%">
                         <colgroup>
@@ -711,8 +735,8 @@ const PICopy= () => {
 
                     <a name="t4"></a>
 
-                    <h3 id="table4">Table 4. Efficacy of SOLOSEC for Treatment of Bacterial Vaginosis in Trial 2 in
-                        Modified-Intent-to-Treat Population at 7-14 Days</h3>
+                    <H3 id="table4">Table 4. Efficacy of SOLOSEC for Treatment of Bacterial Vaginosis in Trial 2 in
+                        Modified-Intent-to-Treat Population at 7-14 Days</H3>
 
                     <table width="100%">
                         <colgroup>
@@ -817,7 +841,7 @@ const PICopy= () => {
                     <P>Advise the patient to read the FDA-approved patient labeling (Patient Information and
                         Instructions for Use).</P>
 
-                    <h3 className="underline">Administration Instructions</h3>
+                    <H3 className="underline">Administration Instructions</H3>
 
                     <P>Instruct the patient:</P>
 
@@ -831,7 +855,7 @@ const PICopy= () => {
 
                     <P>Advise the patient that SOLOSEC may be taken without regard to the timing of meals.</P>
 
-                    <h3 className="underline">Lactation</h3>
+                    <H3 className="underline">Lactation</H3>
 
                     <P>Advise women not to breastfeed during treatment with SOLOSEC and to discontinue breastfeeding for
                         96 hours following the administration of SOLOSEC. Also, advise a nursing mother that she may
@@ -839,12 +863,12 @@ const PICopy= () => {
                         infant stored human milk or formula <em>[see Use in Specific Populations (<a
                             href="#lactation">8.2</a>)]</em>.</P>
 
-                    <h3 className="underline">Vulvo-Vaginal Candidiasis</h3>
+                    <H3 className="underline">Vulvo-Vaginal Candidiasis</H3>
 
                     <P>Advise the patient that use of SOLOSEC may result in vulvo-vaginal candidiasis that may require
                         treatment with an antifungal agent.</P>
 
-                    <h3 className="underline">Drug Resistance</h3>
+                    <H3 className="underline">Drug Resistance</H3>
 
                     <P>Patients should be counseled that antibacterial drugs including SOLOSEC should only be used to
                         treat bacterial infections. They do not treat viral infections (e.g., the common cold). When
@@ -872,7 +896,7 @@ const PICopy= () => {
 
                     <P>SOLOSEC (SO-lo-sec) (secnidazole) oral granules</P>
 
-                    <h3>What is SOLOSEC?</h3>
+                    <H3>What is SOLOSEC?</H3>
 
                     <ul>
                         <li>SOLOSEC is a prescription medicine used to treat bacterial vaginal infections in adult
@@ -881,7 +905,7 @@ const PICopy= () => {
                         <li>It is not known if SOLOSEC is safe and effective in children under 18 years of age.</li>
                     </ul>
 
-                    <h3>Do not take SOLOSEC if you:</h3>
+                    <H3>Do not take SOLOSEC if you:</H3>
 
                     <ul>
                         <li>are allergic to secnidazole or other nitroimidazole medicines. See the end of this leaflet
@@ -889,8 +913,8 @@ const PICopy= () => {
                         </li>
                     </ul>
 
-                    <h3>Before taking SOLOSEC, tell your healthcare provider about all of your medical conditions,
-                        including if you:</h3>
+                    <H3>Before taking SOLOSEC, tell your healthcare provider about all of your medical conditions,
+                        including if you:</H3>
 
                     <ul>
                         <li>are pregnant or plan to become pregnant. It is not known if SOLOSEC will harm your unborn
@@ -906,7 +930,7 @@ const PICopy= () => {
                     <P>Tell your healthcare provider about all the medicines you take, including prescription and
                         over-the-counter medicines, vitamins, and herbal supplements.</P>
 
-                    <h3>How should I take SOLOSEC?</h3>
+                    <H3>How should I take SOLOSEC?</H3>
 
                     <ul>
                         <li>See <strong>"Instructions for Use"</strong> at the end of this leaflet for instructions on
@@ -918,7 +942,7 @@ const PICopy= () => {
                         </li>
                     </ul>
 
-                    <h3>What are the possible side effects of SOLOSEC?</h3>
+                    <H3>What are the possible side effects of SOLOSEC?</H3>
 
                     <h4>SOLOSEC can cause side effects including vaginal yeast infections.</h4>
 
@@ -931,7 +955,7 @@ const PICopy= () => {
                     <P>These are not all of the side effects of SOLOSEC. Call your doctor for medical advice about side
                         effects. You may report side effects to the FDA at 1-800-FDA-1088.</P>
 
-                    <h3>General information about the safe and effective use of SOLOSEC.</h3>
+                    <H3>General information about the safe and effective use of SOLOSEC.</H3>
 
                     <P>Medicines are sometimes prescribed for purposes other than those listed in a Patient Information
                         leaflet. Do not use SOLOSEC for a condition for which it was not prescribed. Do not give SOLOSEC
@@ -939,7 +963,7 @@ const PICopy= () => {
                         ask your pharmacist or healthcare provider for information about SOLOSEC that is written for
                         health professionals.</P>
 
-                    <h3>What are the ingredients in SOLOSEC?</h3>
+                    <H3>What are the ingredients in SOLOSEC?</H3>
 
                     <h4>Active ingredient: <span>secnidazole</span></h4>
 
@@ -973,7 +997,7 @@ const PICopy= () => {
                     <P>Even though you only take 1 packet of SOLOSEC, the medicine stays in your body and continues
                         working for 4 days.</P>
 
-                    <h3>Important Information</h3>
+                    <H3>Important Information</H3>
 
                     <ul>
                         <li>SOLOSEC may be taken before or after or during a meal.</li>
@@ -982,7 +1006,7 @@ const PICopy= () => {
                         </li>
                     </ul>
 
-                    <h3>How should I store SOLOSEC? </h3>
+                    <H3>How should I store SOLOSEC? </H3>
 
                     <ul>
                         <li>Store SOLOSEC at room temperature between 68°F to 77°F (20°C to 25°C).</li>

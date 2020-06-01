@@ -2,35 +2,44 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 
-type Props = {
+interface StyleProps  {
+ 
+    w:string;
+    h:string;
+ }
+
+interface ChildrenProps {
    children: ReactNode;
    logo?: string;
+ 
 }
 const MainDiv = styled.div<Props>`
-    width: var(--ipad-width);
-    height:var(--main-height);
+    width: 100vw;
+    height: 100vw;
     position: relative;
-    top: -150px;
-    left:4px;
-
+    top: -12vw;
+    left:0.32vw;
+    width: 100vw;
 `;
 
 const LogoWrapper = styled.img`
     position: absolute;
     z-index: 2;
-    top: 105px;
-    left: 86px;
-    width: 295px;
+    top: 7vw;
+    left: 6.88vw;
+    width: 21vw;
 `;
 
+
+interface Props extends StyleProps, ChildrenProps {}
+
 const Splash:React.FC<Props> = ( {children, logo}) => {
-    
     return (
        <>
-        <MainDiv>
-            {children}
-        </MainDiv>
-        <LogoWrapper src={logo} alt="splash page" />
+           <MainDiv>
+               {children}
+           </MainDiv>
+           <LogoWrapper src={logo} alt="splash page"/>
        
        </>
     )

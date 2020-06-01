@@ -49,8 +49,9 @@ user-select: none;
 `;
 
 const Li = styled.li`
-  color:white;
-list-style-type: none;
+    color:white;
+    list-style-type: none;
+    padding-left:4.8vw;
     /* &:before {
         content: "-";
       text-indent: -2em;
@@ -79,7 +80,7 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
             : subnav ?
                 <Li>
                     <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                        <Link href={url}><a>{`-${label}`}</a></Link>
+                        <Link href={url}><a>{`- ${label}`}</a></Link>
                     </Btn>
                 </Li>
             :

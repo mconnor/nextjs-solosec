@@ -81,12 +81,9 @@ const Adiv = styled(motion.div) <OnOff>`
 const QAcontainer = styled.div`
 
     color:var(--button-selected-color);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: -0.02em;
+   
     min-height: 100px;
+   
 `;
 
 const Qwrapper = styled.div`
@@ -95,6 +92,17 @@ const Qwrapper = styled.div`
     align-items:start;
     column-gap:10px;
     align-items:center;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+
+    sup{
+        font-size: 1rem;
+        vertical-align: super;
+    }
 
 `;
 interface Iprops {

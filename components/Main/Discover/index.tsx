@@ -6,14 +6,14 @@ import {PageList} from "../../modals/Nav/PageList";
 const MainDiv = styled.div`
     background-image: url(./img/svg/pg6.svg);
     height: 100%;
-    padding-top: 177px;
-    padding-left:203px;
+    padding-top: 12vw;
+    padding-left:15.4vw;
 `;
 const BtnContainer = styled.div`
     display: grid;
-    grid-template-columns: 460px 460px;
-    column-gap: 9px;
-    row-gap: 7px;
+    grid-template-columns: 32.6vw 32.6vw;
+    column-gap: 0.72vw;
+    row-gap: 0.72vw;
 `;
 
 const BtnInvisible = styled.button`
@@ -23,8 +23,8 @@ const BtnInvisible = styled.button`
     border: none !important;
     font-size:0;
     position: absolute;
-    top: 720px;
-    right: 60px;
+    top: 52.6vw;
+    right: 4vw;
     cursor: pointer;
 `;
 
