@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --ipad-max-width: 1366px;
+        --ipad-max-width: 100vw;
         --ipad-max-height: 1024px;
 
         --ipad-min-width: 1194px;
@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
         --ipad-width: var(--ipad-max-width);
         --ipad-height: calc(var(--ipad-max-height) - 50px);
 
-        --header-height: 100px; 
-        --footer-height: 55px;
+        --header-height:8vw; 
+        --footer-height: 4.4vw;
         --main-height:calc(var(--ipad-height) - var(--header-height));
        
         --isi-exit-y:var(--main-height);
