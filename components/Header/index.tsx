@@ -27,14 +27,14 @@ const MainDiv = styled.div<IProps & IwidthHeightPxString & IwidthHeightNums>`
     color: $primary;
 
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.28vw;
     line-height: 127%;
 `;
 
 const IndexLinkWrapper = styled.button`
     width:220px;
     height: 80px;
-  opacity: 0;
+    opacity: 0;
     justify-self:end;
     cursor: pointer;
 `;

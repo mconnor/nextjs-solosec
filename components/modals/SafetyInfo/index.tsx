@@ -5,22 +5,8 @@ import { useAppState } from "../../../state/";
 import IconWrapper from '../../IconWrapper'
 import Copy from '../StartScreen/Copy';
 import SafteyFooter from './SafteyFooter';
+import {useDeviceDimensions} from "../../../hooks";
 
-
-
-
-const variants = {
-    open: {
-        y: 0,
-    },
-    closed: {
-        y: 752,
-
-        transition: {
-            delay: .2
-        }
-    }
-}
 
 
 type Props = {
@@ -38,9 +24,9 @@ const InnerDiv = styled.div<Props>`
 const OuterContainer = styled(motion.div) <Props>`
     height: calc(100vh - var(--header-height)) !important;
     top:var(--header-height) !important;
-    padding-top: ${props => props.isOpen ? '26px' : '0'};
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: ${props => props.isOpen ? '2.08vw' : '0'};
+    padding-left: 1.6vw;
+    padding-right: 1.6vw;
     z-index:10 !important;
 
     width:var(--ipad-width);
@@ -90,16 +76,30 @@ const Top = styled.div`
 
 //
 const SafetyModalWrapper: React.FC = () => {
-    const { isSafetyInfoOpen, isInitSafetyInfoOpen } = useAppState();
+    const {isSafetyInfoOpen, isInitSafetyInfoOpen} = useAppState();
     if (isInitSafetyInfoOpen) return null;
+    const {ipadHeightPx} = useDeviceDimensions();
+    const variants = {
+        open: {
+            y: 0,
+        },
+        closed: {
+            y: 768,
+
+            transition: {
+                delay: .2
+            }
+        }
+    }
+
     return (
         <OuterContainer className='modalWrapper'
-            isOpen={isSafetyInfoOpen}
-            variants={variants}
-            initial='closed'
-            animate={(isSafetyInfoOpen) ? 'open' : 'closed'}
-            transition={{ damping: 300 }}>
-            <SafetyModal />
+                        isOpen={isSafetyInfoOpen}
+                        variants={variants}
+                        initial='closed'
+                        animate={(isSafetyInfoOpen) ? 'open' : 'closed'}
+                        transition={{damping: 300}}>
+            <SafetyModal/>
         </OuterContainer>);
 }
 
