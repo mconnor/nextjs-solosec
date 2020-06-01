@@ -43,15 +43,14 @@ type Props = {
     seqs?:string[];
 }
 
-const ConversationStarters: React.FC<Props> = ({ headline, buttonCopyArray, url, urls, seqs }) => {
+const ConversationStarters: React.FC<Props> = ({headline, buttonCopyArray, url = 'www.google.com', urls, seqs}) => {
 
-    
 
     return (
         <MainDiv numOfBtns={buttonCopyArray.length}>
             <TitleDiv>{headline}</TitleDiv>
             {
-                buttonCopyArray.map((itm, index:number) => {
+                buttonCopyArray.map((itm, index: number) => {
                     let btName = `bt${index}`;
                     let other = urls ? urls[index] : "";
                     return <Btn copy={itm} 
