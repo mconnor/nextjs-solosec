@@ -80,7 +80,7 @@ const Header: React.FC<Props> = ({ gridArea }) => {
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-            <Link href='/01_02splash'>
+            <Link href='/index'>
                 <IndexLinkWrapper>
 
 
