@@ -1,7 +1,5 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { useDeviceDimensions } from '../../../hooks';
-
 
 
 interface StyleProps  {
@@ -16,35 +14,32 @@ interface ChildrenProps {
  
 }
 const MainDiv = styled.div<Props>`
-    width: ${props => props.w};
-    height: ${props => props.h};
+    width: 100vw;
+    height: 100vw;
     position: relative;
-    top: -150px;
-    left:4px;
-
+    top: -12vw;
+    left:0.32vw;
+    width: 100vw;
 `;
 
 const LogoWrapper = styled.img`
     position: absolute;
     z-index: 2;
-    top: 105px;
-    left: 86px;
-    width: 295px;
+    top: 7vw;
+    left: 6.88vw;
+    width: 21vw;
 `;
 
 
 interface Props extends StyleProps, ChildrenProps {}
 
 const Splash:React.FC<Props> = ( {children, logo}) => {
-    const [targetWidth, targetHeight] = useDeviceDimensions();
-
-    console.log(targetWidth, targetHeight)
     return (
        <>
-        <MainDiv w={targetWidth} h={targetHeight}>
-            {children}
-        </MainDiv>
-        <LogoWrapper src={logo} alt="splash page" />
+           <MainDiv>
+               {children}
+           </MainDiv>
+           <LogoWrapper src={logo} alt="splash page"/>
        
        </>
     )
