@@ -4,15 +4,22 @@ import styled from 'styled-components'
 import Link from 'next/link';
 import Hamburger from './Hamburger'
 import { useAppState } from "../../state";
+import { useDeviceDimensions } from '../../hooks'
+import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
 
 
+interface IProps {
+    gridArea: string;
+}
+// interface IProps extends IwidthHeightPxString  extends IwidthHeightNums {}
 
-const MainDiv = styled.div<Props>`
+
+const MainDiv = styled.div<IProps & IwidthHeightPxString & IwidthHeightNums>`
     grid-area: ${props => props.gridArea};
     background-image: url(./img/header-sansNav.png);
     background-size: 100% 100%;
-    width:var(--ipad-width);
+    width: ${props => props.w}
     padding: 0 24px 0 24px;
     display: grid;
     align-items: center;
@@ -32,9 +39,7 @@ const IndexLinkWrapper = styled.button`
     cursor: pointer;
 `;
 
-interface Props {
-    gridArea: string;
-}
+
 
 
 const PRESCRIBING_INFO = 'Prescribing\nInformation'
@@ -45,11 +50,12 @@ const REFERENCE = 'References'
 
 
 
-const Header: React.FC<Props> = ({ gridArea }) => {
+const Header: React.FC<IProps> = ({ gridArea }) => {
     const { toggleReference, togglePrescribingInfo, toggleSafetyInfo,
         setNav, setSafteyInfo, toggleNav,
         setPrescribingInfo } = useAppState();
 
+    const { ipadWidthPx, ipadHeightPx} = useDeviceDimensions();
 
     const handlRefClick = () => {
         toggleReference && toggleReference();
@@ -75,7 +81,7 @@ const Header: React.FC<Props> = ({ gridArea }) => {
 
     // {_prevState => setNav &&  setNav(true)}
     return (
-        <MainDiv gridArea={gridArea}>
+        <MainDiv gridArea={gridArea} w={ipadWidthPx}>
             <Hamburger clickCallBack={handleNavClick} />
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
