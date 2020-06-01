@@ -6,7 +6,7 @@ import IconWrapper from '../../IconWrapper'
 import Copy from '../StartScreen/Copy';
 import SafteyFooter from './SafteyFooter';
 import {useDeviceDimensions} from "../../../hooks";
-
+import {} from '../../interfaces'
 
 
 type Props = {
@@ -21,7 +21,7 @@ const InnerDiv = styled.div<Props>`
 `;
 
 
-const OuterContainer = styled(motion.div) <Props>`
+const OuterContainer = styled(motion.div)<Props & IwidthHeightPxString>`
     height: calc(100vh - var(--header-height)) !important;
     top:var(--header-height) !important;
     padding-top: ${props => props.isOpen ? '2.08vw' : '0'};
@@ -29,9 +29,9 @@ const OuterContainer = styled(motion.div) <Props>`
     padding-right: 1.6vw;
     z-index:10 !important;
 
-    width:var(--ipad-width);
-        max-width:var(--ipad-max-width);
-   
+    width:${props => props.w};
+height:  width:${props => props.h};
+    
 `;
 
 const Container = styled.div`
@@ -39,6 +39,8 @@ const Container = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 52px 1fr 56px;
     align-items:center;
+    /* width:var(--ipad-width);
+    height:var(--ipad-height); */
 
 `;
 
@@ -78,7 +80,7 @@ const Top = styled.div`
 const SafetyModalWrapper: React.FC = () => {
     const {isSafetyInfoOpen, isInitSafetyInfoOpen} = useAppState();
     if (isInitSafetyInfoOpen) return null;
-    const {ipadHeightPx} = useDeviceDimensions();
+    const {ipadWidthPx,  ipadHeightPx} = useDeviceDimensions();
     const variants = {
         open: {
             y: 0,
@@ -94,6 +96,8 @@ const SafetyModalWrapper: React.FC = () => {
 
     return (
         <OuterContainer className='modalWrapper'
+                        w= {ipadWidthPx}
+                        h= {ipadHeightPx}
                         isOpen={isSafetyInfoOpen}
                         variants={variants}
                         initial='closed'
