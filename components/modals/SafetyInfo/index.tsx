@@ -6,7 +6,7 @@ import IconWrapper from '../../IconWrapper'
 import Copy from '../StartScreen/Copy';
 import SafteyFooter from './SafteyFooter';
 import {useDeviceDimensions} from "../../../hooks";
-import {} from '../../interfaces'
+import {IwidthHeightPxString} from '../../interfaces'
 
 
 type Props = {
@@ -27,10 +27,10 @@ const OuterContainer = styled(motion.div)<Props & IwidthHeightPxString>`
     padding-top: ${props => props.isOpen ? '2.08vw' : '0'};
     padding-left: 1.6vw;
     padding-right: 1.6vw;
-    z-index:10 !important;
+    /* z-index:10 !important;
 
     width:${props => props.w};
-height:  width:${props => props.h};
+height:  ${props => props.h}; */
     
 `;
 
@@ -136,7 +136,7 @@ export const SafetyModal: React.FC = () => {
                 <Copy />
             </InnerDiv>
 
-            <SafteyFooter />
+            {/* <SafteyFooter /> */}
         </Container>
 
     )
