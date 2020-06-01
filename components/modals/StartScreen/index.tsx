@@ -23,7 +23,7 @@ const OuterContainer = styled.div`
 `;
 
 const MyGrid = styled.div`
-    margin: 12px 12px 66px 12px;
+    margin: 1% 12px 66px 1%;
     background:white;
     border: 20px solid var(--isi-blue);
     border-radius: var(--border-radius-4);

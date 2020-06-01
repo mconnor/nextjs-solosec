@@ -38,22 +38,21 @@ const OuterContainer = styled(motion.div)`
   
     margin-top:var(--header-height);
     
-    height: var(--main-height)
+    /* height: var(--main-height); */
     
     /* overflow:scroll !important;
     b
     overflow-y: hidden; */
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
-  //border: 2px solid black;
 `;
 
 
 
 const CopyWrapper = styled(motion.div)`
 
-    margin-left: 553px;
-    margin-right:176px;
+    margin-left: 41%;
+    margin-right:13%;
 `;
 
 const CloseWrapper = styled.div`
@@ -67,7 +66,7 @@ const CloseWrapper = styled.div`
 const NavWrapper = styled(motion.div)`
    position:fixed;
    height: 440px;
-   width: 400px;
+   width: 30%;
     background: blue;
     top:114px;
     left:14px;
