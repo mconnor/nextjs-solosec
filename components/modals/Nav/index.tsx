@@ -57,7 +57,7 @@ const MainDiv = styled(motion.div)`
     position: fixed;
     top:var(--header-height);
     left:0;
-    padding: 20px;
+    padding: 1.6vw;
     background-color:#AAAAA9;
     
     /* background-image: url(/img/bg/site-map.png);
@@ -107,7 +107,7 @@ const NavContainerX = styled.div<StyleProps>`
 const Logo = styled.div`
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 2.24vw;
     color:#034063;
     margin-left:84px;
     sup{

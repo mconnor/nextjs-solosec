@@ -8,11 +8,11 @@ const GlobalStyle = createGlobalStyle`
         --ipad-mini-width: 1024px;
         --ipad-mini-height: 768px;
 
-        --ipad-width: var(--ipad12-width);
-        --ipad-height: calc(var(--ipad12-height) - 50px);
+        --ipad-width: 100vw;
+        --ipad-height: calc(100vw - 50px);
 
-        --header-height: 100px; 
-        --footer-height: 55px;
+        --header-height: 8vw; 
+        --footer-height: 4.4vw;
         --main-height:calc(var(--ipad-height) - var(--header-height));
        
         --isi-exit-y:var(--main-height);
