@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import {useDeviceDimensions} from '../../hooks'
+import { IwidthHeightPxString } from '../interfaces'
 
 
 type MainDivProps = {
@@ -11,7 +13,7 @@ type MainDivProps = {
 }
 
 
-const MainDiv = styled.div<MainDivProps>`
+const MainDiv = styled.div<MainDivProps & IwidthHeightPxString>`
     grid-area: ${props => props.gridArea};
     background-repeat: 
         ${props => props.bgArt && props.foreGroundArt ? 'no-repeat, no-repeat'
@@ -42,6 +44,7 @@ type Props = {
 const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt,
                                  pageIndex}) => {
     console.log(pageIndex);
+    const { ipadWidthPx, ipadMainSectionHeightPx  } = useDeviceDimensions();
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}
                  foreGroundArt={foreGroundArt } noBgArt={noBgArt}>
