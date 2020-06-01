@@ -10,21 +10,20 @@ import SafteyFooter from '../SafetyInfo/SafteyFooter';
 // _prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)
 
 const OuterContainer = styled.div`
-
+   width: 400px;
+    max-width: var(--ipad-max-width); 
+    
     z-index:6 !important;
-    height:100vh;
-    max-height: var(--ipad-height);
-
+   
     background:rgba(0,0,0,.5) !important;
 
     display:grid;
     grid-template-columns: 1fr;
-
-    
+    overflow:hidden;
 `;
 
 const MyGrid = styled.div`
-    margin: 0 12px 66px 12px;
+    margin: 12px 12px 66px 12px;
     background:white;
     border: 20px solid var(--isi-blue);
     border-radius: var(--border-radius-4);
@@ -33,25 +32,19 @@ const MyGrid = styled.div`
     grid-template-columns: 1fr;
    
     grid-template-rows: 130px 1fr 100px;
-
-    
 `;
 
 const Header = styled.div`
-
     display:grid;
-    grid-template-columns: 1fr;
-
-    /* justify-content: space-between;
-    align-items:center; */
-
-    padding-right: var(--isi-margin);
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 var(--isi-margin) 0 var(--isi-margin);
     background: white;
-
-    background-image:url(./img/solosec-logo-isi.svg);
-    
+    /* background-image:url(./img/solosec-logo-isi.svg); */
+    /* background-size: var(--i) */
     background-repeat:no-repeat;
-    background-position: var(--isi-margin) 1px;
+    background-position: var(--isi-margin);
 `;
 
 const Main = styled.div`
@@ -82,7 +75,7 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
                 <Main>
                     <Copy />
                 </Main>
-                    <SafteyFooter />
+                    {/* <SafteyFooter /> */}
 
             </MyGrid>
         </OuterContainer>

@@ -33,15 +33,18 @@ const variantsRight = {
 
 const OuterContainer = styled(motion.div)`
      position: fixed ;
-     width: var( --ipad-width);
+     width: var(--ipad-width);
+    max-width: var(--ipad-max-width);
+  
     margin-top:var(--header-height);
-
+    
+    height: var(--main-height)
+    
     /* overflow:scroll !important;
     b
     overflow-y: hidden; */
   overflow-y: scroll !important;
-  padding: 14px 20px 0 14px;
-  background: white;
+  padding: 14px 20px MARGIN 14px;
   //border: 2px solid black;
 `;
 
@@ -57,7 +60,6 @@ const CloseWrapper = styled.div`
     top:calc(var(--header-height) + 20px);
     left: calc(var(--ipad-width) - 220px);
     position: fixed;
-    z-index:2;
  
 
     

@@ -42,6 +42,9 @@ const OuterContainer = styled(motion.div) <Props>`
     padding-left: 20px;
     padding-right: 20px;
     z-index:10 !important;
+
+    width:var(--ipad-width);
+        max-width:var(--ipad-max-width);
    
 `;
 
