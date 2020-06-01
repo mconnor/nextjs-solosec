@@ -35,7 +35,7 @@ const MainDiv = styled.div`
     overflow-y: scroll;
     /* gap: 70px; */
     sup {
-    font-size: 8px;
+    font-size: 10px;
     }
 `;
 

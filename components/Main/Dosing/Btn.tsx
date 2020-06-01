@@ -5,15 +5,15 @@ import {PageList} from "../../modals/Nav/PageList";
 
 const BtnInvisible = styled.button`
     width: calc(var(--ipad-width)/2);
-    height: calc(var(--ipad-height)/2);
+    height: calc(var(--ipad-height)/10);
     border: none !important;
     position:fixed;
-    top:calc(var(--ipad-height)/2);
+    top:calc(var(--ipad-height)/1.5);
     left: calc(var(--ipad-width)/2);
     cursor: pointer;
    
-   background:none;
-   border:none;
+    background:none;
+    border:none;
 `;
 
 export default () => {
