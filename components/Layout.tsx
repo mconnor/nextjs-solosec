@@ -63,7 +63,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
 
     // Code that turns off native swipes in OCE Sales
     // @ts-ignore
-    // if (CLMPlayer) CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
+    //if (CLMPlayer) CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
 
     useEffect(() => {
         document.addEventListener("keydown", checkKey, false);
