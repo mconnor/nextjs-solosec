@@ -15,8 +15,8 @@ type Props = {
 }
 
 const Img = styled.img`
-    width: 460px;
-    height: 201px;
+    width: 32.6vw;
+    height: 14.244;
 `;
 
 
