@@ -52,14 +52,25 @@ const OuterContainer = styled(motion.div)`
 const CopyWrapper = styled(motion.div)`
 
     margin-left: 41%;
-    margin-right:13%;
+    margin-right:6%;
+    margin-top: 10%;
 `;
 
 const CloseWrapper = styled.div`
-    top:calc(var(--header-height) + 20px);
-    left: calc(var(--ipad-width) - 220px);
+left: 35%;
+
+position: fixed;
+    top: var(--header-height);
+   right:3%;
+   background:white;
+   border-bottom: 1px gray solid;
     position: fixed;
- 
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:30px;
+   padding-bottom: 33px;
+   
+    
 
     
 `;
@@ -79,7 +90,7 @@ const PrescribingInfoWrapper = () => {
     const { isPrescribingInfoOpen } = useAppState();
 
     if (!isPrescribingInfoOpen) return null;
-    return  <PrescribingInfo />
+    return <PrescribingInfo />
 
 }
 const PrescribingInfo = () => {
@@ -102,11 +113,11 @@ const PrescribingInfo = () => {
             </CloseWrapper>
 
             <CopyWrapper
-                 variants={variantsRight}
-                 initial='closed'
-                 animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
-                 transition={{ damping: 300 }}
-                //  onAnimationComplete={()=> setIsExitAnimDone(true) }
+                variants={variantsRight}
+                initial='closed'
+                animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
+                transition={{ damping: 300 }}
+            //  onAnimationComplete={()=> setIsExitAnimDone(true) }
             >
                 <PICopy />
             </CopyWrapper>
