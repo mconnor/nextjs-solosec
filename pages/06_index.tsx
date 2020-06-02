@@ -12,13 +12,13 @@ export default () => (
             // chartH={292}
 
                
-            chartTop={`${((274-FUDGE)/870)*100}vh`}
-            chartH={`${((292-FUDGE)/870)*100}vh`}
+            chartTop={`11.2vw`}
+            chartH={`${((292-FUDGE)/870)*100}vw`}
             chartL={`${((762/1366))*100}vw`}
          
 
-            max1={222-FUDGE}
-            max2={229-FUDGE} 
+            max1={242-FUDGE}
+            max2={249-FUDGE}
             gap={35}
             score1={77}
             score2={79}

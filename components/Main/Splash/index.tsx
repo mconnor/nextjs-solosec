@@ -1,7 +1,5 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { url } from 'inspector';
-
 
 interface StyleProps {
 
@@ -21,7 +19,7 @@ const MainDiv = styled.div`
     position: relative;
     top: -9vw;
     left:0.32vw;
-    width: 100vw;
+    //width: 100vw;
     overflow:hidden;
    
 `;
@@ -54,8 +52,7 @@ const Splash: React.FC<Props> = ({ children, logo }) => {
 
             </LogoBG>
             <MainDiv>
-                
-                {children}
+                    <img src="./img/svg/pg2-vector-nologo.svg" alt="splash page"/>
             </MainDiv>
 
         </>
