@@ -15,3 +15,14 @@ export interface ChildrenProps {
     children: ReactNode;
     logo?: string;
  }
+export interface Iscale {
+    scale: number;
+}
+
+export interface Iboolean  {
+    isOpen: boolean;
+}
+
+export interface Imodal extends Iscale, Iboolean {
+
+}

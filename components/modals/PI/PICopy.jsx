@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+const TRfirst = styled.tr`
+
+`;
+
 
 const Copy = styled.div`
     background-color:white;
@@ -431,7 +435,7 @@ const PICopy= () => {
                             <col align="left" valign="middle" width="20%"/>
                         </colgroup>
                         <thead>
-                        <tr className="First Last">
+                        <tr className="first Last">
                             <th align="left"></th>
                             <th align="left"></th>
                             <th align="left" className="borders">C<sub>max</sub> (mcg/mL)</th>
@@ -643,7 +647,7 @@ const PICopy= () => {
                             <col align="center" valign="middle" width="20%"/>
                         </colgroup>
                         <thead>
-                        <tr className="First">
+                        <tr className="first">
                             <th align="left"></th>
                             <th align="center" colSpan="2" className="borders border-bottom center">Trial 1</th>
                             <th align="center" colSpan="2" className="border-bottom center">Trial 2</th>
@@ -667,7 +671,7 @@ const PICopy= () => {
                         </tr>
                         </thead>
                         <tbody>
-                        <tr className="First white no-padding-bottom">
+                        <tr className="first white no-padding-bottom">
                             <td align="left"><strong>Clinical Responder<sup>&dagger;</sup></strong></td>
                             <td align="center">42 (67.7)</td>
                             <td align="center">11 (17.7)</td>
@@ -745,7 +749,7 @@ const PICopy= () => {
                             <col align="center" valign="middle" width="37.5%"/>
                         </colgroup>
                         <thead>
-                        <tr className="First">
+                        <tr className="first">
                             <th align="left"></th>
                             <th align="center" className="borders border-bottom center" colSpan="2">Trial 2</th>
                         </tr>

@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
         --grayout-bg: rgba(0,0 ,0 ,0.8);
 
-
+--isi-headline-color: #072b49;
        
        
       
@@ -134,15 +134,7 @@ a {
         background:white;   
     }
 
-.isi-subhead {
-    font-style: normal;
-    font-weight: 900;
-    font-size:var(--isi-subhead-fontsize);
-    color: #072b49;
-    /* identical to box height, or 80% */
 
-    letter-spacing: 0.04em;
-}
 .isi-link {
     a {
       color: var(--royal-blue-light);
@@ -303,6 +295,11 @@ font-size: 18px; */
 
     }
 
+
+.first {
+
+background:lightblue;
+}
     /* &.inner-container {
         background: white;
         border-radius: 4px;
