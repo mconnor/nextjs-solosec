@@ -4,7 +4,7 @@ import ConfirmBtn from './ConfirmBtn'
 import {useAppState} from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
-import {useCookie} from "../../../hooks";
+//import {useCookie} from "../../../hooks";
 
 
 const OuterContainer = styled.div`
@@ -57,14 +57,14 @@ type FCProps = {
 }
 
 const StartScreen: React.FC<FCProps> = ({section}) => {
-    const [cookie, setCookie] = useCookie({key: "isi"});
+    //const [cookie, setCookie] = useCookie({key: "isi"});
     const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
     if (section !== Sections.SPLASH) {
         setInitSafteyInfo && setInitSafteyInfo(false);
         return null;
     }
 
-    if (!isInitSafetyInfoOpen || cookie === 'close') return null;
+    if (!isInitSafetyInfoOpen) return null;
 
     return (
         <OuterContainer className='modalWrapper'>
@@ -72,7 +72,7 @@ const StartScreen: React.FC<FCProps> = ({section}) => {
                 <Header>
 
                     <ConfirmBtn clickCallBack={() => {
-                        setCookie("close");
+                        //setCookie("close");
                         setInitSafteyInfo && setInitSafteyInfo(false)
                     }}>CONFIRM</ConfirmBtn>
                 </Header>
