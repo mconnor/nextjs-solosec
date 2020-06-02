@@ -3,6 +3,7 @@ import styled from 'styled-components'
 //import Link from 'next/link';
 // import { motion } from 'framer-motion';
 import { useAppState } from '../../../state';
+//import {PageList} from "./PageList";
 
 interface ChildrenProps {
     children?: ReactNode;
@@ -26,6 +27,7 @@ interface SubProps {
 
 
 const Btn = styled.div<SubProps>`
+    cursor: pointer; 
     display: grid;
     white-space:nowrap;
     color:white;
@@ -57,8 +59,6 @@ const Li = styled.li`
       text-indent: -2em;
       display: inline-block;
     }; */
-    
-
 `;
 
 // const Ul = styled.ul`
@@ -69,28 +69,32 @@ const Li = styled.li`
 
 const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, isDisabled=false }) => {
     const url = "/" + pageName;
-    const { setNav } = useAppState();
-    const hanleClick = () => setNav && setNav(false);
+    const {setNav} = useAppState();
+    const hanleClick = () => {
+        setNav && setNav(false);
+    };
+
+    function nav() {
+        let path = window.location.pathname.split("/");
+        let strippedPath = path.slice(0, path.length - 1).join("/");
+        window.location.href = strippedPath + url + ".html";
+    }
 
     // very hacky solution for this particualar case
     return (
         <>
-            {children ||  isDisabled ?
+            {children || isDisabled ?
                 <Btn>{label}</Btn>
-            : subnav ?
-                <Li>
-                    <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                        <div onClick={() => {
-                            window.location.href = url + ".html"
-                        }}><a>{`- ${label}`}</a></div>
+                : subnav ?
+                    <Li>
+                        <Btn role='button' onClick={hanleClick} subnav={subnav}>
+                            <div><a onClick={nav}>{`- ${label}`}</a></div>
                     </Btn>
                 </Li>
             :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <div onClick={() => {
-                        window.location.href = url + ".html"
-                    }}><a>{label}</a></div>
+                    <div><a onClick={nav}>{label}</a></div>
                 </Btn>
 
 

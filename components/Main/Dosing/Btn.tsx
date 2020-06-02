@@ -8,10 +8,10 @@ const BtnInvisible = styled.button`
     height: calc(var(--ipad-height)/10);
     border: none !important;
     position:fixed;
-    top:calc(var(--ipad-height)/1.5);
-    left: calc(var(--ipad-width)/2);
-    cursor: pointer;
-   
+    top:45vw;
+    left: 70vw;
+    cursor: pointer
+    //background-color:#F3F
     background:none;
     border:none;
 `;

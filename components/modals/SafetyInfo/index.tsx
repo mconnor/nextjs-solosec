@@ -6,7 +6,7 @@ import IconWrapper from '../../IconWrapper'
 import Copy from '../StartScreen/Copy';
 import {useDeviceDimensions} from "../../../hooks";
 import SafteyFooter from './SafteyFooter';
-import { Iscale, Iboolean, Imodal, IwidthHeightPxString } from '../../interfaces'
+import {Iscale, Imodal, IwidthHeightPxString} from '../../interfaces'
 
 
 
@@ -71,7 +71,7 @@ const SafetyModalWrapper: React.FC = () => {
             y: 0,
         },
         closed: {
-            y: '80vh',
+            y: '77vh',
 
             transition: {
                 delay: .2

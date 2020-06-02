@@ -2,9 +2,10 @@
 import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
-import { useAppState } from '../../../state'
+import {useAppState} from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
+import {useCookie} from "../../../hooks";
 
 
 
@@ -58,21 +59,22 @@ type FCProps = {
     section:string;
 }
 
-const StartScreen: React.FC<FCProps> = ({ section }) => {
-    const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
+const StartScreen: React.FC<FCProps> = ({section}) => {
+    const [cookie, setCookie] = useCookie({ key: "isi" }) ;
+    const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
+    if (section !== Sections.SPLASH ) {
+        setInitSafteyInfo && setInitSafteyInfo(false);
+        return null;
+    }
 
-    
+    if (!isInitSafetyInfoOpen || cookie === 'close') return null;
 
-
-
-    if (!isInitSafetyInfoOpen) return null;
- 
     return (
         <OuterContainer className='modalWrapper'>
-            <MyGrid >
+            <MyGrid>
                 <Header>
-                
-                  <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
+
+                    <ConfirmBtn clickCallBack={() => {setCookie("close"); setInitSafteyInfo && setInitSafteyInfo(false)}}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
                     <Copy start />

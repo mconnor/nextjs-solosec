@@ -24,7 +24,7 @@ const variants = {
 }
 
 const MainDiv = styled.div`
-    height:60vh;
+    height:59vh;
     margin-left: 7.3vw;
     margin-right: 10.16vw;
     margin-top: 7.3vw;
@@ -59,7 +59,7 @@ export default QA
 
 
 const Qdiv = styled.div`
-    font-size: 2.5vh;
+    font-size: 2vh;
     font-style:bold;
     font-weight: 700;
     sup {
@@ -70,7 +70,7 @@ const Qdiv = styled.div`
 type OnOff = { on?: boolean; }
 
 const Adiv = styled(motion.div) <OnOff>`
-    margin-top: 2.1vh;
+    margin-top: 2.5vh;
     font-style: normal;
     font-weight: 300;
     font-size: 2.1vh;
@@ -96,7 +96,7 @@ const Qwrapper = styled.div`
     
     font-style: normal;
     font-weight: normal;
-    font-size: 2.5vh;
+    font-size: 2vw;
     line-height: 3vh;
     letter-spacing: -0.02em;
 

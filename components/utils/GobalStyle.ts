@@ -11,17 +11,19 @@ const GlobalStyle = createGlobalStyle`
         --ipad-width: 100vw;
         --ipad-height: 100vh;
 
-        --header-height: calc(var(--ipad-height)*.08); 
+        //--header-height: calc(var(--ipad-width)*.08); 
+        --header-height: 8vw; 
         --footer-height: 54px;
         /* --header-height: 100px; 
         --footer-height: 55px; */
-        --main-height:calc(var(--ipad-height) - var(--header-height));
+        // --main-height:calc(var(--ipad-height) - var(--header-height));
+        --main-height:92vw;
        
         --isi-exit-y:var(--main-height);
 
         --grayout-bg: rgba(0,0 ,0 ,0.8);
 
---isi-headline-color: #072b49;
+        --isi-headline-color: #072b49;
        
        
       
