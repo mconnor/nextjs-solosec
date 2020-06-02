@@ -13,7 +13,7 @@ const MainDiv = styled.div`
     //max-width: var(--ipad-max-width);
     height: 86vw;
     position: relative;
-    top: 0;
+    top: 0px;
     left:0.32vw;
     //width: 100vw;
     overflow:hidden;
