@@ -5,7 +5,7 @@ const h2 = styled.h2`
     //color: var(--royal-blue);
     font-style: normal;
     font-weight: 900;
-    font-size: cacl()
+    //font-size: cacl();
 
     color: #072b49;
     /* identical to box height, or 80% */
@@ -66,6 +66,9 @@ const Container = styled.div<Props>`
 
     padding-left:${props => `${props.marginLR}px`};
     padding-right:${props => `${props.marginLR}px`};
+    sup {
+        font-size: .5em;
+    }
 `;
 const NoWrapSpan = styled.span`
     white-space: nowrap;
@@ -113,8 +116,7 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
 
             <StrongDiv>To report SUSPECTED ADVERSE REACTIONS, contact Lupin Pharmaceuticals, Inc. at
                 1-844-SOLOSEC <NoWrapSpan>(1-844-765-6732)</NoWrapSpan> or FDA
-                at <NoWrapSpan>(1-800-FDA-1088) </NoWrapSpan> or <a href="http://www.fda.gov/medwatch"
-                                                                    target="_blank">www.fda.gov/medwatch.</a></StrongDiv>
+                at <NoWrapSpan>(1-800-FDA-1088) </NoWrapSpan> or <a href="http://www.fda.gov/medwatch">www.fda.gov/medwatch.</a></StrongDiv>
 
             <Btn onClick={() => handleIPIclick()}>Please see full Prescribing Information.</Btn>
 

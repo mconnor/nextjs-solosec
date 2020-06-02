@@ -19,7 +19,8 @@ const Main = styled.button<MainProps>`
     border-radius: 10px;
     padding-right: 30px;
     padding-left:32px;
-    height: 74px;
+    height: 5.5vw;
+    padding-top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,7 +34,7 @@ const Span = styled.span`
     white-space: nowrap;
     font-style: normal;
     font-weight: 500;
-    font-size: 3vh;
+    font-size: 2vw;
     letter-spacing: -0.020em;
     text-align: left;
   `;

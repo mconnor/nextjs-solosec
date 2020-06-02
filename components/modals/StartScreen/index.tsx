@@ -62,7 +62,7 @@ type FCProps = {
 const StartScreen: React.FC<FCProps> = ({ section }) => {
     const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
     if (!isInitSafetyInfoOpen) return null;
-    if  (section !== Sections.INDEX) {
+    if  (section !== Sections.SPLASH) {
         setInitSafteyInfo && setInitSafteyInfo(false);
         return null;
     }

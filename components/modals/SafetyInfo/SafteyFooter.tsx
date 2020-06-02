@@ -19,6 +19,9 @@ const GridAreaDiv = styled.div<IgridArea>`
     p {
         font-size: 12px;
     }
+    sup  {
+    font-size: 8px;
+    }
 `;
 
 // const Slogan = styled.h3`

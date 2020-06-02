@@ -11,7 +11,7 @@ type Props = {
 
 const BtnInvisible = styled.button`
     width: 26.3vw;
-    height: 9vh;
+    height: 15vh;
     background: transparent;
     border: none !important;
     font-size:0;
