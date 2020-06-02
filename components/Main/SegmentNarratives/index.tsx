@@ -31,7 +31,7 @@ const SegmentNarratives: React.FC<Props> = () => {
                 width: "100vw",
                 height: "100vh",
                 position: "absolute",
-                top: 0,
+                top: 100,
                 left: 0,
             }}></div>
             <div>

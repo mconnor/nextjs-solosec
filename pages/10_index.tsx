@@ -9,7 +9,7 @@ export default () => (
                 width: "100vw",
                 height: "100vh",
                 position: "absolute",
-                top: 0,
+                top: 100,
                 left: 0,
             }}></div>
             <object type="image/svg+xml" data="./img/svg/pg28-animation.svg"/>
