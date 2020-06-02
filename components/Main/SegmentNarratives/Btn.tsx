@@ -10,11 +10,12 @@ type Props = {
 }
 
 const BtnInvisible = styled.button`
-    width: 360px;
-    height: 75px;
+    width: 26.3vw;
+    height: 9vh;
     background: transparent;
     border: none !important;
     font-size:0;
+   
 `;
 
 

@@ -13,8 +13,8 @@ const Main = styled.div`
 
 const BtnHolder = styled.div`
     position: absolute;
-    top: 440px;
-    left: 140px;
+    top: 47vh;
+    left: 10.2vw;
 `;
 
 const SegmentNarratives: React.FC<Props> = () => {
