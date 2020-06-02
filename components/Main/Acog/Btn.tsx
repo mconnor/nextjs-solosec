@@ -10,8 +10,8 @@ const Main = styled.div<MainProps>`
     opacity: ${props => props.on ? 1 : 0};
 `;
 const Img = styled.img`
-    width: 825px;
-    height: 78px;
+    width: 64vw;
+    height: 5.75vw;
 `;
 
 type Props = {

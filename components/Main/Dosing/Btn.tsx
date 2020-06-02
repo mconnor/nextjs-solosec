@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import {PageList} from "../../modals/Nav/PageList";
 
 const BtnInvisible = styled.button`
-    width: calc(var(--ipad-width)/2);
+    width: calc(var(--ipad-width)/3);
     height: calc(var(--ipad-height)/10);
     border: none !important;
     position:fixed;
