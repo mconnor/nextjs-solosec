@@ -37,8 +37,8 @@ const PageContainer = styled.div`
     background-color: white;
     width: var(--ipad-width);
     max-width: var(--ipad-width);
-    height: var(--ipad-main-height);
-    max-height: var(--ipad-main-height);
+    height: var(--main-height);
+    max-height: var(--main-height);
     top: var(--header-height);
 `;
 

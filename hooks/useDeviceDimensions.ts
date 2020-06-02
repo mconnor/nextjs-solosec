@@ -49,7 +49,7 @@ export const useDeviceDimensions = ():TargetState => {
     // const [targetHeaderH_px, setTargetHeaderH] = useState('');
     useEffect(() => {
        
-        const HEADER_FOOTER =  154;
+        const HEADER_FOOTER =  0;
 
         if (screenSize >= widthBreakPoint.ipad12) {
             setTargetWidthPx(`${widthBreakPoint.ipad12}px`);

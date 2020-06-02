@@ -62,12 +62,12 @@ type FCProps = {
 const StartScreen: React.FC<FCProps> = ({section}) => {
     const [cookie, setCookie] = useCookie({ key: "isi" }) ;
     const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
-    if (section !== Sections.SPLASH || cookie === "close") {
+    if (section !== Sections.SPLASH ) {
         setInitSafteyInfo && setInitSafteyInfo(false);
         return null;
     }
 
-    if (!isInitSafetyInfoOpen) return null;
+    if (!isInitSafetyInfoOpen || cookie === 'close') return null;
 
     return (
         <OuterContainer className='modalWrapper'>

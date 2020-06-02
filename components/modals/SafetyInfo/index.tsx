@@ -71,7 +71,7 @@ const SafetyModalWrapper: React.FC = () => {
             y: 0,
         },
         closed: {
-            y: '80vh',
+            y: '77vh',
 
             transition: {
                 delay: .2

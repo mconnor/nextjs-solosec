@@ -27,7 +27,7 @@ const MainDiv = styled.div<IProps & IwidthHeightPxString & IwidthHeightNums>`
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
     color: $primary;
-
+  height: var(--header-height);
     font-weight: 600;
     font-size: 1.28vw;
     line-height: 127%;
