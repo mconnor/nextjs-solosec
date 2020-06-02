@@ -62,7 +62,9 @@ const Chart: React.FC<Props> = ({
                         chartTop =`${(273/870)*100}vh`,
                         chartL = `${(334/1336)*100}vw`,
                         chartH =`${(247/870)*100}vh`,
-                        max1 = 164, max2 = 40, score1 = 67.7, score2 = 17.7, gap = 31, horizontal = false, barThickness=128}) => {
+                        max1 = 164, 
+                        max2 = 40,
+                        score1 = 67.7, score2 = 17.7, gap = 31, horizontal = false, barThickness=128}) => {
 
     return (
         <MainDiv chartTop={chartTop} chartL={chartL} chartH={chartH} 

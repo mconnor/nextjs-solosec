@@ -44,8 +44,8 @@ type BarDivProps = {
 
 const BarDiv = styled(motion.div)<BarDivProps>`
     position: relative;
-    width: ${prop => !prop.horizontal  ? `${prop.barThickness}px` :  `${prop.max}px`};
-    height: ${prop => prop.horizontal ?  `${prop.barThickness}px` :  `${prop.max}px`};
+    width: ${prop => !prop.horizontal  ? `${prop.barThickness}px` :  `${((prop.max)/1336)*100}vw`};
+    height: ${prop => prop.horizontal ?  `${prop.barThickness}px` :  `${(prop.max/870)*100}vh`};
     background: ${props => props.placebo ? 'gray' : 'green'};
    
     text-align:center;
