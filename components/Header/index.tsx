@@ -56,7 +56,7 @@ const Header: React.FC<IProps> = ({ gridArea }) => {
         setNav, setSafteyInfo, toggleNav,
         setPrescribingInfo } = useAppState();
 
-    const { ipadWidthPx, ipadHeightPx} = useDeviceDimensions();
+    const {ipadWidthPx} = useDeviceDimensions();
 
     const handlRefClick = () => {
         toggleReference && toggleReference();

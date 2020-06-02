@@ -18,17 +18,18 @@ const MainDiv = styled.div<MainDivProps & IwidthHeightPxString>`
     grid-area: ${props => props.gridArea};
     background-repeat: 
         ${props => props.bgArt && props.foreGroundArt ? 'no-repeat, no-repeat'
-            : props.bgArt || props.foreGroundArt ? 'no-repeat' 
-            : ''
-        };
+    : props.bgArt || props.foreGroundArt ? 'no-repeat'
+        : ''
+};
     background-image: 
-        ${(props) => 
-        (props.bgArt && props.foreGroundArt) ?  `url(${props.foreGroundArt}), url(${props.bgArt})`
-            : props.bgArt ? `url(${props.bgArt})`
-            : props.foreGroundArt ? `url(${props.foreGroundArt})`
+        ${(props) =>
+    (props.bgArt && props.foreGroundArt) ? `url(${props.foreGroundArt}), url(${props.bgArt})`
+        : props.bgArt ? `url(${props.bgArt})`
+        : props.foreGroundArt ? `url(${props.foreGroundArt})`
             : ''
-        };
-background-size: ${props => props.bgSize };
+};
+      //background-size: ${props => props.bgSize};
+      background-width: 100vw;
     /* overflow:hidden; */
 `;
 

@@ -24,10 +24,10 @@ const variants = {
 }
 
 const MainDiv = styled.div`
-    height:600px;
-    margin-left: 98px;
-    margin-right: 127px;
-    margin-top: 90px;
+    height:60vh;
+    margin-left: 7.3vw;
+    margin-right: 10.16vw;
+    margin-top: 7.3vw;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -59,6 +59,7 @@ export default QA
 
 
 const Qdiv = styled.div`
+    font-size: 2.5vh;
     font-style:bold;
     font-weight: 700;
     sup {
@@ -69,13 +70,13 @@ const Qdiv = styled.div`
 type OnOff = { on?: boolean; }
 
 const Adiv = styled(motion.div) <OnOff>`
-    margin-top: 22px;
+    margin-top: 2.1vh;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 2.1vh;
+    line-height: 2.5vh;
     letter-spacing: -0.035em;
-    padding-bottom:20px;
+    padding-bottom:1.9vh;
 `;
 
 const QAcontainer = styled.div`
@@ -95,8 +96,8 @@ const Qwrapper = styled.div`
     
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 31px;
+    font-size: 2.5vh;
+    line-height: 3vh;
     letter-spacing: -0.02em;
 
     sup{
