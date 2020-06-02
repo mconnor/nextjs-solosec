@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { useAppState } from "../../../state";
-import { useDeviceDimensions } from '../../../hooks';
-import { useState, useEffect } from 'react';
-import { Iscale } from '../../interfaces'
+import {useDeviceDimensions} from '../../../hooks';
+import {useEffect} from 'react';
+import {Iscale} from '../../interfaces'
 
 
 const H2 = styled.h2<Iscale>`

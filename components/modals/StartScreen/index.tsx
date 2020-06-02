@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
 import { useAppState } from '../../../state'
-import * as Sections from "../../utils/Sections";
+//import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
 
@@ -58,15 +58,12 @@ type FCProps = {
     section:string;
 }
 
-const StartScreen: React.FC<FCProps> = ({ section }) => {
-    const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
-
-    
-
+const StartScreen: React.FC<FCProps> = () => {
+    const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
 
 
     if (!isInitSafetyInfoOpen) return null;
- 
+
     return (
         <OuterContainer className='modalWrapper'>
             <MyGrid >

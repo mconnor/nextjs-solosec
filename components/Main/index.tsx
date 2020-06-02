@@ -32,7 +32,7 @@ const MainDiv = styled.div<MainDivProps & IwidthHeightPxString>`
       background-size: auto;
       //background-width: 100vw;
     /* overflow:hidden; */
-    margin-top:-1.65vw;
+    margin-top:-1vw;
 `;
 
 type Props = {
