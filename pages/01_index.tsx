@@ -4,7 +4,7 @@ import * as Sections from '../components/utils/Sections'
 
 export default () => (
     <Layout
-        bgArt='./img/bg/2.jpg'
+        bgArt='./img/svg/pg2-full.svg'
         section={Sections.SPLASH}
         pageIndex={0}
     >

@@ -52,7 +52,7 @@ const Splash: React.FC<Props> = ({ children, logo }) => {
 
             </LogoBG>
             <MainDiv>
-                <img src="./img/svg/pg2-vector-nologo.svg" alt="splash page"/>
+                {/*<img src="./img/svg/pg2-vector-nologo.svg" alt="splash page"/>*/}
             </MainDiv>
 
         </>
