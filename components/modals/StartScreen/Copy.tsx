@@ -43,6 +43,9 @@ const Ptag = styled.p<Iscale>`
     font-weight: 500;
     font-size: ${props => `${props.scale * 1}rem`};
     line-height:${props => `${props.scale * 1}rem`};
+    sup {
+    font-size: ${props => `${props.scale * .6}rem`};
+    }
 `;
 
 
