@@ -16,7 +16,8 @@ interface IProps {
 
 
 const MainDiv = styled.div<IProps & IwidthHeightPxString & IwidthHeightNums>`
-position: absolute;
+    position: absolute;
+    z-index:5;
     grid-area: ${props => props.gridArea};
     background-image: url(./img/header-sansNav.png);
     background-size: 100% 100%;

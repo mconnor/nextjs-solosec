@@ -21,6 +21,7 @@ const InnerDiv = styled.div<Iscale>`
 
 
 const OuterContainer = styled(motion.div)<Imodal & IwidthHeightPxString>`
+    position: absolute;
     height: calc(100vh - var(--header-height)) !important;
     top:var(--header-height) !important;
     padding-top: ${props => props.isOpen ? '2.08vw' : '0'};
