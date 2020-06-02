@@ -14,14 +14,14 @@ const H2 = styled.h2<Iscale>`
     color: var(--isi-headline-color);
     /* identical to box height, or 80% */
 
-    /* letter-spacing:${props => `${props.scale * 1}rem`}; */
+    /* letter-spacing:${props => `${props.scale * 1.2}rem`}; */
 `;
 
 const StrongDiv = styled(H2) <Iscale>`
     margin-top: ${props => `${props.scale * 1.2}rem`};
    
     ///* font-size: 18px; */
-    font-size: ${props => `${props.scale * 1}rem`};
+    font-size: ${props => `${props.scale * 1.2}rem`};
     line-height:${props => `${props.scale * 1.2}rem`};
     a {
       color: var(--royal-blue-light);
@@ -41,20 +41,20 @@ const Ptag = styled.p<Iscale>`
    // add conditions to change font size
     font-style: normal;
     font-weight: 500;
-    font-size: ${props => `${props.scale * 1}rem`};
-    line-height:${props => `${props.scale * 1}rem`};
+    font-size: ${props => `${props.scale * 1.2}rem`};
+    line-height:${props => `${props.scale * 1.2}rem`};
 `;
 
 
 const Ulist = styled.ul<Iscale>`
     font-style: normal;
     font-weight: normal;
-    font-size: ${props => `${props.scale * 1}rem`};
-    line-height:${props => `${props.scale * 1}rem`};
+    font-size: ${props => `${props.scale * 1.2}rem`};
+    line-height:${props => `${props.scale * 1.2}rem`};
  
    
     list-style-position: outside; 
-    padding-left:${props => `${props.scale * 1}rem`};
+    padding-left:${props => `${props.scale * 1.2}rem`};
     li {
         margin-top: ${props => `${props.scale * 1.2}rem`};
 
