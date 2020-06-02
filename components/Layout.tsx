@@ -15,7 +15,7 @@ import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
 import {useAppState} from "../state";
 import { useCookie, useDeviceDimensions } from '../hooks';
-
+import SafetyModalWrapper from './modals/SafetyInfo/';
 
 type RLprops = {
     dir: "Right" | "Left" | "Up" | "Down";
@@ -32,22 +32,14 @@ type Props = {
     pageIndex:number;
 }
 const PageContainer = styled.div`
-    position: static;
+    position: absolute;
     overflow: hidden;
     background-color: white;
     width: var(--ipad-width);
     max-width: var(--ipad-width);
-    height: var(--ipad-height);
-    max-height: var(--ipad-height);
-    display: grid;
-    grid-template-columns: 6% 1fr 6%;
-    grid-template-rows: var(--header-height) var(--main-height) 1fr;
-    grid-template-areas:
-        "header header header"
-        "main main main"
-        ". footer .";
-    justify-items: stretch;
-  
+    height: var(--ipad-main-height);
+    max-height: var(--ipad-main-height);
+    top: var(--header-height);
 `;
 
 
@@ -168,8 +160,9 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                         pageIndex={pageIndex}
                     />
 
-                    <Footer gridArea='footer'/>
+                    
                 </PageContainer>
+                <SafetyModalWrapper/>
             </PageWrapper>
 		</>
 	)};

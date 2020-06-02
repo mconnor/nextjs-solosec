@@ -25,9 +25,9 @@ type BG = {
     bg: string;
 }
 const LogoBG = styled.div<BG>`
- position: absolute;
+    position: absolute;
     z-index: 2;
-    top: 7vw;
+    top: var(--ipad-header-height);
     left: 6.88vw;
     width: 21vw;
     height: 21vh;
