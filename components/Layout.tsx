@@ -136,7 +136,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         }
     }
 
-    const  {ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx, ipadWidth, ipadHeight, ipadMainSectionHeight } =useDeviceDimensions()
+    const {ipadWidthPx, ipadHeightPx} = useDeviceDimensions()
     return (
 		<>
             <Head>
