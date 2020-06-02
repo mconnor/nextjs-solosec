@@ -60,7 +60,8 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
         preventDefaultTouchmoveEvent: false,
         trackMouse: true,
-        trackTouch: true
+        trackTouch: true,
+        delta: 20
     });
     // setCookie2(section);
     // console.log(router.pathname )

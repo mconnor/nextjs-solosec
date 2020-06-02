@@ -87,7 +87,7 @@ const Header: React.FC<IProps> = ({ gridArea }) => {
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-            <div onClick={() => window.location.href = "01_index.html"}>
+            <div onClick={() => window.location.href = "/01_index.html"}>
                 <IndexLinkWrapper>
 
 

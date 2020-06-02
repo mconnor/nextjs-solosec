@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         --ipad-width: 100vw;
         --ipad-height: 100vh;
 
-        --header-height: calc(var(--ipad-height)*.08); 
+        --header-height: calc(var(--ipad-width)*.08); 
         --footer-height: 54px;
         /* --header-height: 100px; 
         --footer-height: 55px; */

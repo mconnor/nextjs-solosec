@@ -42,7 +42,7 @@ export default () => {
                     </p>
                     <p>
                         Report suspected side effects of prescription drugs to the FDA at
-                        <a href="www.fda.gov/MedWatch">www.fda.gov/MedWatch</a>
+                        <a href="http://www.fda.gov/MedWatch">www.fda.gov/MedWatch</a>
                         or 1-800-FDA-1088,
                         or contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC (1-844-765-6732).
                     </p>'

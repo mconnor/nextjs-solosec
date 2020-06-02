@@ -3,6 +3,7 @@ import styled from 'styled-components'
 //import Link from 'next/link';
 // import { motion } from 'framer-motion';
 import { useAppState } from '../../../state';
+//import {PageList} from "./PageList";
 
 interface ChildrenProps {
     children?: ReactNode;
@@ -73,21 +74,27 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
         setNav && setNav(false);
     };
 
+    function nav() {
+        let path = window.location.pathname.split("/");
+        let strippedPath = path.slice(0, path.length - 1).join("/");
+        window.location.href = strippedPath + url + ".html";
+    }
+
     // very hacky solution for this particualar case
     return (
         <>
-            {children ||  isDisabled ?
+            {children || isDisabled ?
                 <Btn>{label}</Btn>
-            : subnav ?
-                <Li>
-                    <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                        <div><a href={url + ".html"}>{`- ${label}`}</a></div>
+                : subnav ?
+                    <Li>
+                        <Btn role='button' onClick={hanleClick} subnav={subnav}>
+                            <div><a onClick={nav}>{`- ${label}`}</a></div>
                     </Btn>
                 </Li>
             :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <div><a href={url + ".html"}>{label}</a></div>
+                    <div><a onClick={nav}>{label}</a></div>
                 </Btn>
 
 
