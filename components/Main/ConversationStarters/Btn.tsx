@@ -34,7 +34,7 @@ const Span = styled.span`
     white-space: nowrap;
     font-style: normal;
     font-weight: 500;
-    font-size: 2vw;
+    font-size: 1.9vw;
     letter-spacing: -0.020em;
     text-align: left;
   `;

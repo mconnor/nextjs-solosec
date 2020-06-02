@@ -5,6 +5,7 @@ import ConfirmBtn from './ConfirmBtn'
 import {useAppState} from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
+import {useCookie} from "../../../hooks";
 
 
 
@@ -59,8 +60,9 @@ type FCProps = {
 }
 
 const StartScreen: React.FC<FCProps> = ({section}) => {
+    const [cookie, setCookie] = useCookie({ key: "isi" }) ;
     const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
-    if (section !== Sections.SPLASH) {
+    if (section !== Sections.SPLASH || cookie === "close") {
         setInitSafteyInfo && setInitSafteyInfo(false);
         return null;
     }
@@ -72,7 +74,7 @@ const StartScreen: React.FC<FCProps> = ({section}) => {
             <MyGrid>
                 <Header>
 
-                    <ConfirmBtn clickCallBack={() => setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
+                    <ConfirmBtn clickCallBack={() => {setCookie("close"); setInitSafteyInfo && setInitSafteyInfo(false)}}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
                     <Copy start />

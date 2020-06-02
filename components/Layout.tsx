@@ -6,7 +6,7 @@ import GlobalStyle from './utils/GobalStyle';
 import styled from 'styled-components'
 import Header from './Header';
 import Main from './Main';
-import Footer from './Footer';
+//import Footer from './Footer';
 import ReferencesWrapper from './modals/References';
 import PrescribingInfoWrapper from "./modals/PI";
 import Nav from './modals/Nav';
@@ -14,7 +14,7 @@ import StartScreen  from './modals/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
 import {useAppState} from "../state";
-import { useCookie, useDeviceDimensions } from '../hooks';
+import { useCookie } from '../hooks';
 import SafetyModalWrapper from './modals/SafetyInfo/';
 
 type RLprops = {
@@ -120,7 +120,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         }
     }
 
-    const  {ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx, ipadWidth, ipadHeight, ipadMainSectionHeight } =useDeviceDimensions()
+    //const  {ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx, ipadWidth, ipadHeight, ipadMainSectionHeight } =useDeviceDimensions()
     return (
 		<>
             <Head>
