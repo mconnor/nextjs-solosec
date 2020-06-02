@@ -41,8 +41,9 @@ const Header = styled.div`
     align-items:center;
     padding: 0 var(--isi-margin) 0 var(--isi-margin);
     background: white;
-    /* background-image:url(./img/solosec-logo-isi.svg); */
-    /* background-size: var(--i) */
+    background-image:url(./img/solosec-logo-isi.svg);
+    
+    background-size: 20%;
     background-repeat:no-repeat;
     background-position: var(--isi-margin);
 `;

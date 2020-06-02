@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 
-
+        --isi-subhead-fontsize: calc(var(--ipad-width)/var(ipad-max-width));
 
         --nav-blue:#034063
 
@@ -134,6 +134,15 @@ a {
         background:white;   
     }
 
+.isi-subhead {
+    font-style: normal;
+    font-weight: 900;
+    font-size:var(--isi-subhead-fontsize);
+    color: #072b49;
+    /* identical to box height, or 80% */
+
+    letter-spacing: 0.04em;
+}
 .isi-link {
     a {
       color: var(--royal-blue-light);
