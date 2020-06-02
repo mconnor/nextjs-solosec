@@ -8,8 +8,16 @@ export default () => (
         section={Sections.CHART_36} pageIndex={13}>
              <Chart 
                 horizontal
-                chartTop={320} chartL={471}
-                chartH={724}
+                // chartTop={320}
+                // chartH={724}
+                // chartL={471}
+
+                chartTop={`${((320-12)/870)*100}vh`}
+                chartH={`${((724-12)/870)*100}vh`}
+                chartL={`${((471/1366))*100}vw`}
+
+
+
                 max1={429}
                 max2={218} 
                 gap={8}

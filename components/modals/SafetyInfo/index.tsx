@@ -6,6 +6,7 @@ import IconWrapper from '../../IconWrapper'
 import Copy from '../StartScreen/Copy';
 import {useDeviceDimensions} from "../../../hooks";
 import {IwidthHeightPxString} from '../../interfaces'
+import SafteyFooter from './SafteyFooter';
 
 
 type Props = {
