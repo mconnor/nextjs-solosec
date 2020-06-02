@@ -1,13 +1,10 @@
-import { ReactNode } from 'react';
 import styled from 'styled-components';
-import {useDeviceDimensions} from "../../../hooks";
 
 interface StyleProps {
 
 }
 
 interface ChildrenProps {
-    children?: ReactNode;
     logo?: string;
 
 }
@@ -43,12 +40,11 @@ const LogoBG = styled.div<BG>`
 
 interface Props extends StyleProps, ChildrenProps { }
 
-const Splash: React.FC<Props> = ({ children, logo }) => {
-    const i = useDeviceDimensions();
+const Splash: React.FC<Props> = ({logo}) => {
     return (
         <>
 
-            <LogoBG bg={logo}>
+            <LogoBG bg={logo || ""}>
 
             </LogoBG>
             <MainDiv>
