@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import Btn from '../Btn';
 
 const MainDiv =styled.div`
-    margin-left: 75px;
-    margin-top: 150px;
+    margin-left: 5.4vw;
+    margin-top: 14.6vh;
 
     display: grid;
-    grid-template-columns: 1176px;
-    grid-template-rows: repeat( 4, 78px);
-    column-gap:75px;
-    row-gap: 18px;
+    grid-template-columns: 86vw;
+    grid-template-rows: repeat( 4, 5.7vw);
+    column-gap:5.7vw;
+    row-gap: 1.3vw;
 
-    grid-template-rows: repeat( 4, 78px);
-    gap:18px;
+    grid-template-rows: repeat( 4, 5.7vw);
+    gap:1.3vw;
     grid-template-areas: 
         'bt0'
         'bt1'

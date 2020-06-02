@@ -29,7 +29,7 @@ const MainDiv = styled.div<MainDivProps & IwidthHeightPxString>`
             : ''
 };
       //background-size: ${props => props.bgSize};
-      background-width: 100vw;
+      //background-width: 100vw;
     /* overflow:hidden; */
 `;
 
