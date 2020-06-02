@@ -138,10 +138,10 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <Nav />
                 <ReferencesWrapper section={section}/>
                 <PrescribingInfoWrapper />
-            
+                <Header gridArea='header'/>
                 
 			    <PageContainer {...handlers}>
-                    <Header gridArea='header'/>
+                  
 
                     <Main
                         gridArea='main'

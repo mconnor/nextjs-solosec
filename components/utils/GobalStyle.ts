@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
         --gray: #62645b;
         --green: rgb(41,147,51);
         /* 05aa4e */
-        --isi-margin: 80px;
+        --isi-margin:3%;
      
         --button-border-radius:6px;
         --copy-color-secondary: var(--gray);
