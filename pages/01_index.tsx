@@ -8,7 +8,7 @@ export default () => (
         section={Sections.SPLASH}
         pageIndex={0}
     >
-        <Splash logo="./img/solosec-logo-isi.svg">
+        <Splash>
 
         </Splash>
     </Layout>

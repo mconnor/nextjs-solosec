@@ -13,7 +13,7 @@ const MainDiv = styled.div`
     //max-width: var(--ipad-max-width);
     height: 86vw;
     position: relative;
-    top: -9vw;
+    top: 0;
     left:0.32vw;
     //width: 100vw;
     overflow:hidden;
@@ -21,32 +21,28 @@ const MainDiv = styled.div`
 `;
 
 
-type BG = {
-    bg: string;
+// type BG = {
+//     //bg: string;
+// }
+// const LogoBG = styled.div<BG>`
+//  position: absolute;
+//     z-index: 2;
+//     top: 7vw;
+//     left: 6.88vw;
+//     width: 21vw;
+//     height: 21vh;
+//     background: ${props => `url(${props.bg})`};
+//     background-repeat:no-repeat;
+//
+// `;
+
+
+interface Props extends StyleProps, ChildrenProps {
 }
-const LogoBG = styled.div<BG>`
- position: absolute;
-    z-index: 2;
-    top: 7vw;
-    left: 6.88vw;
-    width: 21vw;
-    height: 21vh;
-    background: ${props => `url(${props.bg})`};
-    background-repeat:no-repeat;
-    
-`;
 
-
-
-interface Props extends StyleProps, ChildrenProps { }
-
-const Splash: React.FC<Props> = ({logo}) => {
+const Splash: React.FC<Props> = () => {
     return (
         <>
-
-            <LogoBG bg={logo || ""}>
-
-            </LogoBG>
             <MainDiv>
                 {/*<img src="./img/svg/pg2-vector-nologo.svg" alt="splash page"/>*/}
             </MainDiv>

@@ -26,6 +26,7 @@ interface SubProps {
 
 
 const Btn = styled.div<SubProps>`
+    cursor: pointer; 
     display: grid;
     white-space:nowrap;
     color:white;
@@ -57,8 +58,6 @@ const Li = styled.li`
       text-indent: -2em;
       display: inline-block;
     }; */
-    
-
 `;
 
 // const Ul = styled.ul`
@@ -69,8 +68,10 @@ const Li = styled.li`
 
 const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, isDisabled=false }) => {
     const url = "/" + pageName;
-    const { setNav } = useAppState();
-    const hanleClick = () => setNav && setNav(false);
+    const {setNav} = useAppState();
+    const hanleClick = () => {
+        setNav && setNav(false);
+    };
 
     // very hacky solution for this particualar case
     return (
@@ -80,17 +81,13 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
             : subnav ?
                 <Li>
                     <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                        <div onClick={() => {
-                            window.location.href = url + ".html"
-                        }}><a>{`- ${label}`}</a></div>
+                        <div><a href={"./" + url + ".html"}>{`- ${label}`}</a></div>
                     </Btn>
                 </Li>
             :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <div onClick={() => {
-                        window.location.href = url + ".html"
-                    }}><a>{label}</a></div>
+                    <div><a href={"./" + url + ".html"}>{label}</a></div>
                 </Btn>
 
 
