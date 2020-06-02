@@ -23,7 +23,7 @@ export default () => {
 
         <BtnInvisible onClick={() => {
             //router.push("/" + PageList.pages["9"])
-            window.location.href = "./" + PageList.pages["9"] + ".html"
+            window.location.href = PageList.pages["9"] + ".html"
         }}></BtnInvisible>
       
 

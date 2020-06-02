@@ -27,7 +27,7 @@ console.log('cookie', cookie) // keep this
 
     return (
 
-        <div>
+        <div style={{display: "inline-block"}}>
             <BtnInvisible onClick={() => {
                 console.log('url', url);
                 setCookie(seq);

@@ -42,7 +42,7 @@ const Discover = () => {
             </BtnContainer>
             <BtnInvisible onClick={() => {
                 //router.push("/" + PageList.pages["3"])
-                window.location.href = "./" + PageList.pages["3"] + ".html"
+                window.location.href = PageList.pages["3"] + ".html"
             }}/>
         </MainDiv>
     )

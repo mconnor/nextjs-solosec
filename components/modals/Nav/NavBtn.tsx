@@ -81,13 +81,13 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
             : subnav ?
                 <Li>
                     <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                        <div><a href={"./" + url + ".html"}>{`- ${label}`}</a></div>
+                        <div><a href={url + ".html"}>{`- ${label}`}</a></div>
                     </Btn>
                 </Li>
             :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <div><a href={"./" + url + ".html"}>{label}</a></div>
+                    <div><a href={url + ".html"}>{label}</a></div>
                 </Btn>
 
 
