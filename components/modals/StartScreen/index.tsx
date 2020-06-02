@@ -4,7 +4,7 @@ import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
 import { useAppState } from '../../../state'
 import * as Sections from "../../utils/Sections";
-//import SafteyFooter from '../SafetyInfo/SafteyFooter';
+import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
 //     const { setInitSafteyInfo } = useAppState()
 // _prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)

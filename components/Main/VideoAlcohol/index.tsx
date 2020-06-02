@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {useDeviceDimensions} from "../../../hooks";
 
 type Props = {
     videoUrl?:string;
@@ -15,8 +16,10 @@ const Main = styled.div`
 `;
 
 const VideoAlcohol: React.FC<Props> = ({ stillUrl, videoUrl}) => {
+    const i = useDeviceDimensions();
 
-    return (
+
+     return (
         <Main>
             <video controls poster={stillUrl} src={videoUrl} width={646} height={400}>
                 <source src="video/mp4" type={videoUrl} />
