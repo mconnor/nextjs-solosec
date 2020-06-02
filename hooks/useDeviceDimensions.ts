@@ -50,7 +50,7 @@ export const useDeviceDimensions = ():TargetState => {
        
         const HEADER_FOOTER =  154;
 
-        if (screenSize > widthBreakPoint.ipad12) {
+        if (screenSize >= widthBreakPoint.ipad12) {
             setTargetWidthPx(`${widthBreakPoint.ipad12}px`);
             setTargetHeightPx(`${heightBreakPoint.ipad12}px`);
             setTargetMainHeightPx(`${heightBreakPoint.ipad12 - HEADER_FOOTER}px`);
@@ -60,8 +60,7 @@ export const useDeviceDimensions = ():TargetState => {
             setTargetHeight(heightBreakPoint.ipad12);
             setTargetMainHeight(heightBreakPoint.ipad12 - HEADER_FOOTER);
             // setTargetHeaderH('100px');
-        }
-        else if (screenSize === widthBreakPoint.ipad10){
+        } else if (screenSize >= widthBreakPoint.ipad10) {
             setTargetWidthPx(`${widthBreakPoint.ipad10}px`);
             setTargetHeightPx(`${heightBreakPoint.ipad10}px`)
             setTargetMainHeightPx(`${heightBreakPoint.ipadMini - HEADER_FOOTER}px`);
@@ -69,7 +68,7 @@ export const useDeviceDimensions = ():TargetState => {
             setTargetWidth(widthBreakPoint.ipad10);
             setTargetHeight(heightBreakPoint.ipad10);
             setTargetMainHeight(heightBreakPoint.ipad10 - HEADER_FOOTER);
-           
+
         } else {
             setTargetWidthPx(`${widthBreakPoint.ipadMini}px`);
             setTargetHeightPx(`${heightBreakPoint.ipadMini}px`)

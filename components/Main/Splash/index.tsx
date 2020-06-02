@@ -1,20 +1,19 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import {useDeviceDimensions} from "../../../hooks";
 
 interface StyleProps {
 
-    w: string;
-    h: string;
 }
 
 interface ChildrenProps {
-    children: ReactNode;
+    children?: ReactNode;
     logo?: string;
 
 }
 const MainDiv = styled.div`
     width: var(--ipad-width);
-    max-width: var(--ipad-max-width);
+    //max-width: var(--ipad-max-width);
     height: 86vw;
     position: relative;
     top: -9vw;
@@ -45,6 +44,7 @@ const LogoBG = styled.div<BG>`
 interface Props extends StyleProps, ChildrenProps { }
 
 const Splash: React.FC<Props> = ({ children, logo }) => {
+    const i = useDeviceDimensions();
     return (
         <>
 
@@ -52,7 +52,7 @@ const Splash: React.FC<Props> = ({ children, logo }) => {
 
             </LogoBG>
             <MainDiv>
-                    <img src="./img/svg/pg2-vector-nologo.svg" alt="splash page"/>
+                <img src="./img/svg/pg2-vector-nologo.svg" alt="splash page"/>
             </MainDiv>
 
         </>

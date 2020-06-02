@@ -29,6 +29,7 @@ const MainDiv = styled.div<MainDivProps & IwidthHeightPxString>`
             : ''
 };
       //background-size: ${props => props.bgSize};
+      background-size: auto;
       //background-width: 100vw;
     /* overflow:hidden; */
 `;
@@ -46,12 +47,13 @@ type Props = {
 const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt,
                                  pageIndex}) => {
     console.log(pageIndex);
-    const { ipadWidthPx, ipadMainSectionHeightPx  } = useDeviceDimensions();
+    const {ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx} = useDeviceDimensions();
+    console.log(ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx);
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}
-        bgSize={ipadWidthPx + ' '  + ipadMainSectionHeightPx}
-        w={ipadWidthPx} h={ipadMainSectionHeightPx}
-                 foreGroundArt={foreGroundArt } noBgArt={noBgArt}>
+                 bgSize={ipadWidthPx + ' ' + ipadMainSectionHeightPx}
+                 w={ipadWidthPx} h={ipadMainSectionHeightPx}
+                 foreGroundArt={foreGroundArt} noBgArt={noBgArt}>
             {children}
         </MainDiv>
     )
