@@ -42,7 +42,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     return (
         <>
              <Img src={showSVG} onClick={() => {
-                 setShowSVG(`/img/svg/${svgClicked}.svg`);
+                 setShowSVG(`./img/svg/${svgClicked}.svg`);
                  linkTo(page)}} />
         </>
     )
