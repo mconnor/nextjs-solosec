@@ -66,7 +66,7 @@ const Layout: React.FC<Props> = ({children, pageIndex, title = 'Solosec IVA', fo
     setInitSafteyInfo && setInitSafteyInfo(true);
     const handlers = useSwipeable({
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
-        preventDefaultTouchmoveEvent: false,
+        preventDefaultTouchmoveEvent: true,
         trackMouse: true,
         trackTouch: true,
         delta: 20
