@@ -17,7 +17,7 @@ const variants = {
 
 const OuterContainer = styled(motion.div)`
 
-    
+    top:var(--header-height);
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
 `;
