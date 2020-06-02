@@ -6,8 +6,7 @@ import { useAppState } from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
-//     const { setInitSafteyInfo } = useAppState()
-// _prevState => setInitSafteyInfo &&  setInitSafteyInfo(false)
+
 
 const OuterContainer = styled.div`
    width: 400px;
@@ -61,11 +60,13 @@ type FCProps = {
 
 const StartScreen: React.FC<FCProps> = ({ section }) => {
     const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
+
+    
+
+
+
     if (!isInitSafetyInfoOpen) return null;
-    if  (section !== Sections.INDEX) {
-        setInitSafteyInfo && setInitSafteyInfo(false);
-        return null;
-    }
+ 
     return (
         <OuterContainer className='modalWrapper'>
             <MyGrid >
@@ -74,7 +75,7 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
                   <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
-                    <Copy />
+                    <Copy start />
                 </Main>
                     <SafteyFooter />
 
