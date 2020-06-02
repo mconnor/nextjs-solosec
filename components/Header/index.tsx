@@ -7,7 +7,7 @@ import { useAppState } from "../../state";
 import { useDeviceDimensions } from '../../hooks'
 import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
-
+import { Imodal } from '../interfaces';
 
 interface IProps {
     gridArea: string;
@@ -15,10 +15,10 @@ interface IProps {
 // interface IProps extends IwidthHeightPxString  extends IwidthHeightNums {}
 
 
-const MainDiv = styled.div<IProps & IwidthHeightPxString & IwidthHeightNums>`
+const MainDiv = styled.div`
     position: absolute;
     z-index:5;
-    grid-area: ${props => props.gridArea};
+  
     background-image: url(./img/header-sansNav.png);
     background-size: 100% 100%;
     width: 100vw;
@@ -55,7 +55,7 @@ const REFERENCE = 'References'
 const Header: React.FC<IProps> = ({ gridArea }) => {
     const { toggleReference, togglePrescribingInfo, toggleSafetyInfo,
         setNav, setSafteyInfo, toggleNav,
-        setPrescribingInfo } = useAppState();
+        setPrescribingInfo, isPrescribingInfoOpen } = useAppState();
 
     const {ipadWidthPx} = useDeviceDimensions();
 
@@ -83,7 +83,7 @@ const Header: React.FC<IProps> = ({ gridArea }) => {
 
     // {_prevState => setNav &&  setNav(true)}
     return (
-        <MainDiv gridArea={gridArea} w={ipadWidthPx}>
+        <MainDiv  w={ipadWidthPx}>
             <Hamburger clickCallBack={handleNavClick} />
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
