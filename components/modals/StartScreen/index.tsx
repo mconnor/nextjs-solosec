@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
-import { useAppState } from '../../../state'
-//import * as Sections from "../../utils/Sections";
+import {useAppState} from '../../../state'
+import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
 
@@ -58,18 +58,21 @@ type FCProps = {
     section:string;
 }
 
-const StartScreen: React.FC<FCProps> = () => {
+const StartScreen: React.FC<FCProps> = ({section}) => {
     const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
-
+    if (section !== Sections.SPLASH) {
+        setInitSafteyInfo && setInitSafteyInfo(false);
+        return null;
+    }
 
     if (!isInitSafetyInfoOpen) return null;
 
     return (
         <OuterContainer className='modalWrapper'>
-            <MyGrid >
+            <MyGrid>
                 <Header>
-                
-                  <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
+
+                    <ConfirmBtn clickCallBack={() => setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
                     <Copy start />
