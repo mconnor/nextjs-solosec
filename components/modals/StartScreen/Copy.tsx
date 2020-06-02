@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import {useAppState} from "../../../state";
 
-const SubHead = styled.h2`
+const h2 = styled.h2`
     //color: var(--royal-blue);
     font-style: normal;
     font-weight: 900;
-    font-size: 20px;
+    font-size: cacl()
 
     color: #072b49;
     /* identical to box height, or 80% */
@@ -13,7 +13,7 @@ const SubHead = styled.h2`
     letter-spacing: 0.04em;
 `;
 
-const StrongDiv = styled(SubHead)`
+const StrongDiv = styled(h2)`
     //color: black;
     color: #62645b;
     ///* font-size: 18px; */
@@ -90,14 +90,14 @@ const Copy: React.FC<Props> = ({ marginLR}) => {
 
     return (
         <Container marginLR={marginLR}>
-            <SubHead>INDICATION</SubHead>
+            <h2 className="isi-subhead">INDICATION</h2>
             <Ptag>SOLOSEC<sup>&reg;</sup> (secnidazole) 2g oral granules is a 5-nitroimidazole antimicrobial agent indicated for the treatment of bacterial vaginosis in adult women.</Ptag>
 
-            <SubHead>Dosage and Administration</SubHead>
+            <h2 className="isi-subhead">Dosage and Administration</h2>
 
             <Ptag>SOLOSEC is a single-dose therapy for oral use. The entire contents of SOLOSEC packet should be sprinkled onto applesauce, yogurt or pudding and consumed once within 30 minutes without chewing or crunching the granules. SOLOSEC is not intended to be dissolved in any liquid.</Ptag>
 
-            <SubHead>Important Safety Information</SubHead>
+            <h2 className="isi-subhead">Important Safety Information</h2>
 
             <Ulist>
                 <li>SOLOSEC is contraindicated in patients with a history of hypersensitivity to secnidazole, other ingredients of the formulation, or other nitroimidazole derivatives.</li>
