@@ -96,7 +96,7 @@ const Qwrapper = styled.div`
     
     font-style: normal;
     font-weight: normal;
-    font-size: 2.5vh;
+    font-size: 2vw;
     line-height: 3vh;
     letter-spacing: -0.02em;
 
