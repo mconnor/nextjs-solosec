@@ -44,13 +44,6 @@ const PageContainer = styled.div`
 
 
 
-const ShowScreenSize = styled.div`
-font-size: 42px;
-z-index: 30;
-background: white;
-position:absolute;
-`;
-
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     //const router = useRouter();
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
