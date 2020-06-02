@@ -4,7 +4,6 @@ import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import { useAppState } from "../../../state/";
 import IconWrapper from '../../IconWrapper'
 import Copy from '../StartScreen/Copy';
-import SafteyFooter from './SafteyFooter';
 import {useDeviceDimensions} from "../../../hooks";
 import {IwidthHeightPxString} from '../../interfaces'
 

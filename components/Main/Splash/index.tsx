@@ -3,9 +3,7 @@ import styled from 'styled-components';
 
 
 interface StyleProps  {
- 
-    w:string;
-    h:string;
+
  }
 
 interface ChildrenProps {
@@ -13,13 +11,13 @@ interface ChildrenProps {
    logo?: string;
  
 }
-const MainDiv = styled.div<Props>`
+
+const MainDiv = styled.div`
     width: 100vw;
     height: 100vw;
     position: relative;
     top: -12vw;
     left:0.32vw;
-    width: 100vw;
 `;
 
 const LogoWrapper = styled.img`
