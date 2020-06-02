@@ -15,7 +15,7 @@ const InnerDiv = styled.div<Iscale>`
  
     /* margin: 24px 83px 45px 83px; */
     margin: 1.7% 6% 3% 6%;
-    border:1px solid red;
+  
   
 `;
 
