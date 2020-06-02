@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
-import Link from 'next/link'
+//import Link from 'next/link'
 
 
 type Props = {
@@ -29,10 +29,14 @@ console.log('cookie', cookie) // keep this
 
     return (
 
-        <Link href={url}>
-            <BtnInvisible onClick={() =>{ 
-                 console.log('url', url);setCookie(seq)}} />
-        </Link>
+        <div onClick={() => {
+            window.location.href = url + ".html"
+        }}>
+            <BtnInvisible onClick={() => {
+                console.log('url', url);
+                setCookie(seq)
+            }}/>
+        </div>
     )
 }
 

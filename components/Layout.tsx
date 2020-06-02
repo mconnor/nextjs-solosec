@@ -1,5 +1,5 @@
 import { ReactNode, useEffect } from 'react';
-import { useRouter } from 'next/router'
+//import { useRouter } from 'next/router'
 import { PageWrapper } from "../state";
 import Head from 'next/head';
 import GlobalStyle from './utils/GobalStyle';
@@ -52,7 +52,7 @@ const PageContainer = styled.div`
 
 
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
-    const router = useRouter();
+    //const router = useRouter();
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     // const [cookie2, setCookie2] = useCookie({ key: "section" }) ;
     const {currSeq} = useAppState();
@@ -111,14 +111,18 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 const page = path[n];
                 const thisPath = PageList.seq[cookie];
                 const currentPage = thisPath.indexOf(page);
-                if (dir === "Right") if (currentPage !== 0) router.push("/" + PageList["pages"][thisPath[currentPage-1]]);
-                if (dir === "Left") if (currentPage !== thisPath.length-1) router.push("/" + PageList["pages"][thisPath[currentPage+1]]);
+                // if (dir === "Right") if (currentPage !== 0) router.push("/" + PageList["pages"][thisPath[currentPage-1]]);
+                // if (dir === "Left") if (currentPage !== thisPath.length-1) router.push("/" + PageList["pages"][thisPath[currentPage+1]]);
+                if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage - 1]] + ".html";
+                if (dir === "Left") if (currentPage !== thisPath.length - 1) window.location.href = PageList["pages"][thisPath[currentPage + 1]] + ".html";
             }
         }
 
         function navigate() {
-            if (dir === "Right") if (n !== 0) router.push("/" + PageList["pages"][path[n-1]]);
-            if (dir === "Left") if (n !== path.length-1) router.push("/" + PageList["pages"][path[n+1]]);
+            // if (dir === "Right") if (n !== 0) router.push("/" + PageList["pages"][path[n-1]]);
+            // if (dir === "Left") if (n !== path.length-1) router.push("/" + PageList["pages"][path[n+1]]);
+            if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n - 1]] + ".html";
+            if (dir === "Left") if (n !== path.length - 1) window.location.href = PageList["pages"][path[n + 1]] + ".html"
         }
     }
 
@@ -147,7 +151,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                         gridArea='main'
                         children={children}
                         foreGroundArt={foreGroundArt}
-                        key={router.route}
+                        key={"#1234"}
                         noBgArt={noBgArt}
                         bgArt={bgArt}
                         pageIndex={pageIndex}

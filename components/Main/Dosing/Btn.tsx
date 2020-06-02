@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useRouter } from 'next/router'
+//import { useRouter } from 'next/router'
 import {PageList} from "../../modals/Nav/PageList";
 
 const BtnInvisible = styled.button`
@@ -17,12 +17,14 @@ const BtnInvisible = styled.button`
 `;
 
 export default () => {
-    const router = useRouter();
+    //const router = useRouter();
 
     return (
 
-            <BtnInvisible onClick={() =>{
-                router.push("/" + PageList.pages["9"])}}></BtnInvisible>
+        <BtnInvisible onClick={() => {
+            //router.push("/" + PageList.pages["9"])
+            window.location.href = PageList.pages["9"] + ".html"
+        }}></BtnInvisible>
       
 
     )

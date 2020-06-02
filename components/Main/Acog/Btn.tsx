@@ -1,7 +1,7 @@
 
 import {useToggle, useCookie} from '../../../hooks';
 import styled from 'styled-components';
-import { useRouter } from 'next/router'
+//import { useRouter } from 'next/router'
 
 type MainProps = {
     on: boolean;
@@ -25,13 +25,14 @@ const Btn: React.FC<Props> = ({svgClicked, page, seq}) => {
     const {isToggled, toggle} = useToggle(false);
     const [cookie, setCookie] = useCookie({key: "seq"});
     console.log(cookie);
-    const router = useRouter()
+    //const router = useRouter()
     return (
         <Main on={isToggled} onClick={() => {
             toggle();
             setTimeout(() => {
                 setCookie(seq);
-                router.push("/" + page);
+                //router.push("/" + page);
+                window.location.href = page + ".html"
             }, 100)
         }}>
             <Img src={`./img/svg/${svgClicked}.svg`}/>

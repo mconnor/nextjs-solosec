@@ -1,7 +1,7 @@
 
 
 import styled from 'styled-components'
-import Link from 'next/link';
+//import Link from 'next/link';
 import Hamburger from './Hamburger'
 import { useAppState } from "../../state";
 import { useDeviceDimensions } from '../../hooks'
@@ -87,12 +87,12 @@ const Header: React.FC<IProps> = ({ gridArea }) => {
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-            <Link href='/index'>
+            <div onClick={() => window.location.href = "01_index.html"}>
                 <IndexLinkWrapper>
 
 
                 </IndexLinkWrapper>
-            </Link>
+            </div>
            
         </MainDiv>
     )

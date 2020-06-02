@@ -4,7 +4,7 @@ import {useCookie, useToggle} from '../../../hooks';
 import styled from 'styled-components';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from "react-icons";
-import { useRouter } from 'next/router'
+//import { useRouter } from 'next/router'
 
 type MainProps = {
     on: boolean;
@@ -50,7 +50,7 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
     const { toggle, isToggled } = useToggle(false);
     const [kolor, setKolor] = useState('green');
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
-    const router = useRouter()
+    //const router = useRouter()
     useEffect(() => {
         if (isToggled) {
             setKolor('gold');
@@ -64,7 +64,10 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
         toggle();
         console.log(cookie);
         if (seq) setCookie(seq)
-        setTimeout(()=>{router.push("/" + url);}, 100)
+        setTimeout(() => {
+            //router.push("/" + url);
+            window.location.href = url + ".html"
+        }, 100)
     }
     return (
         <Main 

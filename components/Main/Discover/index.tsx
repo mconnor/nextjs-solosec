@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Btn from './Btn'
-import { useRouter } from 'next/router'
+//import { useRouter } from 'next/router'
 import {PageList} from "../../modals/Nav/PageList";
 
 const MainDiv = styled.div`
@@ -30,7 +30,7 @@ const BtnInvisible = styled.button`
 
 
 const Discover = () => {
-    const router = useRouter();
+    //const router = useRouter();
 
     return (
         <MainDiv className='fillMain'>
@@ -40,8 +40,10 @@ const Discover = () => {
                 <Btn svglink='pg6-button-3' svgClicked='pg6-button-3-selected' page="8" seq="02_c"/>
                 <Btn svglink='pg6-button-4' svgClicked='pg6-button-4-selected' page="10" seq="02_d"/>
             </BtnContainer>
-            <BtnInvisible onClick={() =>{
-                router.push("/" + PageList.pages["3"])}} />
+            <BtnInvisible onClick={() => {
+                //router.push("/" + PageList.pages["3"])
+                window.location.href = PageList.pages["3"] + ".html"
+            }}/>
         </MainDiv>
     )
 }

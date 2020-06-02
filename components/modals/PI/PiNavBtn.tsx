@@ -1,7 +1,7 @@
 // import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { ReactNode, useEffect } from 'react';
-import Link from 'next/link'
+//import Link from 'next/link'
 import { useAppState } from '../../../state'
 
 
@@ -53,11 +53,13 @@ const PiNavBtn: React.FC<Props> = ({ url, children, active = false }) => {
 
     }
     return (
-        <Link href={url}>
+        <div onClick={() => {
+            window.location.href = url + ".html"
+        }}>
             <NavBtn active={currPIanchor === url} onClick={() => handleClick(url)}>
                 {children}
             </NavBtn>
-        </Link>
+        </div>
 
     )
 }

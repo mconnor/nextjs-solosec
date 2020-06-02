@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components'
-import Link from 'next/link';
+//import Link from 'next/link';
 // import { motion } from 'framer-motion';
 import { useAppState } from '../../../state';
 
@@ -80,13 +80,17 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
             : subnav ?
                 <Li>
                     <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                        <Link href={url}><a>{`- ${label}`}</a></Link>
+                        <div onClick={() => {
+                            window.location.href = url + ".html"
+                        }}><a>{`- ${label}`}</a></div>
                     </Btn>
                 </Li>
             :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <Link href={url}><a>{label}</a></Link>
+                    <div onClick={() => {
+                        window.location.href = url + ".html"
+                    }}><a>{label}</a></div>
                 </Btn>
 
 
