@@ -16,10 +16,11 @@ interface IProps {
 
 
 const MainDiv = styled.div<IProps & IwidthHeightPxString & IwidthHeightNums>`
+position: absolute;
     grid-area: ${props => props.gridArea};
     background-image: url(./img/header-sansNav.png);
     background-size: 100% 100%;
-    width: ${props => props.w}
+    width: ${props => props.w};
     padding: 0 24px 0 24px;
     display: grid;
     align-items: center;

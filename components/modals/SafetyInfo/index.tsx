@@ -16,7 +16,8 @@ type Props = {
 const InnerDiv = styled.div<Props>`
     background: white;
  
-    margin: 24px 83px 45px 83px;
+    /* margin: 24px 83px 45px 83px; */
+    margin: 1.7% 6% 3% 6%;
   
 `;
 
@@ -86,7 +87,7 @@ const SafetyModalWrapper: React.FC = () => {
             y: 0,
         },
         closed: {
-            y: 768,
+            y: '80vh',
 
             transition: {
                 delay: .2
@@ -136,7 +137,7 @@ export const SafetyModal: React.FC = () => {
                 <Copy />
             </InnerDiv>
 
-            {/* <SafteyFooter /> */}
+            <SafteyFooter />
         </Container>
 
     )

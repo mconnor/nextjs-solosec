@@ -6,7 +6,7 @@ const SubHead = styled.h2`
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
-    line-height: 16px;
+
     color: #072b49;
     /* identical to box height, or 80% */
 
@@ -17,8 +17,8 @@ const StrongDiv = styled(SubHead)`
     //color: black;
     color: #62645b;
     ///* font-size: 18px; */
-    font-size: 16px;
-    line-height: 22px;
+    font-size: .8rem;
+    line-height:.8rem;
     a {
       color: var(--royal-blue-light);
       text-decoration: none;
@@ -28,17 +28,17 @@ const StrongDiv = styled(SubHead)`
 const Btn = styled(StrongDiv)`
     color: var(--royal-blue-light);
     margin-top: 20px;
-    font-size: 16px;
+    font-size: .8rem;
     cursor: pointer;
 `;
 
 
 const Ptag = styled.p`
-   
+   // add conditions to change font size
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: .8rem;
+    line-height:.8rem;
 /* or 122% */
     letter-spacing: 0.06em;
     color: #62645b;
@@ -48,15 +48,15 @@ const Ptag = styled.p`
 const Ulist = styled.ul`
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: .8rem;
+    line-height:.8rem;
     // or 122% 
     color: var(--copy-color-secondary);
     letter-spacing: 0.065em;
     list-style-position: outside; 
     padding-left: 1em;
     li {
-        margin-top: 20px;
+        margin-top: 0;
 
     }
 `;

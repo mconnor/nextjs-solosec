@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import LumpinLogo from '../../svg/LupinLogo'
 const ModalFooter = styled.div`
     display: grid;
-    grid-template-columns: 70px 114px 310px 1fr 274px 200px 80px;
-    grid-template-areas: ". lupinLogo copyright .  slogan solosecLogo .";
+    grid-template-columns: 5% 10% 25% 1fr;
+   
+    grid-template-areas: ". lupinLogo copyright";
     align-items:center;
     gap: 20px;
 `;
@@ -34,15 +35,15 @@ const GridAreaDiv = styled.div<IgridArea>`
 const SafteyFooter = () => {
     return (
         <ModalFooter>
-        <GridAreaDiv gridArea="lupinLogo">
-            <LumpinLogo />
-        </GridAreaDiv>
+            <GridAreaDiv gridArea="lupinLogo">
+                <LumpinLogo />
+            </GridAreaDiv>
 
-        <GridAreaDiv gridArea="copyright">
-            <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec<sup>®</sup> is a registered trademark
-                owned by Lupin, Inc. </p>
-            <p style={{marginTop: "-10px"}}>PP-SOL-0417</p>
-        </GridAreaDiv>
+            <GridAreaDiv gridArea="copyright">
+                <p>© 2020 Lupin Pharmaceuticals, Inc. All rights reserved. Solosec<sup>®</sup> is a registered trademark
+                    owned by Lupin, Inc. </p>
+                <p style={{marginTop: "-10px"}}>PP-SOL-0417</p>
+            </GridAreaDiv>
 
         {/*<GridAreaDiv gridArea="slogan">*/}
         {/*    <Slogan>ONE PACKET. ONE DOSE. ONE TIME.</Slogan>*/}

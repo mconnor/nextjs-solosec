@@ -75,7 +75,7 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
                 <Main>
                     <Copy />
                 </Main>
-                    {/* <SafteyFooter /> */}
+                    <SafteyFooter />
 
             </MyGrid>
         </OuterContainer>
