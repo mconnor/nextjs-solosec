@@ -26,19 +26,21 @@ const MainDiv = styled.div`
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
     color: $primary;
-  height: var(--header-height);
+    height: var(--header-height);
     font-weight: 600;
     font-size: 1.28vw;
     line-height: 127%;
 `;
 
 const IndexLinkWrapper = styled.div`
-    width:220px;
-    height: 80px;
-    justify-self:end;
+     justify-self:end;
     cursor: pointer;
 `;
 
+const SVGimg = styled.img`
+    /* width:220px; */
+    height: calc(var(--header-height)*.8);
+`;
 
 
 
@@ -86,8 +88,9 @@ const Header: React.FC<IProps> = ({}) => {
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
               <IndexLinkWrapper  onClick={() => window.location.href = "01_index.html"}>
-                    <object type="image/svg+xml" data="./img/svg/solosec-logo-header.svg"/>
-                </IndexLinkWrapper>
+         
+                    <SVGimg src='./img/svg/solosec-logo-header.svg' />
+            </IndexLinkWrapper>
 
 
            
