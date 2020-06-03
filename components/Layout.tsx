@@ -126,7 +126,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
             //if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n - 1]] + ".html";
             //if (dir === "Left") if (n !== path.length - 1) window.location.href = PageList["pages"][path[n + 1]] + ".html"
             if (dir === "Right") if (n !== 0) Navigate(PageList["pages"][path[n - 1]]);
-            if (dir === "Left") if (n !== path.length - 1) Navigate(PageList["pages"][path[n + 1]])
+            if (dir === "Left") if (n !== path.length - 1) Navigate(PageList["pages"][pageIndex === 16 ? path[20] : path[n + 1]])
         }
     }
 

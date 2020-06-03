@@ -7,7 +7,7 @@ import * as Sections from "../../utils/Sections";
 const variants = {
     open: {y: 0},
     closed: {
-        y: "100%", 
+        y: "110%",
         transition: {
             delay: .2
         }

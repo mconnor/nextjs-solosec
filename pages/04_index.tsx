@@ -14,8 +14,9 @@ export default () => (
                 width: "100vw",
                 height: "100vh",
                 position: "absolute",
-                top: 100,
+                top: 0,
                 left: 0,
+                zIndex: 1
             }}></div>
             <object type="image/svg+xml" data="./img/svg/pg17-A.svg"/>
         </div>

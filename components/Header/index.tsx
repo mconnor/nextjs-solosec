@@ -84,9 +84,9 @@ const Header = () => {
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-              <IndexLinkWrapper  onClick={() => window.location.href = "01_index.html"}>
-         
-                   <HeaderLogo />
+            <IndexLinkWrapper onClick={() => Navigate("02_index")}>
+
+                <HeaderLogo/>
             </IndexLinkWrapper>
 
 
