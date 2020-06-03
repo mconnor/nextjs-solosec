@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
-import {useAppState} from '../../../state'
+import { useAppState } from '../../../state'
+import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
+import { useCookie } from '../.././../hooks';
 
 
 
 const OuterContainer = styled.div`
-  
-    z-index:30;
+   width: 400px;
+    max-width: var(--ipad-max-width); 
+    
+    z-index:6 !important;
+   
     background:rgba(0,0,0,.5) !important;
 
     display:grid;
@@ -24,6 +29,7 @@ const MyGrid = styled.div`
  
     display:grid;
     grid-template-columns: 1fr;
+   
     grid-template-rows: 130px 1fr 100px;
 `;
 
@@ -47,29 +53,39 @@ const Main = styled.div`
 `;
 
 
+type FCProps = {
+    section: string;
+}
 
+const StartScreen: React.FC<FCProps> = ({ section }) => {
+    const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: 'StartScreenDidPlay' }) ;
 
-const StartScreen = () => {
     const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
 
-    
-
-
-
+    if (section !== Sections.SPLASH) {
+        setInitSafteyInfo && setInitSafteyInfo(false);
+        return null;
+    }
+    if (cookieInitScreen === 'yes') {
+        setInitSafteyInfo && setInitSafteyInfo(false);
+        // return null;
+    }
     if (!isInitSafetyInfoOpen) return null;
- 
+
     return (
-        <OuterContainer 
-            className='modalFullScreen modalWrapper'>
-            <MyGrid >
+        <OuterContainer className='modalWrapper'>
+            <MyGrid>
                 <Header>
-                
-                  <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
+
+                    <ConfirmBtn clickCallBack={() => {
+                        setCookieInitScreen('yes');
+                        setInitSafteyInfo && setInitSafteyInfo(false)
+                    }}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
-                    <Copy start/>
+                    <Copy start />
                 </Main>
-                    <SafteyFooter />
+                <SafteyFooter />
 
             </MyGrid>
         </OuterContainer>

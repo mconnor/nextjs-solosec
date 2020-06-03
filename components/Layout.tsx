@@ -17,6 +17,7 @@ import {useAppState} from "../state";
 import { useCookie } from '../hooks';
 import SafetyModalWrapper from './modals/SafetyInfo/';
 import {Navigate} from "./utils/Navigate";
+import * as Constants from './utils/Constants'
 
 type RLprops = {
     dir: "Right" | "Left" | "Up" | "Down";
@@ -49,6 +50,9 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
     //const router = useRouter();
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     // const [cookie2, setCookie2] = useCookie({ key: "section" }) ;
+    // const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: Constants.COOKIE_VAL_STARTSREEN.key }) ;
+
+
     const {currSeq, setInitSafteyInfo} = useAppState();
     setInitSafteyInfo && setInitSafteyInfo(true);
     const handlers = useSwipeable({
@@ -138,7 +142,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
             <GlobalStyle/>
             
             <PageWrapper>
-                <StartScreen section={section}/>
+                <StartScreen  section={section}/>
                 
                 <Nav />
                 <ReferencesWrapper section={section}/>
