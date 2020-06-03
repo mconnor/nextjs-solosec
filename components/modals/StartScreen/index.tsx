@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
 import {useAppState} from '../../../state'
-import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
 
 
 const OuterContainer = styled.div`
   
-   z-index:30;
+    z-index:30;
     background:rgba(0,0,0,.5) !important;
 
     display:grid;
