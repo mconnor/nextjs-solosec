@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
-import {useAppState} from '../../../state'
+import { useAppState } from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
-//import {useCookie} from "../../../hooks";
+import { useCookie } from '../.././../hooks';
+
 
 
 const OuterContainer = styled.div`
@@ -56,17 +57,19 @@ type FCProps = {
     section: string;
 }
 
-const StartScreen: React.FC<FCProps> = ({section}) => {
-    //const [cookie, setCookie] = useCookie({key: "isi"});
+const StartScreen: React.FC<FCProps> = ({ section }) => {
+    const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: 'StartScreenDidPlay' }) ;
 
-    //console.log("cookie", cookie, cookie === "close");
-    const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
+    const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
 
     if (section !== Sections.SPLASH) {
         setInitSafteyInfo && setInitSafteyInfo(false);
         return null;
     }
-
+    if (cookieInitScreen === 'yes') {
+        setInitSafteyInfo && setInitSafteyInfo(false);
+        // return null;
+    }
     if (!isInitSafetyInfoOpen) return null;
 
     return (
@@ -75,14 +78,14 @@ const StartScreen: React.FC<FCProps> = ({section}) => {
                 <Header>
 
                     <ConfirmBtn clickCallBack={() => {
-                        //setCookie("close");
+                        setCookieInitScreen('yes');
                         setInitSafteyInfo && setInitSafteyInfo(false)
                     }}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
-                    <Copy start/>
+                    <Copy start />
                 </Main>
-                <SafteyFooter/>
+                <SafteyFooter />
 
             </MyGrid>
         </OuterContainer>
