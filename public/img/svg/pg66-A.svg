@@ -582,15 +582,15 @@ k[p]=X(k[p]," "):(console.warn("unsupported value: "+k[p]),k[p]=[0]):k[p]=[0]:32
 l.length&&(c.A.push(e),c.C.push(l))}c.v=b;c.g=0;c.f=c.v;aa(c);return c},add:aa,remove:P,removeAll:function(){for(var a=w.length-1;0<=a;--a)P(w[a]);return this},timelines:function(){return w.slice()},globalPlay:function(){u&&(V=u-(new Date).getTime(),u=void 0,N());return this},globalPause:function(){u||(u=v,O(!1));return this},globalState:function(){return u?"paused":"running"}}}();
 ]]></script>
     <script><![CDATA[if(KeyshapeJS.version.indexOf('1.')!=0)throw Error('Expected KeyshapeJS v1.*.*');window.ks=document.ks=KeyshapeJS;(function(ks){
-ks.animate("#_a0",[{p:'opacity',t:[0,833],v:[0,1],e:[[0],[0]]}],
-"#_a1",[{p:'opacity',t:[166,1000],v:[0,1],e:[[0],[0]]}],
-"#_a2",[{p:'opacity',t:[833,1666],v:[0,1],e:[[0],[0]]}],
-"#_a3",[{p:'opacity',t:[500,1333],v:[0,1],e:[[0],[0]]}],
-"#_a4",[{p:'opacity',t:[1000,1833],v:[0,1],e:[[0],[0]]}],
-"#_a5",[{p:'opacity',t:[666,1500],v:[0,1],e:[[0],[0]]}],
-"#_a6",[{p:'opacity',t:[1166,2000],v:[0,1],e:[[0],[0]]}],
-"#_a7",[{p:'opacity',t:[333,1166],v:[0,1],e:[[0],[0]]}],
-{autoremove:false}).range(0,2000);
+ks.animate("#_a0",[{p:'opacity',t:[0,1124],v:[0,1],e:[[0],[0]]}],
+"#_a1",[{p:'opacity',t:[224,1350],v:[0,1],e:[[0],[0]]}],
+"#_a2",[{p:'opacity',t:[1124,2249],v:[0,1],e:[[0],[0]]}],
+"#_a3",[{p:'opacity',t:[675,1799],v:[0,1],e:[[0],[0]]}],
+"#_a4",[{p:'opacity',t:[1350,2474],v:[0,1],e:[[0],[0]]}],
+"#_a5",[{p:'opacity',t:[899,2025],v:[0,1],e:[[0],[0]]}],
+"#_a6",[{p:'opacity',t:[1574,2700],v:[0,1],e:[[0],[0]]}],
+"#_a7",[{p:'opacity',t:[449,1574],v:[0,1],e:[[0],[0]]}],
+{autoremove:false}).range(0,2700);
 if(document.location.search.substr(1).split('&').indexOf('global=paused')>=0)ks.globalPause()})(KeyshapeJS);
 ]]></script>
 </svg>

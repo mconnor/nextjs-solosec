@@ -95,10 +95,10 @@ const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, ho
             animate='end'
             transition={{
                 type: "spring",
-                stiffness: 340,
-                damping: 40,
+                stiffness: 10,
+                damping: 5,
                 delay: .5,
-                mass: 4
+                mass: 1
             }}
         >
             <Score fontSize={24}>{score}%</Score>

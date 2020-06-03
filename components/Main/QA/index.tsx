@@ -1,9 +1,9 @@
-import { ReactNode, useEffect } from 'react';
+import {ReactNode, useEffect} from 'react';
 import styled from 'styled-components';
-import { GoPlus, GoDash } from "react-icons/go";
-import { motion } from 'framer-motion';
-import { useToggle } from '../../../hooks';
-import { useAppState } from '../../../state'
+import {GoPlus, GoDash} from "react-icons/go";
+import {motion} from 'framer-motion';
+import {useToggle} from '../../../hooks';
+import {useAppState} from '../../../state'
 import IconWrapper from '../../IconWrapper'
 
 const variants = {
@@ -37,7 +37,7 @@ const MainDiv = styled.div`
     sup {
     font-size: 10px;
     }
-    -webkit-overflow-scrolling: auto;
+    -webkit-overflow-scrolling: touch;
     ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -55,7 +55,7 @@ type Props = {
     children: ReactNode;
 }
 
-const QA: React.FC<Props> = ({ children }) => {
+const QA: React.FC<Props> = ({children}) => {
 
     return (
         <MainDiv>
@@ -65,8 +65,6 @@ const QA: React.FC<Props> = ({ children }) => {
 }
 
 export default QA
-
-
 
 
 const Qdiv = styled.div`
@@ -117,24 +115,25 @@ const Qwrapper = styled.div`
     }
 
 `;
+
 interface Iprops {
     q: string;
     a: string;
-    slug:string;
+    slug: string;
 }
 
 
-export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
-    const { isToggled, toggle, setToggle } = useToggle(false);
-    const { setCurrQ, currQ } = useAppState();
+export const QuestionAnswer: React.FC<Iprops> = ({q, a, slug}) => {
+    const {isToggled, toggle, setToggle} = useToggle(false);
+    const {setCurrQ, currQ} = useAppState();
 
-    useEffect(()=> {
+    useEffect(() => {
         if (currQ !== slug) {
             setToggle(false);
         }
-    }, [ currQ ]) 
+    }, [currQ])
 
-    const handleClick = ()=> {
+    const handleClick = () => {
         toggle();
         setCurrQ && setCurrQ(slug)
     }
@@ -142,13 +141,13 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
     return (
         <QAcontainer onClick={handleClick}>
             <Qwrapper>
-                <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)} />
-              
-                        <IconWrapper kolor='green' size='1em'>
-                            {!isToggled ? <GoPlus/> : <GoDash />}
-                        </IconWrapper>
-   
-              
+                <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)}/>
+
+                <IconWrapper kolor='green' size='1em'>
+                    {!isToggled ? <GoPlus/> : <GoDash/>}
+                </IconWrapper>
+
+
             </Qwrapper>
 
 
@@ -159,10 +158,10 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
                 variants={variants}
                 initial='closed'
                 animate={isToggled ? 'open' : 'closed'}
-                transition={{ damping: 300 }}
-            // initial={{ opacity: 0 }}
-            // animate={{ opacity: 1 }}
-            // exit={{ opacity: 0, display: 'none'}}
+                transition={{damping: 300}}
+                // initial={{ opacity: 0 }}
+                // animate={{ opacity: 1 }}
+                // exit={{ opacity: 0, display: 'none'}}
             >
             </Adiv>
 
@@ -171,8 +170,6 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
 }
 
 
-
-
 function createMarkup(copy: string) {
-    return { __html: copy }
+    return {__html: copy}
 }

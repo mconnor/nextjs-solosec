@@ -39,6 +39,10 @@ const IndexLinkWrapper = styled.button`
     opacity: 0;
     justify-self:end;
     cursor: pointer;
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 `;
 
 
