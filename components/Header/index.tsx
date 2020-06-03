@@ -1,17 +1,17 @@
-
-
 import styled from 'styled-components'
 //import Link from 'next/link';
 import Hamburger from './Hamburger'
-import { useAppState } from "../../state";
-import { useDeviceDimensions } from '../../hooks'
-import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
+import {useAppState} from "../../state";
+//import { useDeviceDimensions } from '../../hooks'
+//import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
-import { Imodal } from '../interfaces';
+
+//import { Imodal } from '../interfaces';
 
 interface IProps {
-    gridArea: string;
+
 }
+
 // interface IProps extends IwidthHeightPxString  extends IwidthHeightNums {}
 
 
@@ -49,15 +49,14 @@ const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
 
-
-
-
-const Header: React.FC<IProps> = ({ gridArea }) => {
-    const { toggleReference, togglePrescribingInfo, toggleSafetyInfo,
+const Header: React.FC<IProps> = ({}) => {
+    const {
+        toggleReference, togglePrescribingInfo, toggleSafetyInfo,
         setNav, setSafteyInfo, toggleNav,
-        setPrescribingInfo, isPrescribingInfoOpen } = useAppState();
+        setPrescribingInfo
+    } = useAppState();
 
-    const {ipadWidthPx} = useDeviceDimensions();
+    //const {ipadWidthPx} = useDeviceDimensions();
 
     const handlRefClick = () => {
         toggleReference && toggleReference();
@@ -83,8 +82,8 @@ const Header: React.FC<IProps> = ({ gridArea }) => {
 
     // {_prevState => setNav &&  setNav(true)}
     return (
-        <MainDiv  w={ipadWidthPx}>
-            <Hamburger clickCallBack={handleNavClick} />
+        <MainDiv>
+            <Hamburger clickCallBack={handleNavClick}/>
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>

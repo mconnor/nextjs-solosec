@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import Btn from '../Btn';
 
 const MainDiv =styled.div`
-    margin-left: 5.4vw;
-    margin-top: 14.6vh;
+    padding-left: 5.4vw;
+    padding-top: 14.6vh;
 
     display: grid;
     grid-template-columns: 86vw;

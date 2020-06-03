@@ -20,7 +20,8 @@ const VideoAlcohol: React.FC<Props> = ({ stillUrl, videoUrl}) => {
 
      return (
         <Main>
-            <video controls poster={stillUrl} src={videoUrl} width={i.ipadWidth * .462}
+            <video style={{position: "relative", top: "-20vw"}} controls poster={stillUrl} src={videoUrl}
+                   width={i.ipadWidth * .462}
                    height={i.ipadWidth * .462 * 0.5625}>
                 <source src="video/mp4" type={videoUrl}/>
                 Your browser does not support the video tag.

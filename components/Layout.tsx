@@ -137,8 +137,8 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 
                 <Nav />
                 <ReferencesWrapper section={section}/>
-                <PrescribingInfoWrapper />
-                <Header gridArea='header'/>
+                <PrescribingInfoWrapper/>
+                <Header/>
 
     {/* <ShowScreenSize>{ipadWidthPx}  {ipadHeightPx}</ShowScreenSize> */}
 			    <PageContainer {...handlers}>
