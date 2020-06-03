@@ -6,11 +6,8 @@ import {useAppState} from "../../state";
 //import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
 import {Navigate} from "../utils/Navigate";
-//import { Imodal } from '../interfaces';
 
-interface IProps {
-
-}
+import HeaderLogo from './HeaderLogo'
 
 // interface IProps extends IwidthHeightPxString  extends IwidthHeightNums {}
 
@@ -19,32 +16,28 @@ const MainDiv = styled.div`
     position: absolute;
     z-index:5;
   
-    background-image: url(./img/header-sansNav.png);
-    background-size: 100% 100%;
+    background-image:linear-gradient(180deg,#296392,#004876 75%);
     width: 100vw;
-    padding: 0 24px 0 24px;
+    padding: 0 45px 0 24px;
     display: grid;
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
     color: $primary;
-  height: var(--header-height);
+    height: var(--header-height);
     font-weight: 600;
     font-size: 1.28vw;
     line-height: 127%;
 `;
 
-const IndexLinkWrapper = styled.button`
-    width:220px;
-    height: 80px;
-    opacity: 0;
-    justify-self:end;
+const IndexLinkWrapper = styled.div`
+     /* display: flex;
+     flex-direction:row;
+     justify-items: end; */
+     justify-self: end;
     cursor: pointer;
-    background-color: #fff;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    border: pink 1px black;
+  
 `;
-
 
 
 
@@ -53,7 +46,7 @@ const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
 
-const Header: React.FC<IProps> = ({}) => {
+const Header = () => {
     const {
         toggleReference, togglePrescribingInfo, toggleSafetyInfo,
         setNav, setSafteyInfo, toggleNav,
@@ -91,12 +84,12 @@ const Header: React.FC<IProps> = ({}) => {
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-            <div onClick={() => Navigate("02_index")}>
-                <IndexLinkWrapper>
+              <IndexLinkWrapper  onClick={() => window.location.href = "01_index.html"}>
+         
+                   <HeaderLogo />
+            </IndexLinkWrapper>
 
 
-                </IndexLinkWrapper>
-            </div>
            
         </MainDiv>
     )
