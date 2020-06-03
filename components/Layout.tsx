@@ -132,12 +132,12 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
             <GlobalStyle/>
             
             <PageWrapper>
-                <StartScreen section={section}/>
+                <StartScreen />
                 
                 <Nav />
                 <ReferencesWrapper section={section}/>
                 <PrescribingInfoWrapper />
-                <Header gridArea='header'/>
+                <Header />
 
     {/* <ShowScreenSize>{ipadWidthPx}  {ipadHeightPx}</ShowScreenSize> */}
 			    <PageContainer {...handlers}>

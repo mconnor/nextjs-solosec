@@ -4,9 +4,8 @@ import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import { useAppState } from "../../../state/";
 import IconWrapper from '../../IconWrapper'
 import Copy from '../StartScreen/Copy';
-import {useDeviceDimensions} from "../../../hooks";
 import SafteyFooter from './SafteyFooter';
-import {Iscale, Imodal, IwidthHeightPxString} from '../../interfaces'
+import { Iscale, Ibool } from '../../interfaces'
 
 
 
@@ -20,15 +19,13 @@ const InnerDiv = styled.div<Iscale>`
 `;
 
 
-const OuterContainer = styled(motion.div)<Imodal & IwidthHeightPxString>`
-    position: absolute;
-    height: calc(100vh - var(--header-height)) !important;
+const OuterContainer = styled(motion.div)<Iscale & Ibool>`
+    /* height: calc(100vh - var(--header-height)) !important; */
     top:var(--header-height) !important;
     padding-top: ${props => props.isOpen ? '2.08vw' : '0'};
     padding-left: ${props => `${props.scale * 1.6}vw`};
     padding-right: ${props => `${props.scale * 1.6}vw`};
-    /* width:${props => props.w};
-    height:  ${props => props.h};  */
+    background:white;
     
 `;
 
@@ -65,13 +62,13 @@ const Top = styled.div<Iscale>`
 const SafetyModalWrapper: React.FC = () => {
     const {isSafetyInfoOpen, isInitSafetyInfoOpen, layoutScale} = useAppState();
     if (isInitSafetyInfoOpen) return null;
-    const {ipadWidthPx,  ipadHeightPx} = useDeviceDimensions();
+   
     const variants = {
         open: {
             y: 0,
         },
         closed: {
-            y: '77vh',
+            y: '80vh',
 
             transition: {
                 delay: .2
@@ -81,14 +78,16 @@ const SafetyModalWrapper: React.FC = () => {
 
     return (
         <OuterContainer scale={layoutScale}
-                        className='modalWrapper'
-                        w= {ipadWidthPx}
-                        h= {ipadHeightPx}
-                        isOpen={isSafetyInfoOpen}
-                        variants={variants}
-                        initial='closed'
-                        animate={(isSafetyInfoOpen) ? 'open' : 'closed'}
-                        transition={{damping: 300}}>
+                className={ 
+                    isSafetyInfoOpen
+                    ? 'modalWrapper z9' 
+                    : 'modalWrapper z1' 
+                }
+                isOpen={isSafetyInfoOpen}
+                variants={variants}
+                initial='closed'
+                animate={(isSafetyInfoOpen) ? 'open' : 'closed'}
+                transition={{damping: 300}}>
             <SafetyModal/>
         </OuterContainer>);
 }
@@ -112,11 +111,11 @@ export const SafetyModal: React.FC = () => {
                 {isSafetyInfoOpen ?
 
                     <IconWrapper kolor={BLUE} size='16px'>
-                        <BsFillCaretDownFill />
+ <BsFillCaretDownFill />
                     </IconWrapper>
                     :
                     <IconWrapper kolor={BLUE} size='16px'>
-                        <BsFillCaretUpFill />
+ <BsFillCaretUpFill />
                     </IconWrapper>
                 }
             </Top>

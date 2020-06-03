@@ -13,9 +13,6 @@ const GlobalStyle = createGlobalStyle`
 
         //--header-height: calc(var(--ipad-width)*.08); 
         --header-height: 8vw; 
-        --footer-height: 54px;
-        /* --header-height: 100px; 
-        --footer-height: 55px; */
         // --main-height:calc(var(--ipad-height) - var(--header-height));
         --main-height:92vw;
        
@@ -125,15 +122,24 @@ a {
 
 /* end css resets */
 
+.z9 {
+    z-index:9 !important;
+}
+.z1 {
+    z-index:9 !important;
+}
 
+.modalFullscreen {
+    height:var(--ipad-height) !important;
+}
     .modalWrapper {
+       
         width:var(--ipad-width);
-        height:var(--ipad-height);
+        height:var(--ipad-main-height);
         position: absolute;
-        z-index: 3;
+       
         left:0;
         overflow:hidden;
-        background:white;   
     }
 
 

@@ -32,19 +32,9 @@ const variantsRight = {
 }
 
 const OuterContainer = styled(motion.div)`
-     position: fixed ;
-     width: var(--ipad-width);
-    max-width: var(--ipad-max-width);
-  
-    margin-top:var(--header-height);
-    
-    /* height: var(--main-height); */
-    
-    /* overflow:scroll !important;
-    b
-    overflow-y: hidden; */
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
+  background:white;
 `;
 
 
@@ -59,7 +49,7 @@ const CopyWrapper = styled(motion.div)`
 const CloseWrapper = styled.div`
 left: 35%;
 
-position: fixed;
+    position: fixed;
     top: var(--header-height);
    right:3%;
    background:white;
@@ -97,7 +87,12 @@ const PrescribingInfo = () => {
     const { isInitSafetyInfoOpen, isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
     if (isInitSafetyInfoOpen) return null;
     return (
-        <OuterContainer className='modalWrapper'>
+        <OuterContainer
+            className={
+                isPrescribingInfoOpen
+                    ? 'modalWrapper z9'
+                    : 'modalWrapper z1'
+            }>
 
             <NavWrapper
                 variants={variants}

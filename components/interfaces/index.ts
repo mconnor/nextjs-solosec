@@ -19,10 +19,10 @@ export interface Iscale {
     scale: number;
 }
 
-export interface Iboolean  {
+export interface Ibool  {
     isOpen: boolean;
 }
 
-export interface Imodal extends Iscale, Iboolean {
+export interface Imodal extends Iscale, Ibool {
 
 }

@@ -5,19 +5,15 @@ import styled from 'styled-components'
 import Hamburger from './Hamburger'
 import { useAppState } from "../../state";
 import { useDeviceDimensions } from '../../hooks'
-import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
-import { Imodal } from '../interfaces';
-
-interface IProps {
-    gridArea: string;
-}
-// interface IProps extends IwidthHeightPxString  extends IwidthHeightNums {}
+import { Iscale } from '../interfaces';
 
 
-const MainDiv = styled.div`
+
+
+const MainDiv = styled.div<Iscale>`
     position: absolute;
-    z-index:5;
+    z-index:20;
   
     background-image: url(./img/header-sansNav.png);
     background-size: 100% 100%;
@@ -27,7 +23,7 @@ const MainDiv = styled.div`
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
     color: $primary;
-  height: var(--header-height);
+    height: var(--header-height);
     font-weight: 600;
     font-size: 1.28vw;
     line-height: 127%;
@@ -52,12 +48,12 @@ const REFERENCE = 'References'
 
 
 
-const Header: React.FC<IProps> = ({ gridArea }) => {
+const Header: React.FC = () => {
     const { toggleReference, togglePrescribingInfo, toggleSafetyInfo,
-        setNav, setSafteyInfo, toggleNav,
-        setPrescribingInfo, isPrescribingInfoOpen } = useAppState();
+            setNav, setSafteyInfo, toggleNav,
+            setPrescribingInfo, layoutScale } = useAppState();
 
-    const {ipadWidthPx} = useDeviceDimensions();
+    
 
     const handlRefClick = () => {
         toggleReference && toggleReference();
@@ -83,7 +79,7 @@ const Header: React.FC<IProps> = ({ gridArea }) => {
 
     // {_prevState => setNav &&  setNav(true)}
     return (
-        <MainDiv  w={ipadWidthPx}>
+        <MainDiv scale={layoutScale}>
             <Hamburger clickCallBack={handleNavClick} />
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
