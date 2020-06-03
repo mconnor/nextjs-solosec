@@ -1,31 +1,31 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 
-const spring={
-    type: "spring",
-    damping: 10,
-    stiffness: 100,
-    // delay: 2,
-    // duration: 1,
-}
+// const spring={
+//     // type: "spring",
+//     // damping: 10,
+//     // stiffness: 100,
+//     // // delay: 2,
+//     duration: 10,
+// }
 
 
-const variantsV= {
+const variantsV = {
     start: {
         scaleY: 0,
-        
+
     },
     end: {
         scaleY: 1,
-        transition: {spring}
+        // transition: {spring}
     }
 }
 
 const variantsH = {
     start: {
         scaleX: 0,
-       transition: {spring}
+        // transition: {spring}
     },
     end: {
         scaleX: 1
@@ -94,11 +94,12 @@ const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, ho
             initial='start'
             animate='end'
             transition={{
-                type: "spring",
-                stiffness: 10,
-                damping: 5,
-                delay: .5,
-                mass: 1
+                // type: "spring",
+                // stiffness: 10,
+                // damping: 5,
+                // delay: .5,
+                // mass: 1,
+                duration: 1.5
             }}
         >
             <Score fontSize={24}>{score}%</Score>
