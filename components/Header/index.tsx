@@ -19,10 +19,9 @@ const MainDiv = styled.div`
     position: absolute;
     z-index:5;
   
-    background-image: url(./img/header-sansNav.png);
-    background-size: 100% 100%;
+    background-image:linear-gradient(180deg,#296392,#004876 75%);
     width: 100vw;
-    padding: 0 24px 0 24px;
+    padding: 0 45px 0 24px;
     display: grid;
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
@@ -33,10 +32,9 @@ const MainDiv = styled.div`
     line-height: 127%;
 `;
 
-const IndexLinkWrapper = styled.button`
+const IndexLinkWrapper = styled.div`
     width:220px;
     height: 80px;
-    opacity: 0;
     justify-self:end;
     cursor: pointer;
 `;
@@ -87,12 +85,11 @@ const Header: React.FC<IProps> = ({}) => {
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-            <div onClick={() => Navigate("02_index")}>
-                <IndexLinkWrapper>
-
-
+              <IndexLinkWrapper  onClick={() => window.location.href = "01_index.html"}>
+                    <object type="image/svg+xml" data="./img/svg/solosec-logo-header.svg"/>
                 </IndexLinkWrapper>
-            </div>
+
+
            
         </MainDiv>
     )
