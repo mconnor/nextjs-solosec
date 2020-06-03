@@ -5,7 +5,7 @@ import {useAppState} from "../../state";
 //import { useDeviceDimensions } from '../../hooks'
 //import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
-
+import {Navigate} from "../utils/Navigate";
 //import { Imodal } from '../interfaces';
 
 interface IProps {
@@ -87,7 +87,7 @@ const Header: React.FC<IProps> = ({}) => {
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-            <div onClick={() => window.location.href = "01_index.html"}>
+            <div onClick={() => Navigate("02_index")}>
                 <IndexLinkWrapper>
 
 

@@ -56,7 +56,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
         trackTouch: true,
-        delta: 50
+        delta: 150
     });
     // setCookie2(section);
     // console.log(router.pathname )

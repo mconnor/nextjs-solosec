@@ -78,9 +78,9 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
         >
             <Span>{copy}</Span>
 
-            <IconContext.Provider value={{ color: kolor, size: '4em', className: "global-class-name" }}>
+            <IconContext.Provider value={{color: kolor, size: '2em', className: "global-class-name"}}>
                 <div>
-                    <IoIosArrowForward />
+                    <IoIosArrowForward/>
                 </div>
             </IconContext.Provider>
         </Main>
