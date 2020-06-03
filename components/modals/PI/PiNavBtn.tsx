@@ -53,9 +53,7 @@ const PiNavBtn: React.FC<Props> = ({ url, children, active = false }) => {
 
     }
     return (
-        <div onClick={() => {
-            window.location.href = url + ".html"
-        }}>
+        <div>
             <NavBtn active={currPIanchor === url} onClick={() => handleClick(url)}>
                 {children}
             </NavBtn>

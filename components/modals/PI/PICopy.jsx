@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-//import { useAppState } from '../../../state'
+import { useAppState } from '../../../state';
 
 const TRfirst = styled.tr`
 
@@ -71,10 +71,12 @@ const P= styled.p`
     line-height: 30px;
 `;
 
-
 const PICopy= () => {
 // const PICopy:React.FC<Props> = ({ gridArea }) => {
-    //const { currPIanchor } = useAppState();
+    const { currPIanchor } = useAppState();
+    const elem = document.getElementById(currPIanchor);
+    console.log(elem);
+    if (elem) elem.scrollIntoView();
     return (
         <Copy>
            

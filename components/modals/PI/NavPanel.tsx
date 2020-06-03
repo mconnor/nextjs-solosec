@@ -21,33 +21,33 @@ const NavPanel: React.FC = () => {
         <Nav>
             <PiNavBtn 
                 active
-                url="#indicationsAndUsage">Indications and Usage</PiNavBtn>
+                url="indicationsAndUsage">Indications and Usage</PiNavBtn>
             <PiNavBtn                
-                url="#dosage">Dosage and Administration</PiNavBtn>
+                url="dosage">Dosage and Administration</PiNavBtn>
             <PiNavBtn                
-                url="#dosageStrength">Dosage Forms and Strengths</PiNavBtn>
+                url="dosageStrength">Dosage Forms and Strengths</PiNavBtn>
             <PiNavBtn                
-                url="#contraindications">Contraindications</PiNavBtn>
+                url="contraindications">Contraindications</PiNavBtn>
             <PiNavBtn                
-                url="#warnings">Warnings and Precautions</PiNavBtn>
+                url="warnings">Warnings and Precautions</PiNavBtn>
             <PiNavBtn                
-                url="#adverseReactions">Adverse Reactions</PiNavBtn>
+                url="adverseReactions">Adverse Reactions</PiNavBtn>
             <PiNavBtn                
-                url="#drugInteractions">Drug Interactions</PiNavBtn>
+                url="drugInteractions">Drug Interactions</PiNavBtn>
             <PiNavBtn               
-                url="#specificUse">Use in Specific Populations</PiNavBtn>
+                url="specificUse">Use in Specific Populations</PiNavBtn>
             <PiNavBtn                
-                url="#description">Description</PiNavBtn>
+                url="description">Description</PiNavBtn>
             <PiNavBtn                
-                url="#clinicalPharmacology">Clinical Pharmacology</PiNavBtn>
+                url="clinicalPharmacology">Clinical Pharmacology</PiNavBtn>
             <PiNavBtn                
-                url="#nonclinicalToxicology">Nonclinical Toxicology</PiNavBtn>
+                url="nonclinicalToxicology">Nonclinical Toxicology</PiNavBtn>
             <PiNavBtn                 
-                url="#clinicalStudies">Clinical Studies</PiNavBtn>
+                url="clinicalStudies">Clinical Studies</PiNavBtn>
             <PiNavBtn                  
-                url="#storage">How Supplied/Storage and Handling</PiNavBtn>
+                url="storage">How Supplied/Storage and Handling</PiNavBtn>
             <PiNavBtn                
-                url="#counseling">Patient Counseling Information</PiNavBtn>
+                url="counseling">Patient Counseling Information</PiNavBtn>
         </Nav>
 
     )
