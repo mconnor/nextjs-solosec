@@ -1,12 +1,13 @@
 export const Splash_p3_7 = () => {
     return (
         
-            <ol><li>Data on File – IQVIA Monthly &amp; Weekly TRx Data in SMART, U.S. Edition – Weekly and Monthly NPA Data
-    (Assessed as of May 2020). Prepared May 2020
-</li>
-<li>
-SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017
-</li>
+            <ol><li>Data on File – IQVIA Monthly &amp; Weekly TRx Data in SMART, U.S. Edition – Weekly and Monthly NPA
+                Data
+                (Assessed as of May 2020). Prepared May 2020
+            </li>
+                <li>
+                    SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
+                </li>
             </ol>
         
     )

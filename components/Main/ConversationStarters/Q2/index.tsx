@@ -10,7 +10,7 @@ const MainDiv = styled.div<MainProps>`
     padding-left: 8.3vw;
     padding-top: 15.5vh;
     display: grid;
-    grid-template-columns: 44vw 33.8vw;
+    grid-template-columns: 33.8vw 44vw;
     grid-template-rows: repeat( 4, 5.7vw);
     column-gap:5.7vw;
     row-gap: 1.3vw;

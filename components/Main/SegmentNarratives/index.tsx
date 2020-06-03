@@ -13,9 +13,10 @@ const Main = styled.div`
 
 const BtnHolder = styled.div`
     position: absolute;
-    top: 47vh;
+    top: 43vh;
     left: 10.2vw;
     z-index: 1;
+    //background-color: #fff;
 `;
 
 const SegmentNarratives: React.FC<Props> = () => {

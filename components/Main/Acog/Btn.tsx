@@ -2,6 +2,7 @@
 import {useToggle, useCookie} from '../../../hooks';
 import styled from 'styled-components';
 //import { useRouter } from 'next/router'
+import {Navigate} from "../../utils/Navigate";
 
 type MainProps = {
     on: boolean;
@@ -32,7 +33,8 @@ const Btn: React.FC<Props> = ({svgClicked, page, seq}) => {
             setTimeout(() => {
                 setCookie(seq);
                 //router.push("/" + page);
-                window.location.href = page + ".html"
+                //window.location.href = page + ".html"
+                Navigate(page);
             }, 100)
         }}>
             <Img src={`./img/svg/${svgClicked}.svg`}/>

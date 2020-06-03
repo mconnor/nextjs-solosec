@@ -60,7 +60,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
         trackTouch: true,
-        delta: 50
+        delta: 150
     });
     // setCookie2(section);
     // console.log(router.pathname )
@@ -79,16 +79,16 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
 
     // @ts-ignore
     function checkKey(e:KeyboardEvent) {
-        e = e || window.event;
-
-        if (e.keyCode === 37) {
-            console.log("left");
-            swipeLink(pageIndex, "Right")
-        }
-        else if (e.keyCode === 39) {
-            console.log("right")
-            swipeLink(pageIndex, "Left");
-        }
+        // e = e || window.event;
+        //
+        // if (e.keyCode === 37) {
+        //     console.log("left");
+        //     swipeLink(pageIndex, "Right")
+        // }
+        // else if (e.keyCode === 39) {
+        //     console.log("right")
+        //     swipeLink(pageIndex, "Left");
+        // }
 
     }
 

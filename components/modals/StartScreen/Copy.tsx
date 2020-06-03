@@ -43,6 +43,9 @@ const Ptag = styled.p<Iscale>`
     font-weight: 500;
     font-size: ${props => `${props.scale * 1}rem`};
     line-height:${props => `${props.scale * 1}rem`};
+    sup {
+    font-size: ${props => `${props.scale * .6}rem`};
+    }
 `;
 
 
@@ -66,6 +69,9 @@ const Container = styled.div<Iscale>`
 
     padding-left:${props => `${props.scale * 26}px`};
     padding-right:${props => `${props.scale * 26}px`};
+    sup {
+    
+    }
 `;
 const NoWrapSpan = styled.span`
     white-space: nowrap;

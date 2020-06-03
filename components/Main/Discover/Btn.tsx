@@ -5,7 +5,8 @@ import styled from 'styled-components';
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
 //import { useRouter } from 'next/router'
-
+import {Navigate} from "../../utils/Navigate";
+//import Nav from "../../modals/Nav";
 
 type Props = {
     svglink:string;
@@ -37,7 +38,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
         setCookie(seq)
         setTimeout(() => {
             //router.push("/" + PageList.pages[page]);
-            window.location.href = PageList.pages[page] + ".html";
+            Navigate(PageList.pages[page]);
         }, 100)
 
     }

@@ -24,10 +24,10 @@ const variants = {
 }
 
 const MainDiv = styled.div`
-    height:60vh;
+    height:50vw;
     padding-left: 7.3vw;
     padding-right: 10.16vw;
-    padding-top: 7.3vw;
+    padding-top: 4vw;
 
     display: grid;
     grid-template-columns: 1fr;

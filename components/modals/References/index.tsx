@@ -66,12 +66,12 @@ const Copy = styled.div`
     li {
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 1.4vw;
+        line-height: 2.1vw;
         letter-spacing: 0.02em;
         margin-left:44px;
-        em {
-            color: red;
+        i {
+            //color: red;
             font-weight: 100;
             font-style: italic;
         }

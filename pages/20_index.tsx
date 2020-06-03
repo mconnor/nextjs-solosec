@@ -9,7 +9,7 @@ const btnArray = [
     'Cost of medication',
     'Other'
 ];
-const HEADLINE = 'What have your patients told you\nis most challenging?'
+const HEADLINE = 'What have your patients told you is most challenging?'
 
 const pages = [
     PageList.pages["7"],

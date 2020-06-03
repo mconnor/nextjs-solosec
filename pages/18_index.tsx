@@ -18,7 +18,7 @@ const seqs = [
     "19_a",
 ];
 
-const HEADLINE = 'What percentage of patients are\nsatisfied with Solosec?'
+const HEADLINE = 'What percentage of patients are satisfied with Solosec?'
 
 export default () => (
     <Layout
