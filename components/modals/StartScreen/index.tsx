@@ -58,7 +58,10 @@ type FCProps = {
 
 const StartScreen: React.FC<FCProps> = ({section}) => {
     //const [cookie, setCookie] = useCookie({key: "isi"});
+
+    //console.log("cookie", cookie, cookie === "close");
     const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
+
     if (section !== Sections.SPLASH) {
         setInitSafteyInfo && setInitSafteyInfo(false);
         return null;
