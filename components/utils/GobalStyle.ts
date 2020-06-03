@@ -126,7 +126,7 @@ a {
     z-index:9 !important;
 }
 .z1 {
-    z-index:9 !important;
+    z-index:1 !important;
 }
 
 .modalFullscreen {

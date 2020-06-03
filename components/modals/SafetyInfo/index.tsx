@@ -78,11 +78,8 @@ const SafetyModalWrapper: React.FC = () => {
 
     return (
         <OuterContainer scale={layoutScale}
-                className={ 
-                    isSafetyInfoOpen
-                    ? 'modalWrapper z9' 
-                    : 'modalWrapper z1' 
-                }
+                className='modalWrapper' 
+
                 isOpen={isSafetyInfoOpen}
                 variants={variants}
                 initial='closed'
