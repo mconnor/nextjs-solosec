@@ -12,7 +12,7 @@ const Main = styled.div`
     display: grid;
     place-items: center;
     height: 100%;
-    margin-top: -60px;
+    margin-top: 0;
 `;
 
 const VideoAlcohol: React.FC<Props> = ({ stillUrl, videoUrl}) => {
