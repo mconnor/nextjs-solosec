@@ -7,8 +7,8 @@ type MainProps = {
 }
 
 const MainDiv = styled.div<MainProps>`
-    margin-left: 8.3vw;
-    margin-top: 15.5vh;
+    padding-left: 8.3vw;
+    padding-top: 15.5vh;
     display: grid;
     grid-template-columns: 44vw 33.8vw;
     grid-template-rows: repeat( 4, 5.7vw);

@@ -32,6 +32,7 @@ const variantsRight = {
 }
 
 const OuterContainer = styled(motion.div)`
+  z-index:5;
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
   background:white;
@@ -47,18 +48,18 @@ const CopyWrapper = styled(motion.div)`
 `;
 
 const CloseWrapper = styled.div`
-left: 35%;
+    left: 35%;
 
     position: fixed;
     top: var(--header-height);
-   right:3%;
-   background:white;
-   border-bottom: 1px gray solid;
+    right:3%;
+    background:white;
+    border-bottom: 1px gray solid;
     position: fixed;
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows:30px;
-   padding-bottom: 33px;
+    padding-bottom: 33px;
    
     
 
@@ -88,11 +89,7 @@ const PrescribingInfo = () => {
     if (isInitSafetyInfoOpen) return null;
     return (
         <OuterContainer
-            className={
-                isPrescribingInfoOpen
-                    ? 'modalWrapper z9'
-                    : 'modalWrapper z1'
-            }>
+            className='modalWrapper'>
 
             <NavWrapper
                 variants={variants}

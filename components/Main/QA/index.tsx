@@ -24,10 +24,10 @@ const variants = {
 }
 
 const MainDiv = styled.div`
-    height:59vh;
-    margin-left: 7.3vw;
-    margin-right: 10.16vw;
-    margin-top: 7.3vw;
+    height:60vh;
+    padding-left: 7.3vw;
+    padding-right: 10.16vw;
+    padding-top: 7.3vw;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -37,6 +37,17 @@ const MainDiv = styled.div`
     sup {
     font-size: 10px;
     }
+    -webkit-overflow-scrolling: auto;
+    ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
 `;
 
 

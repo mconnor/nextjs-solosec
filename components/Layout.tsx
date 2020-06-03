@@ -54,7 +54,8 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
         onSwiping: (eventData) => onSwiping(eventData, pageIndex),
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
-        trackTouch: true
+        trackTouch: true,
+        delta: 50
     });
     // setCookie2(section);
     // console.log(router.pathname )
@@ -132,12 +133,12 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
             <GlobalStyle/>
             
             <PageWrapper>
-                <StartScreen />
+                <StartScreen section={section}/>
                 
                 <Nav />
                 <ReferencesWrapper section={section}/>
-                <PrescribingInfoWrapper />
-                <Header />
+                <PrescribingInfoWrapper/>
+                <Header/>
 
     {/* <ShowScreenSize>{ipadWidthPx}  {ipadHeightPx}</ShowScreenSize> */}
 			    <PageContainer {...handlers}>

@@ -1,8 +1,8 @@
-
 import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
-import { useAppState } from '../../../state'
+import {useAppState} from '../../../state'
+import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
 
 
@@ -68,7 +68,7 @@ const StartScreen = () => {
                   <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
-                    <Copy start />
+                    <Copy start/>
                 </Main>
                     <SafteyFooter />
 
