@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
         //--header-height: calc(var(--ipad-width)*.08); 
         --header-height: 8vw; 
-        // --main-height:calc(var(--ipad-height) - var(--header-height));
+        //--main-height:calc(var(--ipad-height) - var(--header-height));
         --main-height:92vw;
        
         --isi-exit-y:var(--main-height);
@@ -135,7 +135,8 @@ a {
     .modalWrapper {
        
         width:var(--ipad-width);
-        height:var(--ipad-main-height);
+        //height:var(--ipad-main-height);
+        height:71vw;
         position: absolute;
        
         left:0;

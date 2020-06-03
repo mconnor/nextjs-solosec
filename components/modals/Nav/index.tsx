@@ -43,7 +43,7 @@ const TB4 = 'Patient/Physician Testimonial'
 const variants = {
     open: { y: 0 },
     closed: {
-        y: "100%",
+        y: "110%",
         transition: {
             delay: .2
         }
@@ -66,7 +66,6 @@ const MainDiv = styled(motion.div)`
     padding-top: 3vw;
     padding-bottom: 4.8vw;
     align-items:start;
-    
 `;
 
 interface StyleProps {
@@ -90,7 +89,7 @@ const NavContainerX = styled.div<StyleProps>`
     border-right: ${props => props.borderRight && '2px solid #034063'};
     display: grid;
     grid-template-columns: 1fr;
-    height: 100%; 
+    height: 82%; 
     margin:0;
     line-height: 4vw;
     padding-right: 20px !important;
