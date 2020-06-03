@@ -6,11 +6,8 @@ import {useAppState} from "../../state";
 //import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
 import {Navigate} from "../utils/Navigate";
-//import { Imodal } from '../interfaces';
 
-interface IProps {
-
-}
+import HeaderLogo from './HeaderLogo'
 
 // interface IProps extends IwidthHeightPxString  extends IwidthHeightNums {}
 
@@ -33,13 +30,13 @@ const MainDiv = styled.div`
 `;
 
 const IndexLinkWrapper = styled.div`
-     justify-self:end;
+     /* display: flex;
+     flex-direction:row;
+     justify-items: end; */
+     justify-self: end;
     cursor: pointer;
-`;
-
-const SVGimg = styled.img`
-    /* width:220px; */
-    height: calc(var(--header-height)*.8);
+    border: pink 1px black;
+  
 `;
 
 
@@ -49,7 +46,7 @@ const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
 
-const Header: React.FC<IProps> = ({}) => {
+const Header = () => {
     const {
         toggleReference, togglePrescribingInfo, toggleSafetyInfo,
         setNav, setSafteyInfo, toggleNav,
@@ -89,7 +86,7 @@ const Header: React.FC<IProps> = ({}) => {
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
               <IndexLinkWrapper  onClick={() => window.location.href = "01_index.html"}>
          
-                    <SVGimg src='./img/svg/solosec-logo-header.svg' />
+                   <HeaderLogo />
             </IndexLinkWrapper>
 
 
