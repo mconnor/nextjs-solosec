@@ -51,9 +51,7 @@ const variants = {
 }
 
 const MainDiv = styled(motion.div)`
-    z-index: 3;
-  
-    position: fixed;
+    z-index:5;
     top:var(--header-height);
     left:0;
     padding: 1.6vw;
@@ -168,7 +166,11 @@ const Nav = () => {
    
     if (isInitSafetyInfoOpen) return null;
     return (
-        <MainDiv
+        <MainDiv 
+            className={
+                isNavOpen
+                ? 'modalWrapper z9' 
+                : 'modalWrapper z1' }
             variants={variants}
             initial='closed'
             animate={isNavOpen ? 'open' : 'closed'}

@@ -32,19 +32,10 @@ const variantsRight = {
 }
 
 const OuterContainer = styled(motion.div)`
-     position: fixed ;
-     width: var(--ipad-width);
-    max-width: var(--ipad-max-width);
-  
-    margin-top:var(--header-height);
-    
-    /* height: var(--main-height); */
-    
-    /* overflow:scroll !important;
-    b
-    overflow-y: hidden; */
+  z-index:5;
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
+  background:white;
 `;
 
 
@@ -57,18 +48,18 @@ const CopyWrapper = styled(motion.div)`
 `;
 
 const CloseWrapper = styled.div`
-left: 35%;
+    left: 35%;
 
-position: fixed;
+    position: fixed;
     top: var(--header-height);
-   right:3%;
-   background:white;
-   border-bottom: 1px gray solid;
+    right:3%;
+    background:white;
+    border-bottom: 1px gray solid;
     position: fixed;
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows:30px;
-   padding-bottom: 33px;
+    padding-bottom: 33px;
    
     
 
@@ -97,7 +88,8 @@ const PrescribingInfo = () => {
     const { isInitSafetyInfoOpen, isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
     if (isInitSafetyInfoOpen) return null;
     return (
-        <OuterContainer className='modalWrapper'>
+        <OuterContainer
+            className='modalWrapper'>
 
             <NavWrapper
                 variants={variants}

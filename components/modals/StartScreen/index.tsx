@@ -2,16 +2,13 @@ import styled from 'styled-components';
 import Copy from './Copy'
 import ConfirmBtn from './ConfirmBtn'
 import {useAppState} from '../../../state'
-import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
-//import {useCookie} from "../../../hooks";
+
+
 
 const OuterContainer = styled.div`
-   width: 400px;
-    max-width: var(--ipad-max-width); 
-    
-    z-index:6 !important;
-   
+  
+    z-index:30;
     background:rgba(0,0,0,.5) !important;
 
     display:grid;
@@ -27,7 +24,6 @@ const MyGrid = styled.div`
  
     display:grid;
     grid-template-columns: 1fr;
-   
     grid-template-rows: 130px 1fr 100px;
 `;
 
@@ -51,40 +47,29 @@ const Main = styled.div`
 `;
 
 
-type FCProps = {
-    section: string;
-}
 
-const StartScreen: React.FC<FCProps> = ({section}) => {
-    //const [cookie, setCookie] = useCookie({key: "isi"});
 
-    const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
+const StartScreen = () => {
+    const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
 
-    //const sec = cookie === "close" ? Sections.INDEX : Sections.SPLASH;
+    
 
-    if (section !== Sections.SPLASH) {
-        setInitSafteyInfo && setInitSafteyInfo(false);
-        return null;
-    }
+
 
     if (!isInitSafetyInfoOpen) return null;
-
-    function close() {
-        //if (!cookie) setCookie("close");
-        setInitSafteyInfo && setInitSafteyInfo(false)
-    }
-
+ 
     return (
-        <OuterContainer className='modalWrapper'>
-            <MyGrid>
+        <OuterContainer 
+            className='modalFullScreen modalWrapper'>
+            <MyGrid >
                 <Header>
-
-                    <ConfirmBtn clickCallBack={()=>close()}>CONFIRM</ConfirmBtn>
+                
+                  <ConfirmBtn clickCallBack={()=> setInitSafteyInfo && setInitSafteyInfo(false)}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
                     <Copy start/>
                 </Main>
-                <SafteyFooter/>
+                    <SafteyFooter />
 
             </MyGrid>
         </OuterContainer>

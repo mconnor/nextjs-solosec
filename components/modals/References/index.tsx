@@ -7,7 +7,7 @@ import * as Sections from "../../utils/Sections";
 const variants = {
     open: {y: 0},
     closed: {
-        y: "100%",
+        y: "100%", 
         transition: {
             delay: .2
         }
@@ -15,9 +15,11 @@ const variants = {
 
 }
 
-const OuterContainer = styled(motion.div)`
 
-    top:var(--header-height);
+
+const OuterContainer = styled(motion.div)`
+    z-index:30;
+    top:0;
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
 `;
@@ -87,6 +89,7 @@ type Props = {
 }
 const ReferencesWrapper: React.FC<Props> = ({section}) => {
     const { isInitSafetyInfoOpen } = useAppState();
+    
     if (isInitSafetyInfoOpen) return null;
     if (section === Sections.NO_REF) return null;
     return <References section={section}/>;
@@ -97,11 +100,16 @@ const References: React.FC<Props> = ({section}) => {
     console.log('section' + section)
 
     return (
-        <OuterContainer className='modalWrapper'
-                        variants={variants}
-                        initial='closed'
-                        animate={isReferenceOpen ? 'open' : 'closed'}
-                        transition={{damping: 300}}>
+        <OuterContainer 
+                className={
+                    isReferenceOpen 
+                    ? 'modalFullScreen modalWrapper' 
+                    : 'modalFullScreen modalWrapper'
+                }
+                variants={variants}
+                initial='closed'
+                animate={isReferenceOpen ? 'open' : 'closed'}
+                transition={{damping: 300}}>
             <Container>
                 <Top>
                     <h1>REFERENCES</h1>
