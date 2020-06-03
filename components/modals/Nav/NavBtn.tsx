@@ -4,6 +4,7 @@ import styled from 'styled-components'
 // import { motion } from 'framer-motion';
 import { useAppState } from '../../../state';
 //import {PageList} from "./PageList";
+import {Navigate} from "../../utils/Navigate";
 
 interface ChildrenProps {
     children?: ReactNode;
@@ -75,9 +76,10 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
     };
 
     function nav() {
-        let path = window.location.pathname.split("/");
-        let strippedPath = path.slice(0, path.length - 1).join("/");
-        window.location.href = strippedPath + url + ".html";
+        // let path = window.location.pathname.split("/");
+        // let strippedPath = path.slice(0, path.length - 1).join("/");
+        // window.location.href = strippedPath + url + ".html";
+        Navigate(url);
     }
 
     // very hacky solution for this particualar case

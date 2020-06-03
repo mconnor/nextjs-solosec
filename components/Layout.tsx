@@ -16,6 +16,7 @@ import {PageList} from "./modals/Nav/PageList";
 import {useAppState} from "../state";
 import { useCookie } from '../hooks';
 import SafetyModalWrapper from './modals/SafetyInfo/';
+import {Navigate} from "./utils/Navigate";
 
 type RLprops = {
     dir: "Right" | "Left" | "Up" | "Down";
@@ -108,16 +109,20 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 const currentPage = thisPath.indexOf(page);
                 // if (dir === "Right") if (currentPage !== 0) router.push("/" + PageList["pages"][thisPath[currentPage-1]]);
                 // if (dir === "Left") if (currentPage !== thisPath.length-1) router.push("/" + PageList["pages"][thisPath[currentPage+1]]);
-                if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage - 1]] + ".html";
-                if (dir === "Left") if (currentPage !== thisPath.length - 1) window.location.href = PageList["pages"][thisPath[currentPage + 1]] + ".html";
+                //if (dir === "Right") if (currentPage !== 0) window.location.href = PageList["pages"][thisPath[currentPage - 1]] + ".html";
+                //if (dir === "Left") if (currentPage !== thisPath.length - 1) window.location.href = PageList["pages"][thisPath[currentPage + 1]] + ".html";
+                if (dir === "Right") if (currentPage !== 0) Navigate(PageList["pages"][thisPath[currentPage - 1]]);
+                if (dir === "Left") if (currentPage !== thisPath.length - 1) Navigate(PageList["pages"][thisPath[currentPage + 1]]);
             }
         }
 
         function navigate() {
             // if (dir === "Right") if (n !== 0) router.push("/" + PageList["pages"][path[n-1]]);
             // if (dir === "Left") if (n !== path.length-1) router.push("/" + PageList["pages"][path[n+1]]);
-            if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n - 1]] + ".html";
-            if (dir === "Left") if (n !== path.length - 1) window.location.href = PageList["pages"][path[n + 1]] + ".html"
+            //if (dir === "Right") if (n !== 0) window.location.href = PageList["pages"][path[n - 1]] + ".html";
+            //if (dir === "Left") if (n !== path.length - 1) window.location.href = PageList["pages"][path[n + 1]] + ".html"
+            if (dir === "Right") if (n !== 0) Navigate(PageList["pages"][path[n - 1]]);
+            if (dir === "Left") if (n !== path.length - 1) Navigate(PageList["pages"][path[n + 1]])
         }
     }
 

@@ -14,6 +14,7 @@ const BtnInvisible = styled.button`
     //background-color:#F3F
     background:none;
     border:none;
+    z-index: 3;
 `;
 
 export default () => {
