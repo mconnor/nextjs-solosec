@@ -1494,10 +1494,10 @@ k[p]=X(k[p]," "):(console.warn("unsupported value: "+k[p]),k[p]=[0]):k[p]=[0]:32
 l.length&&(c.A.push(e),c.C.push(l))}c.v=b;c.g=0;c.f=c.v;aa(c);return c},add:aa,remove:P,removeAll:function(){for(var a=w.length-1;0<=a;--a)P(w[a]);return this},timelines:function(){return w.slice()},globalPlay:function(){u&&(V=u-(new Date).getTime(),u=void 0,N());return this},globalPause:function(){u||(u=v,O(!1));return this},globalState:function(){return u?"paused":"running"}}}();
 ]]></script>
     <script><![CDATA[if(KeyshapeJS.version.indexOf('1.')!=0)throw Error('Expected KeyshapeJS v1.*.*');window.ks=document.ks=KeyshapeJS;(function(ks){
-ks.animate("#_a0",[{p:'opacity',t:[0,700],v:[0,1],e:[[0],[0]]}],
-"#_a1",[{p:'opacity',t:[400,1100],v:[0,1],e:[[0],[0]]}],
-"#_a2",[{p:'opacity',t:[800,1500],v:[0,1],e:[[0],[0]]}],
-{autoremove:false}).range(0,1500);
+ks.animate("#_a0",[{p:'opacity',t:[0,1166],v:[0,1],e:[[0],[0]]}],
+"#_a1",[{p:'opacity',t:[666,1832],v:[0,1],e:[[0],[0]]}],
+"#_a2",[{p:'opacity',t:[1332,2500],v:[0,1],e:[[0],[0]]}],
+{autoremove:false}).range(0,2500);
 if(document.location.search.substr(1).split('&').indexOf('global=paused')>=0)ks.globalPause()})(KeyshapeJS);
 ]]></script>
 </svg>
