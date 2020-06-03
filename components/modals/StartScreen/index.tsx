@@ -6,7 +6,6 @@ import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
 //import {useCookie} from "../../../hooks";
 
-
 const OuterContainer = styled.div`
    width: 400px;
     max-width: var(--ipad-max-width); 
@@ -59,8 +58,9 @@ type FCProps = {
 const StartScreen: React.FC<FCProps> = ({section}) => {
     //const [cookie, setCookie] = useCookie({key: "isi"});
 
-    //console.log("cookie", cookie, cookie === "close");
     const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
+
+    //const sec = cookie === "close" ? Sections.INDEX : Sections.SPLASH;
 
     if (section !== Sections.SPLASH) {
         setInitSafteyInfo && setInitSafteyInfo(false);
@@ -69,15 +69,17 @@ const StartScreen: React.FC<FCProps> = ({section}) => {
 
     if (!isInitSafetyInfoOpen) return null;
 
+    function close() {
+        //if (!cookie) setCookie("close");
+        setInitSafteyInfo && setInitSafteyInfo(false)
+    }
+
     return (
         <OuterContainer className='modalWrapper'>
             <MyGrid>
                 <Header>
 
-                    <ConfirmBtn clickCallBack={() => {
-                        //setCookie("close");
-                        setInitSafteyInfo && setInitSafteyInfo(false)
-                    }}>CONFIRM</ConfirmBtn>
+                    <ConfirmBtn clickCallBack={()=>close()}>CONFIRM</ConfirmBtn>
                 </Header>
                 <Main>
                     <Copy start/>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Btn from './Btn'
 //import { useRouter } from 'next/router'
 import {PageList} from "../../modals/Nav/PageList";
+import {Navigate} from "../../utils/Navigate";
 
 const MainDiv = styled.div`
     background-image: url(./img/svg/pg6.svg);
@@ -19,11 +20,12 @@ const BtnContainer = styled.div`
 const BtnInvisible = styled.button`
     width: 360px;
     height: 75px;
+    //background-color: #fff;
     background: transparent;
     border: none !important;
     font-size:0;
     position: absolute;
-    top: 52.6vw;
+    top: 46vw;
     right: 4vw;
     cursor: pointer;
 `;
@@ -42,7 +44,8 @@ const Discover = () => {
             </BtnContainer>
             <BtnInvisible onClick={() => {
                 //router.push("/" + PageList.pages["3"])
-                window.location.href = PageList.pages["3"] + ".html"
+                //window.location.href = PageList.pages["3"] + ".html"
+                Navigate(PageList.pages["3"])
             }}/>
         </MainDiv>
     )
