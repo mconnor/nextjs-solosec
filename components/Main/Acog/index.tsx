@@ -26,7 +26,7 @@ const BtnContainer = styled.div`
     left: 35vw;
     top: 8.6vw;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 `;
 
 type Props = {
@@ -45,9 +45,18 @@ const Acgo:React.FC<Props> = ( { page }) => {
                 <Btn svgClicked={`pg${page}-button-5-overlay`} page={PageList.pages["12"]} seq="03_e"/>
                 <Btn svgClicked={`pg${page}-button-6-overlay`} page={PageList.pages["4"]} seq="03_f"/>
             </BtnContainer>
+            <div style={{
+                width: "100vw",
+                height: "100vh",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                zIndex: 1
+            }}></div>
             <SVGDiv className='obj'>
                 <object type="image/svg+xml" data="./img/svg/pg14-background.svg"/>
             </SVGDiv>
+
         </MainDiv>
     )
 }
