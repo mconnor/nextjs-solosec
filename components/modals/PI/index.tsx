@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 
 
-
-import PICopy from './PICopy';
+import Copy from './Copy';
+// import PICopy from './PICopy';
 import NavPanel from './NavPanel'
 import CloseBtn from './CloseBtn'
 
@@ -119,7 +119,7 @@ const PrescribingInfo = () => {
                 transition={{ damping: 300 }}
             //  onAnimationComplete={()=> setIsExitAnimDone(true) }
             >
-                <PICopy />
+                <Copy />
             </CopyWrapper>
         </OuterContainer>
     )
