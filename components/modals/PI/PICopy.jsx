@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+//import { useAppState } from '../../../state'
 
 const TRfirst = styled.tr`
 
@@ -73,14 +74,14 @@ const P= styled.p`
 
 const PICopy= () => {
 // const PICopy:React.FC<Props> = ({ gridArea }) => {
-
+    //const { currPIanchor } = useAppState();
     return (
         <Copy>
            
 
             <div className="content">
 
-                <H1>Full Prescribing Information</H1>
+                <H1 id="top">Full Prescribing Information</H1>
 
                 <div id="indicationsAndUsage">
 

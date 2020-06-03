@@ -98,7 +98,7 @@ const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, ho
                 stiffness: 340,
                 damping: 40,
                 delay: .5,
-                mass: 2
+                mass: 4
             }}
         >
             <Score fontSize={24}>{score}%</Score>
