@@ -6,3 +6,4 @@ export * from "./useSequence";
 export * from "./useCookie";
 export * from "./useMediaType";
 export * from "./useDeviceDimensions";
+export * from "./useStickyState";

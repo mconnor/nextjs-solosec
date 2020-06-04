@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 //import {useAppState} from "../../../state";
 import {PageList} from "../../modals/Nav/PageList";
-import { useCookie } from '../../../hooks'
+import {useCookie} from '../../../hooks'
 //import { useRouter } from 'next/router'
 import {Navigate} from "../../utils/Navigate";
 //import Nav from "../../modals/Nav";
@@ -35,7 +35,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
 
     function linkTo(page:string) {
         console.log(cookie);
-        setCookie(seq)
+        setCookie(seq);
         setTimeout(() => {
             //router.push("/" + PageList.pages[page]);
             Navigate(PageList.pages[page]);
