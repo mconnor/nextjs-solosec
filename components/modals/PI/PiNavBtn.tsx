@@ -12,13 +12,13 @@ interface IBtn {
 }
 
 const NavBtn = styled.div<IBtn>`
-    height: 45px;
+    height: 3.29vw;
     border: 1 solid black;
     display: grid;
     align-items: center;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.3vw;
     padding-left:16px;
     border: 2px;
    
@@ -54,13 +54,13 @@ const PiNavBtn: React.FC<Props> = ({ url, children, active = false }) => {
     }
     return (
 
-        <Link href={url}>
+        <div>
 
-                <NavBtn active={currPIanchor === url} onClick={() => handleClick(url)}>
-                    {children}
-                </NavBtn>
+            <NavBtn active={currPIanchor === url} onClick={() => handleClick(url)}>
+                {children}
+            </NavBtn>
 
-        </Link>
+        </div>
     )
 }
 

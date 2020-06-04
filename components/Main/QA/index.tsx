@@ -37,17 +37,18 @@ const MainDiv = styled.div`
     sup {
     font-size: 10px;
     }
-    -webkit-overflow-scrolling: touch;
-    ::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, .5);
-  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
+    -webkit-overflow-scrolling: auto;
+    
+    //::-webkit-scrollbar {
+    //  -webkit-appearance: none;
+    //  width: 7px;
+    //}
+    //
+    //::-webkit-scrollbar-thumb {
+    //  border-radius: 4px;
+    //  background-color: rgba(0, 0, 0, .5);
+    //  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    //}
 `;
 
 
