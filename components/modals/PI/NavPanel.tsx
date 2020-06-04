@@ -9,7 +9,7 @@ const Nav = styled.nav`
     /* position:fixed; */
     display:grid;
     grid-template-columns: 1fr;
-    color: var(--isi-blue);
+    color: var(--pi-modal-blue);
     background: #eeeeee;
     padding: 0 40px;   
 `;
