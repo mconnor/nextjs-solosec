@@ -2,6 +2,9 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 import {useDeviceDimensions} from '../../hooks'
 import { IwidthHeightPxString } from '../interfaces'
+import { useAppState } from '../../state'
+// import MyImage from './MyImage';
+
 
 
 
@@ -18,7 +21,7 @@ const MainDiv = styled.div<MainDivProps & IwidthHeightPxString>`
     grid-area: ${props => props.gridArea};
     background-repeat: 
         ${props => props.bgArt && props.foreGroundArt ? 'no-repeat, no-repeat'
-    : props.bgArt || props.foreGroundArt ? 'no-repeat'
+        : props.bgArt || props.foreGroundArt ? 'no-repeat'
         : ''
 };
     background-image: 
@@ -49,8 +52,12 @@ type Props = {
 const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgArt,
                                  pageIndex}) => {
     console.log(pageIndex);
-    const {ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx} = useDeviceDimensions();
-    console.log(ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx);
+    const {ipadWidthPx, ipadMainSectionHeightPx} = useDeviceDimensions();
+    const { isInitSafetyInfoOpen } = useAppState();
+
+    if (isInitSafetyInfoOpen) return null;
+    
+    // console.log(ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx);
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}
                  bgSize={ipadWidthPx + ' ' + ipadMainSectionHeightPx}
