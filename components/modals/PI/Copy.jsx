@@ -13,7 +13,7 @@ const Copy = () => {
 				<h2>1 Indications and Usage</h2>
 				<h3>1.1 Bacterial Vaginosis</h3>
 				<p>
-					SOLOSEC is indicated for the treatment of bacterial vaginosis in adult women{' '}
+                    SOLOSEC is indicated for the treatment of bacterial vaginosis in adult women
 					<em>
 						[see Use in Specific Populations (<a href="#specificUse">8.1</a>) and Clinical Studies (<a href="#clinicalStudies">14</a>)]
 					</em>.
@@ -30,6 +30,8 @@ const Copy = () => {
 			</div>
 			<div id="dosage">
 				<h2>2 Dosage and Administration</h2>
+
+
 				<h3>2.1 Recommended Dosage</h3>
 				<p>
 					The recommended dosage of SOLOSEC is a single 2-gram packet of granules taken once orally, without
@@ -41,18 +43,16 @@ const Copy = () => {
 				<h3>2.2 Instructions for the Preparation and Administration of SOLOSEC</h3>
 				<ul>
 					<li>
-						Open the SOLOSEC packet by folding over the corner (marked by an arrow) and tearing across the
-						top.
+                    Open the SOLOSEC packet by folding over the corner (marked by an arrow) and tearing across the top.
 					</li>
+                    <li>IMAGE GOES HERE?</li>
 					<li>
-						Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding{' '}
+                    Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding 
 						<em>
 							[see Clinical Pharmacology (<a href="#clinicalPharmacology">12.3</a>)]
-						</em>. The granules will not dissolve. Consume all of the mixture within 30 minutes without
-						chewing or crunching the granules. A glass of water may be taken after the administration of
-						SOLOSEC to aid in swallowing.
-					</li>
-					<li>The granules are not intended to be dissolved in any liquid.</li>
+						</em>. The granules are not intended to be dissolved in any liquid. 
+                        </li>
+                        <li>The granules are not intended to be dissolved in any liquid.</li>
 				</ul>
 			</div>
 			<div id="dosageStrength">
@@ -83,10 +83,7 @@ const Copy = () => {
 				</p>
 				<h3>5.2 Potential Risk for Carcinogenicity</h3>
 				<p>
-					Carcinogenicity has been seen in mice and rats treated chronically with nitroimidazole derivatives
-					which are structurally related to secnidazole. It is unclear if the positive tumor findings in
-					lifetime rodent studies of these nitroimidazoles indicate a risk to patients taking a single dose of
-					SOLOSEC to treat bacterial vaginosis. Avoid chronic use of SOLOSEC{' '}
+                    Carcinogenicity has been seen in mice and rats treated chronically with nitroimidazole derivatives which are structurally related to secnidazole. It is unclear if the positive tumor findings in lifetime rodent studies of these nitroimidazoles indicate a risk to patients taking a single dose of SOLOSEC to treat bacterial vaginosis. Avoid chronic use of SOLOSEC 
 					<em>
 						[see Nonclinical Toxicology (<a href="#nonclinicalToxicology">13.1</a>)]
 					</em>
@@ -113,10 +110,7 @@ const Copy = () => {
 					trial (Trial 3 n=321).
 				</p>
 				<p>
-					All patients received a single oral dose of study medication or placebo. Trial 1 evaluated a 1 g
-					(this dose is not approved) dose (n=71) and a 2 g dose (n=72) of SOLOSEC. Trial 2 evaluated a 2 g
-					dose (n=125). The population was female, aged 15 to 54 years. Patients in the placebo-controlled
-					trials were primarily Black or African American (54%) or Caucasian (41%).
+                    All patients received a single oral dose of study medication or placebo. Trial 1 evaluated a 1 g (this dose is not approved) dose (n=71) and a 2 g dose (n=72) of SOLOSEC. Trial 2 evaluated a 2 g dose (n=125). The population was female, aged 15 to 54 years. Patients in the placebo- controlled trials were primarily Black or African American (54%) or Caucasian (41%).
 				</p>
 				<p>
 					There were no deaths in the trials. Two patients in Trial 3 discontinued due to vulvovaginal
@@ -215,10 +209,7 @@ const Copy = () => {
 				<h3>8.1 Pregnancy</h3>
 				<h4 className="underline">Risk Summary</h4>
 				<p>
-					Limited available data with SOLOSEC use in pregnant women are insufficient to inform a drug
-					associated risk of adverse developmental outcomes. In animal reproduction studies, there were no
-					adverse developmental outcomes when secnidazole was administered orally to pregnant rats and rabbits
-					during organogenesis at doses up to 4 times the clinical dose{' '}
+                     Limited available data with SOLOSEC use in pregnant women are insufficient to inform a drug associated risk of adverse developmental outcomes. In animal reproduction studies, there were no adverse developmental outcomes when secnidazole was administered orally to pregnant rats and rabbits during organogenesis at doses up to 4 times the clinical dose (see Data)
 					<em>
 						(see <a href="#specificUseData">Data</a>)
 					</em>.
@@ -281,9 +272,7 @@ const Copy = () => {
 			<div id="description">
 				<h2>11 Description</h2>
 				<p>
-					The active ingredient in SOLOSEC Oral Granules is secnidazole (also named
-					1-(2-hydroxypropyl)-2-methyl-5-nitroimidazole and 1-(2-methyl-5-nitro-1<em>H</em>-imidazol-1-yl)
-					propan-2-ol), a nitroimidazole antimicrobial.
+                    The active ingredient in SOLOSEC Oral Granules is secnidazole (also named 1-(2- hydroxypropyl)-2-methyl-5-nitroimidazole and 1-(2-methyl-5-nitro-1H-imidazol-1-yl) propan-2- ol), a nitroimidazole antimicrobial.
 				</p>
 				<p>
 					The molecular formula of secnidazole is C<sub>7</sub>H<sub>11</sub>N<sub>3</sub>O<sub>3</sub>, the
@@ -294,9 +283,7 @@ const Copy = () => {
 				</p>
 				<h3>Figure 1: Structure of Secnidazole</h3>
 				<p>
-					Each packet of SOLOSEC contains 4.8 g of off-white to slightly yellowish granules, which contain 2 g
-					of secnidazole and the following inactive ingredients: Eudragit NE30D (ethyl acrylate methyl
-					methacrylate copolymer), polyethylene glycol 4000, povidone, sugar spheres, and talc.
+                    Each packet of SOLOSEC contains 4.8 g of off-white to slightly yellowish granules, which contain 2 g of secnidazole and the following inactive ingredients: Eudragit NE30D (ethyl acrylate methyl methacrylate copolymer), polyethylene glycol 4000, povidone, sugar spheres, and talc. Contains no ingredient made from a gluten-containing grain (wheat, barley, or rye).
 				</p>
 			</div>
 			<div id="clinicalPharmacology">
@@ -466,13 +453,11 @@ const Copy = () => {
 				</table>
 				<h3 className="underline">Distribution</h3>
 				<p>
-					The apparent volume of distribution of secnidazole is approximately<br />42 L. The plasma protein
-					binding of secnidazole is &lt; 5%.
+                    The apparent volume of distribution of secnidazole is approximately 42 L. The plasma protein binding of secnidazole is &lt; 5%.
 				</p>
 				<h3 className="underline">Elimination</h3>
 				<p>
-					The total body clearance of secnidazole is approximately 25 mL/min. The renal clearance of
-					secnidazole is approximately 3.9 mL/min.
+                    The total body clearance of secnidazole is approximately 25 mL/min. The renal clearance of secnidazole is approximately 3.9 mL/min.
 				</p>
 				<p>The plasma elimination half-life for secnidazole is approximately 17 hours.</p>
 				<h3 className="italicise">Metabolism</h3>
@@ -1044,16 +1029,14 @@ const Copy = () => {
 					</li>
 				</ul>
 				<p>
-					This Patient Information and Instructions for Use have been approved by the US Food and Drug
-					Administration. Revised: 10/2017
+                    This Patient Information and Instructions for Use have been approved by the US Food and Drug Administration. Revised: 06/2019
 				</p>
 				<p>Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202</p>
-				<p>© 2017 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
+				<p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
 				<p>
-					Solosec<sup className="trade grey">™</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
-					Company)
+					Solosec<sup className="trade grey">™</sup> is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)
 				</p>
-				<p>7179660</p>
+				<p>226679</p>
 			</div>
 
 			<style jsx>{`
