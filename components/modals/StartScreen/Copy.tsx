@@ -87,8 +87,10 @@ type Props = {
 }
 
 const Copy: React.FC<Props> = ({  start }) => {
-    const { togglePrescribingInfo,
-        setNav, setSafteyInfo, layoutScale, setLayoutScale } = useAppState();
+    const {
+        togglePrescribingInfo,
+        setNav, setSafteyInfo, layoutScale, setLayoutScale, setInitSafteyInfo
+    } = useAppState();
 
     const { ipadWidth } = useDeviceDimensions();
     
@@ -104,6 +106,7 @@ const Copy: React.FC<Props> = ({  start }) => {
 
     const handleIPIclick = () => {
         togglePrescribingInfo && togglePrescribingInfo();
+        setInitSafteyInfo && setInitSafteyInfo(false);
         setSafteyInfo && setSafteyInfo(false);
         setNav && setNav(false);
     }

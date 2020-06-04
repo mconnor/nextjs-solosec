@@ -1,6 +1,11 @@
 // import styles from './Copy.module.css'
+import {useAppState} from "../../../../state";
 
 const Copy = () => {
+	const {currPIanchor} = useAppState();
+	let elem = document.getElementById(currPIanchor);
+	if (elem) elem.scrollIntoView();
+
 	return (
 		<div className="MyPi">
 			<h1>Full Prescribing Information</h1>
