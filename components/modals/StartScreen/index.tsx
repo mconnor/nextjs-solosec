@@ -59,8 +59,8 @@ type FCProps = {
 
 const StartScreen: React.FC<FCProps> = ({ section }) => {
     //const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: 'StartScreenDidPlay' }) ;
-    const cookieInitScreen = typeof window !== 'undefined' ? window.localStorage.isi : ""
-    const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
+    const cookieInitScreen = typeof window !== 'undefined' ? window.sessionStorage.isi : ""
+    const {isInitSafetyInfoOpen, setInitSafteyInfo} = useAppState()
 
     if (section !== Sections.SPLASH) {
         setInitSafteyInfo && setInitSafteyInfo(false);
@@ -79,7 +79,7 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
 
                     <ConfirmBtn clickCallBack={() => {
                         //setCookieInitScreen('yes');
-                        if (typeof window !== 'undefined') window.localStorage.isi = 'yes';
+                        if (typeof window !== 'undefined') window.sessionStorage.isi = 'yes';
                         setInitSafteyInfo && setInitSafteyInfo(false)
                     }}>CONFIRM</ConfirmBtn>
                 </Header>

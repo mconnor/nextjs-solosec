@@ -290,7 +290,7 @@ const Copy = () => {
 					molecular weight is 185.18 and the chemical structure is:
 				</p>
 				<p>
-					<img className="s50" src="/global/figure-1.png" />
+					<img className="s50" src="./img/figure-1.png"/>
 				</p>
 				<h3>Figure 1: Structure of Secnidazole</h3>
 				<p>
@@ -1014,7 +1014,7 @@ const Copy = () => {
 						Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and tearing
 						across the top.
 					</li>
-					<img className="s25" src="/global/figure-2.png" />
+					<img className="s25" src="./img/figure-2.png"/>
 					<li>
 						Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding. The
 						granules will not dissolve. Take within 30 minutes without chewing or crunching the granules.

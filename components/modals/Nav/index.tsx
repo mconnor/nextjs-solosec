@@ -12,7 +12,7 @@ import { FaTools } from "react-icons/fa";
 import { BsQuestionSquareFill } from "react-icons/bs";
 
 import {PageList} from "./PageList";
-
+import {Navigate} from "../../utils/Navigate";
 
 const SUMMARY = 'Summary';
 const CONSENSUS_GUIDELINES = 'Consensus Guidelines'
@@ -176,17 +176,18 @@ const Nav = () => {
             transition={{ damping: 300 }}
         >
             <NavContainerX borderRight>
-               <div><Logo>Solosec<sup>&reg;</sup>
-              
-              </Logo>
-              <SubLogo>(secnizazole)</SubLogo></div>
+                <div onClick={() => Navigate("01_index")}
+                ><Logo>Solosec<sup>®</sup>
+
+                </Logo>
+                    <SubLogo onClick={() => Navigate("01_index")}>(secnizazole)</SubLogo></div>
             </NavContainerX>
             <NavContainer borderRight>
-                <NavBtn label={SUMMARY} pageName={PageList.pages["2"]} />
-                <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]} />
-                <NavBtn label={STUDY} pageName={PageList.pages["4"]} />
+                <NavBtn label={SUMMARY} pageName={PageList.pages["2"]}/>
+                <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]}/>
+                <NavBtn label={STUDY} pageName={PageList.pages["4"]}/>
 
-                <NavBtn label={BOHBOT} pageName={PageList.pages["6"]} />
+                <NavBtn label={BOHBOT} pageName={PageList.pages["6"]}/>
                 <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName={PageList.pages["7"]} />
                 <NavBtn label={DOSING} pageName={PageList.pages["8"]} />
                 <NavBtn label={CO_PAY_CARD} pageName={PageList.pages["10"]} />
