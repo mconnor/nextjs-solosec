@@ -54,9 +54,8 @@ const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgA
     console.log(pageIndex);
     const {ipadWidthPx, ipadMainSectionHeightPx} = useDeviceDimensions();
     const { isInitSafetyInfoOpen } = useAppState();
-
     if (isInitSafetyInfoOpen) return null;
-    
+
     // console.log(ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx);
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}

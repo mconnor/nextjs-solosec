@@ -1,7 +1,6 @@
 // import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { ReactNode, useEffect } from 'react';
-import Link from 'next/link'
 import { useAppState } from '../../../state'
 
 
