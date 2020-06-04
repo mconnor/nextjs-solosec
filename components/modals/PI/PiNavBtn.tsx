@@ -1,6 +1,10 @@
 // import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { ReactNode, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+//import Link from 'next/link'
+>>>>>>> origin/chad-new-navigation-002
 import { useAppState } from '../../../state'
 
 

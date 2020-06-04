@@ -37,13 +37,17 @@ const OuterContainer = styled(motion.div)`
   height: 90vh !important;
 `;
 
-
-
 const CopyWrapper = styled(motion.div)`
 
-    margin-left: 41%;
-    margin-right:6%;
-    margin-top: 40%;
+    //margin-left: 41%;
+    //margin-right:6%;
+    //margin-top: 20%;
+    width: 68%;
+    height: 60%;
+    position: relative;
+    top: 20vw;
+    left: 33%;
+    overflow-y: scroll !important;
 `;
 
 const CloseWrapper = styled.div`
