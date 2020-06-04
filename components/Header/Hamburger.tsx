@@ -6,9 +6,6 @@ const Svg = styled.svg`
     width: 38px;
     height: 52px;
     fill: var(--primary);
-    &:hover {
-         fill: var( --primary-btn-hover-color);
-    }
 `;
 
 const CloseBtn = styled.div`
