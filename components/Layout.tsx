@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react';
+import {ReactNode, useState, useEffect} from 'react';
 //import { useRouter } from 'next/router'
 import { PageWrapper } from "../state";
 import Head from 'next/head';
@@ -50,6 +50,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
     //const router = useRouter();
     //const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     // const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: Constants.COOKIE_VAL_STARTSREEN.key }) ;
+    const [inner, setInner] = useState(<div></div>);
     const cookie = typeof window !== 'undefined' ? window.localStorage.seq : ""
     if (typeof window !== 'undefined') console.log("localStorage", window.localStorage.seq)
 
@@ -69,36 +70,36 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
     // @ts-ignore
     //if (CLMPlayer) CLMPlayer.defineNoSwipeRegion("region",0,0,1366,768);
 
-    useEffect(() => {
-        document.addEventListener("keydown", checkKey, false);
-
-        return () => {
-            document.removeEventListener("keydown", checkKey, false);
-        };
-    }, []);
+    // useEffect(() => {
+    //     document.addEventListener("keydown", checkKey, false);
+    //
+    //     return () => {
+    //         document.removeEventListener("keydown", checkKey, false);
+    //     };
+    // }, []);
 
     // @ts-ignore
-    function checkKey(e:KeyboardEvent) {
-        // e = e || window.event;
-        //
-        // if (e.keyCode === 37) {
-        //     console.log("left");
-        //     swipeLink(pageIndex, "Right")
-        // }
-        // else if (e.keyCode === 39) {
-        //     console.log("right")
-        //     swipeLink(pageIndex, "Left");
-        // }
-
-    }
+    // function checkKey(e:KeyboardEvent) {
+    //     // e = e || window.event;
+    //     //
+    //     // if (e.keyCode === 37) {
+    //     //     console.log("left");
+    //     //     swipeLink(pageIndex, "Right")
+    //     // }
+    //     // else if (e.keyCode === 39) {
+    //     //     console.log("right")
+    //     //     swipeLink(pageIndex, "Left");
+    //     // }
+    //
+    // }
 
     console.log("**Current", currSeq, cookie);
-    const onSwiping = ({ dir }: RLprops, pi: number) => {
+    const onSwiping = ({dir}: RLprops, pi: number) => {
         if (dir === "Left") swipeLink(pi, "Left");
         if (dir === "Right") swipeLink(pi, "Right");
     }
 
-    function swipeLink(n:number, dir:string) {
+    function swipeLink(n: number, dir: string) {
         console.log("Cookies", currSeq, n, dir);
         const path = PageList.seq.main;
         if (!cookie || cookie === "") {
@@ -132,42 +133,53 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
     }
 
     //const  {ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx, ipadWidth, ipadHeight, ipadMainSectionHeight } =useDeviceDimensions()
+
+    useEffect(() => {
+        setTimeout(() => {
+            setInner(
+                <PageWrapper>
+                    <StartScreen section={section}/>
+
+                    <Nav/>
+                    <ReferencesWrapper section={section}/>
+                    <PrescribingInfoWrapper/>
+                    <Header/>
+
+                    {/* <ShowScreenSize>{ipadWidthPx}  {ipadHeightPx}</ShowScreenSize> */}
+                    <PageContainer {...handlers}>
+
+
+                        <Main
+                            gridArea='main'
+                            children={children}
+                            foreGroundArt={foreGroundArt}
+                            key={"#1234"}
+                            noBgArt={noBgArt}
+                            bgArt={bgArt}
+                            pageIndex={pageIndex}
+                        />
+
+
+                    </PageContainer>
+                    <SafetyModalWrapper/>
+                </PageWrapper>
+            ); // count is 0 here
+        }, 100);
+    }, []);
+
+
     return (
-		<>
+        <>
             <Head>
-				<title>{title}</title>
-				<meta charSet="utf-8" />
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-              
-			</Head>
+                <title>{title}</title>
+                <meta charSet="utf-8"/>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+                <meta name="theme-color" content="#000000"/>
+                <link rel="manifest" href="./static/manifest/manifest.json"/>
+            </Head>
             <GlobalStyle/>
-            
-            <PageWrapper>
-                <StartScreen  section={section}/>
-                
-                <Nav />
-                <ReferencesWrapper section={section}/>
-                <PrescribingInfoWrapper/>
-                <Header/>
+            {inner}
 
-    {/* <ShowScreenSize>{ipadWidthPx}  {ipadHeightPx}</ShowScreenSize> */}
-			    <PageContainer {...handlers}>
-                  
-
-                    <Main
-                        gridArea='main'
-                        children={children}
-                        foreGroundArt={foreGroundArt}
-                        key={"#1234"}
-                        noBgArt={noBgArt}
-                        bgArt={bgArt}
-                        pageIndex={pageIndex}
-                    />
-
-                    
-                </PageContainer>
-                <SafetyModalWrapper/>
-            </PageWrapper>
 		</>
 	)};
 
