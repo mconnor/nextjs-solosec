@@ -93,7 +93,7 @@ const QAcontainer = styled.div`
 
     color:var(--button-selected-color);
    
-    min-height: 100px;
+    min-height: 6vw;
    
 `;
 
