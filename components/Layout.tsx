@@ -164,7 +164,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                     <SafetyModalWrapper/>
                 </PageWrapper>
             ); // count is 0 here
-        }, 100);
+        }, 25);
     }, []);
 
 
@@ -174,8 +174,6 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <title>{title}</title>
                 <meta charSet="utf-8"/>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-                <meta name="theme-color" content="#000000"/>
-                <link rel="manifest" href="./static/manifest/manifest.json"/>
             </Head>
             <GlobalStyle/>
             {inner}
