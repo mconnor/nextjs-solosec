@@ -1078,7 +1078,7 @@ const Copy = () => {
                                 <li>May be taken at any time with, before or after a meal.
                             </li>
                             </ul>
-                            <p class="strong">>
+                            <p class="strong">
                                 Store at 20-25°C (68-77°F);excursions permitted to 15-30°C (59-86°F)<br />
                             
                                 (See USP Controlled Room Temperature).<br />
