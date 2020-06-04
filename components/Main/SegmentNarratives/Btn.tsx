@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
 //import Link from 'next/link'
-
+import {Navigate} from "../../utils/Navigate";
 
 type Props = {
     page:string;
@@ -31,7 +31,8 @@ console.log('cookie', cookie) // keep this
             <BtnInvisible onClick={() => {
                 console.log('url', url);
                 setCookie(seq);
-                window.location.href = "./" + url + ".html"
+                //window.location.href = "./" + url + ".html"
+                Navigate(url);
             }}/>
         </div>
     )
