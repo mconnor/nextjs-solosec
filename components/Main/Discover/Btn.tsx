@@ -36,6 +36,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     function linkTo(page:string) {
         console.log(cookie);
         setCookie(seq);
+        if (typeof window !== 'undefined') window.localStorage.seq = seq;
         setTimeout(() => {
             //router.push("/" + PageList.pages[page]);
             Navigate(PageList.pages[page]);

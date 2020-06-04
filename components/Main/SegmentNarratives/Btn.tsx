@@ -31,6 +31,7 @@ console.log('cookie', cookie) // keep this
             <BtnInvisible onClick={() => {
                 console.log('url', url);
                 setCookie(seq);
+                if (typeof window !== 'undefined') window.localStorage.seq = seq;
                 //window.location.href = "./" + url + ".html"
                 Navigate(url);
             }}/>

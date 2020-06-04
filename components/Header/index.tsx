@@ -5,7 +5,7 @@ import {useAppState} from "../../state";
 //import { useDeviceDimensions } from '../../hooks'
 //import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
-
+import {Navigate} from "../utils/Navigate";
 
 import HeaderLogo from './HeaderLogo'
 

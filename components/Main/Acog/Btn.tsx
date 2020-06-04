@@ -32,6 +32,7 @@ const Btn: React.FC<Props> = ({svgClicked, page, seq}) => {
             toggle();
             setTimeout(() => {
                 setCookie(seq);
+                if (typeof window !== 'undefined') window.localStorage.seq = seq;
                 //router.push("/" + page);
                 //window.location.href = page + ".html"
                 Navigate(page);

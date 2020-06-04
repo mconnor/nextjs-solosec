@@ -1,9 +1,7 @@
 
 import styled from 'styled-components'
-import { useAppState } from "../../../state";
+import {useAppState} from "../../../state";
 import { motion } from 'framer-motion';
-
-
 
 import Copy from './Copy';
 // import PICopy from './PICopy';

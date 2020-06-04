@@ -11,7 +11,7 @@ export default () => (
             width: "100vw",
             height: "100vh",
             position: "absolute",
-            top: 100,
+            top: 0,
             left: 0,
         }}></div>
         <div>

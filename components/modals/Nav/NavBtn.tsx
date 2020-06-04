@@ -79,6 +79,7 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
         // let path = window.location.pathname.split("/");
         // let strippedPath = path.slice(0, path.length - 1).join("/");
         // window.location.href = strippedPath + url + ".html";
+        if (typeof window !== 'undefined') window.localStorage.seq = "";
         Navigate(url);
     }
 

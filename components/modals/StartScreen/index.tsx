@@ -4,7 +4,7 @@ import ConfirmBtn from './ConfirmBtn'
 import { useAppState } from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
-import { useCookie } from '../.././../hooks';
+//import { useCookie } from '../.././../hooks';
 
 
 
@@ -58,8 +58,8 @@ type FCProps = {
 }
 
 const StartScreen: React.FC<FCProps> = ({ section }) => {
-    const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: 'StartScreenDidPlay' }) ;
-
+    //const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: 'StartScreenDidPlay' }) ;
+    const cookieInitScreen = typeof window !== 'undefined' ? window.localStorage.isi : ""
     const { isInitSafetyInfoOpen, setInitSafteyInfo } = useAppState()
 
     if (section !== Sections.SPLASH) {
@@ -78,7 +78,8 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
                 <Header>
 
                     <ConfirmBtn clickCallBack={() => {
-                        setCookieInitScreen('yes');
+                        //setCookieInitScreen('yes');
+                        if (typeof window !== 'undefined') window.localStorage.isi = 'yes';
                         setInitSafteyInfo && setInitSafteyInfo(false)
                     }}>CONFIRM</ConfirmBtn>
                 </Header>

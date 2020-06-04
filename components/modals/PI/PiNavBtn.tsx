@@ -12,7 +12,7 @@ interface IBtn {
 }
 
 const NavBtn = styled.div<IBtn>`
-    height: 50px;
+    height: 45px;
     border: 1 solid black;
     display: grid;
     align-items: center;

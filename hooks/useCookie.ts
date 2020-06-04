@@ -15,7 +15,9 @@ export const useCookie = ({key}: Props): [string, Dispatch<SetStateAction<string
     const [cookie, setCookie] = useState(initial);
 
     useEffect(() => {
-        Cookies.set(key, cookie, { 'samesite': 'strict' });
+        Cookies.set(key, cookie, {
+            sameSite: 'strict'
+        });
         //writeStorage.set(key, cookie);
         //store.setItem(key, cookie);
     }, [cookie, key]);

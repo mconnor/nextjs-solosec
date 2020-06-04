@@ -64,7 +64,10 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
     const handleClick = (_url:string)=> {
         toggle();
         console.log(cookie);
-        if (seq) setCookie(seq)
+        if (seq) {
+            setCookie(seq);
+            if (typeof window !== 'undefined') window.localStorage.seq = seq;
+        }
         setTimeout(() => {
             //router.push("/" + url);
             window.location.href = url + ".html"

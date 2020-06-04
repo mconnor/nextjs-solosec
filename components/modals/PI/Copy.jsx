@@ -1,5 +1,5 @@
 // import styles from './Copy.module.css'
-import {useAppState} from "../../../../state";
+import {useAppState} from "../../../state";
 
 const Copy = () => {
 	const {currPIanchor} = useAppState();

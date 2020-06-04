@@ -14,7 +14,7 @@ import StartScreen  from './modals/StartScreen'
 import {useSwipeable} from "react-swipeable";
 import {PageList} from "./modals/Nav/PageList";
 import {useAppState} from "../state";
-import { useCookie } from '../hooks';
+//import { useCookie } from '../hooks';
 import SafetyModalWrapper from './modals/SafetyInfo/';
 import {Navigate} from "./utils/Navigate";
 //import * as Constants from './utils/Constants'
@@ -48,10 +48,10 @@ const PageContainer = styled.div`
 
 const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', foreGroundArt , noBgArt=false, bgArt, section=''})=>{
     //const router = useRouter();
-    const [cookie, setCookie] = useCookie({ key: "seq" }) ;
-    // const [cookie2, setCookie2] = useCookie({ key: "section" }) ;
+    //const [cookie, setCookie] = useCookie({ key: "seq" }) ;
     // const [cookieInitScreen, setCookieInitScreen] = useCookie({ key: Constants.COOKIE_VAL_STARTSREEN.key }) ;
-
+    const cookie = typeof window !== 'undefined' ? window.localStorage.seq : ""
+    if (typeof window !== 'undefined') console.log("localStorage", window.localStorage.seq)
 
     const {currSeq, setInitSafteyInfo} = useAppState();
     setInitSafteyInfo && setInitSafteyInfo(true);
@@ -105,7 +105,8 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
             navigate();
         } else {
             if (PageList.seq[cookie].indexOf(path[n]) < 1) {
-                setCookie("");
+                //setCookie("");
+                if (typeof window !== 'undefined') window.localStorage.seq = "";
                 navigate();
             } else {
                 const page = path[n];
