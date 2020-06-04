@@ -23,11 +23,11 @@ const NavBtn = styled.div<IBtn>`
     border: 2px;
    
     border-style:${props => props.active ? 'groove' : 'none'};
-    background: ${props => !props.active ? '' : '#072b49'};
+    background: ${props => !props.active ? '' : 'var(--pi-modal-blue)'};
 
-    color:  ${props => props.active ? 'white' : '#072b49'};
+    color:  ${props => props.active ? 'white' : 'var(--pi-modal-blue)'};
     cursor: pointer;
-    
+    white-space:nowrap;
     
    
 `;
