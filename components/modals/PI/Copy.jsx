@@ -7,16 +7,16 @@ const Copy = () => {
 	if (elem) elem.scrollIntoView();
 
 	return (
-		<div className="MyPi">
+		<div className="MyPi white">
 			<h1 className="pi-headline">Full Prescribing Information</h1>
 			<div id="indicationsAndUsage">
 				<h2>1 Indications and Usage</h2>
                     <h3>1.1 Bacterial Vaginosis</h3>
                         <p>
                             SOLOSEC is indicated for the treatment of bacterial vaginosis in adult women
-                            <em>
+                            <span className="emphasis">
                                 [see Use in Specific Populations (<a href="#specificUse">8.1</a>) and Clinical Studies (<a href="#clinicalStudies">14</a>)]
-                            </em>.
+                            </span>.
                         </p>
                     <h3>1.2 Usage</h3>
                         <p>
@@ -36,10 +36,10 @@ const Copy = () => {
 				<h3>2.1 Recommended Dosage</h3>
                     <p>
                         The recommended dosage of SOLOSEC is a single 2-gram packet of granules taken once orally, without
-                        regard to the timing of meals{' '}
-                        <em>
+                        regard to the timing of meals
+                        <span className="emphasis">
                             [see Clinical Pharmacology (<a href="#clinicalPharmacology">12.3</a>)]
-                        </em>.
+                        </span>.
                     </p>
                     <h3>2.2 Instructions for the Preparation and Administration of SOLOSEC</h3>
                     <ul>
@@ -49,9 +49,9 @@ const Copy = () => {
                       
                         <li>
                         Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding 
-                            <em>
+                            <span className="emphasis">
                                 [see Clinical Pharmacology (<a href="#clinicalPharmacology">12.3</a>)]
-                            </em>. The granules are not intended to be dissolved in any liquid. 
+                            </span>. The granules are not intended to be dissolved in any liquid. 
                             </li>
                             <li>The granules are not intended to be dissolved in any liquid.</li>
                     </ul>
@@ -77,17 +77,17 @@ const Copy = () => {
 				<h3>5.1 Vulvo-Vaginal Candidiasis</h3>
                     <p>
                         The use of SOLOSEC may result in vulvo-vaginal candidiasis. In controlled clinical trials of non-pregnant women with bacterial vaginosis, vulvo-vaginal candidiasis developed in 19/197 (9.6%) of subjects who received 2 g SOLOSEC and 4/136 (2.9%) subjects who received placebo [see Adverse Reactions (6.1)]. Symptomatic vulvo-vaginal candidiasis may require treatment with an antifungal agent.
-                        <em>
+                        <span className="emphasis">
                             [see Adverse Reactions (<a href="#adverseReactions">6.1</a>)]
-                        </em>. Symptomatic vulvo-vaginal candidiasis may require treatment with an antifungal agent.
+                        </span>. Symptomatic vulvo-vaginal candidiasis may require treatment with an antifungal agent.
                     </p>
 
 				<h3>5.2 Potential Risk for Carcinogenicity</h3>
                     <p>
                         Carcinogenicity has been seen in mice and rats treated chronically with nitroimidazole derivatives which are structurally related to secnidazole. It is unclear if the positive tumor findings in lifetime rodent studies of these nitroimidazoles indicate a risk to patients taking a single dose of SOLOSEC to treat bacterial vaginosis. Avoid chronic use of SOLOSEC 
-                        <em>
+                        <span className="emphasis">
                             [see Nonclinical Toxicology (<a href="#nonclinicalToxicology">13.1</a>)]
-                        </em>
+                        </span>
                     </p>
                     <h3>5.3 Drug Resistance</h3>
                     <p>
@@ -214,9 +214,9 @@ const Copy = () => {
                     <h4 className="underline">Risk Summary</h4>
                     <p>
                         Limited available data with SOLOSEC use in pregnant women are insufficient to inform a drug associated risk of adverse developmental outcomes. In animal reproduction studies, there were no adverse developmental outcomes when secnidazole was administered orally to pregnant rats and rabbits during organogenesis at doses up to 4 times the clinical dose (see Data)
-                        <em>
+                        <span className="emphasis">
                             (see <a href="#specificUseData">Data</a>)
-                        </em>.
+                        </span>.
                     </p>
                     <p>
                         The estimated background risk of major birth defects and miscarriage for the indicated population is
@@ -294,36 +294,37 @@ const Copy = () => {
                 </div>
                 <div id="clinicalPharmacology">
                     <h2>12 Clinical Pharmacology</h2>
-                    <h3>12.1 Mechanism of Action</h3>
-                    <p>
-                        SOLOSEC is a nitroimidazole antimicrobial drug{' '}
-                        <em>
-                            [See Microbiology (<a href="#microbiology">12.4</a>)]
-                        </em>.
-                    </p>
-                    <h3>12.2 Pharmacodynamics</h3>
-                    <p>
-                        Secnidazole exposure-response relationships and the time course of pharmacodynamic response are
-                        unknown.
-                    </p>
-                    <h3 className="underline">Cardiac Electrophysiology</h3>
-                    <p>
-                        The effect of secnidazole on the QTc interval was evaluated in a Phase 1 randomized, double blind,
-                        placebo- and positive-controlled four-period crossover thorough QTc study in 52 healthy adult
-                        subjects following single oral granule doses of 2 g and 6 g (3-times the recommended dose). Although
-                        there was a positive relationship of the QTc interval with secnidazole concentrations, there was no
-                        clinically relevant increase in the QTc interval following either dose.
-                    </p>
-                    <h3>12.3 Pharmacokinetics</h3>
-                    <p>
-                        A single oral dose of 2 g of SOLOSEC in healthy adult female subjects, following an overnight fast
-                        and admixed with (4 oz) of applesauce, resulted in a mean (SD) secnidazole peak plasma concentration
-                        (C<sub>max</sub>) of 45.4 (7.64) mcg/mL and mean (SD) systemic exposure (AUC<sub>0-inf</sub>) of
-                        1331.6 (230.16) mcg•hr/mL. Median (range) time to peak concentration (T<sub>max</sub>) was 4.0
-                        (3.0-4.0) hours. Following administration of the 2 g dose, mean secnidazole plasma concentrations
-                        decreased to 22.1 mcg/mL at 24 hours, 9.2 mcg/mL at 48 hours, 3.8 mcg/mL at 72 hours, and 1.4 mcg/mL
-                        at 96 hours.
-                    </p>
+                        <h3>12.1 Mechanism of Action</h3>
+                        <p>
+                            SOLOSEC is a nitroimidazole antimicrobial drug
+                            <span className="emphasis">
+                                [See Microbiology (<a href="#microbiology">12.4</a>)]
+                            </span>.
+                        </p>
+                        <h3>12.2 Pharmacodynamics</h3>
+                        <p>
+                            Secnidazole exposure-response relationships and the time course of pharmacodynamic response are
+                            unknown.
+                        </p>
+                        <h3 className="underline">Cardiac Electrophysiology</h3>
+                        <p>
+                            The effect of secnidazole on the QTc interval was evaluated in a Phase 1 randomized, double blind,
+                            placebo- and positive-controlled four-period crossover thorough QTc study in 52 healthy adult
+                            subjects following single oral granule doses of 2 g and 6 g (3-times the recommended dose). Although
+                            there was a positive relationship of the QTc interval with secnidazole concentrations, there was no
+                            clinically relevant increase in the QTc interval following either dose.
+                        </p>
+                        <h3>12.3 Pharmacokinetics</h3>
+                        <p>
+                            A single oral dose of 2 g of SOLOSEC in healthy adult female subjects, following an overnight fast
+                            and admixed with (4 oz) of applesauce, resulted in a mean (SD) secnidazole peak plasma concentration
+                            (C<sub>max</sub>) of 45.4 (7.64) mcg/mL and mean (SD) systemic exposure (AUC<sub>0-inf</sub>) of
+                            1331.6 (230.16) mcg•hr/mL. Median (range) time to peak concentration (T<sub>max</sub>) was 4.0
+                            (3.0-4.0) hours. Following administration of the 2 g dose, mean secnidazole plasma concentrations
+                            decreased to 22.1 mcg/mL at 24 hours, 9.2 mcg/mL at 48 hours, 3.8 mcg/mL at 72 hours, and 1.4 mcg/mL
+                            at 96 hours.
+                        </p>
+
                     <h3 className="underline">Absorption</h3>
                     <h4 className="italicise">Effect of Food</h4>
                     <p>
@@ -331,10 +332,10 @@ const Copy = () => {
                         (approximately 150 protein calories, 250 carbohydrate calories, and 500-600 fat calories) resulted
                         in no significant change in the rate (C<sub>max</sub>) and extent (AUC) of secnidazole exposure as
                         compared to administration when admixed with applesauce and taken under fasted conditions. There was
-                        no effect of admixing SOLOSEC with pudding and yogurt as compared to admixing with applesauce (<a href="#table2">Table 2</a>).{' '}
-                        <em>
+                        no effect of admixing SOLOSEC with pudding and yogurt as compared to admixing with applesauce (<a href="#table2">Table 2</a>).
+                        <span className="emphasis">
                             [see Dosage and Administration (<a href="#dosage">2.2</a>)]
-                        </em>
+                        </span>
                     </p>
                     <h3 id="table2">
                         Table 2: Pharmacokinetic Parameters Following Single Dose Administration of SOLOSEC 2 g Given Orally
@@ -458,22 +459,22 @@ const Copy = () => {
                         </tfoot>
                     </table>
                     <h3 className="underline">Distribution</h3>
-                    <p>
-                        The apparent volume of distribution of secnidazole is approximately 42 L. The plasma protein binding of secnidazole is &lt; 5%.
-                    </p>
-                    <h3 className="underline">Elimination</h3>
-                    <p>
-                        The total body clearance of secnidazole is approximately 25 mL/min. The renal clearance of secnidazole is approximately 3.9 mL/min.
-                    </p>
-                    <p>The plasma elimination half-life for secnidazole is approximately 17 hours.</p>
-                    <h3 className="italicise">Metabolism</h3>
-                    <p>
-                        Secnidazole is metabolized <em>in vitro</em> via oxidation by human hepatic CYP450 enzyme system
-                        with ≤ 1% conversion to metabolites.
-                    </p>
-                    <h3 className="italicise">Excretion</h3>
-                    <p>
-                        Approximately 15% of a 2 g oral dose of SOLOSEC is excreted as unchanged secnidazole in the urine.
+                        <p>
+                            The apparent volume of distribution of secnidazole is approximately 42 L. The plasma protein binding of secnidazole is &lt; 5%.
+                        </p>
+                        <h3 className="underline">Elimination</h3>
+                        <p>
+                            The total body clearance of secnidazole is approximately 25 mL/min. The renal clearance of secnidazole is approximately 3.9 mL/min.
+                        </p>
+                        <p>The plasma elimination half-life for secnidazole is approximately 17 hours.</p>
+                        <h3 className="italicise">Metabolism</h3>
+                        <p>
+                            Secnidazole is metabolized <span className="emphasis">in vitro</span> via oxidation by human hepatic CYP450 enzyme system
+                            with ≤ 1% conversion to metabolites.
+                        </p>
+                        <h3 className="italicise">Excretion</h3>
+                        <p>
+                            Approximately 15% of a 2 g oral dose of SOLOSEC is excreted as unchanged secnidazole in the urine.
                     </p>
                     <h3 className="underline">Drug Interactions</h3>
                     <h4 className="italicise">Oral Contraceptives</h4>
@@ -488,14 +489,14 @@ const Copy = () => {
                         Concomitant administration of 2 g of SOLOSEC with the combination OC resulted in no significant
                         effect on mean C<sub>max</sub> and AUC of NE (increases of 13% and 16%, respectively).
                         Administration of 2 g of SOLOSEC 1 day before combination OC administration also resulted in no
-                        significant effect on mean C<sub>max</sub> and AUC of NE.{' '}
-                        <em>
+                        significant effect on mean C<sub>max</sub> and AUC of NE.
+                        <span className="emphasis">
                             [see Drug Interactions (<a href="#drugInteractions">7.1</a>)]
-                        </em>
+                        </span>
                     </p>
                     <h3 className="italicise">Ethanol Metabolism</h3>
                     <p>
-                        <em>In vitro</em> studies showed that secnidazole had no effect on aldehyde dehydrogenase activity.
+                        <span className="emphasis">In vitro</span> studies showed that secnidazole had no effect on aldehyde dehydrogenase activity.
                     </p>
                     <h3 id="microbiology">12.4 Microbiology</h3>
                     <h4 className="underline">Mechanism of Action</h4>
@@ -511,35 +512,36 @@ const Copy = () => {
                         reduced susceptibility to secnidazole. The clinical significance of such an effect is unknown.
                     </p>
                     <h3 className="underline">Antibacterial Activity</h3>
-                    <p>
-                        Culture and sensitivity testing of bacteria are not routinely performed to establish the diagnosis
-                        of bacterial vaginosis{' '}
-                        <em>
-                            [see Indications and Usage (<a href="#indicationsAndUsage">1.2</a>)]
-                        </em>; standard methodology for the susceptibility testing of potential bacterial pathogens,
-                        <em>Gardnerella vaginalis</em> or <em>Mobiluncus</em> spp. has not been defined.
-                    </p>
-                    <p>
-                        The following <em>in vitro</em> data are available but their clinical significance is unknown.
-                        Secnidazole is active <em>in vitro</em> against most isolates of the following organisms reported to
-                        be associated with bacterial vaginosis:
-                    </p>
-                    <p>
-                        <em>Bacteroides</em> spp.
-                    </p>
-                    <p>
-                        <em>Gardnerella vaginalis</em>
-                    </p>
-                    <p>
-                        <em>Prevotella</em> spp.
-                    </p>
-                    <p>
-                        <em>Mobiluncus</em> spp.
-                    </p>
-                    <p>
-                        <em>Megasphaera</em>-like type I/II
-                    </p>
+                        <p>
+                        Culture and sensitivity testing of bacteria are not routinely performed to establish the diagnosis of bacterial vaginosis [see Indications and Usage (1.2)]; standard methodology for the susceptibility testing of potential bacterial pathogens, <span className="emphasis">Gardnerella vaginalis</span> or <span className="emphasis">Mobiluncus</span> spp. has not been defined.</p>
+
+                        <p>The following in vitro data are available but their clinical significance is unknown. Secnidazole is active in vitro against most isolates of the following organisms reported to be associated with bacterial vaginosis:</p>
+                        <p>
+                            The following <span className="emphasis">in vitro</span> data are available but their clinical significance is unknown.
+                            Secnidazole is active <span className="emphasis">in vitro</span> against most isolates of the following organisms reported to
+                            be associated with bacterial vaginosis:
+                        </p>
+
+
+
+                        <p>
+                            <span className="emphasis">Bacteroides</span> spp.
+                        </p>
+                        <p>
+                            <span className="emphasis">Gardnerella vaginalis</span>
+                        </p>
+                        <p>
+                            <span className="emphasis">Prevotella</span> spp.
+                        </p>
+                        <p>
+                            <span className="emphasis">Mobiluncus</span> spp.
+                        </p>
+                        <p>
+                            <span className="emphasis">Megasphaera</span>-like type I/II
+                        </p>
                 </div>
+
+
                 <div id="nonclinicalToxicology">
                     <h2>13 Nonclinical Toxicology</h2>
                     <h3>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</h3>
@@ -884,10 +886,10 @@ const Copy = () => {
                         Advise women not to breastfeed during treatment with SOLOSEC and to discontinue breastfeeding for 96
                         hours following the administration of SOLOSEC. Also, advise a nursing mother that she may choose to
                         pump and discard her milk for 96 hours after administration of SOLOSEC and feed her infant stored
-                        human milk or formula{' '}
-                        <em>
+                        human milk or formula
+                        <span className="emphasis">
                             [see Use in Specific Populations (<a href="#lactation">8.2</a>)]
-                        </em>.
+                        </span>.
                     </p>
                     <h3 className="underline">Vulvo-Vaginal Candidiasis</h3>
                         <p>
@@ -905,12 +907,16 @@ const Copy = () => {
                         will not be treatable by SOLOSEC or other antibacterial drugs in the future.
                     </p>
                     <p>
-                        Manufactured for and Distributed by:<br />Lupin Pharmaceuticals, Inc.<br />Baltimore, MD 21202
+                        Manufactured for and Distributed by:<br />
+                        Lupin Pharmaceuticals, Inc.<br />
+                        Baltimore, MD 21202<br />
+                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
+                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                        226679
                     </p>
-                    <p>© 2017 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
-                    <p>
-                        Solosec<sup className="trade grey">™</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
+                    <p> Solosec<sup className="trade grey">™</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
                         Company)
+                    
                     </p>
                     <p>7179660</p>
                 </div>
@@ -992,9 +998,11 @@ const Copy = () => {
                         <strong>Inactive ingredients:</strong> Eudragit NE30D (ethyl acrylate methyl methacrylate
                         copolymer), polyethylene glycol 4000, povidone, sugar spheres, and talc.
                     </p>
-                    <p>
-                        For more information visit www.solosec.com or contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC
-                        (1-844-765-6732).
+                    <p className="font-strong">
+                        Contains no ingredient made from a gluten-containing grain (wheat, barley, or rye).
+                    </p>
+                    <p className="font-small">
+                        For more information visit www.solosec.com or contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC (1-844-765-6732).    
                     </p>
                     <h2 id="instructionsForUseLink">
                         Instructions For Use | SOLOSEC<br />
@@ -1003,11 +1011,11 @@ const Copy = () => {
                     <h4>For oral use (by mouth) only.</h4>
                     <h4>How to take SOLOSEC?</h4>
 
-<div><img className="s25" src="./global/figure-2.png" /></div>
                     <ol className="light">
                         <li>
                             Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and tearing
                             across the top.
+                            <div> <img className="s25" src="./global/figure-2.png" /></div>
                         </li>
                      
                         <li>
@@ -1046,20 +1054,78 @@ const Copy = () => {
                         This Patient Information and Instructions for Use have been approved by the US Food and Drug Administration. Revised: 06/2019
                     </p>
                     <p>Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202</p>
-                    <p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
+                    <p>©  2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)
+                    226679
+                    </p>
+
+                    <div className="package-label">
+                        <h2>PACKAGE LABEL.PRINCIPAL DISPLAY PANEL Principal Display Panel - Individual Carton</h2>
+                            <p>
+                                solosec® 2g<br />
+                                secnidazole<br />
+                                NDC 27437-051-01<br />
+                                Oral Granules<br />
+                                1 Unit-of-Use Packet<br />
+                                Rx Only<br />
+                                LUPIN PHARMACEUTICALS, INC. USUAL DOSAGE: One packet.<br />
+                                Solosec®granules should be administered as follows:<br />
+                            </p>
+
+                            <ul>
+                                <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
+                                <li>Consume the contents of one packet without chewing or crunching the granules.</li>
+                                <li>A glass of water may be taken to aid in swallowing.</li>
+                                <li>May be taken at any time with, before or after a meal.
+                            </li>
+                            </ul>
+                            <p class="strong">>
+                                Store at 20-25°C (68-77°F);excursions permitted to 15-30°C (59-86°F)<br />
+                            
+                                (See USP Controlled Room Temperature).<br />
+                            </p>
+             
+
+                            <p>
+                                © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
+                                Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company) <br />
+                                Revised June 2019<br />
+                                Position pharmacy label over this panel <br />
+                                Product of Italy<br />
+                                solosec®2g <br />
+                                secnidazole<br />
+                                Rx Only<br />
+                            </p>
+                    </div>
+
+
+
                     <p>
                         Solosec<sup className="trade grey">™</sup> is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)
                     </p>
                     <p>226679</p>
 			</div>
 
-			<style jsx>{`
+            <style jsx>{`
+            
+                        .emphasis {
+                            font-style:italic;
+                        }
+
+                        .font-small {
+                            font-size: small;
+                        }
+                        .font-strong {
+                            font-weight: 600;
+                        }
                         .underline {
                             text-decoration: underline;
                         }
                         .light: {
                             font-weight: lighgt;
-                        }   
+                        }  
+                        .italicise  {
+                            font-style: italic;
+                        }
                 {/* table styling */}
                         tr:first-child th {
                             background: #d5eaf6;
@@ -1200,11 +1266,11 @@ const Copy = () => {
             
          }
 
-#indicationsAndUsage, #dosage, #dosageStrength, #contraindications, #adverseReactions,
-#adverseReactions, #warnings, #counseling, #description, 
-#description,  #nonclinicalToxicology, #storage, #counseling, #patientInfo, #instructionsForUseLink {
-    margin-bottom: 72px;
-}
+        #indicationsAndUsage, #dosage, #dosageStrength, #contraindications, #adverseReactions,
+        #adverseReactions, #warnings, #counseling, #description, 
+        #description,  #nonclinicalToxicology, #storage, #counseling, #patientInfo, #instructionsForUseLink {
+            margin-bottom: 72px;
+        }
 
 
 
