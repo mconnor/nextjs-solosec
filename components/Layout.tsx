@@ -174,6 +174,9 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                 <title>{title}</title>
                 <meta charSet="utf-8"/>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap"
+                    rel="stylesheet"></link>
             </Head>
             <GlobalStyle/>
             {inner}
