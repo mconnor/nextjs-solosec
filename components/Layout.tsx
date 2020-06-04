@@ -17,7 +17,6 @@ import {useAppState} from "../state";
 import { useCookie } from '../hooks';
 import SafetyModalWrapper from './modals/SafetyInfo/';
 import {Navigate} from "./utils/Navigate";
-import * as Constants from './utils/Constants'
 
 type RLprops = {
     dir: "Right" | "Left" | "Up" | "Down";
