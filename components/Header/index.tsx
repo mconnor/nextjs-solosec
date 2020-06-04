@@ -50,7 +50,7 @@ const Header = () => {
     const {
         toggleReference, togglePrescribingInfo, toggleSafetyInfo,
         setNav, setSafteyInfo, toggleNav,
-        setPrescribingInfo
+        setPrescribingInfo, isInitSafetyInfoOpen
     } = useAppState();
 
     //const {ipadWidthPx} = useDeviceDimensions();
@@ -76,8 +76,8 @@ const Header = () => {
         setSafteyInfo && setSafteyInfo(false);
         setPrescribingInfo && setPrescribingInfo(false);
     }
-
-    // {_prevState => setNav &&  setNav(true)}
+   
+    if (isInitSafetyInfoOpen) return null;
     return (
         <MainDiv>
             <Hamburger clickCallBack={handleNavClick}/>
