@@ -896,15 +896,13 @@ const Copy = () => {
 					the immediate treatment and (2) increase the likelihood that bacteria will develop resistance and
 					will not be treatable by SOLOSEC or other antibacterial drugs in the future.
 				</p>
-				<p>
-					Manufactured for and Distributed by:<br />Lupin Pharmaceuticals, Inc.<br />Baltimore, MD 21202
-				</p>
-				<p>© 2017 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
-				<p>
-					Solosec<sup className="trade grey">™</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
-					Company)
-				</p>
-				<p>7179660</p>
+                <p>
+                        Manufactured for and Distributed by:<br />
+                        Lupin Pharmaceuticals, Inc.<br />
+                        Baltimore, MD 21202<br />
+                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved. Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                        226679
+                    </p>
 			</div>
 			<div id="patientInfo">
 				<h2>Patient Information</h2>
@@ -1031,12 +1029,14 @@ const Copy = () => {
 				<p>
                     This Patient Information and Instructions for Use have been approved by the US Food and Drug Administration. Revised: 06/2019
 				</p>
-				<p>Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202</p>
-				<p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
 				<p>
-					Solosec<sup className="trade grey">™</sup> is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)
-				</p>
-				<p>226679</p>
+                    Manufactured for and Distributed by:<br />
+                    Lupin Pharmaceuticals, Inc.,<br />
+                    Baltimore, MD 21202<br />
+                    &copy; 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved.<br />
+                    Solosec<sup className="trade grey">™</sup> is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                    226679
+                 </p>
 			</div>
 
 			<style jsx>{`
