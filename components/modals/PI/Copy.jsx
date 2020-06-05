@@ -910,8 +910,7 @@ const Copy = () => {
                         Manufactured for and Distributed by:<br />
                         Lupin Pharmaceuticals, Inc.<br />
                         Baltimore, MD 21202<br />
-                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
-                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved. Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
                         226679
                     </p>
                     <p> Solosec<sup className="trade grey">™</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
