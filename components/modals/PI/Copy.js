@@ -279,7 +279,7 @@ const Copy = () => {
 					molecular weight is 185.18 and the chemical structure is:
 				</p>
 				<p>
-					<img className="s50" src="/global/figure-1.png" />
+					<img className="s50" src="./img/figure-1.png"/>
 				</p>
 				<h3>Figure 1: Structure of Secnidazole</h3>
 				<p>
@@ -897,14 +897,12 @@ const Copy = () => {
 					will not be treatable by SOLOSEC or other antibacterial drugs in the future.
 				</p>
 				<p>
-					Manufactured for and Distributed by:<br />Lupin Pharmaceuticals, Inc.<br />Baltimore, MD 21202
+					Manufactured for and Distributed by:<br/>Lupin Pharmaceuticals, Inc.<br/>Baltimore, MD 21202
 				</p>
-				<p>© 2017 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
-				<p>
-					Solosec<sup className="trade grey">™</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
-					Company)
-				</p>
-				<p>7179660</p>
+				<p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved. Solosec<sup
+					className="trade grey">®</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
+					Company)</p>
+				<p>226679</p>
 			</div>
 			<div id="patientInfo">
 				<h2>Patient Information</h2>
@@ -985,11 +983,14 @@ const Copy = () => {
 					copolymer), polyethylene glycol 4000, povidone, sugar spheres, and talc.
 				</p>
 				<p>
+					Contains no ingredient made from a gluten-containing grain (wheat, barley, or rye).
+				</p>
+				<p>
 					For more information visit www.solosec.com or contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC
 					(1-844-765-6732).
 				</p>
 				<h2 id="instructionsForUseLink">
-					Instructions For Use | SOLOSEC<br />
+					Instructions For Use | SOLOSEC<br/>
 					<span className="lowercase">(secnidazole) oral granules</span>
 				</h2>
 				<h4>For oral use (by mouth) only.</h4>
@@ -999,7 +1000,7 @@ const Copy = () => {
 						Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and tearing
 						across the top.
 					</li>
-					<img className="s25" src="/global/figure-2.png" />
+					<img className="s25" src="./img/figure-2.png"/>
 					<li>
 						Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding. The
 						granules will not dissolve. Take within 30 minutes without chewing or crunching the granules.
@@ -1029,13 +1030,14 @@ const Copy = () => {
 					</li>
 				</ul>
 				<p>
-                    This Patient Information and Instructions for Use have been approved by the US Food and Drug Administration. Revised: 06/2019
+					This Patient Information and Instructions for Use have been approved by the US Food and Drug
+					Administration. Revised: 06/2019
 				</p>
 				<p>Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202</p>
-				<p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved</p>
-				<p>
-					Solosec<sup className="trade grey">™</sup> is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)
-				</p>
+				<p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved. Solosec<sup
+					className="trade grey">®</sup> is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin
+					Company).</p>
+
 				<p>226679</p>
 			</div>
 
@@ -1104,12 +1106,16 @@ const Copy = () => {
             color: var(--copy-color-secondary);
        }
 
+		ol {
+		padding-left: 10px;
+		}
+
        li {
             font-style: normal;
             font-weight: normal;
             font-size: 20px;
             line-height: 30px;
-            letter-spacing: 0.02em;    
+            letter-spacing: 0.02em;   
          }
 
          li em {

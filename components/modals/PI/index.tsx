@@ -42,11 +42,11 @@ const CopyWrapper = styled(motion.div)`
     //margin-left: 41%;
     //margin-right:6%;
     //margin-top: 20%;
-    width: 68%;
+    width: 66%;
     height: 60%;
     position: relative;
     top: 20vw;
-    left: 33%;
+    left: 38%;
     overflow-y: scroll !important;
 `;
 
