@@ -45,7 +45,7 @@ const Copy = () => {
 					<li>
                     Open the SOLOSEC packet by folding over the corner (marked by an arrow) and tearing across the top.
 					</li>
-                    <li>IMAGE GOES HERE?</li>
+                    {/* <li>IMAGE GOES HERE?</li> */}
 					<li>
                     Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding 
 						<em>
@@ -997,7 +997,14 @@ const Copy = () => {
 						Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and tearing
 						across the top.
 					</li>
-					<img className="s25" src="/global/figure-2.png" />
+
+
+
+
+
+
+
+					<img className="s25" src="/img/box.png" />
 					<li>
 						Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding. The
 						granules will not dissolve. Take within 30 minutes without chewing or crunching the granules.
@@ -1035,6 +1042,13 @@ const Copy = () => {
                         226679
                     </p>
 
+                   
+                    
+
+<div className="box"><img src="./img/box1.jpg" alt="box1"></img></div>
+
+
+                    
                     <p className="font-bold">
                         PACKAGE LABEL. PRINCIPAL DISPLAY PANEL<br />
                         Principal Display Panel - Individual Carton<br />
@@ -1072,6 +1086,9 @@ const Copy = () => {
                         Rx Only
                     </p>
 
+{/* Principal Display Panel - Individual Packet */}
+<div className="box"><img src="./img/box_indexpend_packet_C_27437-051-02.jpg" alt="box1"></img></div>
+
                     <p>
                         Manufactured for and Distributed by:<br />
                         Lupin Pharmaceuticals, Inc.,<br />
@@ -1080,6 +1097,14 @@ const Copy = () => {
                         Solosec&reg; is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
                         226679
                     </p>
+
+<div className="box"><img src="./img/box2.jpg" alt="box1"></img></div>
+<div className="box"><img src="./img/box_principal__display_carton.jpg" alt="box1"></img></div>
+<div className="box"><img src="./img/box_indexpend_packet_C_27437-051-02.jpg" alt="box1"></img></div>
+<div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div>
+
+
+
 			</div>
 
 			<style jsx>{`
