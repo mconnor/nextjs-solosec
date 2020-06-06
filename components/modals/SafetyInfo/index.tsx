@@ -60,7 +60,7 @@ const Top = styled.div<Iscale>`
 
 
 const SafetyModalWrapper: React.FC = () => {
-    const {isSafetyInfoOpen, isInitSafetyInfoOpen, layoutScale, setSafteyInfo} = useAppState();
+    const {isSafetyInfoOpen, isInitSafetyInfoOpen, layoutScale} = useAppState();
     if (isInitSafetyInfoOpen) return null;
    
     const variants = {
@@ -107,11 +107,11 @@ export const SafetyModal: React.FC = () => {
                 <h1>IMPORTANT SAFETY INFORMATION</h1>
                 {isSafetyInfoOpen ?
 
-                    <IconWrapper kolor={BLUE} size='16px' onClick={toggleSafetyInfo}>>
+                    <IconWrapper kolor={BLUE} size='16px'>
                         <BsFillCaretDownFill/>
                     </IconWrapper>
                     :
-                    <IconWrapper kolor={BLUE} size='16px' onClick={toggleSafetyInfo}>>
+                    <IconWrapper kolor={BLUE} size='16px'>
                         <BsFillCaretUpFill/>
                     </IconWrapper>
                 }
