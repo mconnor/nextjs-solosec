@@ -997,14 +997,6 @@ const Copy = () => {
 						Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and tearing
 						across the top.
 					</li>
-
-
-
-
-
-
-
-					<img className="s25" src="/img/box.png" />
 					<li>
 						Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding. The
 						granules will not dissolve. Take within 30 minutes without chewing or crunching the granules.
@@ -1044,15 +1036,13 @@ const Copy = () => {
 
                    
                     
+<section>
 
-<div className="box"><img src="./img/box1.jpg" alt="box1"></img></div>
 
 
-                    
                     <p className="font-bold">
-                        PACKAGE LABEL. PRINCIPAL DISPLAY PANEL<br />
                         Principal Display Panel - Individual Carton<br />
-                        solosec® 2g<br />
+                        olosec® 2g<br />
                         secnidazole<br />
                         NDC 27437-051-01<br />
                         Oral Granules<br />
@@ -1062,7 +1052,58 @@ const Copy = () => {
                         USUAL DOSAGE: One packet.
                     </p>
 
-                    <h4><span className="font-bold">Solosec granules should be administered as follows</span>
+                    <p>Solosec® granules should be administered as follows:</p>
+                    <p>
+                        <ul>
+
+                        </ul>
+                    </p>
+
+
+                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
+                        <ul>
+                            <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
+                            <li>Consume the contents of one packet without chewing or crunching the granules.</li>
+                            <li>A glass of water may be taken to aid in swallowing.</li>
+                            <li>May be taken at any time with, before or after a meal.</li>
+                        </ul>
+                    </p>
+
+
+
+
+                    <p className="font-bold">
+                        Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
+                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
+                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
+                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                        Revised June 2019<br />
+                        Product of Italy<br />
+                        solosec® 2g<br />
+                        secnidazole<br />
+                        Rx Only<br />
+                    </p>
+                    <div className="box"><img src="./img/box1_carton.jpg" alt="box1"></img></div>
+
+
+</section>
+                   
+
+
+<section>
+                    <p className="font-bold">
+                        Principal Display Panel - Individual Packet<br />
+                        This packet is contained within CARTON NDC 27437-051-02<br />
+                        solosec® 2g<br />
+                        secnidazole<br />
+                        Oral Granules<br />
+                        Rx Only<br />
+                        LUPIN PHARMACEUTICALS, INC. USUAL DOSAGE: One packet.</p>
+
+                    <p>Solosec® granules should be administered as follows:</p>
+
+
+                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
                         <ul>
                             <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
                             <li>Consume the contents of one packet without chewing or crunching the granules.</li>
@@ -1070,24 +1111,100 @@ const Copy = () => {
                             <li>May be taken at any time with, before or after a meal.</li>
                         </ul>
 
-                    </h4>
-
+                    </p>
                     <p className="font-bold">
                         Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
-                        (See USP Controlled Room Temperature).<br />
-                        Manufactured for and Distributed by: <span className="font-normal">Lupin Pharmaceuticals, Inc., Baltimore, MD 21202</span><br />
+                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
                         © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
-                        Solosec is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
                         Revised June 2019<br />
-                        Position pharmacy label over this panel<br />
+                        Product of Italy<br />
+                        solosec® 2g<br />
+                        secnidazole<br />
+                        Rx Only<br />
+                    </p>
+                    <div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div>
+
+</section>
+
+
+
+<section>
+                    <p className="font-bold">
+                        Principal Display Panel - Display Carton
+                       </p>
+
+                    <p>Solosec® granules should be administered as follows:</p>
+
+
+                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
+                        <ul>
+                            <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
+                            <li>Consume the contents of one packet without chewing or crunching the granules.</li>
+                            <li>A glass of water may be taken to aid in swallowing.</li>
+                            <li>May be taken at any time with, before or after a meal.</li>
+                        </ul>
+
+                    </p>
+                    <p className="font-bold">
+                        Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
+                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
+                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
+                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                        Revised June 2019<br />
                         Product of Italy<br />
                         solosec® 2g<br />
                         secnidazole<br />
                         Rx Only
                     </p>
 
-{/* Principal Display Panel - Individual Packet */}
-<div className="box"><img src="./img/box_indexpend_packet_C_27437-051-02.jpg" alt="box1"></img></div>
+                    <div className="box"><img src="./img/box_display_carton.jpg" alt="box1"></img></div>
+
+</section>
+
+
+<section>
+                    <p className="font-bold">
+                        Principal Display Panel - Individual Packet
+                       </p>
+
+                    <p>This packet is contained within CARTON NDC 27437-051-02<br />
+                        solosec® 2g<br />
+                        secnidazole<br />
+                        Oral Granules<br />
+                        Rx Only<br />
+                        LUPIN PHARMACEUTICALS, INC. USUAL DOSAGE: One packet.
+                    </p>
+
+
+                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
+                        <ul>
+                            <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
+                            <li>Consume the contents of one packet without chewing or crunching the granules.</li>
+                            <li>A glass of water may be taken to aid in swallowing.</li>
+                            <li>May be taken at any time with, before or after a meal.</li>
+                        </ul>
+
+                    </p>
+                    <p className="font-bold">
+                        Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
+                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
+                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
+                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
+                        Revised June 2019<br />
+                        Product of Italy<br />
+                        solosec® 2g<br />
+                        secnidazole<br />
+                        Rx Only<br />
+                    </p>
+
+                    <div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div>
+
+</section>
+
+
+
+
 
                     <p>
                         Manufactured for and Distributed by:<br />
@@ -1098,10 +1215,10 @@ const Copy = () => {
                         226679
                     </p>
 
-<div className="box"><img src="./img/box2.jpg" alt="box1"></img></div>
-<div className="box"><img src="./img/box_principal__display_carton.jpg" alt="box1"></img></div>
+{/* 
+</div>
 <div className="box"><img src="./img/box_indexpend_packet_C_27437-051-02.jpg" alt="box1"></img></div>
-<div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div>
+<div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div> */}
 
 
 
