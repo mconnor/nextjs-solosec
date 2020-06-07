@@ -69,6 +69,8 @@ const StartScreen: React.FC<FCProps> = ({ section }) => {
     if (cookieInitScreen === 'yes') {
         setInitSafteyInfo && setInitSafteyInfo(false);
         // return null;
+    } else {
+        window.localStorage.seq = "";
     }
     if (!isInitSafetyInfoOpen) return null;
 

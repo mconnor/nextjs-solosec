@@ -34,6 +34,7 @@ const Container = styled.div<Iscale>`
     grid-template-columns: 1fr;
     grid-template-rows: 52px 1fr 56px;
     align-items:center;
+    z-index: 5;
 `;
 
 

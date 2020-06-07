@@ -30,7 +30,7 @@ const variantsRight = {
 }
 
 const OuterContainer = styled(motion.div)`
-  z-index:5;
+  z-index:10;
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
   background:white;

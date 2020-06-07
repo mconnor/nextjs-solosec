@@ -51,7 +51,7 @@ const variants = {
 }
 
 const MainDiv = styled(motion.div)`
-    z-index:5;
+    z-index:15;
     top:var(--header-height);
     left:0;
     padding: 1.6vw;
