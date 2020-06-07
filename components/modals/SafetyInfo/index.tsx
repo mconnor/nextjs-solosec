@@ -26,7 +26,7 @@ const OuterContainer = styled(motion.div)<Iscale & Ibool>`
     padding-left: ${props => `${props.scale * 1.6}vw`};
     padding-right: ${props => `${props.scale * 1.6}vw`};
     background:white;
-    
+    z-index:6 !important;
 `;
 
 const Container = styled.div<Iscale>`
@@ -39,6 +39,7 @@ const Container = styled.div<Iscale>`
 
 
 const Top = styled.div<Iscale>`
+    user-select: none; 
     height: ${props => `${props.scale * 54}px`};
     color: var(--copy-color-secondary);
     background: rgb(213,233,247);
@@ -60,7 +61,7 @@ const Top = styled.div<Iscale>`
 
 
 const SafetyModalWrapper: React.FC = () => {
-    const {isSafetyInfoOpen, isInitSafetyInfoOpen, layoutScale, setSafteyInfo} = useAppState();
+    const {isSafetyInfoOpen, isInitSafetyInfoOpen, layoutScale} = useAppState();
     if (isInitSafetyInfoOpen) return null;
    
     const variants = {
@@ -103,15 +104,19 @@ export const SafetyModal: React.FC = () => {
 
             <Top 
                 scale={layoutScale}
-                onClick={toggleSafetyInfo}>
+                onClick={(e:React.MouseEvent)=>   {
+                    e.preventDefault();
+                    toggleSafetyInfo && toggleSafetyInfo();
+                }}
+            >
                 <h1>IMPORTANT SAFETY INFORMATION</h1>
                 {isSafetyInfoOpen ?
 
-                    <IconWrapper kolor={BLUE} size='16px' onClick={toggleSafetyInfo}>>
+                    <IconWrapper kolor={BLUE} size='16px'>
                         <BsFillCaretDownFill/>
                     </IconWrapper>
                     :
-                    <IconWrapper kolor={BLUE} size='16px' onClick={toggleSafetyInfo}>>
+                    <IconWrapper kolor={BLUE} size='16px'>
                         <BsFillCaretUpFill/>
                     </IconWrapper>
                 }
