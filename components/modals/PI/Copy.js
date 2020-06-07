@@ -45,7 +45,7 @@ const Copy = () => {
 					<li>
                     Open the SOLOSEC packet by folding over the corner (marked by an arrow) and tearing across the top.
 					</li>
-                    {/* <li>IMAGE GOES HERE?</li> */}
+                    <li>IMAGE GOES HERE?</li>
 					<li>
                     Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding 
 						<em>
@@ -279,7 +279,7 @@ const Copy = () => {
 					molecular weight is 185.18 and the chemical structure is:
 				</p>
 				<p>
-					<img className="s50" src="/global/figure-1.png" />
+					<img className="s50" src="./img/figure-1.png"/>
 				</p>
 				<h3>Figure 1: Structure of Secnidazole</h3>
 				<p>
@@ -896,13 +896,13 @@ const Copy = () => {
 					the immediate treatment and (2) increase the likelihood that bacteria will develop resistance and
 					will not be treatable by SOLOSEC or other antibacterial drugs in the future.
 				</p>
-                <p>
-                        Manufactured for and Distributed by:<br />
-                        Lupin Pharmaceuticals, Inc.<br />
-                        Baltimore, MD 21202<br />
-                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved. Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
-                        226679
-                    </p>
+				<p>
+					Manufactured for and Distributed by:<br/>Lupin Pharmaceuticals, Inc.<br/>Baltimore, MD 21202
+				</p>
+				<p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved. Solosec<sup
+					className="trade grey">®</sup> is a trademark of Symbiomix Therapeutics, LLC (A Lupin
+					Company)</p>
+				<p>226679</p>
 			</div>
 			<div id="patientInfo">
 				<h2>Patient Information</h2>
@@ -983,11 +983,14 @@ const Copy = () => {
 					copolymer), polyethylene glycol 4000, povidone, sugar spheres, and talc.
 				</p>
 				<p>
+					Contains no ingredient made from a gluten-containing grain (wheat, barley, or rye).
+				</p>
+				<p>
 					For more information visit www.solosec.com or contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC
 					(1-844-765-6732).
 				</p>
 				<h2 id="instructionsForUseLink">
-					Instructions For Use | SOLOSEC<br />
+					Instructions For Use | SOLOSEC<br/>
 					<span className="lowercase">(secnidazole) oral granules</span>
 				</h2>
 				<h4>For oral use (by mouth) only.</h4>
@@ -997,6 +1000,7 @@ const Copy = () => {
 						Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and tearing
 						across the top.
 					</li>
+					<img className="s25" src="./img/figure-2.png"/>
 					<li>
 						Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding. The
 						granules will not dissolve. Take within 30 minutes without chewing or crunching the granules.
@@ -1019,209 +1023,22 @@ const Copy = () => {
 					</li>
 				</ul>
 				<h3>How should I store SOLOSEC?</h3>
-                    <ul>
-                        <li>Store SOLOSEC at room temperature between 68°F to 77°F (20°C to 25°C).</li>
-                        <li>
-                            <strong>Keep SOLOSEC and all medications out of the reach of children.</strong>
-                        </li>
-                    </ul>
-                    <p>
-                        This <em>Patient Information</em> and <em>Instructions for Use</em> have been approved by the US Food and Drug
-                        Administration. Revised: 06/2019<br />
-                        Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
-                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company).<br />
-                        All Rights Reserved solosec&reg; is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
-                        226679
-                    </p>
+				<ul>
+					<li>Store SOLOSEC at room temperature between 68°F to 77°F (20°C to 25°C).</li>
+					<li>
+						<strong>Keep SOLOSEC and all medications out of the reach of children.</strong>
+					</li>
+				</ul>
+				<p>
+					This Patient Information and Instructions for Use have been approved by the US Food and Drug
+					Administration. Revised: 06/2019
+				</p>
+				<p>Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202</p>
+				<p>© 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved. Solosec<sup
+					className="trade grey">®</sup> is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin
+					Company).</p>
 
-                   
-                    
-<section>
-
-
-
-                    <p className="font-bold">
-                        Principal Display Panel - Individual Carton<br />
-                        olosec® 2g<br />
-                        secnidazole<br />
-                        NDC 27437-051-01<br />
-                        Oral Granules<br />
-                        1 Unit-of-Us e Packet<br />
-                        Rx Only<br />
-                        LUPIN PHARMACEUTICALS, INC.<br />
-                        USUAL DOSAGE: One packet.
-                    </p>
-
-                    <p>Solosec® granules should be administered as follows:</p>
-                    <p>
-                        <ul>
-
-                        </ul>
-                    </p>
-
-
-                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
-                        <ul>
-                            <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
-                            <li>Consume the contents of one packet without chewing or crunching the granules.</li>
-                            <li>A glass of water may be taken to aid in swallowing.</li>
-                            <li>May be taken at any time with, before or after a meal.</li>
-                        </ul>
-                    </p>
-
-
-
-
-                    <p className="font-bold">
-                        Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
-                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
-                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
-                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
-                        Revised June 2019<br />
-                        Product of Italy<br />
-                        solosec® 2g<br />
-                        secnidazole<br />
-                        Rx Only<br />
-                    </p>
-                    <div className="box"><img src="./img/box1_carton.jpg" alt="box1"></img></div>
-
-
-</section>
-                   
-
-
-<section>
-                    <p className="font-bold">
-                        Principal Display Panel - Individual Packet<br />
-                        This packet is contained within CARTON NDC 27437-051-02<br />
-                        solosec® 2g<br />
-                        secnidazole<br />
-                        Oral Granules<br />
-                        Rx Only<br />
-                        LUPIN PHARMACEUTICALS, INC. USUAL DOSAGE: One packet.</p>
-
-                    <p>Solosec® granules should be administered as follows:</p>
-
-
-                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
-                        <ul>
-                            <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
-                            <li>Consume the contents of one packet without chewing or crunching the granules.</li>
-                            <li>A glass of water may be taken to aid in swallowing.</li>
-                            <li>May be taken at any time with, before or after a meal.</li>
-                        </ul>
-
-                    </p>
-                    <p className="font-bold">
-                        Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
-                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
-                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
-                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
-                        Revised June 2019<br />
-                        Product of Italy<br />
-                        solosec® 2g<br />
-                        secnidazole<br />
-                        Rx Only<br />
-                    </p>
-                    <div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div>
-
-</section>
-
-
-
-<section>
-                    <p className="font-bold">
-                        Principal Display Panel - Display Carton
-                       </p>
-
-                    <p>Solosec® granules should be administered as follows:</p>
-
-
-                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
-                        <ul>
-                            <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
-                            <li>Consume the contents of one packet without chewing or crunching the granules.</li>
-                            <li>A glass of water may be taken to aid in swallowing.</li>
-                            <li>May be taken at any time with, before or after a meal.</li>
-                        </ul>
-
-                    </p>
-                    <p className="font-bold">
-                        Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
-                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
-                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
-                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
-                        Revised June 2019<br />
-                        Product of Italy<br />
-                        solosec® 2g<br />
-                        secnidazole<br />
-                        Rx Only
-                    </p>
-
-                    <div className="box"><img src="./img/box_display_carton.jpg" alt="box1"></img></div>
-
-</section>
-
-
-<section>
-                    <p className="font-bold">
-                        Principal Display Panel - Individual Packet
-                       </p>
-
-                    <p>This packet is contained within CARTON NDC 27437-051-02<br />
-                        solosec® 2g<br />
-                        secnidazole<br />
-                        Oral Granules<br />
-                        Rx Only<br />
-                        LUPIN PHARMACEUTICALS, INC. USUAL DOSAGE: One packet.
-                    </p>
-
-
-                    <p><span className="font-bold">Solosec granules should be administered as follows</span>
-                        <ul>
-                            <li>Sprinkle onto applesauce, yogurt or pudding. The granules will not dissolve. Consume all of the granules within 30 minutes.</li>
-                            <li>Consume the contents of one packet without chewing or crunching the granules.</li>
-                            <li>A glass of water may be taken to aid in swallowing.</li>
-                            <li>May be taken at any time with, before or after a meal.</li>
-                        </ul>
-
-                    </p>
-                    <p className="font-bold">
-                        Store at 20-25°C (68-77°F); excursions permitted to 15-30°C (59-86°F)<br />
-                        (See USP Controlled Room Temperature). Manufactured for and Distributed by: Lupin Pharmaceuticals, Inc., Baltimore, MD 21202<br />
-                        © 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved<br />
-                        Solosec® is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
-                        Revised June 2019<br />
-                        Product of Italy<br />
-                        solosec® 2g<br />
-                        secnidazole<br />
-                        Rx Only<br />
-                    </p>
-
-                    <div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div>
-
-</section>
-
-
-
-
-
-                    <p>
-                        Manufactured for and Distributed by:<br />
-                        Lupin Pharmaceuticals, Inc.,<br />
-                        Baltimore, MD 21202<br />
-                        &copy; 2019 Symbiomix Therapeutics, LLC (A Lupin Company). All Rights Reserved.<br />
-                        Solosec&reg; is a registered trademark of Symbiomix Therapeutics, LLC (A Lupin Company)<br />
-                        226679
-                    </p>
-
-{/* 
-</div>
-<div className="box"><img src="./img/box_indexpend_packet_C_27437-051-02.jpg" alt="box1"></img></div>
-<div className="box"><img src="./img/box_individual_packet.jpg" alt="box1"></img></div> */}
-
-
-
+				<p>226679</p>
 			</div>
 
 			<style jsx>{`
@@ -1230,13 +1047,6 @@ const Copy = () => {
                     .underline {
                         text-decoration: underline;
 
-                    }
-                    .font-bold {
-                        font-weight: bold;
-                    }
-
-                    .font-normal {
-                        font-weight: normal;
                     }
 
                     tr:first-child th {
@@ -1296,12 +1106,16 @@ const Copy = () => {
             color: var(--copy-color-secondary);
        }
 
+		ol {
+		padding-left: 10px;
+		}
+
        li {
             font-style: normal;
             font-weight: normal;
             font-size: 20px;
             line-height: 30px;
-            letter-spacing: 0.02em;    
+            letter-spacing: 0.02em;   
          }
 
          li em {
