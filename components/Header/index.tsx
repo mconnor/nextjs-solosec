@@ -14,7 +14,7 @@ import HeaderLogo from './HeaderLogo'
 
 const MainDiv = styled.div`
     position: absolute;
-    z-index:5;
+    z-index:50;
   
     background-image:linear-gradient(180deg,#296392,#004876 75%);
     width: 100vw;

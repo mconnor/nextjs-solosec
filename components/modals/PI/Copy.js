@@ -1019,6 +1019,9 @@ const Copy = () => {
                     <li>
                         Open the SOLOSEC packet by folding over the corner marked by an arrow (see diagram) and tearing
                         across the top.
+                        <p>
+                            <img className="s50" src="./img/figure-2.png"/>
+                        </p>
                     </li>
                     <li>
                         Sprinkle the entire contents of the SOLOSEC packet onto applesauce, yogurt or pudding. The

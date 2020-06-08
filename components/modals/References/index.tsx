@@ -18,8 +18,8 @@ const variants = {
 
 
 const OuterContainer = styled(motion.div)`
-    z-index:30;
-    top:0;
+    z-index:60;
+    top:var(--header-height);
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
 `;
