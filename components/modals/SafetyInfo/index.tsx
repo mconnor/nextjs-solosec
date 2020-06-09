@@ -95,7 +95,6 @@ const SafetyModalWrapper: React.FC = () => {
 
 
 const BLUE='#468dcc';
-// ..0x184879;
 export const SafetyModal: React.FC = () => {
     const { toggleSafetyInfo, isSafetyInfoOpen, layoutScale } = useAppState();
     return (

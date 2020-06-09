@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import {useDeviceDimensions} from '../../hooks'
 import { IwidthHeightPxString } from '../interfaces'
 import { useAppState } from '../../state'
-// import MyImage from './MyImage';
-
 
 
 
@@ -56,7 +54,6 @@ const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgA
     const { isInitSafetyInfoOpen } = useAppState();
     if (isInitSafetyInfoOpen) return null;
 
-    // console.log(ipadWidthPx, ipadHeightPx, ipadMainSectionHeightPx);
     return (
         <MainDiv gridArea={gridArea} bgArt={bgArt}
                  bgSize={ipadWidthPx + ' ' + ipadMainSectionHeightPx}
@@ -68,4 +65,3 @@ const Main: React.FC<Props> = ({ children, gridArea, foreGroundArt, bgArt, noBgA
 }
 
 export default Main
-// {...handlers}

@@ -4,8 +4,6 @@ import ConfirmBtn from './ConfirmBtn'
 import { useAppState } from '../../../state'
 import * as Sections from "../../utils/Sections";
 import SafteyFooter from '../SafetyInfo/SafteyFooter';
-//import { useCookie } from '../.././../hooks';
-
 
 
 const OuterContainer = styled.div`

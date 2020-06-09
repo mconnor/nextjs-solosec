@@ -2,15 +2,6 @@ import styled from 'styled-components';
 import {motion} from 'framer-motion';
 
 
-// const spring={
-//     // type: "spring",
-//     // damping: 10,
-//     // stiffness: 100,
-//     // // delay: 2,
-//     duration: 10,
-// }
-
-
 const variantsV = {
     start: {
         scaleY: 0,
@@ -25,7 +16,6 @@ const variantsV = {
 const variantsH = {
     start: {
         scaleX: 0,
-        // transition: {spring}
     },
     end: {
         scaleX: 1
