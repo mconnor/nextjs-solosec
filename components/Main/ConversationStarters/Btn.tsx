@@ -4,7 +4,7 @@ import {useCookie, useToggle} from '../../../hooks';
 import styled from 'styled-components';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from "react-icons";
-//import { useRouter } from 'next/router'
+
 
 type MainProps = {
     on: boolean;

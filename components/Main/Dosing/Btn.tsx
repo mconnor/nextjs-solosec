@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-//import { useRouter } from 'next/router'
+
 import {PageList} from "../../modals/Nav/PageList";
 import {Navigate} from "../../utils/Navigate";
 

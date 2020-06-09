@@ -1,16 +1,9 @@
-import styled from 'styled-components'
-//import Link from 'next/link';
+import styled from 'styled-components';
 import Hamburger from './Hamburger'
 import {useAppState} from "../../state";
-//import { useDeviceDimensions } from '../../hooks'
-//import { IwidthHeightPxString , IwidthHeightNums} from '../interfaces'
 import NavBtn from './NavBtn';
 import {Navigate} from "../utils/Navigate";
-
 import HeaderLogo from './HeaderLogo'
-
-// interface IProps extends IwidthHeightPxString  extends IwidthHeightNums {}
-
 
 const MainDiv = styled.div`
     position: absolute;

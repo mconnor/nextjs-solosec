@@ -4,7 +4,7 @@ import styled from 'styled-components';
 //import {useAppState} from "../../../state";
 import {PageList} from "../../modals/Nav/PageList";
 import {useCookie} from '../../../hooks'
-//import { useRouter } from 'next/router'
+
 import {Navigate} from "../../utils/Navigate";
 //import Nav from "../../modals/Nav";
 

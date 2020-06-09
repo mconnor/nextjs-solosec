@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
-//import Link from 'next/link'
+
 import {Navigate} from "../../utils/Navigate";
 
 type Props = {

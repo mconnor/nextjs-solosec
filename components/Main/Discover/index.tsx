@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Btn from './Btn'
-//import { useRouter } from 'next/router'
 import {PageList} from "../../modals/Nav/PageList";
 import {Navigate} from "../../utils/Navigate";
 
@@ -32,8 +31,6 @@ const BtnInvisible = styled.button`
 
 
 const Discover = () => {
-    //const router = useRouter();
-
     return (
         <MainDiv className='fillMain'>
             <BtnContainer>
@@ -43,8 +40,6 @@ const Discover = () => {
                 <Btn svglink='pg6-button-4' svgClicked='pg6-button-4-selected' page="10" seq="02_d"/>
             </BtnContainer>
             <BtnInvisible onClick={() => {
-                //router.push("/" + PageList.pages["3"])
-                //window.location.href = PageList.pages["3"] + ".html"
                 Navigate(PageList.pages["3"])
             }}/>
         </MainDiv>
