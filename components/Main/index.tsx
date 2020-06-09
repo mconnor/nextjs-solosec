@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import {useDeviceDimensions} from '../../hooks'
+import { useDeviceDimensions } from '../../hooks'
 import { IwidthHeightPxString } from '../interfaces'
 import { useAppState } from '../../state'
 

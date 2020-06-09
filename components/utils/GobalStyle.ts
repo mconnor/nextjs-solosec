@@ -8,13 +8,13 @@ const GlobalStyle = createGlobalStyle`
         --ipad-mini-width: 1024px;
         --ipad-mini-height: 768px;
 
-        --ipad-width: 100vw;
-        --ipad-height: 100vh;
+        --ipad-width: var(--ipad12-width);
+        --ipad-height: var(--ipad12-height);
 
-        //--header-height: calc(var(--ipad-width)*.08); 
-        --header-height: 8vw; 
-        //--main-height:calc(var(--ipad-height) - var(--header-height));
-        --main-height:92vw;
+        --header-height: calc(var(--ipad-width)*.08); 
+       
+        --main-height:calc(var(--ipad-height) - var(--header-height));
+        
        
         --isi-exit-y:var(--main-height);
 
@@ -135,9 +135,9 @@ a {
     .modalWrapper {
        
         width:var(--ipad-width);
-        //height:var(--ipad-main-height);
-        height:71vw;
-        position: absolute;
+        height:var(--ipad-main-height);
+
+        position: absolute; 
        
         left:0;
         overflow:hidden;

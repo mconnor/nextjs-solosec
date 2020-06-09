@@ -5,13 +5,16 @@ import * as RefCopy from './copy/RefCopy'
 import * as Sections from "../../utils/Sections";
 
 const variants = {
-    open: {y: 0},
+    open: {
+            y: 0
+            },
     closed: {
-        y: "110%",
+        y: "100%", display: "block",
         transition: {
             delay: .2
-        }
+        },
     },
+
 
 }
 
@@ -22,6 +25,7 @@ const OuterContainer = styled(motion.div)`
     top:var(--header-height);
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
+    display: "block"
 `;
 
 const Container = styled.div`

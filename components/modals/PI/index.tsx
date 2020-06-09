@@ -34,7 +34,7 @@ const OuterContainer = styled(motion.div)`
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
   background:white;
-  height: 90vh !important;
+  /* height: 90vh !important; */
 `;
 
 const CopyWrapper = styled(motion.div)`
@@ -42,20 +42,21 @@ const CopyWrapper = styled(motion.div)`
     //margin-left: 41%;
     //margin-right:6%;
     //margin-top: 20%;
-    width: 66%;
+    width: calc(var(--ipad-width)*2/3);
     height: 60%;
     position: relative;
-    top: 20vw;
-    left: 38%;
+    top:  calc(var(--header-height) + 300px);
+    left: calc(var(--ipad-width)*0.38);
     overflow-y: scroll !important;
+    padding: 0 44px 0 44px;
 `;
 
 const CloseWrapper = styled.div`
-    left: 35%;
-
     position: fixed;
     top: var(--header-height);
-    right:3%;
+    left: calc(var(--ipad-width)/3);
+    width: calc(var(--ipad-width)*2/3);
+   
     background:white;
     border-bottom: 1px gray solid;
     position: fixed;
@@ -63,6 +64,8 @@ const CloseWrapper = styled.div`
     grid-template-columns:1fr;
     grid-template-rows:30px;
     padding-bottom: 33px;
+    padding-right: 14px;
+    z-index:2;
    
     
 
@@ -71,10 +74,11 @@ const CloseWrapper = styled.div`
 const NavWrapper = styled(motion.div)`
    position:fixed;
    height: 440px;
-   width: 30%;
+   width: calc(var(--ipad-width)/3);
     background: blue;
     top:114px;
     left:14px;
+    z-index:3;
 `;
 
 

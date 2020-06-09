@@ -8,17 +8,20 @@ import HeaderLogo from './HeaderLogo'
 const MainDiv = styled.div`
     position: absolute;
     z-index:50;
+    width: var(--ipad-width);
+    max-width: var(--ipad-width);
+    height: var(--header-height);
   
     background-image:linear-gradient(180deg,#296392,#004876 75%);
-    width: 100vw;
+
     padding: 0 45px 0 24px;
     display: grid;
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
     color: $primary;
-    height: var(--header-height);
+    
     font-weight: 600;
-    font-size: 1.28vw;
+     font-size: 1rem;
     line-height: 127%;
 `;
 

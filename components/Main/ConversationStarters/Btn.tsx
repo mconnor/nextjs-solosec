@@ -70,7 +70,7 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
         }
         setTimeout(() => {
             //router.push("/" + url);
-            window.location.href = url + ".html"
+            window.location.href = url + ""
         }, 100)
     }
     return (

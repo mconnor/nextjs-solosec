@@ -70,11 +70,11 @@ const SafetyModalWrapper: React.FC = () => {
             y: 0,
         },
         closed: {
-            y: '80vh',
-
+            y: 'calc(var(--ipad-height) - 164px)',
             transition: {
                 delay: .2
-            }
+            },
+         
         }
     }
 

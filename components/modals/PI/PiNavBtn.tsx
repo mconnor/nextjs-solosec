@@ -18,7 +18,7 @@ const NavBtn = styled.div<IBtn>`
     align-items: center;
     font-style: normal;
     font-weight: 500;
-    font-size: 1.3vw;
+    font-size: 1.125rem;
     padding-left:16px;
     border: 2px;
    

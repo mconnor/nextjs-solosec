@@ -25,7 +25,7 @@ type Props = {
 const Btn: React.FC<Props> = ({svgClicked, page, seq}) => {
     const {isToggled, toggle} = useToggle(false);
     const [cookie, setCookie] = useCookie({key: "seq"});
-
+    console.log(cookie);
     return (
         <Main on={isToggled} onClick={() => {
             toggle();

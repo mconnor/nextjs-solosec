@@ -15,6 +15,7 @@ import {PageList} from "./modals/Nav/PageList";
 import {useAppState} from "../state";
 import SafetyModalWrapper from './modals/SafetyInfo/';
 import {Navigate} from "./utils/Navigate";
+import MaskStage from './MaskStage';
 
 type RLprops = {
     dir: "Right" | "Left" | "Up" | "Down";
@@ -39,6 +40,7 @@ const PageContainer = styled.div`
     height: var(--main-height);
     max-height: var(--main-height);
     top: var(--header-height);
+    border:2px red solid;
 `;
 
 
@@ -88,10 +90,15 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
             if (dir === "Left") if (n !== path.length - 1) Navigate(PageList["pages"][pageIndex === 16 ? path[20] : path[n + 1]])
         }
     }
+
+
+
     useEffect(() => {
         setTimeout(() => {
             setInner(
+              
                 <PageWrapper>
+                    <MaskStage />
                     <StartScreen section={section}/>
 
                     <Nav/>
@@ -117,6 +124,7 @@ const Layout: React.FC<Props> = ({ children, pageIndex, title = 'Solosec IVA', f
                     </PageContainer>
                     <SafetyModalWrapper/>
                 </PageWrapper>
+               
             ); // count is 0 here
         }, 25);
     }, []);

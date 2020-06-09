@@ -25,7 +25,7 @@ const SpaLink: React.FC<Props> = ({ pageName }) => {
     //const url = "/" + pageName;
     return (
         <Main>
-            <div onClick={() => window.location.href = pageName + ".html"}>
+            <div onClick={() => window.location.href = pageName + ""}>
                 <a>{pageName}</a>
             </div>
         </Main>
