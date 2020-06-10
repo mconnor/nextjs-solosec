@@ -4,7 +4,7 @@ import { useAppState } from '../../../state';
 import {Navigate} from "../../utils/Navigate";
 
 interface ChildrenProps {
-    children?: ReactNode;
+    centerV?:boolean;
     pageName?: string;
     label?: string;
     subnav?: boolean;
@@ -16,6 +16,7 @@ interface ChildrenProps {
 
 interface SubProps {
     subnav?: boolean;
+    centerV:boolean;
 }
 
 
@@ -24,6 +25,9 @@ interface SubProps {
 const Btn = styled.div<SubProps>`
     cursor: pointer; 
     display: grid;
+    grid-template-columns: 1fr;
+    align-items: ${props => props.centerV ? 'center' : 'start'};
+    /* align-items: ${props => props.centerV && 'center'}; */
     white-space:nowrap;
     color:white;
     font-family: Lato;
@@ -39,18 +43,13 @@ const Btn = styled.div<SubProps>`
         color:white;
     }
 
-
-`;
-
-const Li = styled.li`
-    color:white;
-    list-style-type: none;
-    padding-left:4.8vw;
+    height:${props => props.subnav ? '40px' : '68px'};
 `;
 
 
 
-const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, isDisabled=false }) => {
+
+const NavBtn: React.FC<ChildrenProps> = ({ pageName, label, subnav, centerV=false , isDisabled=false }) => {
     const url = "/" + pageName;
     const {setNav} = useAppState();
     const hanleClick = () => {
@@ -64,23 +63,23 @@ const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, is
 
     return (
         <>
-            {children || isDisabled ?
-                <Btn>{label}</Btn>
+            {isDisabled ?
+                <Btn centerV={centerV}>{label}</Btn>
                 : subnav ?
-                    <Li>
-                        <Btn role='button' onClick={hanleClick} subnav={subnav}>
+                   
+                        <Btn centerV={centerV} role='button' onClick={hanleClick} subnav={subnav}>
                             <div><a onClick={nav}>{`- ${label}`}</a></div>
-                    </Btn>
-                </Li>
-            :
+                        </Btn>
+                    
+                :
 
-                <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <div><a onClick={nav}>{label}</a></div>
-                </Btn>
+                    <Btn centerV={centerV} role='button' onClick={hanleClick} subnav={subnav}>
+                        <div><a onClick={nav}>{label}</a></div>
+                    </Btn>
 
 
             }
-            {children}
+           
         </>
     )
 }

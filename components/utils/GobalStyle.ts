@@ -11,9 +11,9 @@ const GlobalStyle = createGlobalStyle`
         --ipad-width: var(--ipad12-width);
         --ipad-height: var(--ipad12-height);
 
-        --header-height: calc(var(--ipad-width)*.08); 
+        --header-height: 100px; 
        
-        --main-height:calc(var(--ipad-height) - var(--header-height));
+        --main-height:calc(var(--ipad-height) - var(--header-height) - 54px);
         
        
         --isi-exit-y:var(--main-height);
@@ -40,9 +40,9 @@ const GlobalStyle = createGlobalStyle`
 
         --isi-subhead-fontsize: calc(var(--ipad-width)/var(ipad-max-width));
 
-        --nav-blue:#034063
+        --nav-blue:#034063;
 
---triangle-blue;
+
 
         --fourty-two-blue: 0x003e6a;
         --slogan-blue: #002851
@@ -122,21 +122,21 @@ a {
 
 /* end css resets */
 
-.z9 {
-    z-index:9 !important;
-}
-.z1 {
-    z-index:1 !important;
-}
+    .z9 {
+        z-index:9 !important;
+    }
+    .z1 {
+        z-index:1 !important;
+    }
 
-.modalFullscreen {
-    height:var(--ipad-height) !important;
-}
+    .modalFullscreen {
+        height:var(--ipad-height) !important;
+    }
     .modalWrapper {
        
         width:var(--ipad-width);
-        height:var(--ipad-main-height);
-
+        height: calc(var(--main-height) + 54px);
+        top: var(--header-height);
         position: absolute; 
        
         left:0;

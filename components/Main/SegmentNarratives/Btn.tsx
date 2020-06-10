@@ -32,7 +32,7 @@ console.log('cookie', cookie) // keep this
                 console.log('url', url);
                 setCookie(seq);
                 if (typeof window !== 'undefined') window.localStorage.seq = seq;
-                //window.location.href = "./" + url + ".html"
+                //window.location.href = "./" + url + ""
                 Navigate(url);
             }}/>
         </div>

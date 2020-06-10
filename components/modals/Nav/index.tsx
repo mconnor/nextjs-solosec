@@ -51,20 +51,17 @@ const variants = {
 }
 
 const MainDiv = styled(motion.div)`
-    z-index:15;
-    top:var(--header-height);
-    left:0;
-    padding: 1.6vw;
+    /* z-index:15; */
+
+    /* padding: 1.6%; */
     background-color:#AAAAA9;
-    
-    /* background-image: url(/img/bg/site-map.png);
-    background-repeat: no-repeat; */
     display: grid;
     /* grid-template-columns: 20% 38% 42%; */
-    grid-template-columns: 1fr 2fr 2fr;
-    column-gap: 4.8vw;
-    padding-top: 3vw;
-    padding-bottom: 4.8vw;
+    grid-template-columns: 189px 1fr 555px;
+    column-gap: 4.8%;
+    padding-top: 64px;
+
+    padding-left: 98px;
     align-items:start;
 `;
 
@@ -73,39 +70,49 @@ interface StyleProps {
 }
 
 const NavContainer = styled.div<StyleProps>`
-    border-right: ${props => props.borderRight && '2px solid #034063'};
+    border-right: ${props => props.borderRight && '2px solid var(--nav-blue)'};
     display: grid;
     grid-template-columns: 1fr;
-    //height: 90%; 
+    height: 90%; 
     margin:0;
-    line-height: 4vw;
+    line-height: 4%
 /* row-gap:24px; */
     ul {
-        line-height: 3.2vw;
+        /* line-height: 3.2%; */
     }
 `;
 
 const NavContainerX = styled.div<StyleProps>`
-    border-right: ${props => props.borderRight && '2px solid #034063'};
+    border-right: ${props => props.borderRight && '2px solid var(--nav-blue)'};
     display: grid;
     grid-template-columns: 1fr;
-    height: 82%; 
+    height: 90%; 
     margin:0;
-    line-height: 4vw;
     padding-right: 20px !important;
-/* row-gap:24px; */
-    ul {
-        line-height: 1.6vw;
-    }
 `;
 
+const NavContainerR = styled.div<StyleProps>`
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    /* height: 82%; 
+    margin:0; */
+    /* padding-right: 20px !important; */
+    grid-template-rows: repeat(4,auto);
+    row-gap: 40px;
+`;
+
+const NavBtnWrapper = styled.div`
+
+   
+`;
 
 const Logo = styled.div`
     font-style: normal;
     font-weight: bold;
-    font-size: 2.24vw;
-    color:#034063;
-    margin-left:6.72vw;
+    font-size: 34px;
+    color:var(--nav-blue);
+    margin-left:6.72%;
     sup{
         font-weight: lighter;
         font-size: 1rem;
@@ -119,9 +126,9 @@ const Logo = styled.div`
 const SubLogo = styled.div`
     font-style: normal;
     font-weight: normal;
-    font-size: 1.92vw;
-    color:#034063;
-    margin-left:6.72vw;
+    font-size:24px;
+    color:var(--nav-blue);
+    margin-left:6.72%;
 `;
 
 
@@ -129,34 +136,38 @@ const SubLogo = styled.div`
 const RightColBt = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 2.8vw;
-    margin-bottom: 2.4vw;
+
+    column-gap: 20px;
+    margin-top: 10px;
+    
+    /* column-gap: 2.8%;
+    margin-bottom: 2.4%; */
     text-align: left;
 `;
 
 const RightColBtX = styled.div`
     display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 2.4vw;
+    grid-template-columns: 112px 1fr;
+    /* column-gap: 2.4%; */
     margin-bottom: 0px;
     text-align: left;
 `;
 
-const RightColBtSub = styled.div`
-    display: grid;
-    grid-template-columns: auto 1fr;
-    //column-gap: 0px;
-    margin-bottom: 0px;
-    margin-left: 6vw;
-    text-align: left;
-`;
+// const RightColBtSub = styled.div`
+//     display: grid;
+//     grid-template-columns: auto 1fr;
+//     //column-gap: 0px;
+//     margin-bottom: 0px;
+//     margin-left: 6%;
+//     text-align: left;
+// `;
 
 const IconBg = styled.button`
-    background:#034063;
+    background:var(--nav-blue);
     border-radius: 5px;
     border:0;
-    height:4.32vw;
-    width: 4.32vw;
+    height:54px;
+    width: 54px;
     font-size: 14px;
 `;
 
@@ -176,11 +187,10 @@ const Nav = () => {
             transition={{ damping: 300 }}
         >
             <NavContainerX borderRight>
-                <div onClick={() => Navigate("01_index")}
-                ><Logo>Solosec<sup>®</sup>
-
-                </Logo>
-                    <SubLogo onClick={() => Navigate("01_index")}>(secnizazole)</SubLogo></div>
+                <div onClick={() => Navigate("01_index")}>
+                    <Logo>Solosec<sup>®</sup></Logo>
+                    <SubLogo onClick={() => Navigate("01_index")}>(secnizazole)</SubLogo>
+                </div>
             </NavContainerX>
             <NavContainer borderRight>
                 <NavBtn label={SUMMARY} pageName={PageList.pages["2"]}/>
@@ -195,16 +205,17 @@ const Nav = () => {
                 <NavBtn label={SATISFACTION_SURVEY} pageName={PageList.pages["11"]} />
                 <NavBtn label={CURRENT_BV_TREATMENTS} pageName={PageList.pages["12"]} />
 
-                <NavBtn label={APPENDIX} >
-                    <ul>
-                        <NavBtn label={PHARMAK} pageName={PageList.pages["13"]} subnav />
-                        <NavBtn label={STUDY2DATA} pageName={PageList.pages["14"]} subnav />
-                        <NavBtn label={TREATMENT_ADHERENCE} pageName={PageList.pages["15"]} subnav />
-                    </ul>
-                </NavBtn>
+                <NavBtnWrapper>
+                            <NavBtn label={APPENDIX} />
+                    
+                            <NavBtn label={PHARMAK} pageName={PageList.pages["13"]} subnav />
+                            <NavBtn label={STUDY2DATA} pageName={PageList.pages["14"]} subnav />
+                            <NavBtn label={TREATMENT_ADHERENCE} pageName={PageList.pages["15"]} subnav />
+                </NavBtnWrapper>
+               
 
             </NavContainer>
-            <NavContainer>
+            <NavContainerR>
                 <RightColBt>
                     <IconBg>
                         <IconWrapper kolor='white' size='2em'>
@@ -212,45 +223,44 @@ const Nav = () => {
                         </IconWrapper>
                     </IconBg>
 
-                    <NavBtn label={CONVERSATION_STARTERS} pageName={PageList.pages["17"]} />
+                    <NavBtn centerV label={CONVERSATION_STARTERS} pageName={PageList.pages["17"]} />
                 </RightColBt>
                 <RightColBt>
-
                     <IconBg>
                         <IconWrapper kolor='white' size='2em'>
                             <AiOutlineSisternode />
                         </IconWrapper>
                     </IconBg>
-
-
-                    <NavBtn label={SEGMENT_NARRATIVES} pageName={PageList.pages["21"]} />
+                    <NavBtn centerV label={SEGMENT_NARRATIVES} pageName={PageList.pages["21"]} />
                 </RightColBt>
-                <RightColBtX>
+                <RightColBt>
                     <IconBg>
                         <IconWrapper kolor='white' size='2em'>
                             <FaTools />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={TOOLBOX} isDisabled />
-                </RightColBtX>
-                <RightColBtSub>
-                    <ul>
-                        <NavBtn label={TB1} pageName={PageList.pages["22"]} subnav />
-                        <NavBtn label={TB2} pageName={PageList.pages["23"]} subnav />
-                        <NavBtn label={TB3} pageName={PageList.pages["24"]} subnav />
-                        <NavBtn label={TB4} pageName={PageList.pages["25"]} subnav />
-                    </ul>
-                </RightColBtSub>
+                           <NavBtnWrapper>
+                                <NavBtn centerV label={TOOLBOX} isDisabled />
+                                <NavBtn centerV label={TB1} pageName={PageList.pages["22"]} subnav />
+                                <NavBtn  centerV label={TB2} pageName={PageList.pages["23"]} subnav />
+                                <NavBtn centerV label={TB3} pageName={PageList.pages["24"]} subnav />
+                                <NavBtn centerV label={TB4} pageName={PageList.pages["25"]} subnav />
+                           </NavBtnWrapper>
+                      
+
+             
+                </RightColBt>
+
                 <RightColBt>
                     <IconBg>
                         <IconWrapper kolor='white' size='2em'>
                             <BsQuestionSquareFill />
                         </IconWrapper>
                     </IconBg>
-                    <NavBtn label={Q_A} pageName={PageList.pages["26"]} />
+                    <NavBtn centerV label={Q_A} pageName={PageList.pages["26"]} />
                 </RightColBt>
 
-            </NavContainer>
+            </NavContainerR>
 
         </MainDiv>
     )
