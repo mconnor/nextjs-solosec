@@ -88,9 +88,9 @@ type Props = {
     section: string;
 }
 const ReferencesWrapper: React.FC<Props> = ({section}) => {
-    const { isInitSafetyInfoOpen } = useAppState();
+    const { isInitSafetyInfoOpen, isPrescribingInfoOpen, isNavOpen, isSafetyInfoOpen } = useAppState();
     
-    if (isInitSafetyInfoOpen) return null;
+    if (isInitSafetyInfoOpen || isPrescribingInfoOpen || isNavOpen || isSafetyInfoOpen ) return null;
     if (section === Sections.NO_REF) return null;
     return <References section={section}/>;
 }
