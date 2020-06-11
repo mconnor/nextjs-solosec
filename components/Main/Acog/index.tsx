@@ -11,9 +11,9 @@ const MainDiv = styled.div`
 const SVGDiv = styled.div`
     //background-image: url(/img/svg/pg14-background.svg);
     height: 100%;
-    top: -45.7vh;
+    top:0;
     left: 0px;
-    position: relative;
+    position: absolute;
     z-index: 0;
 `;
 
@@ -21,10 +21,10 @@ const BtnContainer = styled.div`
    
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat( 6, 7.6vh);
+    grid-template-rows: repeat( 6, 77px);
     justify-items: start;
-    left: 35vw;
-    top: 8.6vw;
+    left: 490px;
+    top: 110px;
     position: relative;
     z-index: 2;
 `;

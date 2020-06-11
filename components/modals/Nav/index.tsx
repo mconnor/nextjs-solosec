@@ -145,22 +145,6 @@ const RightColBt = styled.div`
     text-align: left;
 `;
 
-const RightColBtX = styled.div`
-    display: grid;
-    grid-template-columns: 112px 1fr;
-    /* column-gap: 2.4%; */
-    margin-bottom: 0px;
-    text-align: left;
-`;
-
-// const RightColBtSub = styled.div`
-//     display: grid;
-//     grid-template-columns: auto 1fr;
-//     //column-gap: 0px;
-//     margin-bottom: 0px;
-//     margin-left: 6%;
-//     text-align: left;
-// `;
 
 const IconBg = styled.button`
     background:var(--nav-blue);

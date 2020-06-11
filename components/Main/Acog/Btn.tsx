@@ -11,8 +11,8 @@ const Main = styled.div<MainProps>`
     opacity: ${props => props.on ? 1 : 0};
 `;
 const Img = styled.img`
-    width: 64vw;
-    height: 5.75vw;
+    width: 825px;
+    height: 72px;
 `;
 
 type Props = {
@@ -27,14 +27,17 @@ const Btn: React.FC<Props> = ({svgClicked, page, seq}) => {
     const [cookie, setCookie] = useCookie({key: "seq"});
     console.log(cookie);
     return (
-        <Main on={isToggled} onClick={() => {
-            toggle();
-            setTimeout(() => {
-                setCookie(seq);
-                if (typeof window !== 'undefined') window.localStorage.seq = seq;
-                Navigate(page);
-            }, 100)
-        }}>
+        <Main 
+            on={isToggled} 
+            onClick={() => {
+                toggle();
+                // setTimeout(() => {
+                //     setCookie(seq);
+                //     if (typeof window !== 'undefined') window.localStorage.seq = seq;
+                //     Navigate(page);
+                // }, 100)
+             }}
+        >
             <Img src={`./img/svg/${svgClicked}.svg`}/>
         </Main>
     )
