@@ -14,8 +14,8 @@ type Props = {
 }
 
 const Img = styled.img`
-    width: 32.6vw;
-    height: 14.244;
+    width: 470px;
+    height: 200px;
 `;
 
 
@@ -36,7 +36,7 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
         setCookie(seq);
         if (typeof window !== 'undefined') window.localStorage.seq = seq;
         setTimeout(() => {
-            //router.push("/" + PageList.pages[page]);
+         
             Navigate(PageList.pages[page]);
         }, 100)
 
@@ -44,9 +44,10 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
 
     return (
         <>
-             <Img src={showSVG} onClick={() => {
-                 setShowSVG(`./img/svg/${svgClicked}.svg`);
-                 linkTo(page)}} />
+             <Img src={showSVG} 
+                // onClick={() => { setShowSVG(`./img/svg/${svgClicked}.svg`);
+                //  linkTo(page)}} 
+                 />
         </>
     )
 }
