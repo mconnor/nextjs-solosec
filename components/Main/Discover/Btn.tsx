@@ -1,11 +1,10 @@
 
 import { useState } from 'react';
 import styled from 'styled-components';
-//import {useAppState} from "../../../state";
 import {PageList} from "../../modals/Nav/PageList";
-import { useCookie } from '../../../hooks'
-import { useRouter } from 'next/router'
+import {useCookie} from '../../../hooks'
 
+import {Navigate} from "../../utils/Navigate";
 
 type Props = {
     svglink:string;
@@ -15,15 +14,15 @@ type Props = {
 }
 
 const Img = styled.img`
-    width: 460px;
-    height: 201px;
+    width: 32.6vw;
+    height: 14.244;
 `;
 
 
 const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     const [cookie, setCookie] = useCookie({key: "seq"});
     const [showSVG, setShowSVG] = useState(`./img/svg/${svglink}.svg`);
-    const router = useRouter()
+    //const router = useRouter()
 
     //const [linkUrl] = useState<string>(PageList["pages"][page])
 
@@ -33,16 +32,20 @@ const Btn:React.FC<Props> = ({ svglink, svgClicked, page, seq}) => {
     // },[showSVG])
 
     function linkTo(page:string) {
-            console.log(cookie);
-            setCookie(seq)
-            setTimeout(()=>{router.push("/" + PageList.pages[page]);}, 100)
-       
+        console.log(cookie);
+        setCookie(seq);
+        if (typeof window !== 'undefined') window.localStorage.seq = seq;
+        setTimeout(() => {
+            //router.push("/" + PageList.pages[page]);
+            Navigate(PageList.pages[page]);
+        }, 100)
+
     }
 
     return (
         <>
              <Img src={showSVG} onClick={() => {
-                 setShowSVG(`/img/svg/${svgClicked}.svg`);
+                 setShowSVG(`./img/svg/${svgClicked}.svg`);
                  linkTo(page)}} />
         </>
     )

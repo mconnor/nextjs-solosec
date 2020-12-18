@@ -1,12 +1,10 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components'
-import Link from 'next/link';
-// import { motion } from 'framer-motion';
 import { useAppState } from '../../../state';
+import {Navigate} from "../../utils/Navigate";
 
 interface ChildrenProps {
     children?: ReactNode;
-    // clickCallBack: (() => void) | undefined;
     pageName?: string;
     label?: string;
     subnav?: boolean;
@@ -17,15 +15,14 @@ interface ChildrenProps {
 
 
 interface SubProps {
-
     subnav?: boolean;
-
 }
 
 
 
 
 const Btn = styled.div<SubProps>`
+    cursor: pointer; 
     display: grid;
     white-space:nowrap;
     color:white;
@@ -33,10 +30,7 @@ const Btn = styled.div<SubProps>`
     font-style: normal;
     font-weight: 500;
     font-size: ${props => props.subnav ? '20px' : '28px'};
-/* background:${props => props.subnav ? 'pink' : 'blue'}; */
-
-/* or 178% */
-user-select: none;
+    user-select: none;
     letter-spacing: -0.015em;
     color: white; 
     
@@ -49,43 +43,39 @@ user-select: none;
 `;
 
 const Li = styled.li`
-  color:white;
-list-style-type: none;
-    /* &:before {
-        content: "-";
-      text-indent: -2em;
-      display: inline-block;
-    }; */
-    
-
+    color:white;
+    list-style-type: none;
+    padding-left:4.8vw;
 `;
 
-// const Ul = styled.ul`
-//     margin:0;
-//     padding:0;
-// `;
 
 
 const NavBtn: React.FC<ChildrenProps> = ({ children, pageName, label, subnav, isDisabled=false }) => {
     const url = "/" + pageName;
-    const { setNav } = useAppState();
-    const hanleClick = () => setNav && setNav(false);
+    const {setNav} = useAppState();
+    const hanleClick = () => {
+        setNav && setNav(false);
+    };
 
-    // very hacky solution for this particualar case
+    function nav() {
+        if (typeof window !== 'undefined') window.localStorage.seq = "";
+        Navigate(url);
+    }
+
     return (
         <>
-            {children ||  isDisabled ?
+            {children || isDisabled ?
                 <Btn>{label}</Btn>
-            : subnav ?
-                <Li>
-                    <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                        <Link href={url}><a>{`-${label}`}</a></Link>
+                : subnav ?
+                    <Li>
+                        <Btn role='button' onClick={hanleClick} subnav={subnav}>
+                            <div><a onClick={nav}>{`- ${label}`}</a></div>
                     </Btn>
                 </Li>
             :
 
                 <Btn role='button' onClick={hanleClick} subnav={subnav}>
-                    <Link href={url}><a>{label}</a></Link>
+                    <div><a onClick={nav}>{label}</a></div>
                 </Btn>
 
 

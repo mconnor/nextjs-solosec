@@ -42,7 +42,7 @@ export default () => {
                     </p>
                     <p>
                         Report suspected side effects of prescription drugs to the FDA at
-                        <a href="www.fda.gov/MedWatch" target="_blank">www.fda.gov/MedWatch</a>
+                        <a href="http://www.fda.gov/MedWatch">www.fda.gov/MedWatch</a>
                         or 1-800-FDA-1088,
                         or contact Lupin Pharmaceuticals, Inc. at 1-844-SOLOSEC (1-844-765-6732).
                     </p>'
@@ -56,7 +56,7 @@ export default () => {
                 <QuestionAnswer slug="q6"
                     q='How can my patients access the savings card?'
                     a='<p>
-                    Patients can visit <a href="http://solosec.com/savings-card" target="_blank" >solosec.com/savings-card</a> to access a card to download or send to mobile. You may also request physical cards form your Lupin representative. The physical card can be used in the pharmacy, or patients may scan its QR code to download the co-pay card offer to their mobile phone. No pre-registration or pre-authorization is required.
+                    Patients can visit <a href="http://solosec.com/savings-card">solosec.com/savings-card</a> to access a card to download or send to mobile. You may also request physical cards form your Lupin representative. The physical card can be used in the pharmacy, or patients may scan its QR code to download the co-pay card offer to their mobile phone. No pre-registration or pre-authorization is required.
                     </p>'
                 />
             </QA>

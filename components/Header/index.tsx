@@ -1,40 +1,37 @@
-
-
-import styled from 'styled-components'
-import Link from 'next/link';
+import styled from 'styled-components';
 import Hamburger from './Hamburger'
-import { useAppState } from "../../state";
+import {useAppState} from "../../state";
 import NavBtn from './NavBtn';
+import {Navigate} from "../utils/Navigate";
+import HeaderLogo from './HeaderLogo'
 
-
-
-const MainDiv = styled.div<Props>`
-    grid-area: ${props => props.gridArea};
-    background-image: url(./img/header-sansNav.png);
-    background-size: 100% 100%;
-    width:var(--ipad-width);
-    padding: 0 24px 0 24px;
+const MainDiv = styled.div`
+    position: absolute;
+    z-index:50;
+  
+    background-image:linear-gradient(180deg,#296392,#004876 75%);
+    width: 100vw;
+    padding: 0 45px 0 24px;
     display: grid;
     align-items: center;
     grid-template-columns: 64px repeat(3, 142px) 1fr;
     color: $primary;
-
+    height: var(--header-height);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.28vw;
     line-height: 127%;
 `;
 
-const IndexLinkWrapper = styled.button`
-    width:220px;
-    height: 80px;
-  opacity: 0;
-    justify-self:end;
+const IndexLinkWrapper = styled.div`
+     /* display: flex;
+     flex-direction:row;
+     justify-items: end; */
+     justify-self: end;
     cursor: pointer;
+    border: pink 1px black;
+  
 `;
 
-interface Props {
-    gridArea: string;
-}
 
 
 const PRESCRIBING_INFO = 'Prescribing\nInformation'
@@ -42,14 +39,14 @@ const SAFETY_MSG = 'Important\nSafety\nInformation'
 const REFERENCE = 'References'
 
 
-
-
-
-const Header: React.FC<Props> = ({ gridArea }) => {
-    const { toggleReference, togglePrescribingInfo, toggleSafetyInfo,
+const Header = () => {
+    const {
+        toggleReference, togglePrescribingInfo, toggleSafetyInfo,
         setNav, setSafteyInfo, toggleNav,
-        setPrescribingInfo } = useAppState();
+        setPrescribingInfo, isInitSafetyInfoOpen
+    } = useAppState();
 
+    //const {ipadWidthPx} = useDeviceDimensions();
 
     const handlRefClick = () => {
         toggleReference && toggleReference();
@@ -72,20 +69,20 @@ const Header: React.FC<Props> = ({ gridArea }) => {
         setSafteyInfo && setSafteyInfo(false);
         setPrescribingInfo && setPrescribingInfo(false);
     }
-
-    // {_prevState => setNav &&  setNav(true)}
+   
+    if (isInitSafetyInfoOpen) return null;
     return (
-        <MainDiv gridArea={gridArea}>
-            <Hamburger clickCallBack={handleNavClick} />
+        <MainDiv>
+            <Hamburger clickCallBack={handleNavClick}/>
             <NavBtn borderRight clickCallBack={handleIPIclick}>{PRESCRIBING_INFO}</NavBtn>
             <NavBtn borderRight clickCallBack={handleIsiClick}>{SAFETY_MSG}</NavBtn>
             <NavBtn clickCallBack={handlRefClick}>{REFERENCE}</NavBtn>
-            <Link href='/01_02splash'>
-                <IndexLinkWrapper>
+            <IndexLinkWrapper onClick={() => Navigate("01_index")}>
+
+                <HeaderLogo/>
+            </IndexLinkWrapper>
 
 
-                </IndexLinkWrapper>
-            </Link>
            
         </MainDiv>
     )

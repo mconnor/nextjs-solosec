@@ -7,7 +7,7 @@ import * as Sections from "../../utils/Sections";
 const variants = {
     open: {y: 0},
     closed: {
-        y: "100%",
+        y: "110%",
         transition: {
             delay: .2
         }
@@ -15,25 +15,24 @@ const variants = {
 
 }
 
-const OuterContainer = styled(motion.div)`
 
-    
+
+const OuterContainer = styled(motion.div)`
+    z-index:60;
+    top:var(--header-height);
     background-color: rgba(0,0 ,0 ,0.8);
     padding: 20px;
 `;
 
 const Container = styled.div`
-    height: 100%;
+    height: var(--ipad-height);
+    max-height: var(--ipad-max-height);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 1fr;
-   
-    border-bottom-right-radius: var(--border-radius-4);
-    border-bottom-left-radius:  var(--border-radius-4);
-    
+    grid-template-rows: 75px 1fr; 
 `;
 const Top = styled.div`
-    background-color: green;
+    background-color: var(--green);
     border:0;
     border-top-right-radius: var(--border-radius-4);
     border-top-left-radius:  var(--border-radius-4);
@@ -60,19 +59,21 @@ const Copy = styled.div`
     grid-area: 'copy';
     background-color:white;
     padding: 20px 48px 0 20px;
-    border-bottom-right-radius: var(--border-radius-4);
-    border-bottom-left-radius: var(--border-radius-4);
     letter-spacing: 0.03em;
     line-height: 28px;
     color: var(--copy-color-secondary);
+    ol {
+       
+    }
     li {
         font-style: normal;
         font-weight: normal;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 1.4vw;
+        line-height: 2.1vw;
         letter-spacing: 0.02em;
-        em {
-            color: red;
+        margin-left:44px;
+        i {
+            //color: red;
             font-weight: 100;
             font-style: italic;
         }
@@ -87,8 +88,9 @@ type Props = {
     section: string;
 }
 const ReferencesWrapper: React.FC<Props> = ({section}) => {
-    const { isInitSafetyInfoOpen } = useAppState();
-    if (isInitSafetyInfoOpen) return null;
+    const { isInitSafetyInfoOpen, isPrescribingInfoOpen, isNavOpen, isSafetyInfoOpen } = useAppState();
+    
+    if (isInitSafetyInfoOpen || isPrescribingInfoOpen || isNavOpen || isSafetyInfoOpen ) return null;
     if (section === Sections.NO_REF) return null;
     return <References section={section}/>;
 }
@@ -98,11 +100,16 @@ const References: React.FC<Props> = ({section}) => {
     console.log('section' + section)
 
     return (
-        <OuterContainer className='modalWrapper'
-                        variants={variants}
-                        initial='closed'
-                        animate={isReferenceOpen ? 'open' : 'closed'}
-                        transition={{damping: 300}}>
+        <OuterContainer 
+                className={
+                    isReferenceOpen 
+                    ? 'modalFullScreen modalWrapper' 
+                    : 'modalFullScreen modalWrapper'
+                }
+                variants={variants}
+                initial='closed'
+                animate={isReferenceOpen ? 'open' : 'closed'}
+                transition={{damping: 300}}>
             <Container>
                 <Top>
                     <h1>REFERENCES</h1>
