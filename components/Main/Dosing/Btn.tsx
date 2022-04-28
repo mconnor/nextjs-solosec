@@ -18,7 +18,7 @@ const BtnInvisible = styled.button`
     z-index: 3;
 `;
 
-export default () => {
+const Btn = () => {
     //const router = useRouter();
 
     return (
@@ -30,4 +30,6 @@ export default () => {
       
 
     )
-}
+};
+
+export default Btn;
