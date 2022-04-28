@@ -10,7 +10,7 @@
     "build": "next build && next export",
     "serve": "browser-sync start --server --files 'css/*.css' --ss 'out/'",
     "start": "next start -p 4000",
-    "lint": "next lint --dir pages"
+    "lint": "next lint --dir pages, hooks, components, state"
   },
   "dependencies": {
     "framer-motion": "^1.11.1",
