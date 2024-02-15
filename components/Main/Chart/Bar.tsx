@@ -1,31 +1,21 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 
-const spring={
-    type: "spring",
-    damping: 10,
-    stiffness: 100,
-    // delay: 2,
-    // duration: 1,
-}
-
-
-const variantsV= {
+const variantsV = {
     start: {
         scaleY: 0,
-        
+
     },
     end: {
         scaleY: 1,
-        transition: {spring}
+        // transition: {spring}
     }
 }
 
 const variantsH = {
     start: {
         scaleX: 0,
-       transition: {spring}
     },
     end: {
         scaleX: 1
@@ -44,8 +34,8 @@ type BarDivProps = {
 
 const BarDiv = styled(motion.div)<BarDivProps>`
     position: relative;
-    width: ${prop => !prop.horizontal  ? `${prop.barThickness}px` :  `${prop.max}px`};
-    height: ${prop => prop.horizontal ?  `${prop.barThickness}px` :  `${prop.max}px`};
+    width: ${prop => !prop.horizontal  ? `${prop.barThickness}px` :  `${((prop.max)/1336)*100}vw`};
+    height: ${prop => prop.horizontal ?  `${prop.barThickness}px` :  `${(prop.max/870)*100}vh`};
     background: ${props => props.placebo ? 'gray' : 'green'};
    
     text-align:center;
@@ -94,11 +84,12 @@ const Bar: React.FC<Props> = ({barThickness, max, placebo, score, scoreBelow, ho
             initial='start'
             animate='end'
             transition={{
-                type: "spring",
-                stiffness: 340,
-                damping: 40,
-                delay: .5,
-                mass: 2
+                // type: "spring",
+                // stiffness: 10,
+                // damping: 5,
+                // delay: .5,
+                // mass: 1,
+                duration: 1.5
             }}
         >
             <Score fontSize={24}>{score}%</Score>

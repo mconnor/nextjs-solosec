@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import {PageList} from "../../modals/Nav/PageList";
 import { useCookie } from '../../../hooks'
-import Link from 'next/link'
 
+import {Navigate} from "../../utils/Navigate";
 
 type Props = {
     page:string;
@@ -10,11 +10,12 @@ type Props = {
 }
 
 const BtnInvisible = styled.button`
-    width: 360px;
-    height: 75px;
+    width: 26.3vw;
+    height: 20vh;
     background: transparent;
     border: none !important;
     font-size:0;
+    cursor: pointer;
 `;
 
 
@@ -22,16 +23,19 @@ const Btn:React.FC<Props> = ({ page, seq}) => {
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
 
 console.log('cookie', cookie) // keep this
-
-
     const url =  PageList.pages[page];
 
     return (
 
-        <Link href={url}>
-            <BtnInvisible onClick={() =>{ 
-                 console.log('url', url);setCookie(seq)}} />
-        </Link>
+        <div style={{display: "inline-block"}}>
+            <BtnInvisible onClick={() => {
+                console.log('url', url);
+                setCookie(seq);
+                if (typeof window !== 'undefined') window.localStorage.seq = seq;
+                //window.location.href = "./" + url + ".html"
+                Navigate(url);
+            }}/>
+        </div>
     )
 }
 

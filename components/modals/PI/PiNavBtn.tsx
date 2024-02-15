@@ -1,7 +1,7 @@
 // import { motion } from 'framer-motion';
 import styled from 'styled-components'
 import { ReactNode, useEffect } from 'react';
-import Link from 'next/link'
+
 import { useAppState } from '../../../state'
 
 
@@ -12,22 +12,22 @@ interface IBtn {
 }
 
 const NavBtn = styled.div<IBtn>`
-    height: 50px;
+    height: 3.29vw;
     border: 1 solid black;
     display: grid;
     align-items: center;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.3vw;
     padding-left:16px;
     border: 2px;
    
     border-style:${props => props.active ? 'groove' : 'none'};
-    background: ${props => !props.active ? '' : '#072b49'};
+    background: ${props => !props.active ? '' : 'var(--pi-modal-blue)'};
 
-    color:  ${props => props.active ? 'white' : '#072b49'};
+    color:  ${props => props.active ? 'white' : 'var(--pi-modal-blue)'};
     cursor: pointer;
-    
+    white-space:nowrap;
     
    
 `;
@@ -53,12 +53,14 @@ const PiNavBtn: React.FC<Props> = ({ url, children, active = false }) => {
 
     }
     return (
-        <Link href={url}>
+
+        <div>
+
             <NavBtn active={currPIanchor === url} onClick={() => handleClick(url)}>
                 {children}
             </NavBtn>
-        </Link>
 
+        </div>
     )
 }
 

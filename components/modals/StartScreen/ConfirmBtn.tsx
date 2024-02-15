@@ -8,25 +8,12 @@ interface IBtn {
 }
 
 const Btn = styled.button<IBtn>`
-    background: #05aa4e;
-    border-radius: 6px;
-    width: 212px;
-    height: 44px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: white;
-    display: grid;
-    place-items: center;
-    border:0;   
     grid-area: ${(props) => props.gridArea};
-    cursor: pointer;
- 
 `;
 
 interface ChildrenProps {
     children: ReactNode;
-    clickCallBack: (() => void) | undefined;
+    clickCallBack?: (() => void);
     gridArea?:string;
 }
 
@@ -34,7 +21,10 @@ const ConfirmBtn: React.FC<ChildrenProps> = ({ children, clickCallBack, gridArea
 
     return (
 
-           <Btn gridArea={gridArea} onClick={clickCallBack}>{children}</Btn> 
+           <Btn 
+            className="button-green"
+            gridArea={gridArea} 
+            onClick={clickCallBack}>{children}</Btn> 
     
     )
 }

@@ -1,12 +1,10 @@
 
 import styled from 'styled-components'
-import { useAppState } from "../../../state";
+import {useAppState} from "../../../state";
 import { motion } from 'framer-motion';
 
-
-
-
-import PICopy from './PICopy';
+import Copy from './Copy';
+// import PICopy from './PICopy';
 import NavPanel from './NavPanel'
 import CloseBtn from './CloseBtn'
 
@@ -32,39 +30,48 @@ const variantsRight = {
 }
 
 const OuterContainer = styled(motion.div)`
-     position: fixed ;
-     width: var( --ipad-width);
-    margin-top:var(--header-height);
-    width: var(--ipad--height);
-    height: 52vw !important;
-    /* overflow:scroll !important;
-    b
-    overflow-y: hidden; */
+  z-index:10;
   overflow-y: scroll !important;
   padding: 14px 20px MARGIN 14px;
-  //border: 2px solid black;
+  background:white;
+  height: 90vh !important;
 `;
-
-
 
 const CopyWrapper = styled(motion.div)`
 
-    margin-left: 553px;
-    margin-right:176px;
+    //margin-left: 41%;
+    //margin-right:6%;
+    //margin-top: 20%;
+    width: 66%;
+    height: 60%;
+    position: relative;
+    top: 20vw;
+    left: 38%;
+    overflow-y: scroll !important;
 `;
 
 const CloseWrapper = styled.div`
-    top:calc(var(--header-height) + 20px);
-    left: calc(var(--ipad-width) - 220px);
+    left: 35%;
+
     position: fixed;
- 
+    top: var(--header-height);
+    right:3%;
+    background:white;
+    border-bottom: 1px gray solid;
+    position: fixed;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:30px;
+    padding-bottom: 33px;
+   
+    
 
     
 `;
 const NavWrapper = styled(motion.div)`
    position:fixed;
    height: 440px;
-   width: 400px;
+   width: 30%;
     background: blue;
     top:114px;
     left:14px;
@@ -77,14 +84,15 @@ const PrescribingInfoWrapper = () => {
     const { isPrescribingInfoOpen } = useAppState();
 
     if (!isPrescribingInfoOpen) return null;
-    return  <PrescribingInfo />
+    return <PrescribingInfo />
 
 }
 const PrescribingInfo = () => {
     const { isInitSafetyInfoOpen, isPrescribingInfoOpen, togglePrescribingInfo } = useAppState();
     if (isInitSafetyInfoOpen) return null;
     return (
-        <OuterContainer className='modalWrapper'>
+        <OuterContainer
+            className='modalWrapper'>
 
             <NavWrapper
                 variants={variants}
@@ -100,13 +108,13 @@ const PrescribingInfo = () => {
             </CloseWrapper>
 
             <CopyWrapper
-                 variants={variantsRight}
-                 initial='closed'
-                 animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
-                 transition={{ damping: 300 }}
-                //  onAnimationComplete={()=> setIsExitAnimDone(true) }
+                variants={variantsRight}
+                initial='closed'
+                animate={(isPrescribingInfoOpen) ? 'open' : 'closed'}
+                transition={{ damping: 300 }}
+            //  onAnimationComplete={()=> setIsExitAnimDone(true) }
             >
-                <PICopy />
+                <Copy />
             </CopyWrapper>
         </OuterContainer>
     )

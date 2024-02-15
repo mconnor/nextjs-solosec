@@ -1,9 +1,9 @@
-import { ReactNode, useEffect } from 'react';
+import {ReactNode, useEffect} from 'react';
 import styled from 'styled-components';
-import { GoPlus, GoDash } from "react-icons/go";
-import { motion } from 'framer-motion';
-import { useToggle } from '../../../hooks';
-import { useAppState } from '../../../state'
+import {GoPlus, GoDash} from "react-icons/go";
+import {motion} from 'framer-motion';
+import {useToggle} from '../../../hooks';
+import {useAppState} from '../../../state'
 import IconWrapper from '../../IconWrapper'
 
 const variants = {
@@ -24,10 +24,10 @@ const variants = {
 }
 
 const MainDiv = styled.div`
-    height:600px;
-    margin-left: 98px;
-    margin-right: 127px;
-    margin-top: 90px;
+    height:50vw;
+    padding-left: 7.3vw;
+    padding-right: 10.16vw;
+    padding-top: 4vw;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -37,6 +37,18 @@ const MainDiv = styled.div`
     sup {
     font-size: 10px;
     }
+    -webkit-overflow-scrolling: auto;
+    
+    //::-webkit-scrollbar {
+    //  -webkit-appearance: none;
+    //  width: 7px;
+    //}
+    //
+    //::-webkit-scrollbar-thumb {
+    //  border-radius: 4px;
+    //  background-color: rgba(0, 0, 0, .5);
+    //  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    //}
 `;
 
 
@@ -44,7 +56,7 @@ type Props = {
     children: ReactNode;
 }
 
-const QA: React.FC<Props> = ({ children }) => {
+const QA: React.FC<Props> = ({children}) => {
 
     return (
         <MainDiv>
@@ -56,9 +68,8 @@ const QA: React.FC<Props> = ({ children }) => {
 export default QA
 
 
-
-
 const Qdiv = styled.div`
+    font-size: 2vh;
     font-style:bold;
     font-weight: 700;
     sup {
@@ -69,24 +80,21 @@ const Qdiv = styled.div`
 type OnOff = { on?: boolean; }
 
 const Adiv = styled(motion.div) <OnOff>`
-    margin-top: 22px;
+    margin-top: 2.5vh;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 2.1vh;
+    line-height: 2.5vh;
     letter-spacing: -0.035em;
-    padding-bottom:20px;
+    padding-bottom:1.9vh;
 `;
 
 const QAcontainer = styled.div`
 
     color:var(--button-selected-color);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: -0.02em;
-    min-height: 100px;
+   
+    min-height: 6vw;
+   
 `;
 
 const Qwrapper = styled.div`
@@ -95,26 +103,38 @@ const Qwrapper = styled.div`
     align-items:start;
     column-gap:10px;
     align-items:center;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+    line-height: 3vh;
+    letter-spacing: -0.02em;
+
+    sup{
+        font-size: 1rem;
+        vertical-align: super;
+    }
 
 `;
+
 interface Iprops {
     q: string;
     a: string;
-    slug:string;
+    slug: string;
 }
 
 
-export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
-    const { isToggled, toggle, setToggle } = useToggle(false);
-    const { setCurrQ, currQ } = useAppState();
+export const QuestionAnswer: React.FC<Iprops> = ({q, a, slug}) => {
+    const {isToggled, toggle, setToggle} = useToggle(false);
+    const {setCurrQ, currQ} = useAppState();
 
-    useEffect(()=> {
+    useEffect(() => {
         if (currQ !== slug) {
             setToggle(false);
         }
-    }, [ currQ ]) 
+    }, [currQ])
 
-    const handleClick = ()=> {
+    const handleClick = () => {
         toggle();
         setCurrQ && setCurrQ(slug)
     }
@@ -122,13 +142,13 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
     return (
         <QAcontainer onClick={handleClick}>
             <Qwrapper>
-                <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)} />
-              
-                        <IconWrapper kolor='green' size='1em'>
-                            {!isToggled ? <GoPlus/> : <GoDash />}
-                        </IconWrapper>
-   
-              
+                <Qdiv role='button' dangerouslySetInnerHTML={createMarkup(q)}/>
+
+                <IconWrapper kolor='green' size='1em'>
+                    {!isToggled ? <GoPlus/> : <GoDash/>}
+                </IconWrapper>
+
+
             </Qwrapper>
 
 
@@ -139,10 +159,10 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
                 variants={variants}
                 initial='closed'
                 animate={isToggled ? 'open' : 'closed'}
-                transition={{ damping: 300 }}
-            // initial={{ opacity: 0 }}
-            // animate={{ opacity: 1 }}
-            // exit={{ opacity: 0, display: 'none'}}
+                transition={{damping: 300}}
+                // initial={{ opacity: 0 }}
+                // animate={{ opacity: 1 }}
+                // exit={{ opacity: 0, display: 'none'}}
             >
             </Adiv>
 
@@ -151,8 +171,6 @@ export const QuestionAnswer: React.FC<Iprops> = ({ q, a , slug }) => {
 }
 
 
-
-
 function createMarkup(copy: string) {
-    return { __html: copy }
+    return {__html: copy}
 }

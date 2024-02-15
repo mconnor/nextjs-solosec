@@ -12,7 +12,7 @@ import { FaTools } from "react-icons/fa";
 import { BsQuestionSquareFill } from "react-icons/bs";
 
 import {PageList} from "./PageList";
-
+import {Navigate} from "../../utils/Navigate";
 
 const SUMMARY = 'Summary';
 const CONSENSUS_GUIDELINES = 'Consensus Guidelines'
@@ -51,13 +51,10 @@ const variants = {
 }
 
 const MainDiv = styled(motion.div)`
-    z-index: 3;
-    width: var(--ipad-width);
-   
-    position: fixed;
+    z-index:15;
     top:var(--header-height);
     left:0;
-    padding: 20px;
+    padding: 1.6vw;
     background-color:#AAAAA9;
     
     /* background-image: url(/img/bg/site-map.png);
@@ -65,11 +62,10 @@ const MainDiv = styled(motion.div)`
     display: grid;
     /* grid-template-columns: 20% 38% 42%; */
     grid-template-columns: 1fr 2fr 2fr;
-    column-gap: 60px;
-    padding-top: 50px;
-    padding-bottom: 60px;
+    column-gap: 4.8vw;
+    padding-top: 3vw;
+    padding-bottom: 4.8vw;
     align-items:start;
-    
 `;
 
 interface StyleProps {
@@ -82,10 +78,10 @@ const NavContainer = styled.div<StyleProps>`
     grid-template-columns: 1fr;
     //height: 90%; 
     margin:0;
-    line-height: 50px;
+    line-height: 4vw;
 /* row-gap:24px; */
     ul {
-        line-height: 40px;
+        line-height: 3.2vw;
     }
 `;
 
@@ -93,13 +89,13 @@ const NavContainerX = styled.div<StyleProps>`
     border-right: ${props => props.borderRight && '2px solid #034063'};
     display: grid;
     grid-template-columns: 1fr;
-    height: 100%; 
+    height: 82%; 
     margin:0;
-    line-height: 50px;
+    line-height: 4vw;
     padding-right: 20px !important;
 /* row-gap:24px; */
     ul {
-        line-height: 40px;
+        line-height: 1.6vw;
     }
 `;
 
@@ -107,12 +103,13 @@ const NavContainerX = styled.div<StyleProps>`
 const Logo = styled.div`
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 2.24vw;
     color:#034063;
-    margin-left:84px;
+    margin-left:6.72vw;
     sup{
         font-weight: lighter;
-    font-size: 1rem;
+        font-size: 1rem;
+        vertical-align: super;
     }
 
     /* grid-row-start: row1-start;
@@ -122,9 +119,9 @@ const Logo = styled.div`
 const SubLogo = styled.div`
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.92vw;
     color:#034063;
-    margin-left:84px;
+    margin-left:6.72vw;
 `;
 
 
@@ -132,15 +129,15 @@ const SubLogo = styled.div`
 const RightColBt = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 35px;
-    margin-bottom: 30px;
+    column-gap: 2.8vw;
+    margin-bottom: 2.4vw;
     text-align: left;
 `;
 
 const RightColBtX = styled.div`
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 35px;
+    column-gap: 2.4vw;
     margin-bottom: 0px;
     text-align: left;
 `;
@@ -150,7 +147,7 @@ const RightColBtSub = styled.div`
     grid-template-columns: auto 1fr;
     //column-gap: 0px;
     margin-bottom: 0px;
-    margin-left: 75px;
+    margin-left: 6vw;
     text-align: left;
 `;
 
@@ -158,8 +155,8 @@ const IconBg = styled.button`
     background:#034063;
     border-radius: 5px;
     border:0;
-    height: 54px;
-    width: 54px;
+    height:4.32vw;
+    width: 4.32vw;
     font-size: 14px;
 `;
 
@@ -168,24 +165,29 @@ const Nav = () => {
    
     if (isInitSafetyInfoOpen) return null;
     return (
-        <MainDiv
+        <MainDiv 
+            className={
+                isNavOpen
+                ? 'modalWrapper z9' 
+                : 'modalWrapper z1' }
             variants={variants}
             initial='closed'
             animate={isNavOpen ? 'open' : 'closed'}
             transition={{ damping: 300 }}
         >
             <NavContainerX borderRight>
-               <div><Logo>Solosec<sup>&reg;</sup>
-              
-              </Logo>
-              <SubLogo>(secnizazole)</SubLogo></div>
+                <div onClick={() => Navigate("01_index")}
+                ><Logo>Solosec<sup>®</sup>
+
+                </Logo>
+                    <SubLogo onClick={() => Navigate("01_index")}>(secnizazole)</SubLogo></div>
             </NavContainerX>
             <NavContainer borderRight>
-                <NavBtn label={SUMMARY} pageName={PageList.pages["2"]} />
-                <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]} />
-                <NavBtn label={STUDY} pageName={PageList.pages["4"]} />
+                <NavBtn label={SUMMARY} pageName={PageList.pages["2"]}/>
+                <NavBtn label={CONSENSUS_GUIDELINES} pageName={PageList.pages["3"]}/>
+                <NavBtn label={STUDY} pageName={PageList.pages["4"]}/>
 
-                <NavBtn label={BOHBOT} pageName={PageList.pages["6"]} />
+                <NavBtn label={BOHBOT} pageName={PageList.pages["6"]}/>
                 <NavBtn label={NO_ALCOHOL_RESTRICTION} pageName={PageList.pages["7"]} />
                 <NavBtn label={DOSING} pageName={PageList.pages["8"]} />
                 <NavBtn label={CO_PAY_CARD} pageName={PageList.pages["10"]} />

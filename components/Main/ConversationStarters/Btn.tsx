@@ -4,7 +4,7 @@ import {useCookie, useToggle} from '../../../hooks';
 import styled from 'styled-components';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from "react-icons";
-import { useRouter } from 'next/router'
+
 
 type MainProps = {
     on: boolean;
@@ -19,7 +19,8 @@ const Main = styled.button<MainProps>`
     border-radius: 10px;
     padding-right: 30px;
     padding-left:32px;
-    height: 74px;
+    height: 5.5vw;
+    padding-top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,7 +34,7 @@ const Span = styled.span`
     white-space: nowrap;
     font-style: normal;
     font-weight: 500;
-    font-size: 31px;
+    font-size: 1.9vw;
     letter-spacing: -0.020em;
     text-align: left;
   `;
@@ -50,7 +51,7 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
     const { toggle, isToggled } = useToggle(false);
     const [kolor, setKolor] = useState('green');
     const [cookie, setCookie] = useCookie({ key: "seq" }) ;
-    const router = useRouter()
+    //const router = useRouter()
     useEffect(() => {
         if (isToggled) {
             setKolor('gold');
@@ -63,8 +64,14 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
     const handleClick = (_url:string)=> {
         toggle();
         console.log(cookie);
-        if (seq) setCookie(seq)
-        setTimeout(()=>{router.push("/" + url);}, 100)
+        if (seq) {
+            setCookie(seq);
+            if (typeof window !== 'undefined') window.localStorage.seq = seq;
+        }
+        setTimeout(() => {
+            //router.push("/" + url);
+            window.location.href = url + ".html"
+        }, 100)
     }
     return (
         <Main 
@@ -74,9 +81,9 @@ const Btn: React.FC<Props> = ({ copy, gridArea, url, seq}) => {
         >
             <Span>{copy}</Span>
 
-            <IconContext.Provider value={{ color: kolor, size: '4em', className: "global-class-name" }}>
+            <IconContext.Provider value={{color: kolor, size: '2em', className: "global-class-name"}}>
                 <div>
-                    <IoIosArrowForward />
+                    <IoIosArrowForward/>
                 </div>
             </IconContext.Provider>
         </Main>

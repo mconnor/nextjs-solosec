@@ -1,4 +1,4 @@
-import Link from 'next/link'
+
 
 import styled from 'styled-components'
 
@@ -22,12 +22,12 @@ type Props = {
     pageName: string;
 }
 const SpaLink: React.FC<Props> = ({ pageName }) => {
-    const url = "/" + pageName;
+    //const url = "/" + pageName;
     return (
         <Main>
-            <Link href={url}>
+            <div onClick={() => window.location.href = pageName + ".html"}>
                 <a>{pageName}</a>
-            </Link>
+            </div>
         </Main>
     )
 }

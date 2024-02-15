@@ -1,12 +1,12 @@
 export const Splash_p3_7 = () => {
     return (
         
-            <ol><li>Data on File – IQVIA Monthly &amp; Weekly TRx Data in SMART, U.S. Edition – Weekly and Monthly NPA Data
-    (Assessed as of May 2020). Prepared May 2020
-</li>
-<li>
-SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017
-</li>
+            <ol><li>Data on File – IQVIA Monthly &amp; Weekly TRx Data in SMART, U.S. Edition – Weekly and Monthly NPA
+                Data (Assessed as of May 2020). Prepared May 2020.
+            </li>
+                <li>
+                    SOLOSEC [prescribing information]. Baltimore, MD: Lupin Pharmaceuticals, Inc.; 2017.
+                </li>
             </ol>
         
     )
@@ -278,12 +278,12 @@ export const Pg65 = () => {
     return (
         <ol>
             <li>
-                1. Koumans EH, Sternberg M, Bruce C, et al. The prevalence of bacterial vaginosis in the United States,
+                Koumans EH, Sternberg M, Bruce C, et al. The prevalence of bacterial vaginosis in the United States,
                 2001-2004; associations with symptoms, sexual behaviors, and reproductive health. <i>Sex Transm Dis</i>.
                 2007;34(11):864-869.
             </li>
             <li>
-                2. Allsworth JE, Lewis VA, Peipert JF. Viral sexually transmitted infections and bacterial vaginosis:
+                Allsworth JE, Lewis VA, Peipert JF. Viral sexually transmitted infections and bacterial vaginosis:
                 2001-2004 National Health and Nutrition Examination Survey data. <i>Sex Transm Dis</i>.
                 2008;35(9):791-79.
             </li>

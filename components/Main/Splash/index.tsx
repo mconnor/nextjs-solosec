@@ -1,38 +1,57 @@
-import { ReactNode } from 'react';
 import styled from 'styled-components';
 
+interface StyleProps {
 
-type Props = {
-   children: ReactNode;
-   logo?: string;
 }
-const MainDiv = styled.div<Props>`
-    width: var(--ipad-width);
-    height:var(--main-height);
-    position: relative;
-    top: -150px;
-    left:4px;
 
+interface ChildrenProps {
+    logo?: string;
+
+}
+const MainDiv = styled.div`
+    width: var(--ipad-width);
+    //max-width: var(--ipad-max-width);
+    height: 86vw;
+    position: relative;
+    top: -9vw;
+    left:0.32vw;
+    //width: 100vw;
+    overflow:hidden;
+   
 `;
 
-const LogoWrapper = styled.img`
+
+type BG = {
+    bg: string;
+}
+const LogoBG = styled.div<BG>`
     position: absolute;
     z-index: 2;
-    top: 105px;
-    left: 86px;
-    width: 295px;
+    top: var(--ipad-header-height);
+    left: 6.88vw;
+    width: 21vw;
+    height: 21vh;
+    background: ${props => `url(${props.bg})`};
+    background-repeat:no-repeat;
+    
 `;
 
-const Splash:React.FC<Props> = ( {children, logo}) => {
-    
+
+
+interface Props extends StyleProps, ChildrenProps { }
+
+const Splash: React.FC<Props> = ({logo}) => {
     return (
-       <>
-        <MainDiv>
-            {children}
-        </MainDiv>
-        <LogoWrapper src={logo} alt="splash page" />
-       
-       </>
+        <>
+
+            <LogoBG bg={logo || ""}>
+
+            </LogoBG>
+            <MainDiv>
+                {/*<img src="./img/svg/pg2-vector-nologo.svg" alt="splash page"/>*/}
+            </MainDiv>
+
+        </>
     )
 }
 

@@ -19,6 +19,8 @@ const Btn = styled.div<StyleProps>`
     text-align: center;
     white-space: pre-wrap;
     color: white; 
+    cursor:pointer;
+    
 `;
 
 interface Props extends StyleProps, ChildrenProps {}
